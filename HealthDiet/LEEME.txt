@@ -1,38 +1,7 @@
-═══════════════════════════════════════════
-  DIETAS PABLO & ALBA — Guía de uso
-═══════════════════════════════════════════
+HEALTHDIET — GUÍA DE USO
 
-ESTRUCTURA DE ARCHIVOS
-──────────────────────
-HealthDiet/
-  index.html          ← La app (no tocar)
-  planes/
-    plan1.json        ← Supervivencia
-    plan2.json        ← Bajo en potasio
-    plan3.json        ← Plan 3
-    plan4.json        ← Plan 4
-  LEEME.txt           ← Este archivo
+Abre index.html en tu navegador para acceder a Mis recetas, Menús y Cocinar juntos. Para probarlo solo necesitas este archivo.
 
-SUBIR A NETLIFY (primera vez)
-──────────────────────────────
-1. Ve a: https://app.netlify.com/drop
-2. Arrastra la carpeta "HealthDiet" completa
-3. Copia la URL que te da (ej: sunny-cake-123.netlify.app)
-4. Guárdala en favoritos del móvil
+Los datos se guardan en el navegador y dispositivo utilizados. Aún no se sincronizan con Supabase. Si cambias la ubicación del archivo o de navegador, los datos locales anteriores podrían no estar disponibles; conserva tu copia anterior.
 
-ACTUALIZAR (cuando añadas planes nuevos)
-─────────────────────────────────────────
-1. Añade el nuevo archivo JSON en la carpeta "planes/"
-2. Abre index.html y busca "CONFIGURACIÓN DE PLANES"
-3. Descomenta o añade la línea del nuevo plan
-4. Ve a app.netlify.com, entra en tu sitio
-5. Arrastra la carpeta actualizada
-
-AÑADIR UN PLAN NUEVO
-─────────────────────
-Solo necesitas dos cosas:
-1. El archivo JSON del plan (ej: plan5.json) en la carpeta "planes/"
-2. Añadir esta línea en index.html dentro de PLANES_CONFIG:
-   { id: '5', nombre: 'Plan 5', archivo: 'planes/plan5.json', badge: 'b5' },
-
-═══════════════════════════════════════════
+El archivo platos.html redirige a index.html si ambos están en la misma carpeta. La carpeta planes contiene archivos de la aplicación anterior y no se utiliza para los menús nuevos.
