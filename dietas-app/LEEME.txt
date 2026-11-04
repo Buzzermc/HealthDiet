@@ -1,0 +1,38 @@
+═══════════════════════════════════════════
+  DIETAS PABLO & ALBA — Guía de uso
+═══════════════════════════════════════════
+
+ESTRUCTURA DE ARCHIVOS
+──────────────────────
+dietas-app/
+  index.html          ← La app (no tocar)
+  planes/
+    plan1.json        ← Supervivencia
+    plan2.json        ← Bajo en potasio
+    plan3.json        ← Plan 3
+    plan4.json        ← Plan 4
+  LEEME.txt           ← Este archivo
+
+SUBIR A NETLIFY (primera vez)
+──────────────────────────────
+1. Ve a: https://app.netlify.com/drop
+2. Arrastra la carpeta "dietas-app" completa
+3. Copia la URL que te da (ej: sunny-cake-123.netlify.app)
+4. Guárdala en favoritos del móvil
+
+ACTUALIZAR (cuando añadas planes nuevos)
+─────────────────────────────────────────
+1. Añade el nuevo archivo JSON en la carpeta "planes/"
+2. Abre index.html y busca "CONFIGURACIÓN DE PLANES"
+3. Descomenta o añade la línea del nuevo plan
+4. Ve a app.netlify.com, entra en tu sitio
+5. Arrastra la carpeta actualizada
+
+AÑADIR UN PLAN NUEVO
+─────────────────────
+Solo necesitas dos cosas:
+1. El archivo JSON del plan (ej: plan5.json) en la carpeta "planes/"
+2. Añadir esta línea en index.html dentro de PLANES_CONFIG:
+   { id: '5', nombre: 'Plan 5', archivo: 'planes/plan5.json', badge: 'b5' },
+
+═══════════════════════════════════════════

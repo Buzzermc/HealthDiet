@@ -1,0 +1,2947 @@
+{
+  "plan": "1",
+  "nombre": "Supervivencia",
+  "dias": {
+    "alba": {
+      "Lunes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y plátano",
+              "ing": [
+                "125g yogur natural",
+                "20g cereales muesli",
+                "80g plátano"
+              ],
+              "rec": [
+                "Mezclar el yogur con el muesli.",
+                "Añadir la fruta a la mezcla o tomar por separado."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y jamón serrano",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g jamón serrano"
+              ],
+              "rec": [
+                "Tostar el pan y colocar encima el jamón serrano y el tomate en lonchas."
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Naranja y nueces",
+              "ing": [
+                "180g naranja",
+                "10g nuez pelada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Ensalada de lentejas con maíz, queso fresco y pavo",
+              "ing": [
+                "140g lentejas cocidas",
+                "50g maíz dulce enlatado",
+                "50g pepino",
+                "75g tomate crudo",
+                "70g queso tipo Burgos 0% MG",
+                "35g pechuga de pavo fiambre",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Escurrir las lentejas bajo el chorro de agua fría.",
+                "Trocear el pepino y el tomate.",
+                "Incorporar a las lentejas las hortalizas, el maíz, el queso y el pavo a dados.",
+                "Mezclar y aliñar con aceite de oliva."
+              ]
+            },
+            {
+              "n": "Granada",
+              "ing": [
+                "280g granada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Merienda 17:00",
+          "items": [
+            {
+              "n": "Snack de queso Burgos y tomate",
+              "ing": [
+                "140g queso tipo Burgos 0% MG",
+                "150g tomate crudo"
+              ],
+              "rec": [
+                "Trocear en dados de tamaño similar. Mezclar y tomar."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Chips de boniato al horno",
+              "ing": [
+                "100g boniato",
+                "3g aceite de oliva",
+                "1g pimienta negra"
+              ],
+              "rec": [
+                "Lavar el boniato y cortar en rodajas muy finas. Poner a remojo 10 min.",
+                "Precalentar el horno a 220ºC. Engrasar una bandeja y extender las rodajas.",
+                "Hornear 10 min, dar la vuelta y hornear 10 min más hasta que queden crujientes."
+              ]
+            },
+            {
+              "n": "Revuelto de jamón serrano con cebolla y espárragos",
+              "ing": [
+                "75g espárrago",
+                "45g jamón serrano",
+                "50g cebolla o cebolleta",
+                "60g huevo de gallina",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Pochar con el aceite la cebolla y los espárragos en trozos similares.",
+                "Cuando estén tiernos añadir el jamón picado.",
+                "Batir el huevo y añadir removiendo hasta que cuaje."
+              ]
+            },
+            {
+              "n": "Papaya",
+              "ing": [
+                "100g papaya"
+              ]
+            }
+          ]
+        }
+      ],
+      "Martes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y manzana",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "90g manzana roja"
+              ],
+              "rec": [
+                "Mezclar yogur con muesli. Añadir la fruta."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y queso fresco",
+              "ing": [
+                "70g pan blanco",
+                "70g queso tipo Burgos 0% MG",
+                "45g tomate crudo"
+              ],
+              "rec": [
+                "Tostar el pan y colocar encima el queso y el tomate."
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Tortitas de legumbres + plátano y kéfir",
+              "ing": [
+                "28g tortitas legumbres",
+                "125g plátano",
+                "100g kéfir"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Cuscús con pollo y judías verdes",
+              "ing": [
+                "100g cuscús para microondas",
+                "70g judías verdes en conserva",
+                "70g tiras de pechuga de pollo al natural"
+              ],
+              "rec": [
+                "Calentar el cuscús 1 minuto en el microondas.",
+                "Calentar las judías verdes y el pollo 1 minuto al microondas.",
+                "Mezclar el cuscús con las judías y el pollo. Servir."
+              ]
+            },
+            {
+              "n": "Ciruelas",
+              "ing": [
+                "150g ciruela"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Merienda 17:00",
+          "items": [
+            {
+              "n": "Hummus con zanahoria y pepino",
+              "ing": [
+                "50g hummus",
+                "80g zanahoria",
+                "100g pepino"
+              ],
+              "rec": [
+                "Colocar el hummus en un bol con pepino y zanahoria en bastones."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Lenguado a la plancha sobre lecho de verduras",
+              "ing": [
+                "275g lenguado",
+                "75g calabacín",
+                "100g cebolla o cebolleta",
+                "120g pimiento rojo",
+                "8g aceite de oliva",
+                "3g eneldo seco"
+              ],
+              "rec": [
+                "Cortar en juliana fina el pimiento, el calabacín y la cebolla.",
+                "Saltear a fuego vivo las verduras con el aceite hasta que la cebolla dore.",
+                "Asar el lenguado a la plancha.",
+                "Emplatar las verduras en el fondo y el lenguado encima. Espolvorear con eneldo."
+              ]
+            },
+            {
+              "n": "Queso fresco",
+              "ing": [
+                "65g queso fresco"
+              ]
+            },
+            {
+              "n": "Melocotón",
+              "ing": [
+                "175g melocotón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Miércoles": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y plátano",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "80g plátano"
+              ],
+              "rec": [
+                "Mezclar yogur con muesli. Añadir la fruta."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y pavo",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g pechuga de pavo fiambre"
+              ],
+              "rec": [
+                "Tostar el pan y colocar encima el pavo y el tomate."
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Naranja y nueces",
+              "ing": [
+                "180g naranja",
+                "10g nuez pelada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Arroz basmati con atún y verduras",
+              "ing": [
+                "70g arroz basmati crudo",
+                "100g mezcla verduras mediterráneo al vapor",
+                "80g queso fresco desnatado",
+                "80g atún al natural en conserva",
+                "5g aceite de oliva",
+                "2g pimienta negra",
+                "2g orégano"
+              ],
+              "rec": [
+                "Calentar el arroz para microondas 1 minuto.",
+                "Saltear las verduras con poco aceite, sal, pimienta y orégano.",
+                "Añadir el arroz, el queso y el atún a la sartén y mezclar."
+              ]
+            },
+            {
+              "n": "Kiwi",
+              "ing": [
+                "120g kiwi"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Merienda 17:00",
+          "items": [
+            {
+              "n": "Uvas y anacardos",
+              "ing": [
+                "160g uva blanca",
+                "10g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Dados de pollo con rúcula, boniato y calabacín",
+              "ing": [
+                "150g pollo pechuga",
+                "150g calabacín",
+                "100g boniato",
+                "40g rúcula",
+                "50g cebolla o cebolleta",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Pelar boniato y calabacín, cortar en rodajas finas.",
+                "Colocar en sartén con un dedo de agua, cocinar tapado 10 min y destapado 5 min más.",
+                "Asar el pollo en dados gruesos en sartén ligeramente engrasada.",
+                "Emplatar la rúcula con cebolla en juliana, calabacín y boniato. Aliñar y colocar el pollo al lado."
+              ]
+            },
+            {
+              "n": "Melón",
+              "ing": [
+                "150g melón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Jueves": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y manzana",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "90g manzana roja"
+              ],
+              "rec": [
+                "Mezclar yogur con muesli. Añadir la fruta."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y jamón serrano",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g jamón serrano"
+              ],
+              "rec": [
+                "Tostar el pan y colocar encima el jamón y el tomate."
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Naranja y nueces",
+              "ing": [
+                "180g naranja",
+                "10g nuez pelada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Patatas al microondas gratinadas con mozzarella",
+              "ing": [
+                "170g patata",
+                "20g queso mozzarella para gratinar",
+                "1g orégano"
+              ],
+              "rec": [
+                "Lavar las patatas y pinchar con un tenedor.",
+                "Asar en el microondas a máxima potencia 10-12 minutos.",
+                "Pelar, partir por la mitad, espolvorear orégano y mozzarella.",
+                "Gratinar en el microondas 2 minutos."
+              ]
+            },
+            {
+              "n": "Champiñón o seta + tiras de pollo asada",
+              "ing": [
+                "75g champiñón o seta",
+                "70g tiras de pollo asada comercial"
+              ]
+            },
+            {
+              "n": "Granada",
+              "ing": [
+                "280g granada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Merienda 17:00",
+          "items": [
+            {
+              "n": "Snack de queso Burgos y tomate",
+              "ing": [
+                "140g queso tipo Burgos 0% MG",
+                "150g tomate crudo"
+              ],
+              "rec": [
+                "Trocear en dados. Mezclar y tomar."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Merluza a la plancha con salteado de champiñones y ajos",
+              "ing": [
+                "200g merluza",
+                "100g champiñón o seta",
+                "30g ajo",
+                "5g aceite de oliva",
+                "3g perejil"
+              ],
+              "rec": [
+                "Asar la merluza a la plancha.",
+                "Saltear los champiñones en cuartos con los ajos tiernos pelados y troceados.",
+                "Emplatar la merluza con el salteado."
+              ]
+            },
+            {
+              "n": "Queso fresco",
+              "ing": [
+                "65g queso fresco"
+              ]
+            },
+            {
+              "n": "Papaya",
+              "ing": [
+                "100g papaya"
+              ]
+            }
+          ]
+        }
+      ],
+      "Viernes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y arándanos",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "25g arándanos"
+              ],
+              "rec": [
+                "Mezclar yogur con muesli. Añadir los arándanos."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y pavo",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g pechuga de pavo fiambre"
+              ],
+              "rec": [
+                "Tostar el pan y colocar encima el pavo y el tomate."
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Tortitas de legumbres",
+              "ing": [
+                "28g tortitas legumbres"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Bol de arroz basmati y jamón",
+              "ing": [
+                "125g arroz basmati para microondas",
+                "65g mozzarella fresca light",
+                "40g jamón serrano",
+                "50g tomate crudo",
+                "50g aceituna negra",
+                "50g aguacate",
+                "10g zumo de limón",
+                "5g aceite de oliva"
+              ],
+              "rec": [
+                "Calentar el arroz 1 minuto en el microondas.",
+                "Cortar todos los ingredientes en taquitos.",
+                "Mezclar y aliñar con aceite, especias al gusto y zumo de limón."
+              ]
+            },
+            {
+              "n": "Ciruelas",
+              "ing": [
+                "150g ciruela"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Merienda 17:00",
+          "items": [
+            {
+              "n": "Hummus con zanahoria y pepino",
+              "ing": [
+                "50g hummus",
+                "80g zanahoria",
+                "100g pepino"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Pizza Fit de jamón cocido y champiñón",
+              "ing": [
+                "40g fajita integral",
+                "75g tomate triturado natural",
+                "45g queso mozzarella para gratinar",
+                "60g jamón cocido",
+                "75g champiñón o seta",
+                "1g orégano"
+              ],
+              "rec": [
+                "Utilizar la fajita integral como base de la pizza.",
+                "Extender el tomate triturado, la mozzarella, el champiñón laminado y el jamón cocido.",
+                "Hornear a 180ºC durante 5 minutos. Emplatar y añadir orégano."
+              ]
+            },
+            {
+              "n": "Melocotón",
+              "ing": [
+                "175g melocotón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Sábado": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche + tostada con huevos revueltos y aguacate",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café",
+                "40g pan blanco",
+                "60g huevo de gallina",
+                "50g aguacate",
+                "3g aceite de oliva"
+              ],
+              "rec": [
+                "Pelar y lonchear el aguacate.",
+                "Batir el huevo y cuajar en sartén con el aceite removiendo.",
+                "Colocar el revuelto en el pan tostado y añadir las lonchas de aguacate."
+              ]
+            },
+            {
+              "n": "Kiwi",
+              "ing": [
+                "120g kiwi"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Plátano y kéfir",
+              "ing": [
+                "125g plátano",
+                "100g kéfir"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Merluza a la plancha con rúcula, boniato y calabacín",
+              "ing": [
+                "150g filete de merluza",
+                "150g calabacín",
+                "100g boniato",
+                "40g rúcula",
+                "50g cebolla o cebolleta",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Pelar y cortar en rodajas finas. Cocinar en sartén con un dedo de agua tapado 10 min.",
+                "Asar el filete de merluza salpimentado. Emplatar con la ensalada aliñada."
+              ]
+            },
+            {
+              "n": "Kiwi",
+              "ing": [
+                "120g kiwi"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Merienda 17:00",
+          "items": [
+            {
+              "n": "Uvas y anacardos",
+              "ing": [
+                "160g uva blanca",
+                "10g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            },
+            {
+              "n": "Melón",
+              "ing": [
+                "150g melón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Domingo": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tortitas de avena y plátano con manzana y canela",
+              "ing": [
+                "80g plátano",
+                "30g harina de avena",
+                "105g clara de huevo pasteurizada",
+                "90g manzana roja",
+                "3g aceite de oliva",
+                "1g vainilla",
+                "canela al gusto"
+              ],
+              "rec": [
+                "Aplastar el plátano. Agregar harina, clara y vainilla. Batir hasta crema uniforme.",
+                "Calentar sartén engrasada. Volcar y voltear para dorar por ambos lados.",
+                "Extender la manzana laminada y espolvorear con canela."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            },
+            {
+              "n": "Granada",
+              "ing": [
+                "280g granada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Fajita con tortilla, salmón y aguacate",
+              "ing": [
+                "40g fajita integral",
+                "65g huevo de gallina",
+                "60g salmón ahumado",
+                "100g aguacate"
+              ],
+              "rec": [
+                "Batir el huevo y cuajar en sartén a fuego medio, sin cuajar del todo colocar la fajita encima.",
+                "Poner el aguacate y el salmón en la mitad y doblar la fajita en media luna."
+              ]
+            },
+            {
+              "n": "Papaya",
+              "ing": [
+                "100g papaya"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pablo": {
+      "Lunes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada UHT",
+                "8g cacao en polvo desgrasado sin azúcar"
+              ]
+            },
+            {
+              "n": "Sándwich integral de jamón cocido, aguacate y rúcula",
+              "ing": [
+                "30g pan de molde integral",
+                "15g jamón cocido",
+                "25g aguacate",
+                "10g rúcula"
+              ],
+              "rec": [
+                "Pelar y lonchear el aguacate.",
+                "Montar el sándwich con las lonchas de aguacate, la rúcula y el jamón cocido."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Plátano y anacardos",
+              "ing": [
+                "160g plátano",
+                "10g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Yogur proteico y anacardos + tortitas",
+              "ing": [
+                "120g yogur proteico",
+                "10g anacardos",
+                "28g tortitas legumbres"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Ensalada de lentejas con maíz, queso fresco y pavo",
+              "ing": [
+                "180g lentejas cocidas",
+                "50g maíz dulce enlatado",
+                "70g pepino",
+                "90g tomate crudo",
+                "110g queso tipo Burgos 0% MG",
+                "40g pechuga de pavo fiambre",
+                "10g aceite de oliva"
+              ],
+              "rec": [
+                "Escurrir las lentejas bajo el chorro de agua fría.",
+                "Trocear el pepino y el tomate.",
+                "Incorporar a las lentejas las hortalizas, el maíz, el queso y el pavo a dados.",
+                "Mezclar y aliñar con aceite de oliva."
+              ]
+            },
+            {
+              "n": "Granada",
+              "ing": [
+                "280g granada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Chips de boniato al horno",
+              "ing": [
+                "100g boniato",
+                "3g aceite de oliva",
+                "1g pimienta negra"
+              ],
+              "rec": [
+                "Lavar el boniato y cortar en rodajas muy finas. Poner a remojo 10 min.",
+                "Precalentar el horno a 220ºC. Engrasar una bandeja y extender las rodajas.",
+                "Hornear 10 min, dar la vuelta y hornear 10 min más hasta que queden crujientes."
+              ]
+            },
+            {
+              "n": "Revuelto de jamón serrano con cebolla y espárragos",
+              "ing": [
+                "100g espárrago",
+                "60g jamón serrano",
+                "70g cebolla o cebolleta",
+                "120g huevo de gallina",
+                "10g aceite de oliva"
+              ],
+              "rec": [
+                "Pochar con el aceite la cebolla y los espárragos en trozos similares.",
+                "Cuando estén tiernos añadir el jamón picado.",
+                "Batir el huevo y añadir removiendo hasta que cuaje."
+              ]
+            },
+            {
+              "n": "Papaya",
+              "ing": [
+                "100g papaya"
+              ]
+            }
+          ]
+        }
+      ],
+      "Martes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Sándwich integral de pavo y queso de untar",
+              "ing": [
+                "60g pan de molde integral",
+                "30g queso de untar ligero",
+                "30g pechuga de pavo fiambre"
+              ],
+              "rec": [
+                "Untar el queso en una rebanada del pan de molde, añadir el pavo y montar el sándwich."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Mandarinas",
+              "ing": [
+                "180g mandarina"
+              ]
+            },
+            {
+              "n": "Chocolate negro",
+              "ing": [
+                "10g chocolate negro"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Tortitas de legumbres + plátano",
+              "ing": [
+                "28g tortitas legumbres",
+                "160g plátano"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Cuscús con pollo y judías verdes",
+              "ing": [
+                "125g cuscús para microondas",
+                "105g judías verdes en conserva",
+                "100g tiras de pechuga de pollo al natural"
+              ],
+              "rec": [
+                "Calentar el cuscús 1 minuto en el microondas.",
+                "Calentar las judías verdes y el pollo 1 minuto al microondas.",
+                "Mezclar el cuscús con las judías y el pollo. Servir."
+              ]
+            },
+            {
+              "n": "Ciruelas",
+              "ing": [
+                "150g ciruela"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Lenguado a la plancha sobre lecho de verduras",
+              "ing": [
+                "350g lenguado",
+                "100g calabacín",
+                "125g cebolla o cebolleta",
+                "150g pimiento rojo",
+                "10g aceite de oliva",
+                "5g eneldo seco"
+              ],
+              "rec": [
+                "Cortar en juliana fina el pimiento, el calabacín y la cebolla.",
+                "Saltear a fuego vivo las verduras con el aceite hasta que la cebolla dore.",
+                "Asar el lenguado a la plancha.",
+                "Emplatar las verduras en el fondo y el lenguado encima. Espolvorear con eneldo."
+              ]
+            },
+            {
+              "n": "Queso fresco",
+              "ing": [
+                "65g queso fresco"
+              ]
+            },
+            {
+              "n": "Melocotón",
+              "ing": [
+                "175g melocotón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Miércoles": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Sándwich integral de jamón cocido, aguacate y rúcula",
+              "ing": [
+                "30g pan de molde integral",
+                "15g jamón cocido",
+                "25g aguacate",
+                "10g rúcula"
+              ],
+              "rec": [
+                "Pelar y lonchear el aguacate. Montar el sándwich con aguacate, rúcula y jamón cocido."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Manzana y nueces",
+              "ing": [
+                "150g manzana roja",
+                "10g nuez pelada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Naranja y kéfir",
+              "ing": [
+                "130g naranja",
+                "100g kéfir"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Arroz basmati con atún y verduras",
+              "ing": [
+                "80g arroz basmati crudo",
+                "100g mezcla verduras mediterráneo al vapor",
+                "10g salsa de soja",
+                "100g atún al natural en conserva",
+                "10g aceite de oliva",
+                "2g pimienta negra",
+                "2g orégano"
+              ],
+              "rec": [
+                "Calentar el arroz para microondas 1 minuto.",
+                "Saltear las verduras con poco aceite, sal, pimienta y orégano.",
+                "Añadir el arroz, la soja y el atún a la sartén y mezclar."
+              ]
+            },
+            {
+              "n": "Kiwi",
+              "ing": [
+                "120g kiwi"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Dados de pollo con ensalada de rúcula, boniato y calabacín",
+              "ing": [
+                "180g pollo pechuga",
+                "175g calabacín",
+                "120g boniato",
+                "50g rúcula",
+                "70g cebolla o cebolleta",
+                "10g aceite de oliva"
+              ],
+              "rec": [
+                "Pelar boniato y calabacín, cortar en rodajas finas.",
+                "Colocar en sartén con un dedo de agua, cocinar tapado 10 min y destapado 5 min más.",
+                "Asar el pollo en dados gruesos en sartén ligeramente engrasada.",
+                "Emplatar la rúcula con cebolla en juliana, calabacín y boniato. Aliñar y colocar el pollo al lado."
+              ]
+            },
+            {
+              "n": "Melón",
+              "ing": [
+                "150g melón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Jueves": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Sándwich integral de pavo y queso de untar",
+              "ing": [
+                "60g pan de molde integral",
+                "30g queso de untar ligero",
+                "30g pechuga de pavo fiambre"
+              ],
+              "rec": [
+                "Untar el queso en una rebanada del pan de molde, añadir el pavo y montar el sándwich."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Mandarinas",
+              "ing": [
+                "180g mandarina"
+              ]
+            },
+            {
+              "n": "Chocolate negro",
+              "ing": [
+                "10g chocolate negro"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Yogur proteico y anacardos",
+              "ing": [
+                "120g yogur proteico",
+                "10g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Patatas al microondas gratinadas con mozzarella",
+              "ing": [
+                "240g patata",
+                "30g queso mozzarella para gratinar",
+                "2g orégano"
+              ],
+              "rec": [
+                "Lavar las patatas y pinchar con un tenedor.",
+                "Asar en el microondas a máxima potencia 10-12 minutos.",
+                "Pelar, partir por la mitad, espolvorear orégano y mozzarella.",
+                "Gratinar en el microondas 2 minutos."
+              ]
+            },
+            {
+              "n": "Champiñón o seta + tiras de pollo asada",
+              "ing": [
+                "75g champiñón o seta",
+                "70g tiras de pollo asada comercial"
+              ]
+            },
+            {
+              "n": "Granada",
+              "ing": [
+                "280g granada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Merluza a la plancha con salteado de champiñones y ajos",
+              "ing": [
+                "250g merluza",
+                "125g champiñón o seta",
+                "40g ajo",
+                "8g aceite de oliva",
+                "3g pimienta negra"
+              ],
+              "rec": [
+                "Asar la merluza a la plancha.",
+                "Saltear los champiñones en cuartos con los ajos tiernos pelados y troceados.",
+                "Emplatar la merluza con el salteado."
+              ]
+            },
+            {
+              "n": "Queso fresco",
+              "ing": [
+                "65g queso fresco"
+              ]
+            },
+            {
+              "n": "Papaya",
+              "ing": [
+                "100g papaya"
+              ]
+            }
+          ]
+        }
+      ],
+      "Viernes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Sándwich integral de jamón serrano y huevo a la plancha",
+              "ing": [
+                "60g pan de molde integral",
+                "60g huevo de gallina",
+                "5g aceite de oliva",
+                "30g jamón serrano"
+              ],
+              "rec": [
+                "Hacer el huevo a la plancha en sartén caliente con el aceite.",
+                "Montar el sándwich colocando el huevo y encima el jamón serrano."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Plátano y anacardos",
+              "ing": [
+                "160g plátano",
+                "10g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Tortitas de legumbres + plátano",
+              "ing": [
+                "28g tortitas legumbres",
+                "160g plátano"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Bol de arroz basmati y jamón",
+              "ing": [
+                "125g arroz basmati para microondas",
+                "65g mozzarella fresca light",
+                "40g jamón serrano",
+                "50g tomate crudo",
+                "50g aceituna negra",
+                "50g aguacate",
+                "10g zumo de limón",
+                "5g aceite de oliva"
+              ],
+              "rec": [
+                "Calentar el arroz 1 minuto en el microondas.",
+                "Cortar todos los ingredientes en taquitos.",
+                "Mezclar y aliñar con aceite, especias al gusto y zumo de limón."
+              ]
+            },
+            {
+              "n": "Ciruelas",
+              "ing": [
+                "150g ciruela"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Pizza Fit de jamón cocido y champiñón",
+              "ing": [
+                "80g fajita integral",
+                "100g tomate triturado natural",
+                "60g queso mozzarella para gratinar",
+                "80g jamón cocido",
+                "100g champiñón o seta",
+                "1g orégano"
+              ],
+              "rec": [
+                "Utilizar la fajita integral como base de la pizza.",
+                "Extender el tomate triturado, la mozzarella, el champiñón laminado y el jamón cocido.",
+                "Hornear a 180ºC durante 5 minutos. Emplatar y añadir orégano."
+              ]
+            },
+            {
+              "n": "Melocotón",
+              "ing": [
+                "175g melocotón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Sábado": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Naranja y canela",
+              "ing": [
+                "200g naranja",
+                "2g canela"
+              ],
+              "rec": [
+                "Pelar la naranja. Cortar en rodajas. Añadir la canela al gusto."
+              ]
+            },
+            {
+              "n": "Tostada de pan de barra con aguacate y queso fresco",
+              "ing": [
+                "70g pan blanco",
+                "50g aguacate",
+                "70g queso tipo Burgos 0% MG"
+              ],
+              "rec": [
+                "Pelar y lonchear el aguacate. Montar la tostada con aguacate y queso fresco."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Naranja y kéfir",
+              "ing": [
+                "130g naranja",
+                "100g kéfir"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Merluza a la plancha con rúcula, boniato y calabacín",
+              "ing": [
+                "180g filete de merluza",
+                "175g calabacín",
+                "120g boniato",
+                "50g rúcula",
+                "70g cebolla o cebolleta",
+                "10g aceite de oliva"
+              ]
+            },
+            {
+              "n": "Kiwi",
+              "ing": [
+                "120g kiwi"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            },
+            {
+              "n": "Melón",
+              "ing": [
+                "150g melón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Domingo": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Tortitas de avena y plátano con manzana y canela",
+              "ing": [
+                "100g plátano",
+                "30g harina de avena",
+                "105g clara de huevo pasteurizada",
+                "120g manzana roja",
+                "3g aceite de oliva",
+                "1g vainilla",
+                "1g canela"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Yogur proteico y anacardos",
+              "ing": [
+                "120g yogur proteico",
+                "10g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            },
+            {
+              "n": "Granada",
+              "ing": [
+                "280g granada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Fajita con tortilla, salmón y aguacate",
+              "ing": [
+                "50g fajita integral",
+                "65g huevo de gallina",
+                "60g salmón ahumado",
+                "100g aguacate"
+              ],
+              "rec": [
+                "Batir el huevo y cuajar en sartén a fuego medio, sin cuajar del todo colocar la fajita encima.",
+                "Poner el aguacate y el salmón en la mitad y doblar la fajita en media luna."
+              ]
+            },
+            {
+              "n": "Papaya",
+              "ing": [
+                "100g papaya"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "conjunto": {
+    "Lunes": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Ensalada de lentejas con maíz, queso fresco y pavo",
+            "ing": [
+              {
+                "n": "Lentejas cocidas",
+                "a": 140,
+                "p": 180
+              },
+              {
+                "n": "Maíz dulce enlatado",
+                "a": 50,
+                "p": 50
+              },
+              {
+                "n": "Pepino",
+                "a": 50,
+                "p": 70
+              },
+              {
+                "n": "Tomate crudo",
+                "a": 75,
+                "p": 90
+              },
+              {
+                "n": "Queso tipo Burgos 0% MG",
+                "a": 70,
+                "p": 110
+              },
+              {
+                "n": "Pechuga de pavo fiambre",
+                "a": 35,
+                "p": 40
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              }
+            ],
+            "rec": [
+              "Escurrir las lentejas bajo el chorro de agua fría.",
+              "Trocear el pepino y el tomate.",
+              "Incorporar a las lentejas las hortalizas, el maíz, el queso y el pavo a dados.",
+              "Mezclar y aliñar con aceite de oliva."
+            ]
+          },
+          {
+            "n": "Granada",
+            "ing": [
+              {
+                "n": "Granada",
+                "a": 280,
+                "p": 280
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Chips de boniato al horno",
+            "ing": [
+              {
+                "n": "Boniato",
+                "a": 100,
+                "p": 100
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 3,
+                "p": 3
+              },
+              {
+                "n": "Pimienta negra",
+                "a": 1,
+                "p": 1
+              }
+            ],
+            "rec": [
+              "Lavar el boniato y cortar en rodajas muy finas. Poner a remojo 10 min.",
+              "Precalentar el horno a 220ºC. Engrasar una bandeja y extender las rodajas.",
+              "Hornear 10 min, dar la vuelta y hornear 10 min más hasta que queden crujientes."
+            ]
+          },
+          {
+            "n": "Revuelto de jamón serrano con cebolla y espárragos",
+            "ing": [
+              {
+                "n": "Espárrago",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Jamón serrano",
+                "a": 45,
+                "p": 60
+              },
+              {
+                "n": "Cebolla o cebolleta",
+                "a": 50,
+                "p": 70
+              },
+              {
+                "n": "Huevo de gallina",
+                "a": 60,
+                "p": 120
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              }
+            ],
+            "rec": [
+              "Pochar con el aceite la cebolla y los espárragos en trozos similares.",
+              "Cuando estén tiernos añadir el jamón picado.",
+              "Batir el huevo y añadir removiendo hasta que cuaje."
+            ]
+          },
+          {
+            "n": "Papaya",
+            "ing": [
+              {
+                "n": "Papaya",
+                "a": 100,
+                "p": 100
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Martes": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Cuscús con pollo y judías verdes",
+            "ing": [
+              {
+                "n": "Cuscús para microondas",
+                "a": 100,
+                "p": 125
+              },
+              {
+                "n": "Judías verdes en conserva",
+                "a": 70,
+                "p": 105
+              },
+              {
+                "n": "Tiras de pechuga de pollo al natural",
+                "a": 70,
+                "p": 100
+              }
+            ],
+            "rec": [
+              "Calentar el cuscús 1 minuto en el microondas.",
+              "Calentar las judías verdes y el pollo 1 minuto al microondas.",
+              "Mezclar el cuscús con las judías y el pollo. Servir."
+            ]
+          },
+          {
+            "n": "Ciruelas",
+            "ing": [
+              {
+                "n": "Ciruela",
+                "a": 150,
+                "p": 150
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Lenguado a la plancha sobre lecho de verduras",
+            "ing": [
+              {
+                "n": "Lenguado",
+                "a": 275,
+                "p": 350
+              },
+              {
+                "n": "Calabacín",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Cebolla o cebolleta",
+                "a": 100,
+                "p": 125
+              },
+              {
+                "n": "Pimiento rojo",
+                "a": 120,
+                "p": 150
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              },
+              {
+                "n": "Eneldo seco",
+                "a": 3,
+                "p": 5
+              }
+            ],
+            "rec": [
+              "Cortar en juliana fina el pimiento, el calabacín y la cebolla.",
+              "Saltear a fuego vivo las verduras con el aceite hasta que la cebolla dore.",
+              "Asar el lenguado a la plancha.",
+              "Emplatar las verduras en el fondo y el lenguado encima. Espolvorear con eneldo."
+            ]
+          },
+          {
+            "n": "Queso fresco",
+            "ing": [
+              {
+                "n": "Queso fresco",
+                "a": 65,
+                "p": 65
+              }
+            ]
+          },
+          {
+            "n": "Melocotón",
+            "ing": [
+              {
+                "n": "Melocotón",
+                "a": 175,
+                "p": 175
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Miércoles": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Arroz basmati con atún y verduras",
+            "ing": [
+              {
+                "n": "Arroz basmati crudo",
+                "a": 70,
+                "p": 80
+              },
+              {
+                "n": "Mezcla de verduras mediterráneo al vapor",
+                "a": 100,
+                "p": 100
+              },
+              {
+                "n": "Atún al natural en conserva",
+                "a": 80,
+                "p": 100
+              },
+              {
+                "n": "Queso fresco desnatado",
+                "a": 80,
+                "p": null
+              },
+              {
+                "n": "Salsa de soja",
+                "a": null,
+                "p": 10
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 10
+              },
+              {
+                "n": "Pimienta negra",
+                "a": 2,
+                "p": 2
+              },
+              {
+                "n": "Orégano",
+                "a": 2,
+                "p": 2
+              }
+            ],
+            "rec": [
+              "Calentar el arroz para microondas 1 minuto.",
+              "Saltear las verduras con poco aceite, sal, pimienta y orégano.",
+              "Añadir el arroz y el atún (y el queso fresco para Alba) a la sartén y mezclar."
+            ]
+          },
+          {
+            "n": "Kiwi",
+            "ing": [
+              {
+                "n": "Kiwi",
+                "a": 120,
+                "p": 120
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Dados de pollo con rúcula, boniato y calabacín",
+            "ing": [
+              {
+                "n": "Pollo pechuga solomillo",
+                "a": 150,
+                "p": 180
+              },
+              {
+                "n": "Calabacín",
+                "a": 150,
+                "p": 175
+              },
+              {
+                "n": "Boniato",
+                "a": 100,
+                "p": 120
+              },
+              {
+                "n": "Rúcula",
+                "a": 40,
+                "p": 50
+              },
+              {
+                "n": "Cebolla o cebolleta",
+                "a": 50,
+                "p": 70
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              }
+            ],
+            "rec": [
+              "Pelar boniato y calabacín, cortar en rodajas finas.",
+              "Colocar en sartén con un dedo de agua, cocinar tapado 10 min y destapado 5 min más.",
+              "Asar el pollo en dados gruesos en sartén ligeramente engrasada.",
+              "Emplatar la rúcula con cebolla en juliana, calabacín y boniato. Aliñar y colocar el pollo al lado."
+            ]
+          },
+          {
+            "n": "Melón",
+            "ing": [
+              {
+                "n": "Melón",
+                "a": 150,
+                "p": 150
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Jueves": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Patatas al microondas gratinadas con mozzarella",
+            "ing": [
+              {
+                "n": "Patata",
+                "a": 170,
+                "p": 240
+              },
+              {
+                "n": "Queso mozzarella para gratinar",
+                "a": 20,
+                "p": 30
+              },
+              {
+                "n": "Orégano",
+                "a": 1,
+                "p": 2
+              }
+            ],
+            "rec": [
+              "Lavar las patatas y pinchar con un tenedor.",
+              "Asar en el microondas a máxima potencia 10-12 minutos.",
+              "Pelar, partir por la mitad, espolvorear orégano y mozzarella.",
+              "Gratinar en el microondas 2 minutos."
+            ]
+          },
+          {
+            "n": "Champiñón o seta + tiras de pollo asada",
+            "ing": [
+              {
+                "n": "Champiñón o seta",
+                "a": 75,
+                "p": 75
+              },
+              {
+                "n": "Tiras de pollo asada comercial",
+                "a": 70,
+                "p": 70
+              }
+            ]
+          },
+          {
+            "n": "Granada",
+            "ing": [
+              {
+                "n": "Granada",
+                "a": 280,
+                "p": 280
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Merluza a la plancha con salteado de champiñones y ajos",
+            "ing": [
+              {
+                "n": "Merluza",
+                "a": 200,
+                "p": 250
+              },
+              {
+                "n": "Champiñón o seta",
+                "a": 100,
+                "p": 125
+              },
+              {
+                "n": "Ajo",
+                "a": 30,
+                "p": 40
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 8
+              },
+              {
+                "n": "Perejil",
+                "a": 3,
+                "p": null
+              },
+              {
+                "n": "Pimienta negra",
+                "a": null,
+                "p": 3
+              }
+            ],
+            "rec": [
+              "Asar la merluza a la plancha.",
+              "Saltear los champiñones en cuartos con los ajos tiernos pelados y troceados.",
+              "Emplatar la merluza con el salteado."
+            ]
+          },
+          {
+            "n": "Queso fresco",
+            "ing": [
+              {
+                "n": "Queso fresco",
+                "a": 65,
+                "p": 65
+              }
+            ]
+          },
+          {
+            "n": "Papaya",
+            "ing": [
+              {
+                "n": "Papaya",
+                "a": 100,
+                "p": 100
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Viernes": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Bol de arroz basmati y jamón",
+            "ing": [
+              {
+                "n": "Arroz basmati para microondas",
+                "a": 125,
+                "p": 125
+              },
+              {
+                "n": "Mozzarella fresca light",
+                "a": 65,
+                "p": 65
+              },
+              {
+                "n": "Jamón serrano",
+                "a": 40,
+                "p": 40
+              },
+              {
+                "n": "Tomate crudo",
+                "a": 50,
+                "p": 50
+              },
+              {
+                "n": "Aceituna negra",
+                "a": 50,
+                "p": 50
+              },
+              {
+                "n": "Aguacate",
+                "a": 50,
+                "p": 50
+              },
+              {
+                "n": "Zumo de limón",
+                "a": 10,
+                "p": 10
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 5
+              }
+            ],
+            "rec": [
+              "Calentar el arroz 1 minuto en el microondas.",
+              "Cortar todos los ingredientes en taquitos.",
+              "Mezclar y aliñar con aceite, especias al gusto y zumo de limón."
+            ]
+          },
+          {
+            "n": "Ciruelas",
+            "ing": [
+              {
+                "n": "Ciruela",
+                "a": 150,
+                "p": 150
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Pizza Fit de jamón cocido y champiñón",
+            "ing": [
+              {
+                "n": "Fajita integral",
+                "a": 40,
+                "p": 80
+              },
+              {
+                "n": "Tomate triturado natural",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Queso mozzarella para gratinar",
+                "a": 45,
+                "p": 60
+              },
+              {
+                "n": "Jamón cocido",
+                "a": 60,
+                "p": 80
+              },
+              {
+                "n": "Champiñón o seta",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Orégano",
+                "a": 1,
+                "p": 1
+              }
+            ],
+            "rec": [
+              "Utilizar la fajita integral como base de la pizza.",
+              "Extender el tomate triturado, la mozzarella, el champiñón laminado y el jamón cocido.",
+              "Hornear a 180ºC durante 5 minutos. Emplatar y añadir orégano."
+            ]
+          },
+          {
+            "n": "Melocotón",
+            "ing": [
+              {
+                "n": "Melocotón",
+                "a": 175,
+                "p": 175
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Sábado": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Merluza a la plancha con rúcula, boniato y calabacín",
+            "ing": [
+              {
+                "n": "Filete de merluza",
+                "a": 150,
+                "p": 180
+              },
+              {
+                "n": "Calabacín",
+                "a": 150,
+                "p": 175
+              },
+              {
+                "n": "Boniato",
+                "a": 100,
+                "p": 120
+              },
+              {
+                "n": "Rúcula",
+                "a": 40,
+                "p": 50
+              },
+              {
+                "n": "Cebolla o cebolleta",
+                "a": 50,
+                "p": 70
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              },
+              {
+                "n": "Pimienta negra",
+                "a": 1,
+                "p": 1
+              }
+            ],
+            "rec": [
+              "Pelar boniato y calabacín, cortar en rodajas finas.",
+              "Colocar en sartén con un dedo de agua, cocinar tapado 10 min y destapado 5 min más.",
+              "Asar el filete de merluza salpimentado.",
+              "Emplatar la rúcula con cebolla en juliana, calabacín y boniato. Aliñar con aceite y colocar la merluza al lado."
+            ]
+          },
+          {
+            "n": "Kiwi",
+            "ing": [
+              {
+                "n": "Kiwi",
+                "a": 120,
+                "p": 120
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Comida disfrutona 🎉",
+            "ing": [],
+            "rec": []
+          },
+          {
+            "n": "Melón",
+            "ing": [
+              {
+                "n": "Melón",
+                "a": 150,
+                "p": 150
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Domingo": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Comida disfrutona 🎉",
+            "ing": [],
+            "rec": []
+          },
+          {
+            "n": "Granada",
+            "ing": [
+              {
+                "n": "Granada",
+                "a": 280,
+                "p": 280
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Fajita con tortilla, salmón y aguacate",
+            "ing": [
+              {
+                "n": "Fajita integral",
+                "a": 40,
+                "p": 50
+              },
+              {
+                "n": "Huevo de gallina",
+                "a": 65,
+                "p": 65
+              },
+              {
+                "n": "Salmón ahumado",
+                "a": 60,
+                "p": 60
+              },
+              {
+                "n": "Aguacate",
+                "a": 100,
+                "p": 100
+              }
+            ],
+            "rec": [
+              "Batir el huevo y cuajar en sartén a fuego medio, sin cuajar del todo colocar la fajita encima.",
+              "Poner el aguacate y el salmón en la mitad y doblar la fajita en media luna."
+            ]
+          },
+          {
+            "n": "Papaya",
+            "ing": [
+              {
+                "n": "Papaya",
+                "a": 100,
+                "p": 100
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "compra": {
+    "alba": {
+      "Leche y derivados": [
+        [
+          "Leche semidesnatada UHT",
+          "2175g"
+        ],
+        [
+          "Yogur natural",
+          "625g"
+        ],
+        [
+          "Queso tipo Burgos 0% MG",
+          "560g"
+        ],
+        [
+          "Queso fresco",
+          "130g"
+        ],
+        [
+          "Kéfir",
+          "200g"
+        ],
+        [
+          "Queso fresco desnatado",
+          "80g"
+        ],
+        [
+          "Queso mozzarella para gratinar",
+          "65g"
+        ],
+        [
+          "Mozzarella Fresca Light",
+          "65g"
+        ]
+      ],
+      "Cereales y derivados": [
+        [
+          "Cereales muesli",
+          "100g"
+        ],
+        [
+          "Pan blanco",
+          "390g"
+        ],
+        [
+          "Maíz dulce enlatado",
+          "50g"
+        ],
+        [
+          "Tortitas de legumbres",
+          "56g"
+        ],
+        [
+          "Cuscús para microondas",
+          "100g"
+        ],
+        [
+          "Arroz basmati crudo",
+          "70g"
+        ],
+        [
+          "Arroz basmati para microondas",
+          "125g"
+        ],
+        [
+          "Fajita integral",
+          "90g"
+        ],
+        [
+          "Harina de avena",
+          "30g"
+        ]
+      ],
+      "Frutas": [
+        [
+          "Plátano, banano",
+          "510g"
+        ],
+        [
+          "Naranja",
+          "540g"
+        ],
+        [
+          "Granada",
+          "840g"
+        ],
+        [
+          "Papaya",
+          "300g"
+        ],
+        [
+          "Manzana roja",
+          "300g"
+        ],
+        [
+          "Ciruela",
+          "300g"
+        ],
+        [
+          "Melocotón",
+          "350g"
+        ],
+        [
+          "Kiwi",
+          "360g"
+        ],
+        [
+          "Uva blanca",
+          "320g"
+        ],
+        [
+          "Melón",
+          "300g"
+        ],
+        [
+          "Arándanos",
+          "25g"
+        ],
+        [
+          "Aguacate",
+          "200g"
+        ],
+        [
+          "Zumo de limón",
+          "10g"
+        ]
+      ],
+      "Hortalizas y verduras": [
+        [
+          "Tomate crudo",
+          "800g"
+        ],
+        [
+          "Pepino",
+          "250g"
+        ],
+        [
+          "Boniato",
+          "300g"
+        ],
+        [
+          "Espárrago",
+          "75g"
+        ],
+        [
+          "Cebolla o cebolleta",
+          "250g"
+        ],
+        [
+          "Judías verdes en conserva",
+          "70g"
+        ],
+        [
+          "Zanahoria",
+          "160g"
+        ],
+        [
+          "Calabacín",
+          "375g"
+        ],
+        [
+          "Pimiento rojo",
+          "120g"
+        ],
+        [
+          "Verduras mediterráneo al vapor",
+          "100g"
+        ],
+        [
+          "Rúcula",
+          "80g"
+        ],
+        [
+          "Champiñón o seta",
+          "250g"
+        ],
+        [
+          "Ajo",
+          "30g"
+        ],
+        [
+          "Perejil",
+          "3g"
+        ],
+        [
+          "Aceituna negra",
+          "50g"
+        ],
+        [
+          "Tomate triturado natural",
+          "75g"
+        ]
+      ],
+      "Carnes, pescados y huevos": [
+        [
+          "Jamón serrano",
+          "145g"
+        ],
+        [
+          "Pechuga de pavo fiambre",
+          "95g"
+        ],
+        [
+          "Huevo de gallina",
+          "185g"
+        ],
+        [
+          "Tiras de pechuga de pollo al natural",
+          "70g"
+        ],
+        [
+          "Lenguado",
+          "275g"
+        ],
+        [
+          "Atún al natural en conserva",
+          "80g"
+        ],
+        [
+          "Pollo pechuga solomillo",
+          "150g"
+        ],
+        [
+          "Tiras de pollo asada",
+          "70g"
+        ],
+        [
+          "Merluza",
+          "200g"
+        ],
+        [
+          "Filete de merluza",
+          "150g"
+        ],
+        [
+          "Clara de huevo pasteurizada",
+          "105g"
+        ],
+        [
+          "Salmón ahumado",
+          "60g"
+        ],
+        [
+          "Jamón cocido",
+          "60g"
+        ]
+      ],
+      "Frutos secos y legumbres": [
+        [
+          "Anacardo sin cáscara",
+          "95g"
+        ],
+        [
+          "Nuez pelada",
+          "30g"
+        ],
+        [
+          "Hummus",
+          "100g"
+        ],
+        [
+          "Lentejas cocidas",
+          "140g"
+        ]
+      ],
+      "Aceites y condimentos": [
+        [
+          "Aceite de oliva",
+          "64g"
+        ],
+        [
+          "Café",
+          "600g"
+        ],
+        [
+          "Pimienta negra",
+          "3.5g"
+        ],
+        [
+          "Canela",
+          "21g"
+        ],
+        [
+          "Eneldo seco",
+          "3g"
+        ],
+        [
+          "Orégano",
+          "4g"
+        ],
+        [
+          "Vainilla",
+          "1g"
+        ]
+      ]
+    },
+    "pablo": {
+      "Leche y derivados": [
+        [
+          "Leche semidesnatada UHT",
+          "1125g"
+        ],
+        [
+          "Yogur proteico",
+          "360g"
+        ],
+        [
+          "Queso tipo Burgos 0% MG",
+          "180g"
+        ],
+        [
+          "Queso de untar ligero",
+          "60g"
+        ],
+        [
+          "Queso fresco",
+          "130g"
+        ],
+        [
+          "Kéfir",
+          "200g"
+        ],
+        [
+          "Queso mozzarella para gratinar",
+          "90g"
+        ],
+        [
+          "Mozzarella Fresca Light",
+          "65g"
+        ]
+      ],
+      "Cereales y derivados": [
+        [
+          "Cacao en polvo desgrasado sin azúcar",
+          "40g"
+        ],
+        [
+          "Pan de molde integral",
+          "240g"
+        ],
+        [
+          "Maíz dulce enlatado",
+          "50g"
+        ],
+        [
+          "Chocolate negro",
+          "20g"
+        ],
+        [
+          "Tortitas de legumbres",
+          "56g"
+        ],
+        [
+          "Cuscús para microondas",
+          "125g"
+        ],
+        [
+          "Arroz basmati crudo",
+          "80g"
+        ],
+        [
+          "Arroz basmati para microondas",
+          "125g"
+        ],
+        [
+          "Fajita integral",
+          "130g"
+        ],
+        [
+          "Pan blanco",
+          "70g"
+        ],
+        [
+          "Harina de avena",
+          "30g"
+        ]
+      ],
+      "Frutas": [
+        [
+          "Aguacate",
+          "250g"
+        ],
+        [
+          "Plátano, banano",
+          "740g"
+        ],
+        [
+          "Granada",
+          "840g"
+        ],
+        [
+          "Papaya",
+          "300g"
+        ],
+        [
+          "Mandarina",
+          "360g"
+        ],
+        [
+          "Ciruela",
+          "300g"
+        ],
+        [
+          "Melocotón",
+          "350g"
+        ],
+        [
+          "Manzana roja",
+          "270g"
+        ],
+        [
+          "Naranja",
+          "460g"
+        ],
+        [
+          "Kiwi",
+          "240g"
+        ],
+        [
+          "Melón",
+          "300g"
+        ],
+        [
+          "Zumo de limón",
+          "10g"
+        ]
+      ],
+      "Hortalizas y verduras": [
+        [
+          "Rúcula",
+          "120g"
+        ],
+        [
+          "Pepino",
+          "70g"
+        ],
+        [
+          "Tomate crudo",
+          "140g"
+        ],
+        [
+          "Boniato",
+          "340g"
+        ],
+        [
+          "Espárrago",
+          "100g"
+        ],
+        [
+          "Cebolla o cebolleta",
+          "335g"
+        ],
+        [
+          "Judías verdes en conserva",
+          "105g"
+        ],
+        [
+          "Calabacín",
+          "450g"
+        ],
+        [
+          "Pimiento rojo",
+          "150g"
+        ],
+        [
+          "Verduras mediterráneo al vapor",
+          "100g"
+        ],
+        [
+          "Champiñón o seta",
+          "300g"
+        ],
+        [
+          "Ajo",
+          "40g"
+        ],
+        [
+          "Aceituna negra",
+          "50g"
+        ],
+        [
+          "Tomate triturado natural",
+          "100g"
+        ]
+      ],
+      "Carnes, pescados y huevos": [
+        [
+          "Jamón cocido",
+          "110g"
+        ],
+        [
+          "Pechuga de pavo fiambre",
+          "100g"
+        ],
+        [
+          "Jamón serrano",
+          "130g"
+        ],
+        [
+          "Huevo de gallina",
+          "245g"
+        ],
+        [
+          "Tiras de pollo al natural",
+          "100g"
+        ],
+        [
+          "Lenguado",
+          "350g"
+        ],
+        [
+          "Atún al natural en conserva",
+          "100g"
+        ],
+        [
+          "Pollo pechuga solomillo",
+          "180g"
+        ],
+        [
+          "Tiras de pollo asada",
+          "70g"
+        ],
+        [
+          "Merluza",
+          "250g"
+        ],
+        [
+          "Filete de merluza",
+          "180g"
+        ],
+        [
+          "Clara de huevo pasteurizada",
+          "105g"
+        ],
+        [
+          "Salmón ahumado",
+          "60g"
+        ]
+      ],
+      "Frutos secos y legumbres": [
+        [
+          "Anacardo sin cáscara",
+          "50g"
+        ],
+        [
+          "Nuez pelada",
+          "10g"
+        ],
+        [
+          "Lentejas cocidas",
+          "180g"
+        ]
+      ],
+      "Aceites y condimentos": [
+        [
+          "Aceite de oliva",
+          "84g"
+        ],
+        [
+          "Pimienta negra",
+          "6.5g"
+        ],
+        [
+          "Eneldo seco",
+          "5g"
+        ],
+        [
+          "Orégano",
+          "3g"
+        ],
+        [
+          "Canela",
+          "3g"
+        ],
+        [
+          "Vainilla",
+          "1g"
+        ],
+        [
+          "Salsa de soja",
+          "10g"
+        ]
+      ]
+    }
+  }
+}

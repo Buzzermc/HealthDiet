@@ -1,1 +1,1 @@
-# HealthDiet
+# dietas-app

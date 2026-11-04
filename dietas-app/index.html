@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dietas Pablo & Alba</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=DM+Serif+Display&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#f7f6f3;--card:#fff;--header:#2e2d2a;
+  --text:#1a1a18;--text2:#666;--text3:#bbb;
+  --border:rgba(0,0,0,0.07);--border2:rgba(0,0,0,0.1);--border-dash:rgba(0,0,0,0.08);
+  --ing-bg:#e6f4ed;--ing-color:#1e6b42;--ing-pill:#f0faf4;
+  --rec-bg:#fff3e0;--rec-color:#a05a00;--rec-dot:#e8a020;
+  --sep-bg:#fafaf8;--chip-bg:#f5f4f1;
+  --green:#2d7a5a;--blue:#1e5fa0;--accent:#e8c547;
+}
+@media(prefers-color-scheme:dark){:root{
+  --bg:#1a1a18;--card:#252523;--header:#111110;
+  --text:#f0ede8;--text2:#a0a09a;--text3:#555;
+  --border:rgba(255,255,255,0.08);--border2:rgba(255,255,255,0.12);--border-dash:rgba(255,255,255,0.08);
+  --ing-bg:#0a3d2a;--ing-color:#5dcaa5;--ing-pill:#0f2e20;
+  --rec-bg:#3a2a0a;--rec-color:#ef9f27;--rec-dot:#c47d10;
+  --sep-bg:#1e1e1c;--chip-bg:#2a2a28;
+  --green:#3d9e72;--blue:#378add;
+}}
+*{box-sizing:border-box;margin:0;padding:0;}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--text);font-size:15px;min-height:100vh;}
+.app-header{background:var(--header);padding:16px;position:sticky;top:0;z-index:100;}
+.app-header h1{font-family:'DM Serif Display',serif;font-size:20px;color:#fff;letter-spacing:-0.3px;}
+.app-header p{font-size:11px;color:rgba(255,255,255,0.4);margin-top:2px;text-transform:uppercase;letter-spacing:0.3px;}
+.nav-tabs{display:flex;background:var(--header);border-bottom:0.5px solid rgba(255,255,255,0.1);position:sticky;top:57px;z-index:100;}
+.nav-tab{flex:1;padding:11px 4px;font-size:12px;color:rgba(255,255,255,0.55);border:none;background:none;cursor:pointer;border-bottom:2px solid transparent;white-space:nowrap;font-family:'DM Sans',sans-serif;}
+.nav-tab.active{color:#fff;border-bottom-color:var(--accent);font-weight:500;}
+.content{max-width:680px;margin:0 auto;padding:16px;}
+.section{display:none;}.section.active{display:block;}
+.person-row{display:flex;gap:8px;margin-bottom:14px;}
+.chip{padding:8px 18px;border-radius:100px;font-size:13px;font-weight:500;border:0.5px solid var(--border2);background:var(--card);color:var(--text2);cursor:pointer;font-family:'DM Sans',sans-serif;}
+.chip.ag{background:var(--green);color:#fff;border-color:var(--green);}
+.chip.ab{background:var(--blue);color:#fff;border-color:var(--blue);}
+.plan-row{display:flex;gap:6px;margin-bottom:16px;overflow-x:auto;padding-bottom:2px;}
+.plan-chip{padding:6px 14px;border-radius:100px;font-size:12px;border:0.5px solid var(--border2);background:var(--card);color:var(--text2);white-space:nowrap;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.plan-chip.active{background:var(--text);color:var(--bg);border-color:var(--text);}
+.day-row{display:flex;gap:6px;margin-bottom:20px;}
+.day-pill{width:40px;height:40px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:500;color:var(--text3);background:var(--card);border:0.5px solid var(--border2);flex-shrink:0;cursor:pointer;font-family:'DM Sans',sans-serif;}
+.day-pill.active{background:var(--text);color:var(--bg);border-color:var(--text);}
+.sec-hdr{font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);margin-bottom:12px;}
+.meal-card{background:var(--card);border-radius:16px;margin-bottom:10px;overflow:hidden;border:0.5px solid var(--border);}
+.meal-card-hdr{padding:14px 16px;display:flex;justify-content:space-between;align-items:center;cursor:pointer;user-select:none;}
+.meal-time{font-size:10px;color:var(--text3);text-transform:uppercase;letter-spacing:0.06em;}
+.meal-name{font-family:'DM Serif Display',serif;font-size:17px;color:var(--text);margin-top:2px;letter-spacing:-0.2px;}
+.meal-name.open{font-weight:700;}
+.meal-count{font-family:'DM Sans',sans-serif;font-size:11px;font-weight:500;color:var(--text3);background:var(--chip-bg);padding:2px 7px;border-radius:10px;vertical-align:middle;margin-left:4px;}
+.meal-toggle{width:28px;height:28px;border-radius:50%;background:var(--chip-bg);display:flex;align-items:center;justify-content:center;font-size:11px;color:var(--text2);transition:transform 0.2s;flex-shrink:0;}
+.meal-toggle.open{transform:rotate(180deg);}
+.meal-card-body{max-height:0;overflow:hidden;transition:max-height 0.28s ease;}
+.meal-card-body.open{max-height:5000px;}
+.meal-card-inner{border-top:0.5px solid var(--border);}
+.dish{padding:14px 16px;}
+.dish-name{font-size:13px;font-weight:500;color:var(--text);margin-bottom:8px;padding:6px 10px;background:var(--sep-bg);border-radius:6px;border-left:3px solid var(--rec-dot);}
+.dish-divider{height:0.5px;background:var(--border);margin:0 16px;}
+.block-label{font-size:10px;font-weight:500;letter-spacing:0.08em;text-transform:uppercase;padding:3px 9px;border-radius:6px;margin-bottom:7px;display:inline-block;}
+.label-ing{background:var(--ing-bg);color:var(--ing-color);}
+.label-rec{background:var(--rec-bg);color:var(--rec-color);}
+.block-ing{margin-bottom:10px;}
+.ing-row{display:flex;justify-content:space-between;align-items:center;font-size:13px;color:var(--text2);padding:4px 0;border-bottom:0.5px solid var(--border);}
+.ing-row:last-of-type{border:none;}
+.ing-qty{color:var(--ing-color);font-weight:500;font-size:12px;background:var(--ing-pill);padding:2px 8px;border-radius:20px;white-space:nowrap;margin-left:8px;}
+.qty-total{font-weight:600;color:var(--text);font-size:12px;}
+.qty-split{font-size:11px;color:var(--text2);margin-left:4px;}
+.qty-a{color:var(--ing-color);}.qty-p{color:var(--blue);}
+.solo-badge{font-size:10px;padding:1px 6px;border-radius:10px;font-weight:500;}
+.solo-a{background:var(--ing-bg);color:var(--ing-color);}
+.solo-p{background:#e6f1fb;color:var(--blue);}
+.steps{list-style:none;counter-reset:s;margin-top:6px;}
+.steps li{counter-increment:s;font-size:12.5px;color:var(--text2);padding:5px 0 5px 26px;position:relative;line-height:1.55;}
+.steps li::before{content:counter(s);position:absolute;left:0;top:6px;width:17px;height:17px;border-radius:50%;background:var(--rec-dot);color:#fff;font-size:9px;font-weight:600;display:flex;align-items:center;justify-content:center;}
+.person-toggle{display:flex;gap:8px;margin-bottom:14px;}
+.person-btn{flex:1;padding:10px;border:0.5px solid var(--border2);border-radius:12px;cursor:pointer;font-size:14px;background:var(--card);color:var(--text2);text-align:center;font-family:'DM Sans',sans-serif;}
+.compra-cat{margin-bottom:20px;}
+.compra-cat-title{font-size:11px;font-weight:500;color:var(--text3);margin:0 0 6px;padding-bottom:6px;border-bottom:0.5px solid var(--border);text-transform:uppercase;letter-spacing:0.06em;}
+.compra-item{display:flex;align-items:center;gap:10px;font-size:14px;padding:7px 0;border-bottom:0.5px solid var(--border);color:var(--text);cursor:pointer;user-select:none;}
+.compra-item.checked{background:#fef9e7;border-radius:8px;padding-left:8px;padding-right:8px;margin:0 -8px;}
+@media(prefers-color-scheme:dark){.compra-item.checked{background:#2e2a10;}}
+.compra-check{width:20px;height:20px;border-radius:6px;border:1.5px solid var(--border2);display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background 0.15s,border-color 0.15s;}
+.compra-item.checked .compra-check{background:#e8c547;border-color:#e8c547;}
+.compra-check svg{display:none;}
+.compra-item.checked .compra-check svg{display:block;}
+.compra-name{flex:1;}
+.compra-qty{font-size:13px;color:var(--text2);}
+.compra-qty-uni{display:flex;flex-direction:column;align-items:flex-end;gap:2px;}
+.compra-total{font-size:13px;font-weight:500;color:var(--text);}
+.compra-split{font-size:11px;color:var(--text2);}
+.compra-split-a{color:var(--ing-color);}.compra-split-p{color:var(--blue);}
+.legend{display:flex;gap:12px;margin-bottom:14px;font-size:12px;color:var(--text2);flex-wrap:wrap;}
+.loading{text-align:center;padding:40px 20px;color:var(--text3);font-size:14px;}
+.spinner{display:inline-block;width:22px;height:22px;border:2px solid var(--border2);border-top-color:var(--green);border-radius:50%;animation:spin 0.8s linear infinite;margin-bottom:10px;}
+@keyframes spin{to{transform:rotate(360deg);}}
+.error{text-align:center;padding:30px;color:#c0392b;font-size:13px;}
+.plan-btn-row{display:flex;gap:6px;flex-wrap:wrap;}
+.config-section{background:var(--card);border-radius:16px;margin-bottom:16px;overflow:hidden;border:0.5px solid var(--border);}
+.config-section-title{font-size:11px;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--text3);padding:14px 16px 8px;}
+.config-row{display:flex;align-items:center;justify-content:space-between;padding:12px 16px;border-top:0.5px solid var(--border);}
+.config-row-label{font-size:14px;color:var(--text);}
+.config-row-sub{font-size:12px;color:var(--text3);margin-top:2px;}
+.toggle{width:44px;height:26px;border-radius:13px;background:var(--border2);position:relative;cursor:pointer;transition:background 0.2s;flex-shrink:0;border:none;}
+.toggle.on{background:var(--green);}
+.toggle::after{content:'';position:absolute;width:20px;height:20px;border-radius:50%;background:#fff;top:3px;left:3px;transition:transform 0.2s;box-shadow:0 1px 3px rgba(0,0,0,0.2);}
+.toggle.on::after{transform:translateX(18px);}
+.config-info{font-size:13px;color:var(--text2);padding:12px 16px;line-height:1.5;}
+</style>
+</head>
+<body>
+<div class="app-header">
+  <h1>🥗 Dietas Pablo & Alba</h1>
+  <p>Olga Corbín Nutrición</p>
+</div>
+<div class="nav-tabs">
+  <button class="nav-tab active" onclick="showTab('dia')">📅 Día a día</button>
+  <button class="nav-tab" onclick="showTab('conjunto')">👫 Cocinar juntos</button>
+  <button class="nav-tab" onclick="showTab('compra')">🛒 La compra</button>
+  <button class="nav-tab" onclick="showTab('config')">⚙️ Config</button>
+</div>
+<div class="content">
+  <div class="section active" id="tab-dia">
+    <div class="person-row">
+      <button class="chip ag" id="dp-alba" onclick="setDiaPer(2,'alba')">Alba</button>
+      <button class="chip" id="dp-pablo" onclick="setDiaPer(3,'pablo')">Pablo</button>
+    </div>
+    <div class="plan-btn-row" id="dia-plan-btns"></div>
+    <div style="margin-bottom:16px"></div>
+    <div class="day-row" id="dia-days"></div>
+    <div id="dia-content"></div>
+  </div>
+  <div class="section" id="tab-conjunto">
+    <div class="plan-btn-row" id="cj-plan-btns"></div>
+    <div style="margin-bottom:16px"></div>
+    <div class="day-row" id="cj-days"></div>
+    <div class="legend">
+      <span>Total = suma de los dos.</span>
+      <span><span class="solo-badge solo-a">A</span> Alba &nbsp;<span class="solo-badge solo-p">P</span> Pablo</span>
+    </div>
+    <div id="cj-content"></div>
+  </div>
+  <div class="section" id="tab-config">
+    <div id="config-content"></div>
+  </div>
+  <div class="section" id="tab-compra">
+    <div class="person-toggle">
+      <button class="person-btn" id="cp-alba" onclick="setCompraPer('alba')">Alba</button>
+      <button class="person-btn" id="cp-pablo" onclick="setCompraPer('pablo')">Pablo</button>
+      <button class="person-btn" id="cp-uni" onclick="setCompraPer('uni')">Unificada</button>
+    </div>
+    <div class="plan-btn-row" id="cp-plan-btns"></div>
+    <div style="margin-bottom:16px"></div>
+    <div id="compra-content"></div>
+  </div>
+</div>
+
+<script>
+// ═══ SUPABASE CONFIG ═══
+const SB_URL = 'https://qhpgnqwlkzadbwznrvmz.supabase.co';
+const SB_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFocGducXdsa3phZGJ3em5ydm16Iiwicm9sZSI6ImFub24iLCJpYXQiOjE3Nzk3NzQ1MjEsImV4cCI6MjA5NTM1MDUyMX0.CWWW5apJQ3vTFMrzo6a74JnNVR42bk7tF6oC4lbE8D4';
+const RELACION_ID = 1; // Alba(2) ↔ Pablo(3)
+
+async function sb(table, params='') {
+  const r = await fetch(`${SB_URL}/rest/v1/${table}?${params}`, {
+    headers: { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}` }
+  });
+  return r.json();
+}
+
+async function sbPost(table, data) {
+  const r = await fetch(`${SB_URL}/rest/v1/${table}`, {
+    method: 'POST',
+    headers: { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}`, 'Content-Type': 'application/json', 'Prefer': 'return=representation' },
+    body: JSON.stringify(data)
+  });
+  return r.json();
+}
+
+async function sbUpsert(table, data, onConflict) {
+  const r = await fetch(`${SB_URL}/rest/v1/${table}?on_conflict=${onConflict}`, {
+    method: 'POST',
+    headers: { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}`, 'Content-Type': 'application/json', 'Prefer': 'resolution=merge-duplicates,return=representation' },
+    body: JSON.stringify(data)
+  });
+  return r.json();
+}
+
+// ═══ ESTADO ═══
+const DAYS = ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
+const DAYS3 = ['Lu','Ma','Mi','Ju','Vi','Sá','Do'];
+let planes = [];
+let diaPerId = 2, diaPerNombre = 'alba', diaPlanId = null, diaDay = 'Lunes';
+let cjPlanId = null, cjDay = 'Lunes';
+let cPer = 'alba', cPlanId = null;
+const checksCache = {}; // ingrediente_id → comprado
+
+
+
+// ═══ PLAN BUTTONS ═══
+function buildPlanButtons() {
+  ['dia','cj','cp'].forEach(prefix => {
+    const active = prefix==='dia' ? diaPlanId : prefix==='cj' ? cjPlanId : cPlanId;
+    const fn = prefix==='dia' ? 'setDiaPlan' : prefix==='cj' ? 'setCjPlan' : 'setCompraPlan';
+    // Only show visible plans (or all if config not loaded yet)
+    const visible = planesVisibles.size > 0 ? planes.filter(p=>planesVisibles.has(p.id)) : planes;
+    document.getElementById(`${prefix}-plan-btns`).innerHTML = visible.map(p =>
+      `<button class="plan-chip${p.id===active?' active':''}" onclick="${fn}(${p.id})">${p.nombre}</button>`
+    ).join('');
+  });
+}
+
+function updatePlanChips(prefix, activeId) {
+  document.querySelectorAll(`#${prefix}-plan-btns .plan-chip`).forEach((btn, i) => {
+    btn.className = 'plan-chip' + (planes[i].id === activeId ? ' active' : '');
+  });
+}
+
+// ═══ UI HELPERS ═══
+function showTab(t) {
+  document.querySelectorAll('.section').forEach(s=>s.classList.remove('active'));
+  document.querySelectorAll('.nav-tab').forEach(b=>b.classList.remove('active'));
+  document.getElementById('tab-'+t).classList.add('active');
+  ['dia','conjunto','compra','config'].forEach((n,i)=>{ if(n===t) document.querySelectorAll('.nav-tab')[i].classList.add('active'); });
+  if(t==='dia')      renderDia();
+  if(t==='conjunto') renderCj();
+  if(t==='compra')   renderCompra();
+  if(t==='config')   renderConfig();
+}
+
+function toggle(id) {
+  document.getElementById(id)?.classList.toggle('open');
+  document.getElementById('ch-'+id)?.classList.toggle('open');
+  document.getElementById('nm-'+id)?.classList.toggle('open');
+}
+
+function buildDays(containerId, activeDay, fn) {
+  document.getElementById(containerId).innerHTML = DAYS.map((d,i) =>
+    `<button class="day-pill${d===activeDay?' active':''}" onclick="${fn}('${d}')">${DAYS3[i]}</button>`
+  ).join('');
+}
+
+function loadingHtml() { return `<div class="loading"><div class="spinner"></div><br>Cargando...</div>`; }
+function errorHtml(msg) { return `<div class="error">⚠️ ${msg}</div>`; }
+
+const checkSvg = `<svg width="12" height="12" viewBox="0 0 12 12" fill="none"><polyline points="1.5,6 4.5,9 10.5,3" stroke="#fff" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg>`;
+
+// ═══ TAB DÍA A DÍA ═══
+function setDiaPer(id, nombre) {
+  diaPerId = id; diaPerNombre = nombre;
+  document.getElementById('dp-alba').className  = 'chip' + (id===2 ? ' ag' : '');
+  document.getElementById('dp-pablo').className = 'chip' + (id===3 ? ' ab' : '');
+  renderDia();
+}
+function setDiaPlan(id) { diaPlanId=id; updatePlanChips('dia',id); renderDia(); }
+function selDiaDay(d)   { diaDay=d; renderDia(); }
+
+async function renderDia() {
+  buildDays('dia-days', diaDay, 'selDiaDay');
+  document.getElementById('dia-content').innerHTML = loadingHtml();
+
+  // Get all meals for this person, plan and day — ordered by momento and orden
+  const rows = await sb('plan_dias',
+    `select=orden,momento,receta_id,recetas(id,nombre,pasos)&plan_id=eq.${diaPlanId}&usuario_id=eq.${diaPerId}&dia=eq.${encodeURIComponent(diaDay)}&order=momento,orden`
+  );
+  if (!rows.length) {
+    document.getElementById('dia-content').innerHTML = errorHtml('No hay datos para esta selección.');
+    return;
+  }
+
+  // Get ingredients for each recipe
+  const recetaIds = [...new Set(rows.map(r=>r.receta_id))];
+  const ings = await sb('receta_ingredientes_usuario',
+    `select=receta_id,cantidad,unidad,ingredientes(nombre)&usuario_id=eq.${diaPerId}&receta_id=in.(${recetaIds.join(',')})&order=id`
+  );
+  const ingMap = {};
+  ings.forEach(i => {
+    if (!ingMap[i.receta_id]) ingMap[i.receta_id] = [];
+    ingMap[i.receta_id].push(`${i.cantidad}${i.unidad} ${i.ingredientes.nombre}`);
+  });
+
+  // Group by momento
+  const momentos = {};
+  rows.forEach(r => {
+    if (!momentos[r.momento]) momentos[r.momento] = [];
+    momentos[r.momento].push(r);
+  });
+
+  const planNombre = planes.find(p=>p.id===diaPlanId)?.nombre || '';
+  const pName = diaPerId===2 ? 'Alba' : 'Pablo';
+  let html = `<div class="sec-hdr">${pName} · ${diaDay} · ${planNombre}</div>`;
+
+  Object.entries(momentos).forEach(([momento, items], mi) => {
+    const firstName = items[0].recetas.nombre;
+    const extra = items.length > 1 ? ` <span class="meal-count">+${items.length-1} más</span>` : '';
+    const id = `dia-${mi}`;
+    const dishesH = items.map((item, idx) => {
+      const nameHtml = items.length > 1 ? `<div class="dish-name">${item.recetas.nombre}</div>` : '';
+      const divider  = idx > 0 ? `<div class="dish-divider"></div>` : '';
+      const ingList  = ingMap[item.receta_id] || [];
+      const ingHtml  = ingList.length ? `<div class="block-ing"><span class="block-label label-ing">Ingredientes</span>${ingList.map(i=>`<div class="ing-row"><span>${i.replace(/^[\d.]+[a-z]+\s*/,'')}</span><span class="ing-qty">${i.match(/^[\d.]+[a-z]+/)?.[0]||''}</span></div>`).join('')}</div>` : '';
+      const pasosRaw = item.recetas.pasos || [];
+      const pasos    = typeof pasosRaw === 'string' ? JSON.parse(pasosRaw) : pasosRaw;
+      const recHtml  = pasos.length ? `<span class="block-label label-rec">Preparación</span><ol class="steps">${pasos.map(p=>`<li>${p}</li>`).join('')}</ol>` : '';
+      return `${divider}<div class="dish">${nameHtml}${ingHtml}${recHtml}</div>`;
+    }).join('');
+
+    html += `<div class="meal-card">
+      <div class="meal-card-hdr" onclick="toggle('${id}')">
+        <div style="flex:1;min-width:0">
+          <div class="meal-time">${momento}</div>
+          <div class="meal-name" id="nm-${id}">${firstName}${extra}</div>
+        </div>
+        <div class="meal-toggle" id="ch-${id}">▾</div>
+      </div>
+      <div class="meal-card-body" id="${id}">
+        <div class="meal-card-inner">${dishesH}</div>
+      </div>
+    </div>`;
+  });
+
+  document.getElementById('dia-content').innerHTML = html;
+}
+
+// ═══ TAB COCINAR JUNTOS ═══
+function setCjPlan(id) { cjPlanId=id; updatePlanChips('cj',id); renderCj(); }
+function selCjDay(d)   { cjDay=d; renderCj(); }
+
+async function renderCj() {
+  buildDays('cj-days', cjDay, 'selCjDay');
+  document.getElementById('cj-content').innerHTML = loadingHtml();
+
+  // Get meals for both users on this day — only Comida and Cena
+  const [rowsA, rowsP] = await Promise.all([
+    sb('plan_dias', `select=orden,momento,receta_id,recetas(id,nombre,pasos)&plan_id=eq.${cjPlanId}&usuario_id=eq.2&dia=eq.${encodeURIComponent(cjDay)}&momento=in.(Comida,Cena)&order=momento,orden`),
+    sb('plan_dias', `select=orden,momento,receta_id,recetas(id,nombre,pasos)&plan_id=eq.${cjPlanId}&usuario_id=eq.3&dia=eq.${encodeURIComponent(cjDay)}&momento=in.(Comida,Cena)&order=momento,orden`)
+  ]);
+
+  // Get all recipe ids
+  const allIds = [...new Set([...rowsA, ...rowsP].map(r=>r.receta_id))];
+  const [ingsA, ingsP] = await Promise.all([
+    sb('receta_ingredientes_usuario', `select=receta_id,cantidad,unidad,ingredientes(id,nombre)&usuario_id=eq.2&receta_id=in.(${allIds.join(',')})&order=id`),
+    sb('receta_ingredientes_usuario', `select=receta_id,cantidad,unidad,ingredientes(id,nombre)&usuario_id=eq.3&receta_id=in.(${allIds.join(',')})&order=id`)
+  ]);
+
+  // Build ingredient maps: receta_id → { nombre → {a, p} }
+  const ingMap = {};
+  ingsA.forEach(i => {
+    if (!ingMap[i.receta_id]) ingMap[i.receta_id] = {};
+    if (!ingMap[i.receta_id][i.ingredientes.nombre]) ingMap[i.receta_id][i.ingredientes.nombre] = {};
+    ingMap[i.receta_id][i.ingredientes.nombre].a = i.cantidad;
+  });
+  ingsP.forEach(i => {
+    if (!ingMap[i.receta_id]) ingMap[i.receta_id] = {};
+    if (!ingMap[i.receta_id][i.ingredientes.nombre]) ingMap[i.receta_id][i.ingredientes.nombre] = {};
+    ingMap[i.receta_id][i.ingredientes.nombre].p = i.cantidad;
+  });
+
+  const planNombre = planes.find(p=>p.id===cjPlanId)?.nombre || '';
+
+  // Group by momento
+  const momentos = {};
+  [...new Set([...rowsA,...rowsP].map(r=>r.momento))].forEach(m => {
+    momentos[m] = {
+      a: rowsA.filter(r=>r.momento===m),
+      p: rowsP.filter(r=>r.momento===m)
+    };
+  });
+
+  let html = `<div class="sec-hdr">${cjDay} · ${planNombre}</div>`;
+
+  ['Comida','Cena'].forEach((momento, mi) => {
+    if (!momentos[momento]) return;
+    const items = momentos[momento].a; // use alba's list as base (same recipes)
+    if (!items.length) return;
+    const firstName = items[0].recetas.nombre;
+    const extra = items.length > 1 ? ` <span class="meal-count">+${items.length-1} más</span>` : '';
+    const id = `cj-${mi}`;
+
+    const dishesH = items.map((item, idx) => {
+      const nameHtml = items.length > 1 ? `<div class="dish-name">${item.recetas.nombre}</div>` : '';
+      const divider  = idx > 0 ? `<div class="dish-divider"></div>` : '';
+      const ings = ingMap[item.receta_id] || {};
+      const ingRows = Object.entries(ings).map(([nombre, qty]) => {
+        const aOk = qty.a != null, pOk = qty.p != null;
+        let qhtml = '';
+        if (aOk && pOk) {
+          const tot = qty.a + qty.p;
+          qhtml = `<span class="qty-total">${tot}g</span> <span class="qty-split">(<span class="qty-a">${qty.a}g A</span> · <span class="qty-p">${qty.p}g P</span>)</span>`;
+        } else if (aOk) {
+          qhtml = `<span class="qty-total">${qty.a}g</span> <span class="qty-split"><span class="solo-badge solo-a">solo A</span></span>`;
+        } else {
+          qhtml = `<span class="qty-total">${qty.p}g</span> <span class="qty-split"><span class="solo-badge solo-p">solo P</span></span>`;
+        }
+        return `<div class="ing-row"><span>${nombre}</span><span class="ing-qty" style="background:none;color:inherit;padding:0">${qhtml}</span></div>`;
+      }).join('');
+      const ingHtml = ingRows ? `<div class="block-ing"><span class="block-label label-ing">Ingredientes</span>${ingRows}</div>` : '';
+      const pasosRaw = item.recetas.pasos || [];
+      const pasos = typeof pasosRaw === 'string' ? JSON.parse(pasosRaw) : pasosRaw;
+      const recHtml = pasos.length ? `<span class="block-label label-rec">Preparación</span><ol class="steps">${pasos.map(p=>`<li>${p}</li>`).join('')}</ol>` : '';
+      return `${divider}<div class="dish">${nameHtml}${ingHtml}${recHtml}</div>`;
+    }).join('');
+
+    html += `<div class="meal-card">
+      <div class="meal-card-hdr" onclick="toggle('${id}')">
+        <div style="flex:1;min-width:0">
+          <div class="meal-time">${momento}</div>
+          <div class="meal-name" id="nm-${id}">${firstName}${extra}</div>
+        </div>
+        <div class="meal-toggle" id="ch-${id}">▾</div>
+      </div>
+      <div class="meal-card-body" id="${id}">
+        <div class="meal-card-inner">${dishesH}</div>
+      </div>
+    </div>`;
+  });
+
+  document.getElementById('cj-content').innerHTML = html;
+}
+
+// ═══ TAB LA COMPRA ═══
+function setCompraPer(p) {
+  cPer = p;
+  const styles = {
+    alba:  'background:var(--green);color:#fff;border-color:var(--green)',
+    pablo: 'background:var(--blue);color:#fff;border-color:var(--blue)',
+    uni:   'background:var(--chip-bg);color:var(--text);border-color:var(--border2)',
+  };
+  ['alba','pablo','uni'].forEach(x => {
+    document.getElementById('cp-'+x).style.cssText = p===x ? styles[x] : '';
+  });
+  renderCompra();
+}
+function setCompraPlan(id) { cPlanId=id; updatePlanChips('cp',id); renderCompra(); }
+
+async function toggleCheck(el, ingId, relId, userId) {
+  const key = `${relId||'u'}-${userId||'r'}-${ingId}`;
+  const current = checksCache[key] || false;
+  const newVal = !current;
+  checksCache[key] = newVal;
+  el.classList.toggle('checked', newVal);
+
+  // Persist to Supabase
+  const payload = {
+    ingrediente_id: ingId,
+    plan_id: cPlanId,
+    comprado: newVal,
+    updated_at: new Date().toISOString(),
+    ...(relId ? { relacion_id: relId, usuario_id: null } : { usuario_id: userId, relacion_id: null })
+  };
+  const conflictKey = relId ? 'relacion_id,plan_id,ingrediente_id' : 'usuario_id,plan_id,ingrediente_id';
+  await sbUpsert('compra_checks', payload, conflictKey);
+}
+
+async function loadChecks(planId, relId, userId) {
+  const param = relId
+    ? `relacion_id=eq.${relId}&plan_id=eq.${planId}`
+    : `usuario_id=eq.${userId}&plan_id=eq.${planId}&relacion_id=is.null`;
+  const rows = await sb('compra_checks', `select=ingrediente_id,comprado&${param}`);
+  rows.forEach(r => {
+    const key = relId ? `${relId}-r-${r.ingrediente_id}` : `u-${userId}-${r.ingrediente_id}`;
+    checksCache[key] = r.comprado;
+  });
+}
+
+async function renderCompra() {
+  document.getElementById('compra-content').innerHTML = loadingHtml();
+  const planNombre = planes.find(p=>p.id===cPlanId)?.nombre || '';
+  const emojis = {'Leche y derivados':'🥛','Cereales y derivados':'🌾','Frutas':'🍎','Hortalizas y verduras':'🥦','Carnes, pescados y huevos':'🥩','Frutos secos y legumbres':'🥜','Aceites y condimentos':'🫒','General':'📦'};
+
+  let html = `<div class="sec-hdr">${cPer==='uni'?'Unificada':cPer==='alba'?'Alba':'Pablo'} · ${planNombre}</div>`;
+
+  if (cPer === 'uni') {
+    // Load checks for the relation
+    await loadChecks(cPlanId, RELACION_ID, null);
+
+    // Get all ingredients for both users in this plan, grouped by category
+    const [rowsA, rowsP] = await Promise.all([
+      sb('plan_dias', `select=receta_id&plan_id=eq.${cPlanId}&usuario_id=eq.2`),
+      sb('plan_dias', `select=receta_id&plan_id=eq.${cPlanId}&usuario_id=eq.3`)
+    ]);
+    const idsA = [...new Set(rowsA.map(r=>r.receta_id))];
+    const idsP = [...new Set(rowsP.map(r=>r.receta_id))];
+
+    // Fetch in chunks to avoid URL length limits
+    async function fetchIngs(userId, ids) {
+      let result = [];
+      for (let i = 0; i < ids.length; i += 20) {
+        const chunk = ids.slice(i, i+20);
+        const part = await sb('receta_ingredientes_usuario',
+          `select=cantidad,unidad,ingredientes(id,nombre,categoria)&usuario_id=eq.${userId}&receta_id=in.(${chunk.join(',')})&order=ingrediente_id&limit=1000`
+        );
+        result = result.concat(part);
+      }
+      return result;
+    }
+    const [ingsA, ingsP] = await Promise.all([
+      fetchIngs(2, idsA),
+      fetchIngs(3, idsP)
+    ]);
+
+    // Aggregate by ingredient
+    const agg = {}; // ingId → {nombre, categoria, a, p}
+    ingsA.forEach(i => {
+      const id = i.ingredientes.id;
+      if (!agg[id]) agg[id] = {nombre:i.ingredientes.nombre, categoria:i.ingredientes.categoria, a:0, p:0};
+      agg[id].a += i.cantidad || 0;
+    });
+    ingsP.forEach(i => {
+      const id = i.ingredientes.id;
+      if (!agg[id]) agg[id] = {nombre:i.ingredientes.nombre, categoria:i.ingredientes.categoria, a:0, p:0};
+      agg[id].p += i.cantidad || 0;
+    });
+
+    // Group by category
+    const cats = {};
+    Object.entries(agg).forEach(([id, ing]) => {
+      if (!cats[ing.categoria]) cats[ing.categoria] = [];
+      cats[ing.categoria].push({id: parseInt(id), ...ing});
+    });
+
+    html += `<div class="legend"><span class="compra-split-a" style="font-weight:500">A:</span> Alba &nbsp;·&nbsp; <span class="compra-split-p" style="font-weight:500">P:</span> Pablo</div>`;
+
+    Object.entries(cats).forEach(([cat, items]) => {
+      html += `<div class="compra-cat"><div class="compra-cat-title">${emojis[cat]||'📦'} ${cat}</div>`;
+      items.forEach(ing => {
+        const key = `${RELACION_ID}-r-${ing.id}`;
+        const checked = checksCache[key] ? 'checked' : '';
+        const total = (ing.a + ing.p).toFixed(0);
+        const aqStr = ing.a > 0 ? `${ing.a.toFixed(0)}g` : '—';
+        const pqStr = ing.p > 0 ? `${ing.p.toFixed(0)}g` : '—';
+        html += `<div class="compra-item ${checked}" onclick="toggleCheck(this,${ing.id},${RELACION_ID},null)">
+          <div class="compra-check">${checkSvg}</div>
+          <span class="compra-name">${ing.nombre}</span>
+          <span class="compra-qty-uni">
+            <span class="compra-total">${total}g</span>
+            <span class="compra-split"><span class="compra-split-a">A:${aqStr}</span> · <span class="compra-split-p">P:${pqStr}</span></span>
+          </span>
+        </div>`;
+      });
+      html += '</div>';
+    });
+
+  } else {
+    const userId = cPer === 'alba' ? 2 : 3;
+    await loadChecks(cPlanId, null, userId);
+
+    const rows = await sb('plan_dias', `select=receta_id&plan_id=eq.${cPlanId}&usuario_id=eq.${userId}&limit=1000`);
+    const ids = [...new Set(rows.map(r=>r.receta_id))];
+    // Fetch in chunks of 20 recipe IDs to avoid URL length limits
+    let ings = [];
+    for (let i = 0; i < ids.length; i += 20) {
+      const chunk = ids.slice(i, i+20);
+      const part = await sb('receta_ingredientes_usuario',
+        `select=cantidad,unidad,ingredientes(id,nombre,categoria)&usuario_id=eq.${userId}&receta_id=in.(${chunk.join(',')})&order=ingrediente_id&limit=1000`
+      );
+      ings = ings.concat(part);
+    }
+
+    // Aggregate by ingredient
+    const agg = {};
+    ings.forEach(i => {
+      const id = i.ingredientes.id;
+      if (!agg[id]) agg[id] = {nombre:i.ingredientes.nombre, categoria:i.ingredientes.categoria, total:0};
+      agg[id].total += i.cantidad || 0;
+    });
+
+    // Group by category
+    const cats = {};
+    Object.entries(agg).forEach(([id, ing]) => {
+      if (!cats[ing.categoria]) cats[ing.categoria] = [];
+      cats[ing.categoria].push({id: parseInt(id), ...ing});
+    });
+
+    Object.entries(cats).forEach(([cat, items]) => {
+      html += `<div class="compra-cat"><div class="compra-cat-title">${emojis[cat]||'📦'} ${cat}</div>`;
+      items.forEach(ing => {
+        const key = `u-${userId}-${ing.id}`;
+        const checked = checksCache[key] ? 'checked' : '';
+        html += `<div class="compra-item ${checked}" onclick="toggleCheck(this,${ing.id},null,${userId})">
+          <div class="compra-check">${checkSvg}</div>
+          <span class="compra-name">${ing.nombre}</span>
+          <span class="compra-qty">${ing.total.toFixed(0)}g</span>
+        </div>`;
+      });
+      html += '</div>';
+    });
+  }
+
+  document.getElementById('compra-content').innerHTML = html;
+}
+
+// ═══ CONFIGURACIÓN ═══
+let planesVisibles = new Set(); // IDs de planes activos
+
+async function loadConfig() {
+  const rows = await sb('configuracion', 'select=valor&clave=eq.planes_visibles');
+  if (rows.length) {
+    const ids = rows[0].valor;
+    planesVisibles = new Set(Array.isArray(ids) ? ids : JSON.parse(ids));
+  } else {
+    // Si no hay config, todos activos por defecto
+    planesVisibles = new Set(planes.map(p=>p.id));
+  }
+}
+
+async function saveConfig() {
+  await sbUpsert('configuracion',
+    { clave: 'planes_visibles', valor: JSON.stringify([...planesVisibles]), updated_at: new Date().toISOString() },
+    'clave'
+  );
+}
+
+async function togglePlan(planId) {
+  if (planesVisibles.has(planId)) {
+    // No permitir desactivar si solo queda uno activo
+    if (planesVisibles.size <= 1) return;
+    planesVisibles.delete(planId);
+  } else {
+    planesVisibles.add(planId);
+  }
+  await saveConfig();
+  buildPlanButtons();
+  renderConfig();
+  // Si el plan activo se desactivó, cambiar al primero visible
+  if (!planesVisibles.has(diaPlanId)) { diaPlanId = [...planesVisibles][0]; }
+  if (!planesVisibles.has(cjPlanId))  { cjPlanId  = [...planesVisibles][0]; }
+  if (!planesVisibles.has(cPlanId))   { cPlanId   = [...planesVisibles][0]; }
+}
+
+async function renderConfig() {
+  document.getElementById('config-content').innerHTML = loadingHtml();
+  await loadConfig();
+
+  const activosCount = planesVisibles.size;
+  let html = '';
+
+  // Sección planes
+  html += `<div class="config-section">
+    <div class="config-section-title">Planes visibles</div>
+    <div class="config-info">Activa o desactiva los planes que quieres ver en las pestañas. Debe haber al menos uno activo.</div>`;
+
+  planes.forEach(p => {
+    const on = planesVisibles.has(p.id);
+    const disabled = on && activosCount <= 1;
+    html += `<div class="config-row">
+      <div>
+        <div class="config-row-label">${p.nombre}</div>
+        <div class="config-row-sub">${on ? 'Visible en todas las pestañas' : 'Oculto'}</div>
+      </div>
+      <button class="toggle ${on?'on':''} ${disabled?'disabled':''}"
+        onclick="${disabled ? '' : `togglePlan(${p.id})`}"
+        style="${disabled ? 'opacity:0.4;cursor:not-allowed' : ''}"
+      ></button>
+    </div>`;
+  });
+
+  html += '</div>';
+
+  // Sección info
+  html += `<div class="config-section">
+    <div class="config-section-title">Próximamente</div>
+    <div class="config-info">🍽️ Configurador de dietas — crea y edita planes personalizados para cada persona directamente desde la app.</div>
+  </div>`;
+
+  document.getElementById('config-content').innerHTML = html;
+}
+
+// ═══ ARRANQUE ═══
+// Planes hardcodeados para evitar el cold start en la primera carga
+// (coinciden con los IDs reales en Supabase)
+planes = [
+  {id:2, nombre:'Supervivencia', orden:1},
+  {id:3, nombre:'Bajo en potasio', orden:2},
+  {id:4, nombre:'Plan 3', orden:3},
+  {id:5, nombre:'Plan 4', orden:4}
+];
+diaPlanId = planes[0].id;
+cjPlanId  = planes[0].id;
+cPlanId   = planes[0].id;
+// Cargar config antes de renderizar para mostrar planes correctos
+loadConfig().then(() => {
+  buildPlanButtons();
+  setCompraPer('alba');
+  renderDia();
+});
+
+// Ping Supabase en paralelo para despertar el proyecto (cold start tier gratuito ~1s)
+// Las llamadas reales de datos van después, cuando el usuario interactúa
+fetch(`${SB_URL}/rest/v1/planes?select=id&limit=1`, {
+  headers: { 'apikey': SB_KEY, 'Authorization': `Bearer ${SB_KEY}` }
+}).catch(()=>{});
+</script>
+</body>
+</html>

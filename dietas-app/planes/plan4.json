@@ -1,0 +1,2568 @@
+{
+  "plan": "4",
+  "nombre": "Plan 4",
+  "dias": {
+    "alba": {
+      "Lunes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y plátano",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "80g plátano"
+              ],
+              "rec": [
+                "Mezclar el yogur con el muesli. Añadir la fruta."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y jamón serrano",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g jamón serrano"
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Ensalada de lentejas marinera",
+              "ing": [
+                "75g canónigos",
+                "75g tomate crudo",
+                "40g zanahoria",
+                "40g atún enlatado en agua",
+                "40g salmón ahumado",
+                "8g aceite de oliva",
+                "120g lentejas cocidas"
+              ],
+              "rec": [
+                "Escurrir las lentejas bajo el chorro de agua fría y echarlas en una fuente.",
+                "Lavar y trocear el tomate. Rayar la zanahoria.",
+                "Incorporar a las lentejas las hortalizas, los canónigos, el atún escurrido y el salmón ahumado a dados.",
+                "Mezclar bien después de aliñar con aceite de oliva en crudo."
+              ]
+            },
+            {
+              "n": "Queso fresco",
+              "ing": [
+                "60g queso fresco"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Salmorejo con picada de jamón serrano y huevo",
+              "ing": [
+                "60g pan blanco",
+                "60g huevo de gallina",
+                "8g aceite de oliva",
+                "3g ajo",
+                "200g tomate crudo",
+                "20g jamón serrano",
+                "8g vinagre"
+              ],
+              "rec": [
+                "Pelar y picar el ajo. Colocar en un recipiente y cubrir con el vinagre.",
+                "Cocer el huevo 10 minutos. Reservar.",
+                "Batir el tomate pelado con el pan mojado, el ajo y el vinagre. Añadir el aceite en hilo fino para que emulsione.",
+                "Servir frío con el huevo cocido y el jamón picado fino."
+              ]
+            },
+            {
+              "n": "Berberechos al vapor con microondas",
+              "ing": [
+                "440g almeja, chirla, berberecho",
+                "1g sal",
+                "8g perejil",
+                "60g limón"
+              ],
+              "rec": [
+                "Dejar los berberechos en agua con sal unas horas para que suelten la arena. Escurrir y enjuagar.",
+                "Colocar en un recipiente apto para microondas. Tapar y cocinar a máxima potencia 3 minutos.",
+                "Comprobar si se han abierto. Si no, remover y cocinar 2 minutos más.",
+                "Aliñar con zumo de limón o perejil picado al gusto."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Martes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y manzana",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "90g manzana roja"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y queso fresco",
+              "ing": [
+                "70g pan blanco",
+                "70g queso tipo Burgos 0% MG",
+                "45g tomate crudo"
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Berenjenas rellenas de ternera",
+              "ing": [
+                "100g berenjena",
+                "5g ajo",
+                "50g cebolla o cebolleta",
+                "50g pimiento verde",
+                "75g carne picada ternera",
+                "75g tomate triturado natural",
+                "1g pimentón",
+                "1g pimienta negra",
+                "20g queso mozzarella para gratinar",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Asar la berenjena cortada en dos mitades al horno a 180ºC 20 minutos. Retirar la pulpa y reservar las dos mitades.",
+                "Pochar el ajo y la cebolla picados. Añadir el pimiento rojo en dados y el tomate triturado. Cocinar 5 minutos.",
+                "Incorporar la carne de ternera picada, la pulpa de la berenjena y el pimentón. Saltear hasta que se cocine la ternera.",
+                "Rellenar las berenjenas con la mezcla. Cubrir con mozzarella y gratinar en el horno."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Salmón en tacos y patatas al horno con mozzarella, tomate y calabacín",
+              "ing": [
+                "100g patata",
+                "100g calabacín",
+                "90g tomate crudo",
+                "5g aceite de oliva",
+                "30g mozzarella fresca light",
+                "1g orégano",
+                "100g salmón"
+              ],
+              "rec": [
+                "Precalentar el horno a 180ºC.",
+                "Trocear la patata, el tomate y el calabacín en rodajas y asar en bandeja 20 minutos.",
+                "Colocar las rodajas de patata en la base y hacer capas con el calabacín, el tomate y la mozzarella.",
+                "Espolvorear orégano y hornear 15 minutos más.",
+                "Cortar el salmón en dados, salpimentar y saltear en sartén caliente hasta que se doren. Emplatar encima de las hortalizas."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Miércoles": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y plátano",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "80g plátano"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y pavo",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g pechuga de pavo fiambre"
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Quinoa con salmón ahumado, aguacate y queso fresco",
+              "ing": [
+                "60g quinoa",
+                "75g aguacate",
+                "30g salmón ahumado",
+                "35g queso fresco desnatado",
+                "5g aceite de oliva"
+              ],
+              "rec": [
+                "Lavar la quinoa bajo el chorro de agua fría. Cocer 15 minutos con el doble de agua. Reposar.",
+                "Trocear en trozos de similar tamaño el aguacate, el salmón y el queso fresco.",
+                "Incorporar en un bol la quinoa con el resto de ingredientes, aliñar con aceite de oliva y mezclar bien."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Ensalada de canónigos completa",
+              "ing": [
+                "75g pepino",
+                "75g canónigos",
+                "50g cebolla o cebolleta",
+                "80g zanahoria",
+                "90g tomate crudo",
+                "30g maíz dulce enlatado",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Lavar y trocear las hortalizas.",
+                "Emplatar con los canónigos en la base, colocar encima las hortalizas troceadas y añadir el maíz escurrido.",
+                "Aliñar con aceite de oliva."
+              ]
+            },
+            {
+              "n": "Pollo tikamasala",
+              "ing": [
+                "120g pollo pechuga solomillo",
+                "125g yogur natural",
+                "5g pimienta de Cayena",
+                "5g canela",
+                "5g cilantro",
+                "175g tomate triturado natural"
+              ],
+              "rec": [
+                "Calienta aceite en una sartén, sofríe la cebolla, agrega todas las especias, incluyendo jengibre, ajo y cilantro.",
+                "Seguidamente agrega el tomate y media taza de agua.",
+                "Agrégale los trozos de pollo y deja cocinar corrigiendo sal y especias.",
+                "Cuando el pollo esté listo, agrega el yogur, deja hervir 2 minutos más. Servir con cilantro fresco y picado."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Jueves": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y manzana",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "90g manzana roja"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y jamón serrano",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g jamón serrano"
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Tallarines con pollo y champiñones",
+              "ing": [
+                "60g cintas de pasta",
+                "5g aceite de oliva",
+                "75g champiñón o seta",
+                "120g pollo pechuga solomillo"
+              ],
+              "rec": [
+                "Cocer los tallarines en abundante agua hirviendo 12 minutos. Escurrir y reservar.",
+                "Cortar la pechuga de pollo en tiras finas y dorar en sartén con el aceite.",
+                "Añadir el champiñón laminado al pollo y cocinar 2 minutos.",
+                "Incorporar los tallarines y remover. Agregar especias y hierbas al gusto."
+              ]
+            },
+            {
+              "n": "Queso mozzarella para gratinar",
+              "ing": [
+                "20g queso mozzarella para gratinar"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Parrillada de boniato y cebolla",
+              "ing": [
+                "100g boniato",
+                "100g cebolla blanca",
+                "5g aceite de oliva"
+              ],
+              "rec": [
+                "Pelar y cortar el boniato en rodajas finas y la cebolla en aros.",
+                "Añadir a la parrilla el aceite y colocar primero las rodajas de boniato. Tapar y asar 15 minutos, dándoles la vuelta cada 5 minutos.",
+                "Destapar, agregar la cebolla y asar 5 minutos más."
+              ]
+            },
+            {
+              "n": "Merluza al papillote",
+              "ing": [
+                "125g merluza",
+                "40g zanahoria",
+                "50g calabacín",
+                "30g limón",
+                "10g mostaza",
+                "10g aceite de oliva"
+              ],
+              "rec": [
+                "Corta las verduras en juliana y el limón en rodajas.",
+                "Sobre papel de aluminio coloca un lecho de verduras y sobre estas el filete de merluza, las rodajas de limón y una cucharadita de mostaza de Dijon.",
+                "Por último, salpimentarlo y rocía con un chorrito de aceite."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Viernes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y arándanos",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "25g arándanos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y pavo",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g pechuga de pavo fiambre"
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Gratinado de patata, calabacín y mozzarella con huevo",
+              "ing": [
+                "65g huevo de gallina",
+                "175g patata",
+                "100g calabacín",
+                "50g queso mozzarella para gratinar"
+              ],
+              "rec": [
+                "Cortar patatas en láminas y extender sobre la bandeja del horno a 180º durante 25 min.",
+                "Laminar el calabacín y dorarlo en la plancha.",
+                "Cocinar el huevo a la plancha.",
+                "Sacar la bandeja del horno, echar el calabacín y la mozzarella sobre la patata y gratinar 5-10 min.",
+                "Sacar la bandeja y poner el huevo sobre el calabacín y la mozzarella. Salpimentar al gusto."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Fajita con tortilla, salmón y aguacate",
+              "ing": [
+                "50g fajita integral",
+                "65g huevo de gallina",
+                "60g salmón ahumado",
+                "100g aguacate"
+              ],
+              "rec": [
+                "Batir un huevo y cuajarlo en sartén a fuego medio.",
+                "Cuando aún esté sin cuajar, colocar la fajita encima 1-2 minutos.",
+                "En la mitad, colocar el aguacate y el salmón ahumado.",
+                "Doblar la fajita para conseguir forma de media luna."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Sábado": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche + tostada con huevos revueltos y aguacate",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café",
+                "40g pan blanco",
+                "60g huevo de gallina",
+                "50g aguacate",
+                "3g aceite de oliva"
+              ],
+              "rec": [
+                "Pelar y lonchear el aguacate.",
+                "Batir el huevo y cuajar en sartén con el aceite removiendo.",
+                "Colocar el revuelto en el pan tostado y añadir las lonchas de aguacate."
+              ]
+            },
+            {
+              "n": "Kiwi",
+              "ing": [
+                "120g kiwi"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Risotto de arroz integral con champiñón y sepia",
+              "ing": [
+                "120g sepia",
+                "100g champiñón o seta",
+                "75g cebolla hervida",
+                "8g aceite de oliva",
+                "175g caldo vegetal",
+                "70g arroz integral",
+                "10g queso parmesano"
+              ],
+              "rec": [
+                "Asar la sepia entera en la plancha. Trocear y reservar.",
+                "Pochar la cebolla troceada. Cuando empiece a dorarse añadir los champiñones laminados.",
+                "Añadir el arroz integral, mezclar bien y agregar el triple de caldo que de arroz.",
+                "Dejar cocer a fuego suave hasta que se consuma casi todo el caldo.",
+                "Incorporar la sepia reservada y el queso rallado. Remover a fuego suave hasta que quede cremoso."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Domingo": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tortitas de avena y plátano con manzana y canela",
+              "ing": [
+                "100g plátano",
+                "30g harina de avena",
+                "105g clara de huevo pasteurizada",
+                "120g manzana roja",
+                "3g aceite de oliva",
+                "1g vainilla",
+                "1g canela"
+              ],
+              "rec": [
+                "Aplastar el plátano. Agregar harina, clara y vainilla. Batir hasta crema uniforme.",
+                "Calentar sartén engrasada. Volcar y voltear para dorar por ambos lados.",
+                "Extender la manzana laminada y espolvorear con canela."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Chips de boniato al horno",
+              "ing": [
+                "150g boniato",
+                "5g aceite de oliva",
+                "1g pimienta negra"
+              ],
+              "rec": [
+                "Lavar el boniato y cortar en rodajas muy finas. Poner a remojo 10 min.",
+                "Precalentar el horno a 220ºC. Engrasar una bandeja y extender las rodajas.",
+                "Sazonar con pimienta y hornear 10 min, dar la vuelta y hornear 10 min más."
+              ]
+            },
+            {
+              "n": "Revuelto de jamón serrano con cebolla y espárragos",
+              "ing": [
+                "75g espárrago",
+                "45g jamón serrano",
+                "50g cebolla o cebolleta",
+                "8g aceite de oliva",
+                "60g huevo de gallina"
+              ],
+              "rec": [
+                "Pochar con el aceite la cebolla y los espárragos cortados en trozos similares.",
+                "Cuando estén tiernos añadir el jamón picado.",
+                "Batir el huevo y añadir removiendo hasta que cuaje."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pablo": {
+      "Lunes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Sándwich integral de jamón cocido, aguacate y rúcula",
+              "ing": [
+                "30g pan de molde integral",
+                "15g jamón cocido",
+                "25g aguacate",
+                "10g rúcula"
+              ],
+              "rec": [
+                "Pelar y lonchear el aguacate. Montar el sándwich con aguacate, rúcula y jamón cocido."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Plátano y anacardos",
+              "ing": [
+                "160g plátano",
+                "10g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Ensalada de lentejas marinera",
+              "ing": [
+                "100g canónigos",
+                "90g tomate crudo",
+                "60g zanahoria",
+                "56g atún enlatado en agua",
+                "40g salmón ahumado",
+                "10g aceite de oliva",
+                "160g lentejas cocidas"
+              ],
+              "rec": [
+                "Escurrir las lentejas bajo el chorro de agua fría y echarlas en una fuente.",
+                "Lavar y trocear el tomate. Rayar la zanahoria.",
+                "Incorporar a las lentejas las hortalizas, los canónigos, el atún escurrido y el salmón ahumado a dados.",
+                "Mezclar bien después de aliñar con aceite de oliva en crudo."
+              ]
+            },
+            {
+              "n": "Queso fresco",
+              "ing": [
+                "60g queso fresco"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Salmorejo con picada de jamón serrano y huevo",
+              "ing": [
+                "80g pan blanco",
+                "60g huevo de gallina",
+                "10g aceite de oliva",
+                "5g ajo",
+                "250g tomate crudo",
+                "30g jamón serrano",
+                "10g vinagre"
+              ],
+              "rec": [
+                "Pelar y picar el ajo. Colocar en un recipiente y cubrir con el vinagre.",
+                "Cocer el huevo 10 minutos. Reservar.",
+                "Batir el tomate pelado con el pan mojado, el ajo y el vinagre. Añadir el aceite en hilo fino para que emulsione.",
+                "Servir frío con el huevo cocido y el jamón picado fino."
+              ]
+            },
+            {
+              "n": "Berberechos al vapor con microondas",
+              "ing": [
+                "440g almeja, chirla, berberecho",
+                "1g sal",
+                "8g perejil",
+                "60g limón"
+              ],
+              "rec": [
+                "Dejar los berberechos en agua con sal unas horas para que suelten la arena. Escurrir y enjuagar.",
+                "Colocar en recipiente apto para microondas. Tapar y cocinar a máxima potencia 3 minutos.",
+                "Comprobar si se han abierto. Si no, remover y cocinar 2 minutos más.",
+                "Aliñar con zumo de limón o perejil picado."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Martes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Sándwich integral de pavo y queso de untar",
+              "ing": [
+                "60g pan de molde integral",
+                "30g queso de untar ligero",
+                "30g pechuga de pavo fiambre"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Mandarinas",
+              "ing": [
+                "180g mandarina"
+              ]
+            },
+            {
+              "n": "Chocolate negro",
+              "ing": [
+                "10g chocolate negro"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Berenjenas rellenas de ternera",
+              "ing": [
+                "150g berenjena",
+                "5g ajo",
+                "70g cebolla o cebolleta",
+                "70g pimiento verde",
+                "100g carne picada ternera",
+                "100g tomate triturado natural",
+                "1g pimentón",
+                "1g pimienta negra",
+                "30g queso mozzarella para gratinar",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Asar la berenjena cortada en dos mitades al horno a 180ºC 20 minutos. Retirar la pulpa y reservar las dos mitades.",
+                "Pochar el ajo y la cebolla picados. Añadir el pimiento rojo en dados y el tomate triturado. Cocinar 5 minutos.",
+                "Incorporar la carne de ternera picada, la pulpa de la berenjena y el pimentón. Saltear hasta que se cocine la ternera.",
+                "Rellenar las berenjenas con la mezcla. Cubrir con mozzarella y gratinar en el horno."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Salmón en tacos y patatas al horno con mozzarella, tomate y calabacín",
+              "ing": [
+                "150g patata",
+                "150g calabacín",
+                "150g tomate crudo",
+                "8g aceite de oliva",
+                "50g mozzarella fresca light",
+                "1g orégano",
+                "125g salmón"
+              ],
+              "rec": [
+                "Precalentar el horno a 180ºC.",
+                "Trocear la patata, el tomate y el calabacín en rodajas y asar en bandeja 20 minutos.",
+                "Colocar las rodajas de patata en la base y hacer capas con el calabacín, el tomate y la mozzarella.",
+                "Espolvorear orégano y hornear 15 minutos más.",
+                "Cortar el salmón en dados, salpimentar y saltear en sartén caliente. Emplatar encima de las hortalizas."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Miércoles": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Sándwich integral de jamón cocido, aguacate y rúcula",
+              "ing": [
+                "30g pan de molde integral",
+                "15g jamón cocido",
+                "25g aguacate",
+                "10g rúcula"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Manzana y nueces",
+              "ing": [
+                "150g manzana roja",
+                "10g nuez pelada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Naranja y kéfir",
+              "ing": [
+                "130g naranja",
+                "100g kéfir"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Quinoa con salmón ahumado, aguacate y queso fresco",
+              "ing": [
+                "80g quinoa",
+                "100g aguacate",
+                "40g salmón ahumado",
+                "75g queso fresco desnatado",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Lavar la quinoa bajo el chorro de agua fría. Cocer 15 minutos con el doble de agua. Reposar.",
+                "Trocear en trozos de similar tamaño el aguacate, el salmón y el queso fresco.",
+                "Incorporar en un bol la quinoa con el resto de ingredientes, aliñar con aceite de oliva y mezclar bien."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Ensalada de canónigos completa",
+              "ing": [
+                "120g pepino",
+                "100g canónigos",
+                "100g cebolla o cebolleta",
+                "100g zanahoria",
+                "180g tomate crudo",
+                "40g maíz dulce enlatado",
+                "15g aceite de oliva"
+              ],
+              "rec": [
+                "Lavar y trocear las hortalizas.",
+                "Emplatar con los canónigos en la base, colocar encima las hortalizas troceadas y añadir el maíz escurrido.",
+                "Aliñar con aceite de oliva."
+              ]
+            },
+            {
+              "n": "Pollo tikamasala",
+              "ing": [
+                "120g pollo pechuga solomillo",
+                "125g yogur natural",
+                "5g pimienta de Cayena",
+                "5g canela",
+                "5g cilantro",
+                "175g tomate triturado natural"
+              ],
+              "rec": [
+                "Calienta aceite en una sartén, sofríe la cebolla, agrega todas las especias, incluyendo jengibre, ajo y cilantro.",
+                "Seguidamente agrega el tomate y media taza de agua.",
+                "Agrégale los trozos de pollo y deja cocinar corrigiendo sal y especias.",
+                "Cuando el pollo esté listo, agrega el yogur, deja hervir 2 minutos más. Servir con cilantro fresco y picado."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Jueves": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Sándwich integral de pavo y queso de untar",
+              "ing": [
+                "60g pan de molde integral",
+                "30g queso de untar ligero",
+                "30g pechuga de pavo fiambre"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Mandarinas",
+              "ing": [
+                "180g mandarina"
+              ]
+            },
+            {
+              "n": "Chocolate negro",
+              "ing": [
+                "10g chocolate negro"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Tallarines con pollo y champiñones",
+              "ing": [
+                "80g cintas de pasta",
+                "8g aceite de oliva",
+                "100g champiñón o seta",
+                "150g pollo pechuga solomillo"
+              ],
+              "rec": [
+                "Cocer los tallarines en abundante agua hirviendo 12 minutos. Escurrir y reservar.",
+                "Cortar la pechuga de pollo en tiras finas y dorar en sartén con el aceite.",
+                "Añadir el champiñón laminado al pollo y cocinar 2 minutos.",
+                "Incorporar los tallarines y remover. Agregar especias y hierbas al gusto."
+              ]
+            },
+            {
+              "n": "Queso mozzarella para gratinar",
+              "ing": [
+                "20g queso mozzarella para gratinar"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Parrillada de boniato y cebolla",
+              "ing": [
+                "200g boniato",
+                "200g cebolla blanca",
+                "5g aceite de oliva"
+              ],
+              "rec": [
+                "Pelar y cortar el boniato en rodajas finas y la cebolla en aros.",
+                "Añadir a la parrilla el aceite y colocar primero las rodajas de boniato. Tapar y asar 15 minutos, girando cada 5 min.",
+                "Destapar, agregar la cebolla y asar 5 minutos más."
+              ]
+            },
+            {
+              "n": "Merluza al papillote",
+              "ing": [
+                "125g merluza",
+                "40g zanahoria",
+                "50g calabacín",
+                "30g limón",
+                "10g mostaza",
+                "10g aceite de oliva"
+              ],
+              "rec": [
+                "Corta las verduras en juliana y el limón en rodajas.",
+                "Sobre papel de aluminio coloca un lecho de verduras y sobre estas el filete de merluza, las rodajas de limón y una cucharadita de mostaza de Dijon.",
+                "Por último, salpimentarlo y rocía con un chorrito de aceite."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Viernes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Sándwich integral de jamón serrano y huevo a la plancha",
+              "ing": [
+                "60g pan de molde integral",
+                "60g huevo de gallina",
+                "5g aceite de oliva",
+                "30g jamón serrano"
+              ],
+              "rec": [
+                "Hacer a la plancha el huevo en una sartén caliente con el aceite.",
+                "Montar el sándwich colocando el huevo y encima el jamón serrano."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Plátano y anacardos",
+              "ing": [
+                "160g plátano",
+                "10g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Gratinado de patata, calabacín y mozzarella con huevo",
+              "ing": [
+                "120g huevo de gallina",
+                "225g patata",
+                "125g calabacín",
+                "60g queso mozzarella para gratinar"
+              ],
+              "rec": [
+                "Cortar patatas en láminas y extender sobre la bandeja del horno a 180º durante 25 min.",
+                "Laminar el calabacín y dorarlo en la plancha.",
+                "Cocinar el huevo a la plancha.",
+                "Sacar la bandeja del horno, echar el calabacín y la mozzarella sobre la patata y gratinar 5-10 min.",
+                "Sacar la bandeja y poner el huevo sobre el calabacín y la mozzarella. Salpimentar al gusto."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Fajita con tortilla, salmón y aguacate",
+              "ing": [
+                "50g fajita integral",
+                "65g huevo de gallina",
+                "60g salmón ahumado",
+                "100g aguacate"
+              ],
+              "rec": [
+                "Batir un huevo y cuajarlo en sartén a fuego medio.",
+                "Cuando aún esté sin cuajar, colocar la fajita encima 1-2 minutos.",
+                "En la mitad, colocar el aguacate y el salmón ahumado.",
+                "Doblar la fajita para conseguir forma de media luna."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Sábado": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Naranja y canela",
+              "ing": [
+                "200g naranja",
+                "2g canela"
+              ]
+            },
+            {
+              "n": "Tostada de pan de barra con aguacate y queso fresco",
+              "ing": [
+                "70g pan blanco",
+                "50g aguacate",
+                "70g queso tipo Burgos 0% MG"
+              ],
+              "rec": [
+                "Pelar y lonchear el aguacate. Montar la tostada con aguacate y queso fresco."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Naranja y kéfir",
+              "ing": [
+                "130g naranja",
+                "100g kéfir"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Risotto de arroz integral con champiñón y sepia",
+              "ing": [
+                "150g sepia",
+                "125g champiñón o seta",
+                "100g cebolla hervida",
+                "10g aceite de oliva",
+                "225g caldo vegetal",
+                "100g arroz integral",
+                "20g queso parmesano"
+              ],
+              "rec": [
+                "Asar la sepia entera en la plancha. Trocear y reservar.",
+                "Pochar la cebolla troceada. Cuando empiece a dorarse añadir los champiñones laminados.",
+                "Añadir el arroz integral, mezclar bien y agregar el triple de caldo que de arroz.",
+                "Dejar cocer a fuego suave hasta que se consuma casi todo el caldo.",
+                "Incorporar la sepia reservada y el queso rallado. Remover a fuego suave hasta que quede cremoso."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Domingo": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Tortitas de avena y plátano con manzana y canela",
+              "ing": [
+                "100g plátano",
+                "30g harina de avena",
+                "105g clara de huevo pasteurizada",
+                "120g manzana roja",
+                "3g aceite de oliva",
+                "1g vainilla",
+                "1g canela"
+              ],
+              "rec": [
+                "Aplastar el plátano. Agregar harina, clara y vainilla. Batir hasta crema uniforme.",
+                "Calentar sartén engrasada. Volcar y voltear para dorar por ambos lados.",
+                "Extender la manzana laminada y espolvorear con canela."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Chips de boniato al horno",
+              "ing": [
+                "175g boniato",
+                "5g aceite de oliva",
+                "1g pimienta negra"
+              ],
+              "rec": [
+                "Lavar el boniato y cortar en rodajas muy finas. Poner a remojo 10 min.",
+                "Precalentar el horno a 220ºC. Engrasar una bandeja y extender las rodajas.",
+                "Sazonar con pimienta y hornear 10 min, dar la vuelta y hornear 10 min más."
+              ]
+            },
+            {
+              "n": "Revuelto de jamón serrano con cebolla y espárragos",
+              "ing": [
+                "100g espárrago",
+                "60g jamón serrano",
+                "70g cebolla o cebolleta",
+                "10g aceite de oliva",
+                "120g huevo de gallina"
+              ],
+              "rec": [
+                "Pochar con el aceite la cebolla y los espárragos en trozos similares.",
+                "Cuando estén tiernos añadir el jamón picado.",
+                "Batir el huevo y añadir removiendo hasta que cuaje."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "conjunto": {
+    "Lunes": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Ensalada de lentejas marinera",
+            "ing": [
+              {
+                "n": "Canónigos",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Tomate crudo",
+                "a": 75,
+                "p": 90
+              },
+              {
+                "n": "Zanahoria",
+                "a": 40,
+                "p": 60
+              },
+              {
+                "n": "Atún enlatado en agua",
+                "a": 40,
+                "p": 56
+              },
+              {
+                "n": "Salmón ahumado",
+                "a": 40,
+                "p": 40
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              },
+              {
+                "n": "Lentejas cocidas",
+                "a": 120,
+                "p": 160
+              }
+            ],
+            "rec": [
+              "Escurrir las lentejas bajo el chorro de agua fría y echarlas en una fuente.",
+              "Lavar y trocear el tomate. Rayar la zanahoria.",
+              "Incorporar a las lentejas las hortalizas, los canónigos, el atún escurrido y el salmón a dados.",
+              "Mezclar y aliñar con aceite de oliva."
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Salmorejo con picada de jamón serrano y huevo",
+            "ing": [
+              {
+                "n": "Pan blanco",
+                "a": 60,
+                "p": 80
+              },
+              {
+                "n": "Huevo de gallina",
+                "a": 60,
+                "p": 60
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              },
+              {
+                "n": "Ajo",
+                "a": 3,
+                "p": 5
+              },
+              {
+                "n": "Tomate crudo",
+                "a": 200,
+                "p": 250
+              },
+              {
+                "n": "Jamón serrano",
+                "a": 20,
+                "p": 30
+              }
+            ],
+            "rec": [
+              "Pelar y picar el ajo. Cubrir con el vinagre.",
+              "Cocer el huevo 10 minutos. Reservar.",
+              "Batir el tomate pelado con el pan mojado, el ajo y el vinagre. Añadir el aceite en hilo fino.",
+              "Servir frío con el huevo cocido y el jamón picado fino."
+            ]
+          },
+          {
+            "n": "Berberechos al vapor con microondas",
+            "ing": [
+              {
+                "n": "Almeja, chirla, berberecho",
+                "a": 440,
+                "p": 440
+              }
+            ],
+            "rec": [
+              "Dejar los berberechos en agua con sal unas horas. Escurrir y enjuagar.",
+              "Colocar en recipiente apto para microondas. Tapar y cocinar a máxima potencia 3 minutos.",
+              "Comprobar si se han abierto. Si no, remover y cocinar 2 minutos más. Aliñar al gusto."
+            ]
+          }
+        ]
+      }
+    },
+    "Martes": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Berenjenas rellenas de ternera",
+            "ing": [
+              {
+                "n": "Berenjena",
+                "a": 100,
+                "p": 150
+              },
+              {
+                "n": "Ajo",
+                "a": 5,
+                "p": 5
+              },
+              {
+                "n": "Cebolla o cebolleta",
+                "a": 50,
+                "p": 70
+              },
+              {
+                "n": "Pimiento verde",
+                "a": 50,
+                "p": 70
+              },
+              {
+                "n": "Carne picada ternera",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Tomate triturado natural",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Queso mozzarella para gratinar",
+                "a": 20,
+                "p": 30
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 8
+              }
+            ],
+            "rec": [
+              "Asar la berenjena cortada en dos mitades al horno a 180ºC 20 minutos. Retirar la pulpa y reservar las dos mitades.",
+              "Pochar el ajo y la cebolla picados. Añadir el pimiento en dados y el tomate triturado. Cocinar 5 minutos.",
+              "Incorporar la carne de ternera picada, la pulpa de la berenjena y el pimentón. Saltear hasta que se cocine la ternera.",
+              "Rellenar las berenjenas con la mezcla. Cubrir con mozzarella y gratinar en el horno."
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Salmón en tacos y patatas al horno con mozzarella, tomate y calabacín",
+            "ing": [
+              {
+                "n": "Patata",
+                "a": 100,
+                "p": 150
+              },
+              {
+                "n": "Calabacín",
+                "a": 100,
+                "p": 150
+              },
+              {
+                "n": "Tomate crudo",
+                "a": 90,
+                "p": 150
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 8
+              },
+              {
+                "n": "Mozzarella fresca light",
+                "a": 30,
+                "p": 50
+              },
+              {
+                "n": "Salmón",
+                "a": 100,
+                "p": 125
+              }
+            ],
+            "rec": [
+              "Precalentar el horno a 180ºC.",
+              "Trocear la patata, el tomate y el calabacín en rodajas y asar en bandeja 20 minutos.",
+              "Colocar las rodajas de patata en la base y hacer capas con el calabacín, el tomate y la mozzarella.",
+              "Espolvorear orégano y hornear 15 minutos más.",
+              "Cortar el salmón en dados, salpimentar y saltear en sartén caliente. Emplatar encima de las hortalizas."
+            ]
+          }
+        ]
+      }
+    },
+    "Miércoles": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Quinoa con salmón ahumado, aguacate y queso fresco",
+            "ing": [
+              {
+                "n": "Quinoa",
+                "a": 60,
+                "p": 80
+              },
+              {
+                "n": "Aguacate",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Salmón ahumado",
+                "a": 30,
+                "p": 40
+              },
+              {
+                "n": "Queso fresco desnatado",
+                "a": 35,
+                "p": 75
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 8
+              }
+            ],
+            "rec": [
+              "Lavar la quinoa bajo el chorro de agua fría. Cocer 15 minutos con el doble de agua. Reposar.",
+              "Trocear en trozos de similar tamaño el aguacate, el salmón y el queso fresco.",
+              "Incorporar en un bol la quinoa con el resto de ingredientes, aliñar con aceite de oliva y mezclar bien."
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Ensalada de canónigos completa",
+            "ing": [
+              {
+                "n": "Pepino",
+                "a": 75,
+                "p": 120
+              },
+              {
+                "n": "Canónigos",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Cebolla o cebolleta",
+                "a": 50,
+                "p": 100
+              },
+              {
+                "n": "Zanahoria",
+                "a": 80,
+                "p": 100
+              },
+              {
+                "n": "Tomate crudo",
+                "a": 90,
+                "p": 180
+              },
+              {
+                "n": "Maíz dulce enlatado",
+                "a": 30,
+                "p": 40
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 15
+              }
+            ]
+          },
+          {
+            "n": "Pollo tikamasala",
+            "ing": [
+              {
+                "n": "Pollo pechuga solomillo",
+                "a": 120,
+                "p": 120
+              },
+              {
+                "n": "Yogur natural",
+                "a": 125,
+                "p": 125
+              },
+              {
+                "n": "Tomate triturado natural",
+                "a": 175,
+                "p": 175
+              }
+            ],
+            "rec": [
+              "Calienta aceite en una sartén, sofríe la cebolla, agrega todas las especias, incluyendo jengibre, ajo y cilantro.",
+              "Seguidamente agrega el tomate y media taza de agua.",
+              "Agrégale los trozos de pollo y deja cocinar.",
+              "Cuando el pollo esté listo, agrega el yogur, deja hervir 2 minutos más."
+            ]
+          }
+        ]
+      }
+    },
+    "Jueves": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Tallarines con pollo y champiñones",
+            "ing": [
+              {
+                "n": "Cintas de pasta",
+                "a": 60,
+                "p": 80
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 8
+              },
+              {
+                "n": "Champiñón o seta",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Pollo pechuga solomillo",
+                "a": 120,
+                "p": 150
+              }
+            ],
+            "rec": [
+              "Cocer los tallarines en abundante agua hirviendo 12 minutos. Escurrir y reservar.",
+              "Cortar la pechuga de pollo en tiras finas y dorar en sartén con el aceite.",
+              "Añadir el champiñón laminado al pollo y cocinar 2 minutos.",
+              "Incorporar los tallarines y remover. Agregar especias y hierbas al gusto."
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Parrillada de boniato y cebolla",
+            "ing": [
+              {
+                "n": "Boniato",
+                "a": 100,
+                "p": 200
+              },
+              {
+                "n": "Cebolla blanca",
+                "a": 100,
+                "p": 200
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 5
+              }
+            ],
+            "rec": [
+              "Pelar y cortar el boniato en rodajas finas y la cebolla en aros.",
+              "Añadir a la parrilla el aceite y colocar primero las rodajas de boniato. Tapar y asar 15 minutos, girando cada 5 min.",
+              "Destapar, agregar la cebolla y asar 5 minutos más."
+            ]
+          },
+          {
+            "n": "Merluza al papillote",
+            "ing": [
+              {
+                "n": "Merluza",
+                "a": 125,
+                "p": 125
+              },
+              {
+                "n": "Zanahoria",
+                "a": 40,
+                "p": 40
+              },
+              {
+                "n": "Calabacín",
+                "a": 50,
+                "p": 50
+              },
+              {
+                "n": "Limón",
+                "a": 30,
+                "p": 30
+              },
+              {
+                "n": "Mostaza",
+                "a": 10,
+                "p": 10
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 10,
+                "p": 10
+              }
+            ],
+            "rec": [
+              "Corta las verduras en juliana y el limón en rodajas.",
+              "Sobre papel de aluminio coloca un lecho de verduras y sobre estas el filete de merluza, las rodajas de limón y una cucharadita de mostaza de Dijon.",
+              "Por último, salpimentarlo y rocía con un chorrito de aceite."
+            ]
+          }
+        ]
+      }
+    },
+    "Viernes": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Gratinado de patata, calabacín y mozzarella con huevo",
+            "ing": [
+              {
+                "n": "Huevo de gallina",
+                "a": 65,
+                "p": 120
+              },
+              {
+                "n": "Patata",
+                "a": 175,
+                "p": 225
+              },
+              {
+                "n": "Calabacín",
+                "a": 100,
+                "p": 125
+              },
+              {
+                "n": "Queso mozzarella para gratinar",
+                "a": 50,
+                "p": 60
+              }
+            ],
+            "rec": [
+              "Cortar patatas en láminas y extender sobre la bandeja del horno a 180º durante 25 min.",
+              "Laminar el calabacín y dorarlo en la plancha.",
+              "Cocinar el huevo a la plancha.",
+              "Sacar la bandeja del horno, echar el calabacín y la mozzarella sobre la patata y gratinar 5-10 min.",
+              "Sacar la bandeja y poner el huevo sobre el calabacín y la mozzarella. Salpimentar al gusto."
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Fajita con tortilla, salmón y aguacate",
+            "ing": [
+              {
+                "n": "Fajita integral",
+                "a": 50,
+                "p": 50
+              },
+              {
+                "n": "Huevo de gallina",
+                "a": 65,
+                "p": 65
+              },
+              {
+                "n": "Salmón ahumado",
+                "a": 60,
+                "p": 60
+              },
+              {
+                "n": "Aguacate",
+                "a": 100,
+                "p": 100
+              }
+            ],
+            "rec": [
+              "Batir un huevo y cuajarlo en sartén a fuego medio.",
+              "Cuando aún esté sin cuajar, colocar la fajita encima 1-2 minutos.",
+              "En la mitad, colocar el aguacate y el salmón ahumado.",
+              "Doblar la fajita para conseguir forma de media luna."
+            ]
+          }
+        ]
+      }
+    },
+    "Sábado": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Risotto de arroz integral con champiñón y sepia",
+            "ing": [
+              {
+                "n": "Sepia",
+                "a": 120,
+                "p": 150
+              },
+              {
+                "n": "Champiñón o seta",
+                "a": 100,
+                "p": 125
+              },
+              {
+                "n": "Cebolla hervida",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              },
+              {
+                "n": "Caldo vegetal",
+                "a": 175,
+                "p": 225
+              },
+              {
+                "n": "Arroz integral",
+                "a": 70,
+                "p": 100
+              },
+              {
+                "n": "Queso parmesano",
+                "a": 10,
+                "p": 20
+              }
+            ],
+            "rec": [
+              "Asar la sepia entera en la plancha. Trocear y reservar.",
+              "Pochar la cebolla troceada. Cuando empiece a dorarse añadir los champiñones laminados.",
+              "Añadir el arroz integral, mezclar bien y agregar el triple de caldo que de arroz.",
+              "Dejar cocer a fuego suave hasta que se consuma casi todo el caldo.",
+              "Incorporar la sepia reservada y el queso rallado. Remover a fuego suave hasta que quede cremoso."
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Comida disfrutona 🎉",
+            "ing": [],
+            "rec": []
+          }
+        ]
+      }
+    },
+    "Domingo": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Comida disfrutona 🎉",
+            "ing": [],
+            "rec": []
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Chips de boniato al horno",
+            "ing": [
+              {
+                "n": "Boniato",
+                "a": 150,
+                "p": 175
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 5
+              },
+              {
+                "n": "Pimienta negra",
+                "a": 1,
+                "p": 1
+              }
+            ],
+            "rec": [
+              "Lavar el boniato y cortar en rodajas muy finas. Poner a remojo 10 min.",
+              "Precalentar el horno a 220ºC. Engrasar una bandeja y extender las rodajas.",
+              "Hornear 10 min, dar la vuelta y hornear 10 min más."
+            ]
+          },
+          {
+            "n": "Revuelto de jamón serrano con cebolla y espárragos",
+            "ing": [
+              {
+                "n": "Espárrago",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Jamón serrano",
+                "a": 45,
+                "p": 60
+              },
+              {
+                "n": "Cebolla o cebolleta",
+                "a": 50,
+                "p": 70
+              },
+              {
+                "n": "Huevo de gallina",
+                "a": 60,
+                "p": 120
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              }
+            ],
+            "rec": [
+              "Pochar con el aceite la cebolla y los espárragos en trozos similares.",
+              "Cuando estén tiernos añadir el jamón picado.",
+              "Batir el huevo y añadir removiendo hasta que cuaje."
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "compra": {
+    "alba": {
+      "Leche y derivados": [
+        [
+          "Leche semidesnatada UHT",
+          "2175g"
+        ],
+        [
+          "Yogur natural",
+          "2500g"
+        ],
+        [
+          "Queso tipo Burgos 0% MG",
+          "60g"
+        ],
+        [
+          "Queso mozzarella para gratinar",
+          "90g"
+        ],
+        [
+          "Mozzarella Fresca Light",
+          "30g"
+        ],
+        [
+          "Queso fresco desnatado",
+          "35g"
+        ],
+        [
+          "Queso parmesano",
+          "10g"
+        ]
+      ],
+      "Cereales y derivados": [
+        [
+          "Cereales muesli",
+          "100g"
+        ],
+        [
+          "Pan blanco",
+          "450g"
+        ],
+        [
+          "Quinoa",
+          "60g"
+        ],
+        [
+          "Maíz dulce enlatado",
+          "30g"
+        ],
+        [
+          "Cintas de pasta",
+          "60g"
+        ],
+        [
+          "Fajita integral",
+          "90g"
+        ],
+        [
+          "Arroz integral",
+          "70g"
+        ],
+        [
+          "Harina de avena",
+          "30g"
+        ]
+      ],
+      "Frutas": [
+        [
+          "Plátano, banano",
+          "260g"
+        ],
+        [
+          "Limón",
+          "90g"
+        ],
+        [
+          "Manzana roja",
+          "300g"
+        ],
+        [
+          "Aguacate",
+          "225g"
+        ],
+        [
+          "Arándanos",
+          "25g"
+        ],
+        [
+          "Kiwi",
+          "120g"
+        ]
+      ],
+      "Hortalizas y verduras": [
+        [
+          "Tomate crudo",
+          "680g"
+        ],
+        [
+          "Canónigos",
+          "150g"
+        ],
+        [
+          "Zanahoria",
+          "160g"
+        ],
+        [
+          "Ajo",
+          "8g"
+        ],
+        [
+          "Perejil",
+          "8g"
+        ],
+        [
+          "Berenjena",
+          "100g"
+        ],
+        [
+          "Cebolla o cebolleta",
+          "150g"
+        ],
+        [
+          "Pimiento verde",
+          "50g"
+        ],
+        [
+          "Tomate triturado natural",
+          "250g"
+        ],
+        [
+          "Calabacín",
+          "250g"
+        ],
+        [
+          "Pepino",
+          "75g"
+        ],
+        [
+          "Champiñón o seta",
+          "175g"
+        ],
+        [
+          "Boniato",
+          "250g"
+        ],
+        [
+          "Cebolla blanca",
+          "100g"
+        ],
+        [
+          "Cebolla hervida",
+          "75g"
+        ],
+        [
+          "Espárrago",
+          "75g"
+        ]
+      ],
+      "Carnes, pescados y huevos": [
+        [
+          "Jamón serrano",
+          "125g"
+        ],
+        [
+          "Atún enlatado en agua",
+          "40g"
+        ],
+        [
+          "Salmón ahumado",
+          "130g"
+        ],
+        [
+          "Huevo de gallina",
+          "310g"
+        ],
+        [
+          "Almeja, chirla, berberecho",
+          "440g"
+        ],
+        [
+          "Carne picada ternera",
+          "75g"
+        ],
+        [
+          "Salmón",
+          "100g"
+        ],
+        [
+          "Pechuga de pavo fiambre",
+          "60g"
+        ],
+        [
+          "Pollo pechuga solomillo",
+          "240g"
+        ],
+        [
+          "Merluza",
+          "125g"
+        ],
+        [
+          "Sepia",
+          "120g"
+        ],
+        [
+          "Clara de huevo pasteurizada",
+          "105g"
+        ]
+      ],
+      "Frutos secos y legumbres": [
+        [
+          "Anacardo sin cáscara",
+          "75g"
+        ],
+        [
+          "Lentejas cocidas",
+          "120g"
+        ],
+        [
+          "Patata",
+          "275g"
+        ]
+      ],
+      "Aceites y condimentos": [
+        [
+          "Aceite de oliva",
+          "89g"
+        ],
+        [
+          "Café",
+          "600g"
+        ],
+        [
+          "Canela",
+          "26g"
+        ],
+        [
+          "Pimentón",
+          "1g"
+        ],
+        [
+          "Pimienta negra",
+          "2g"
+        ],
+        [
+          "Orégano",
+          "1g"
+        ],
+        [
+          "Mostaza",
+          "10g"
+        ],
+        [
+          "Vainilla",
+          "1g"
+        ]
+      ]
+    },
+    "pablo": {
+      "Leche y derivados": [
+        [
+          "Leche semidesnatada UHT",
+          "1125g"
+        ],
+        [
+          "Queso fresco",
+          "60g"
+        ],
+        [
+          "Yogur natural",
+          "1875g"
+        ],
+        [
+          "Queso de untar ligero",
+          "60g"
+        ],
+        [
+          "Queso mozzarella para gratinar",
+          "110g"
+        ],
+        [
+          "Mozzarella Fresca Light",
+          "50g"
+        ],
+        [
+          "Queso fresco desnatado",
+          "75g"
+        ],
+        [
+          "Queso tipo Burgos 0% MG",
+          "70g"
+        ],
+        [
+          "Queso parmesano",
+          "20g"
+        ]
+      ],
+      "Cereales y derivados": [
+        [
+          "Cacao en polvo desgrasado sin azúcar",
+          "40g"
+        ],
+        [
+          "Pan de molde integral",
+          "240g"
+        ],
+        [
+          "Pan blanco",
+          "150g"
+        ],
+        [
+          "Chocolate negro",
+          "20g"
+        ],
+        [
+          "Quinoa",
+          "80g"
+        ],
+        [
+          "Maíz dulce enlatado",
+          "40g"
+        ],
+        [
+          "Cintas de pasta",
+          "80g"
+        ],
+        [
+          "Fajita integral",
+          "50g"
+        ],
+        [
+          "Arroz integral",
+          "100g"
+        ],
+        [
+          "Harina de avena",
+          "30g"
+        ]
+      ],
+      "Carnes, pescados y huevos": [
+        [
+          "Jamón cocido",
+          "30g"
+        ],
+        [
+          "Atún enlatado en agua",
+          "56g"
+        ],
+        [
+          "Salmón ahumado",
+          "140g"
+        ],
+        [
+          "Huevo de gallina",
+          "425g"
+        ],
+        [
+          "Jamón serrano",
+          "120g"
+        ],
+        [
+          "Almeja, chirla, berberecho",
+          "440g"
+        ],
+        [
+          "Pechuga de pavo fiambre",
+          "60g"
+        ],
+        [
+          "Carne picada ternera",
+          "100g"
+        ],
+        [
+          "Salmón",
+          "125g"
+        ],
+        [
+          "Pollo pechuga solomillo",
+          "270g"
+        ],
+        [
+          "Merluza",
+          "125g"
+        ],
+        [
+          "Sepia",
+          "150g"
+        ],
+        [
+          "Clara de huevo pasteurizada",
+          "105g"
+        ]
+      ],
+      "Frutas": [
+        [
+          "Aguacate",
+          "300g"
+        ],
+        [
+          "Plátano, banano",
+          "420g"
+        ],
+        [
+          "Limón",
+          "90g"
+        ],
+        [
+          "Mandarina",
+          "360g"
+        ],
+        [
+          "Manzana roja",
+          "270g"
+        ],
+        [
+          "Naranja",
+          "200g"
+        ]
+      ],
+      "Hortalizas y verduras": [
+        [
+          "Rúcula",
+          "20g"
+        ],
+        [
+          "Canónigos",
+          "200g"
+        ],
+        [
+          "Tomate crudo",
+          "670g"
+        ],
+        [
+          "Zanahoria",
+          "200g"
+        ],
+        [
+          "Ajo",
+          "10g"
+        ],
+        [
+          "Perejil",
+          "8g"
+        ],
+        [
+          "Berenjena",
+          "150g"
+        ],
+        [
+          "Cebolla o cebolleta",
+          "240g"
+        ],
+        [
+          "Pimiento verde",
+          "70g"
+        ],
+        [
+          "Tomate triturado natural",
+          "275g"
+        ],
+        [
+          "Calabacín",
+          "325g"
+        ],
+        [
+          "Pepino",
+          "120g"
+        ],
+        [
+          "Champiñón o seta",
+          "225g"
+        ],
+        [
+          "Boniato",
+          "375g"
+        ],
+        [
+          "Cebolla blanca",
+          "200g"
+        ],
+        [
+          "Cebolla hervida",
+          "100g"
+        ],
+        [
+          "Espárrago",
+          "100g"
+        ]
+      ],
+      "Frutos secos y legumbres": [
+        [
+          "Anacardo sin cáscara",
+          "20g"
+        ],
+        [
+          "Lentejas cocidas",
+          "160g"
+        ],
+        [
+          "Patata",
+          "375g"
+        ],
+        [
+          "Nuez pelada",
+          "10g"
+        ]
+      ],
+      "Aceites y condimentos": [
+        [
+          "Aceite de oliva",
+          "115g"
+        ],
+        [
+          "Pimienta negra",
+          "2g"
+        ],
+        [
+          "Orégano",
+          "1g"
+        ],
+        [
+          "Pimentón",
+          "1g"
+        ],
+        [
+          "Mostaza",
+          "10g"
+        ],
+        [
+          "Canela",
+          "8g"
+        ],
+        [
+          "Vainilla",
+          "1g"
+        ]
+      ]
+    }
+  }
+}

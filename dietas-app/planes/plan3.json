@@ -1,0 +1,2602 @@
+{
+  "plan": "3",
+  "nombre": "Plan 3",
+  "dias": {
+    "alba": {
+      "Lunes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y plátano",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "80g plátano"
+              ],
+              "rec": [
+                "Mezclar el yogur con el muesli. Añadir la fruta."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y jamón serrano",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g jamón serrano"
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Ensalada de garbanzos tostados",
+              "ing": [
+                "200g garbanzos cocidos",
+                "10g aceite de oliva",
+                "5g comino",
+                "5g pimentón",
+                "5g ajo",
+                "100g pimiento del piquillo",
+                "15g rúcula",
+                "65g queso feta",
+                "125g yogur natural",
+                "5g miel",
+                "5g orégano"
+              ],
+              "rec": [
+                "Mezcla los garbanzos con las especias y aceite de oliva.",
+                "Saltéalos en una sartén unos 5 min. (tápalos, que saltan).",
+                "Prepara la salsa mezclando el yogur con la miel y el orégano. Añádela en la base del plato.",
+                "Vierte los garbanzos, pimientos de piquillo, queso feta y rúcula encima."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Crema fría de calabacín y albahaca",
+              "ing": [
+                "175g calabacín",
+                "75g yogur natural",
+                "8g aceite de oliva",
+                "0.5g albahaca",
+                "15g zumo de limón"
+              ],
+              "rec": [
+                "Pelar y cortar en dados el calabacín. Cocinar al vapor o hervir 5-7 minutos. Enfriar.",
+                "Batir con el aceite de oliva, la albahaca, el yogur y el zumo de limón hasta obtener una crema homogénea.",
+                "Refrigerar y servir con unas hojas de albahaca decorando el plato."
+              ]
+            },
+            {
+              "n": "Tortilla de champiñones y pechuga de pavo",
+              "ing": [
+                "60g huevo de gallina",
+                "75g champiñón o seta",
+                "35g pechuga de pavo fiambre",
+                "8g aceite de oliva",
+                "70g clara de huevo pasteurizada"
+              ],
+              "rec": [
+                "Saltear en una sartén el champiñón laminado.",
+                "Batir el huevo con la clara y agregar el champiñón pochado junto con el pavo en dados.",
+                "Verter en sartén engrasada, cuajar 5 minutos, doblar y voltear."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Martes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y manzana",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "90g manzana roja"
+              ],
+              "rec": [
+                "Mezclar yogur con muesli. Añadir la fruta."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y queso fresco",
+              "ing": [
+                "70g pan blanco",
+                "70g queso tipo Burgos 0% MG",
+                "45g tomate crudo"
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Salmorejo con picada de jamón serrano y huevo",
+              "ing": [
+                "60g pan blanco",
+                "60g huevo de gallina",
+                "8g aceite de oliva",
+                "3g ajo",
+                "200g tomate crudo",
+                "20g jamón serrano",
+                "8g vinagre"
+              ],
+              "rec": [
+                "Pelar y picar el ajo. Colocar en un recipiente y cubrir con el vinagre.",
+                "Cocer el huevo en agua hirviendo 10 minutos. Reservar.",
+                "Batir el tomate pelado con el pan mojado, el ajo y el vinagre. Añadir el aceite en hilo fino para que emulsione.",
+                "Servir frío con el huevo cocido y el jamón picado fino."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Merluza a la plancha con salteado de champiñones y ajos",
+              "ing": [
+                "200g merluza",
+                "30g ajo",
+                "5g aceite de oliva",
+                "3g perejil",
+                "100g champiñón o seta"
+              ],
+              "rec": [
+                "Asar la merluza a la plancha.",
+                "Saltear los champiñones en cuartos junto con los ajos tiernos pelados y troceados.",
+                "Emplatar la merluza con el salteado."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Miércoles": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y plátano",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "80g plátano"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y pavo",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g pechuga de pavo fiambre"
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Bol de salmón con ensalada de arroz basmati",
+              "ing": [
+                "40g arroz basmati crudo",
+                "30g cebolla blanca",
+                "80g mango",
+                "50g pepino",
+                "100g salmón",
+                "5g aceite de oliva"
+              ],
+              "rec": [
+                "Cocer el arroz con el doble de agua 10-12 minutos. Reposar 5 min con el fuego apagado.",
+                "Pelar y cortar en dados el pepino, la cebolla y el mango.",
+                "Mezclar con el arroz basmati y aliñar con aceite de oliva.",
+                "Asar el lomo de salmón a la plancha y colocar encima de la ensalada."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Ensalada Caprese",
+              "ing": [
+                "80g tomate crudo",
+                "55g mozzarella fresca light",
+                "10g aceite de oliva",
+                "2g sal",
+                "5g albahaca"
+              ],
+              "rec": [
+                "Cortar a rodajas el tomate y la mozzarella.",
+                "Colocar las rodajas intercalando el tomate y el queso.",
+                "Aliñar con aceite de oliva, sal y hojas de albahaca picadas."
+              ]
+            },
+            {
+              "n": "Hamburguesa de pollo casera a la plancha con setas",
+              "ing": [
+                "150g pollo pechuga solomillo",
+                "100g champiñón o seta",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Picar la pechuga de pollo al momento o comprar la hamburguesa comercial ya elaborada.",
+                "Mezclar la carne picada con especias y hierbas aromáticas al gusto. Formar la hamburguesa.",
+                "Asar en la plancha caliente. Saltear las setas laminadas.",
+                "Emplatar la hamburguesa con las setas de guarnición."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Jueves": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y manzana",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "90g manzana roja"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y jamón serrano",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g jamón serrano"
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Ensalada Caprese",
+              "ing": [
+                "80g tomate crudo",
+                "55g mozzarella fresca light",
+                "10g aceite de oliva",
+                "2g sal",
+                "5g albahaca"
+              ]
+            },
+            {
+              "n": "Muslo de pollo deshuesado con aliño mediterráneo",
+              "ing": [
+                "170g pollo muslo/contramuslo",
+                "5g aceite de oliva",
+                "3g ajo",
+                "0.5g tomillo",
+                "0.5g orégano",
+                "0.5g pimienta negra"
+              ],
+              "rec": [
+                "Mezclar el ajo picado, el aceite, la pimienta, el orégano y el tomillo.",
+                "Untar el muslo deshuesado por cada lado con el aliño. Marinar mínimo 20 minutos.",
+                "Asar a la parrilla dando la vuelta hasta que esté completamente hecho."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Crema fría de calabacín y albahaca",
+              "ing": [
+                "175g calabacín",
+                "75g yogur natural",
+                "8g aceite de oliva",
+                "0.5g albahaca",
+                "15g zumo de limón"
+              ],
+              "rec": [
+                "Pelar y cortar en dados el calabacín. Cocinar al vapor 5-7 minutos. Enfriar.",
+                "Batir con el aceite, la albahaca, el yogur y el zumo de limón. Refrigerar."
+              ]
+            },
+            {
+              "n": "Salpicón de pulpo y langostinos",
+              "ing": [
+                "170g pulpo",
+                "150g tomate crudo",
+                "10g aceite de oliva",
+                "1g pimienta negra",
+                "5g vinagre",
+                "50g cebolla o cebolleta",
+                "30g pimiento rojo",
+                "30g pimiento verde",
+                "30g langostino"
+              ],
+              "rec": [
+                "Lavar y cortar en trozos el tomate, la cebolleta y los pimientos.",
+                "Trocear el pulpo y los langostinos cocidos y mezclar con las verduras.",
+                "Preparar vinagreta con el aceite, el vinagre y la pimienta. Regar el salpicón y dejar reposar en la nevera."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Viernes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y arándanos",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "25g arándanos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y pavo",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g pechuga de pavo fiambre"
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Ensalada de patata, coliflor, espárragos verdes y huevo con salsa de mostaza",
+              "ing": [
+                "55g huevo de gallina",
+                "75g coliflor",
+                "50g espárrago",
+                "100g patata",
+                "65g yogur natural",
+                "7g mostaza",
+                "10g zumo de limón"
+              ],
+              "rec": [
+                "Lavar y trocear los espárragos y cocinar al vapor en el microondas.",
+                "Cocer la patata en dados y la coliflor en agua hirviendo 20 minutos.",
+                "Cocer el huevo 10 minutos.",
+                "Preparar la salsa mezclando el yogur con la mostaza y el zumo de limón.",
+                "Agregar en una fuente los espárragos, la patata y la coliflor con el huevo cocido picado. Aliñar con la salsa de yogur."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Fajitas de pollo con aguacate, maíz y queso",
+              "ing": [
+                "30g cebolla o cebolleta",
+                "100g pollo pechuga solomillo",
+                "20g queso Havarti light",
+                "50g aguacate",
+                "15g maíz dulce enlatado",
+                "40g fajita integral",
+                "5g aceite de oliva",
+                "0.5g pimienta negra"
+              ],
+              "rec": [
+                "Cocinar la pechuga de pollo en sartén ligeramente engrasada. Sacar y desmenuzar en tiras.",
+                "Mezclar el pollo con la cebolla, el maíz, el aguacate aplastado, sal y pimienta.",
+                "Extender la tortita y colocar el queso en el centro. Añadir la mezcla de pollo y enrollar."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Sábado": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche + tostada con huevos revueltos y aguacate",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café",
+                "40g pan blanco",
+                "60g huevo de gallina",
+                "50g aguacate",
+                "3g aceite de oliva"
+              ],
+              "rec": [
+                "Pelar y lonchear el aguacate.",
+                "Batir el huevo y cuajar en sartén con el aceite removiendo.",
+                "Colocar el revuelto en el pan tostado y añadir las lonchas de aguacate."
+              ]
+            },
+            {
+              "n": "Kiwi",
+              "ing": [
+                "120g kiwi"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Bol exprés de pollo con aguacate y mozzarella",
+              "ing": [
+                "125g pollo pechuga solomillo",
+                "20g lechuga",
+                "75g aguacate",
+                "75g tomate cherry",
+                "75g mozzarella fresca light",
+                "2g albahaca",
+                "8g aceite de oliva",
+                "5g vinagre de módena"
+              ],
+              "rec": [
+                "Asar en sartén caliente la pechuga de pollo entera. Sacar y lonchear en grueso.",
+                "Colocar en la base de un cuenco la lechuga troceada.",
+                "Poner en el centro el pollo, alrededor los tomates cherry, el aguacate y la mozzarella.",
+                "Picar la albahaca y esparcir por encima. Aliñar con aceite de oliva y vinagre balsámico."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Domingo": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tortitas de avena y plátano con manzana y canela",
+              "ing": [
+                "100g plátano",
+                "30g harina de avena",
+                "105g clara de huevo pasteurizada",
+                "120g manzana roja",
+                "3g aceite de oliva",
+                "1g vainilla",
+                "1g canela"
+              ],
+              "rec": [
+                "Aplastar el plátano. Agregar harina, clara y vainilla. Batir hasta crema uniforme.",
+                "Calentar sartén engrasada. Volcar y voltear para dorar por ambos lados.",
+                "Extender la manzana laminada y espolvorear con canela."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Pipirrana con huevo duro y atún",
+              "ing": [
+                "150g tomate crudo",
+                "75g cebolla blanca",
+                "75g pimiento verde",
+                "55g atún enlatado en agua",
+                "8g aceite de oliva",
+                "5g ajo",
+                "60g huevo de gallina"
+              ],
+              "rec": [
+                "Cocer el huevo, pelar y sacar la yema. Majar en mortero el ajo con la yema y el aceite.",
+                "Añadir la clara del huevo picada fina, el tomate, el pimiento verde y la cebolla en dados pequeños. Añadir el majado y mezclar.",
+                "Reservar en la nevera hasta que esté bien frío. Añadir el atún escurrido al servir."
+              ]
+            },
+            {
+              "n": "Brochetas de pavo y tomatitos al yogur",
+              "ing": [
+                "100g pavo pechuga fresco",
+                "50g tomate cherry",
+                "3g aceite de oliva",
+                "100g yogur natural",
+                "50g zumo de limón",
+                "1g tomillo",
+                "1g romero",
+                "3g ajo"
+              ],
+              "rec": [
+                "Preparar la salsa mezclando el yogur con el zumo de limón, el tomillo, el romero y el ajo picado.",
+                "Agregar el pavo cortado en dados y mezclar bien. Marinar en la nevera 30 minutos.",
+                "Montar la brocheta alternando trozos de pavo con los tomates cherry.",
+                "Asar en la plancha engrasada a fuego medio-fuerte, girando para que se doren por todos los lados."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pablo": {
+      "Lunes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Sándwich integral de jamón cocido, aguacate y rúcula",
+              "ing": [
+                "30g pan de molde integral",
+                "15g jamón cocido",
+                "25g aguacate",
+                "10g rúcula"
+              ],
+              "rec": [
+                "Pelar y lonchear el aguacate. Montar el sándwich con aguacate, rúcula y jamón cocido."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Plátano y anacardos",
+              "ing": [
+                "160g plátano",
+                "10g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Ensalada de garbanzos tostados",
+              "ing": [
+                "200g garbanzos cocidos",
+                "10g aceite de oliva",
+                "5g comino",
+                "5g pimentón",
+                "5g ajo",
+                "100g pimiento del piquillo",
+                "15g rúcula",
+                "65g queso feta",
+                "125g yogur natural",
+                "5g miel",
+                "5g orégano"
+              ],
+              "rec": [
+                "Mezcla los garbanzos con las especias y aceite de oliva.",
+                "Saltéalos en una sartén unos 5 min (tápalos, que saltan).",
+                "Prepara la salsa mezclando el yogur con la miel y el orégano. Añádela en la base del plato.",
+                "Vierte los garbanzos, pimientos de piquillo, queso feta y rúcula encima."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Crema fría de calabacín y albahaca",
+              "ing": [
+                "175g calabacín",
+                "75g yogur natural",
+                "8g aceite de oliva",
+                "0.5g albahaca",
+                "15g zumo de limón"
+              ],
+              "rec": [
+                "Pelar y cortar en dados el calabacín. Cocinar al vapor o hervir 5-7 minutos. Enfriar.",
+                "Batir con el aceite, la albahaca, el yogur y el zumo de limón hasta obtener una crema homogénea. Refrigerar."
+              ]
+            },
+            {
+              "n": "Tortilla de champiñones y pechuga de pavo",
+              "ing": [
+                "60g huevo de gallina",
+                "100g champiñón o seta",
+                "40g pechuga de pavo fiambre",
+                "10g aceite de oliva",
+                "105g clara de huevo pasteurizada"
+              ],
+              "rec": [
+                "Saltear en una sartén el champiñón laminado.",
+                "Batir el huevo con la clara y agregar el champiñón pochado junto con el pavo en dados.",
+                "Verter en sartén engrasada, cuajar 5 minutos, doblar y voltear."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Martes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Sándwich integral de pavo y queso de untar",
+              "ing": [
+                "60g pan de molde integral",
+                "30g queso de untar ligero",
+                "30g pechuga de pavo fiambre"
+              ],
+              "rec": [
+                "Untar el queso en una rebanada del pan de molde, añadir el pavo y montar el sándwich."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Mandarinas",
+              "ing": [
+                "180g mandarina"
+              ]
+            },
+            {
+              "n": "Chocolate negro",
+              "ing": [
+                "10g chocolate negro"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Salmorejo con picada de jamón serrano y huevo",
+              "ing": [
+                "80g pan blanco",
+                "60g huevo de gallina",
+                "10g aceite de oliva",
+                "5g ajo",
+                "250g tomate crudo",
+                "30g jamón serrano",
+                "10g vinagre"
+              ],
+              "rec": [
+                "Pelar y picar el ajo. Colocar en un recipiente y cubrir con el vinagre.",
+                "Cocer el huevo en agua hirviendo 10 minutos. Reservar.",
+                "Batir el tomate pelado con el pan mojado, el ajo y el vinagre. Añadir el aceite en hilo fino para que emulsione.",
+                "Servir frío con el huevo cocido y el jamón picado fino."
+              ]
+            },
+            {
+              "n": "Pechuga de pollo a las finas hierbas",
+              "ing": [
+                "100g pollo pechuga solomillo",
+                "80g cebolla o cebolleta",
+                "3g ajo",
+                "3g perejil",
+                "3g romero",
+                "3g tomillo",
+                "3g orégano",
+                "8g zumo de limón",
+                "10g aceite de oliva"
+              ],
+              "rec": [
+                "Poner las pechugas en una fuente honda y sazonarlas con sal, orégano, tomillo, romero, perejil y ajo picado.",
+                "Macerar 30 minutos. Pelar y picar las cebolletas.",
+                "En la fuente de horno, poner las pechugas con todo su jugo y las cebolletas. Cocinar a 180 grados durante unos 30 minutos."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Merluza a la plancha con salteado de champiñones y ajos",
+              "ing": [
+                "350g merluza",
+                "50g ajo",
+                "10g aceite de oliva",
+                "1g pimienta negra",
+                "150g champiñón o seta"
+              ],
+              "rec": [
+                "Asar la rodaja de merluza a la plancha.",
+                "Saltear los champiñones en cuartos junto con los ajos tiernos pelados y troceados.",
+                "Emplatar la merluza con el salteado."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Miércoles": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Sándwich integral de jamón cocido, aguacate y rúcula",
+              "ing": [
+                "30g pan de molde integral",
+                "15g jamón cocido",
+                "25g aguacate",
+                "10g rúcula"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Manzana y nueces",
+              "ing": [
+                "150g manzana roja",
+                "10g nuez pelada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Bol de salmón con ensalada de arroz basmati",
+              "ing": [
+                "100g arroz basmati crudo",
+                "50g cebolla blanca",
+                "120g mango",
+                "75g pepino",
+                "175g salmón",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Cocer el arroz en un cazo con el doble de agua 10-12 minutos. Reposar 5 min.",
+                "Pelar y cortar en dados el pepino, la cebolla y el mango. Mezclar con el arroz basmati y aliñar con aceite de oliva.",
+                "Asar en la plancha el lomo de salmón limpio de espinas.",
+                "Incorporar el salmón al bol encima de la ensalada de arroz."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Ensalada Caprese",
+              "ing": [
+                "100g tomate crudo",
+                "80g mozzarella fresca light",
+                "10g aceite de oliva",
+                "2g sal",
+                "5g albahaca"
+              ],
+              "rec": [
+                "Cortar a rodajas el tomate y la mozzarella.",
+                "Colocar las rodajas intercalando el tomate y el queso.",
+                "Aliñar con aceite de oliva, sal y hojas de albahaca picadas."
+              ]
+            },
+            {
+              "n": "Hamburguesa de pollo casera a la plancha con setas",
+              "ing": [
+                "180g pollo pechuga solomillo",
+                "125g champiñón o seta",
+                "10g aceite de oliva"
+              ],
+              "rec": [
+                "Pedir al carnicero que nos pique la pechuga de pollo o comprar la hamburguesa comercial.",
+                "Mezclar la carne picada con especias y hierbas al gusto. Formar la hamburguesa.",
+                "Asar en la plancha caliente. Saltear las setas laminadas.",
+                "Emplatar la hamburguesa con las setas de guarnición."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Jueves": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Sándwich integral de pavo y queso de untar",
+              "ing": [
+                "60g pan de molde integral",
+                "30g queso de untar ligero",
+                "30g pechuga de pavo fiambre"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Mandarinas",
+              "ing": [
+                "180g mandarina"
+              ]
+            },
+            {
+              "n": "Chocolate negro",
+              "ing": [
+                "10g chocolate negro"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Ensalada Caprese",
+              "ing": [
+                "100g tomate crudo",
+                "80g mozzarella fresca light",
+                "10g aceite de oliva",
+                "2g sal",
+                "5g albahaca"
+              ]
+            },
+            {
+              "n": "Muslo de pollo deshuesado con aliño mediterráneo",
+              "ing": [
+                "340g pollo muslo/contramuslo",
+                "10g aceite de oliva",
+                "5g ajo",
+                "0.5g tomillo",
+                "0.5g orégano",
+                "0.5g pimienta negra"
+              ],
+              "rec": [
+                "Mezclar el ajo picado, el aceite, la pimienta, el orégano y el tomillo.",
+                "Untar el muslo deshuesado por cada lado con el aliño. Marinar mínimo 20 minutos.",
+                "Asar a la parrilla dando la vuelta hasta que esté completamente hecho."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Crema fría de calabacín y albahaca",
+              "ing": [
+                "175g calabacín",
+                "75g yogur natural",
+                "8g aceite de oliva",
+                "0.5g albahaca",
+                "15g zumo de limón"
+              ],
+              "rec": [
+                "Pelar y cortar en dados el calabacín. Cocinar al vapor 5-7 minutos. Enfriar.",
+                "Batir con el aceite, la albahaca, el yogur y el zumo de limón. Refrigerar."
+              ]
+            },
+            {
+              "n": "Salpicón de pulpo y langostinos",
+              "ing": [
+                "200g pulpo",
+                "180g tomate crudo",
+                "15g aceite de oliva",
+                "1g pimienta negra",
+                "10g vinagre",
+                "75g cebolla o cebolleta",
+                "40g pimiento rojo",
+                "40g pimiento verde",
+                "40g langostino"
+              ],
+              "rec": [
+                "Lavar y cortar en trozos el tomate, la cebolleta y los pimientos.",
+                "Trocear el pulpo y los langostinos cocidos y mezclar con las verduras.",
+                "Preparar vinagreta con el aceite, el vinagre y la pimienta. Regar el salpicón y dejar reposar en la nevera."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Viernes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Sándwich integral de jamón serrano y huevo a la plancha",
+              "ing": [
+                "60g pan de molde integral",
+                "60g huevo de gallina",
+                "5g aceite de oliva",
+                "30g jamón serrano"
+              ],
+              "rec": [
+                "Hacer a la plancha el huevo en una sartén caliente con el aceite.",
+                "Montar el sándwich colocando el huevo y encima el jamón serrano."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Plátano y anacardos",
+              "ing": [
+                "160g plátano",
+                "10g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Ensalada de patata, coliflor, espárragos y huevo con salsa de mostaza",
+              "ing": [
+                "65g huevo de gallina",
+                "125g coliflor",
+                "100g espárrago",
+                "150g patata",
+                "125g yogur natural",
+                "14g mostaza",
+                "15g zumo de limón"
+              ],
+              "rec": [
+                "Lavar y trocear los espárragos y cocinar al vapor en el microondas.",
+                "Cocer la patata en dados y la coliflor en agua hirviendo 20 minutos.",
+                "Cocer el huevo 10 minutos.",
+                "Preparar la salsa mezclando el yogur con la mostaza y el zumo de limón.",
+                "Agregar en una fuente los espárragos, la patata y la coliflor con el huevo cocido picado. Aliñar con la salsa de yogur."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Fajitas de pollo con aguacate, maíz y queso",
+              "ing": [
+                "40g cebolla o cebolleta",
+                "150g pollo pechuga solomillo",
+                "35g queso Havarti light",
+                "100g aguacate",
+                "25g maíz dulce enlatado",
+                "60g fajita integral",
+                "5g aceite de oliva",
+                "0.5g pimienta negra"
+              ],
+              "rec": [
+                "Cocinar la pechuga de pollo en sartén ligeramente engrasada. Sacar y desmenuzar en tiras.",
+                "Mezclar el pollo con la cebolla, el maíz, el aguacate aplastado, sal y pimienta.",
+                "Extender la tortita y colocar el queso en el centro. Añadir la mezcla de pollo y enrollar."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Sábado": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Naranja y canela",
+              "ing": [
+                "200g naranja",
+                "2g canela"
+              ]
+            },
+            {
+              "n": "Tostada de pan de barra con aguacate y queso fresco",
+              "ing": [
+                "70g pan blanco",
+                "50g aguacate",
+                "70g queso tipo Burgos 0% MG"
+              ],
+              "rec": [
+                "Pelar y lonchear el aguacate. Montar la tostada con aguacate y queso fresco."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Bol exprés de pollo con aguacate y mozzarella",
+              "ing": [
+                "150g pollo pechuga solomillo",
+                "30g lechuga",
+                "100g aguacate",
+                "100g tomate cherry",
+                "100g mozzarella fresca light",
+                "2g albahaca",
+                "10g aceite de oliva",
+                "8g vinagre de módena"
+              ],
+              "rec": [
+                "Asar en sartén caliente la pechuga de pollo entera. Sacar y lonchear en grueso.",
+                "Colocar en la base de un cuenco la lechuga limpia y troceada.",
+                "Poner en el centro el pollo, alrededor los tomates cherry, el aguacate y la mozzarella.",
+                "Picar la albahaca y esparcir por encima. Aliñar con aceite de oliva y vinagre balsámico."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ],
+      "Domingo": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Tortitas de avena y plátano con manzana y canela",
+              "ing": [
+                "100g plátano",
+                "30g harina de avena",
+                "105g clara de huevo pasteurizada",
+                "120g manzana roja",
+                "3g aceite de oliva",
+                "1g vainilla",
+                "1g canela"
+              ],
+              "rec": [
+                "Aplastar el plátano. Agregar harina, clara y vainilla. Batir hasta crema uniforme.",
+                "Calentar sartén engrasada. Volcar y voltear para dorar por ambos lados.",
+                "Extender la manzana laminada y espolvorear con canela."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Pipirrana con huevo duro y atún",
+              "ing": [
+                "150g tomate crudo",
+                "75g cebolla blanca",
+                "75g pimiento verde",
+                "55g atún enlatado en agua",
+                "8g aceite de oliva",
+                "5g ajo",
+                "60g huevo de gallina"
+              ],
+              "rec": [
+                "Cocer el huevo, pelar y sacar la yema. Majar en mortero el ajo con la yema y el aceite.",
+                "Añadir la clara del huevo picada fina, el tomate, el pimiento verde y la cebolla en dados. Añadir el majado y mezclar.",
+                "Reservar en la nevera hasta que esté bien frío. Añadir el atún escurrido al servir."
+              ]
+            },
+            {
+              "n": "Brochetas de pavo y tomatitos al yogur",
+              "ing": [
+                "200g pavo pechuga fresco",
+                "100g tomate cherry",
+                "5g aceite de oliva",
+                "125g yogur natural",
+                "70g zumo de limón",
+                "1g tomillo",
+                "1g romero",
+                "5g ajo"
+              ],
+              "rec": [
+                "Preparar la salsa mezclando el yogur con el zumo de limón, el tomillo, el romero y el ajo picado.",
+                "Agregar el pavo cortado en dados y marinar en la nevera 30 minutos.",
+                "Montar la brocheta alternando trozos de pavo con los tomates cherry.",
+                "Asar en la plancha engrasada a fuego medio-fuerte, girando para que se doren por todos los lados."
+              ]
+            },
+            {
+              "n": "Yogur natural",
+              "ing": [
+                "250g yogur natural"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "conjunto": {
+    "Lunes": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Ensalada de garbanzos tostados",
+            "ing": [
+              {
+                "n": "Garbanzos cocidos",
+                "a": 200,
+                "p": 200
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 10,
+                "p": 10
+              },
+              {
+                "n": "Pimiento del piquillo",
+                "a": 100,
+                "p": 100
+              },
+              {
+                "n": "Rúcula",
+                "a": 15,
+                "p": 15
+              },
+              {
+                "n": "Queso feta",
+                "a": 65,
+                "p": 65
+              },
+              {
+                "n": "Yogur natural",
+                "a": 125,
+                "p": 125
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Crema fría de calabacín y albahaca",
+            "ing": [
+              {
+                "n": "Calabacín",
+                "a": 175,
+                "p": 175
+              },
+              {
+                "n": "Yogur natural",
+                "a": 75,
+                "p": 75
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 8
+              },
+              {
+                "n": "Zumo de limón",
+                "a": 15,
+                "p": 15
+              }
+            ],
+            "rec": [
+              "Pelar y cortar en dados el calabacín. Cocinar al vapor 5-7 minutos. Enfriar.",
+              "Batir con el aceite, la albahaca, el yogur y el zumo de limón. Refrigerar."
+            ]
+          },
+          {
+            "n": "Tortilla de champiñones y pechuga de pavo",
+            "ing": [
+              {
+                "n": "Huevo de gallina",
+                "a": 60,
+                "p": 60
+              },
+              {
+                "n": "Champiñón o seta",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Pechuga de pavo fiambre",
+                "a": 35,
+                "p": 40
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              },
+              {
+                "n": "Clara de huevo pasteurizada",
+                "a": 70,
+                "p": 105
+              }
+            ],
+            "rec": [
+              "Saltear en una sartén el champiñón laminado.",
+              "Batir el huevo con la clara y agregar el champiñón pochado junto con el pavo en dados.",
+              "Verter en sartén engrasada, cuajar 5 minutos, doblar y voltear."
+            ]
+          }
+        ]
+      }
+    },
+    "Martes": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Salmorejo con picada de jamón serrano y huevo",
+            "ing": [
+              {
+                "n": "Pan blanco",
+                "a": 60,
+                "p": 80
+              },
+              {
+                "n": "Huevo de gallina",
+                "a": 60,
+                "p": 60
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              },
+              {
+                "n": "Ajo",
+                "a": 3,
+                "p": 5
+              },
+              {
+                "n": "Tomate crudo",
+                "a": 200,
+                "p": 250
+              },
+              {
+                "n": "Jamón serrano",
+                "a": 20,
+                "p": 30
+              }
+            ],
+            "rec": [
+              "Pelar y picar el ajo. Colocar en un recipiente y cubrir con el vinagre.",
+              "Cocer el huevo 10 minutos. Reservar.",
+              "Batir el tomate pelado con el pan mojado, el ajo y el vinagre. Añadir el aceite en hilo fino.",
+              "Servir frío con el huevo cocido y el jamón picado fino."
+            ]
+          },
+          {
+            "n": "Pechuga de pollo a las finas hierbas (solo Pablo)",
+            "ing": [
+              {
+                "n": "Pollo pechuga solomillo",
+                "a": null,
+                "p": 100
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Merluza a la plancha con salteado de champiñones y ajos",
+            "ing": [
+              {
+                "n": "Merluza",
+                "a": 200,
+                "p": 350
+              },
+              {
+                "n": "Ajo",
+                "a": 30,
+                "p": 50
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 10
+              },
+              {
+                "n": "Champiñón o seta",
+                "a": 100,
+                "p": 150
+              }
+            ],
+            "rec": [
+              "Asar la merluza a la plancha.",
+              "Saltear los champiñones en cuartos junto con los ajos tiernos pelados y troceados.",
+              "Emplatar la merluza con el salteado."
+            ]
+          }
+        ]
+      }
+    },
+    "Miércoles": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Bol de salmón con ensalada de arroz basmati",
+            "ing": [
+              {
+                "n": "Arroz basmati crudo",
+                "a": 40,
+                "p": 100
+              },
+              {
+                "n": "Cebolla blanca",
+                "a": 30,
+                "p": 50
+              },
+              {
+                "n": "Mango",
+                "a": 80,
+                "p": 120
+              },
+              {
+                "n": "Pepino",
+                "a": 50,
+                "p": 75
+              },
+              {
+                "n": "Salmón",
+                "a": 100,
+                "p": 175
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 8
+              }
+            ],
+            "rec": [
+              "Cocer el arroz con el doble de agua 10-12 minutos. Reposar 5 min.",
+              "Pelar y cortar en dados el pepino, la cebolla y el mango.",
+              "Mezclar con el arroz basmati y aliñar con aceite de oliva.",
+              "Asar el lomo de salmón a la plancha y colocar encima de la ensalada."
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Ensalada Caprese",
+            "ing": [
+              {
+                "n": "Tomate crudo",
+                "a": 80,
+                "p": 100
+              },
+              {
+                "n": "Mozzarella fresca light",
+                "a": 55,
+                "p": 80
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 10,
+                "p": 10
+              }
+            ]
+          },
+          {
+            "n": "Hamburguesa de pollo casera a la plancha con setas",
+            "ing": [
+              {
+                "n": "Pollo pechuga solomillo",
+                "a": 150,
+                "p": 180
+              },
+              {
+                "n": "Champiñón o seta",
+                "a": 100,
+                "p": 125
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              }
+            ],
+            "rec": [
+              "Pedir al carnicero que nos pique la pechuga de pollo o comprar la hamburguesa comercial.",
+              "Mezclar la carne picada con especias y hierbas al gusto. Formar la hamburguesa.",
+              "Asar en la plancha caliente. Saltear las setas laminadas.",
+              "Emplatar la hamburguesa con las setas de guarnición."
+            ]
+          }
+        ]
+      }
+    },
+    "Jueves": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Ensalada Caprese",
+            "ing": [
+              {
+                "n": "Tomate crudo",
+                "a": 80,
+                "p": 100
+              },
+              {
+                "n": "Mozzarella fresca light",
+                "a": 55,
+                "p": 80
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 10,
+                "p": 10
+              }
+            ]
+          },
+          {
+            "n": "Muslo de pollo deshuesado con aliño mediterráneo",
+            "ing": [
+              {
+                "n": "Pollo muslo/contramuslo",
+                "a": 170,
+                "p": 340
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 10
+              },
+              {
+                "n": "Ajo",
+                "a": 3,
+                "p": 5
+              }
+            ],
+            "rec": [
+              "Mezclar el ajo picado, el aceite, la pimienta, el orégano y el tomillo.",
+              "Untar el muslo deshuesado y marinar mínimo 20 minutos.",
+              "Asar a la parrilla dando la vuelta hasta que esté completamente hecho."
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Crema fría de calabacín y albahaca",
+            "ing": [
+              {
+                "n": "Calabacín",
+                "a": 175,
+                "p": 175
+              },
+              {
+                "n": "Yogur natural",
+                "a": 75,
+                "p": 75
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 8
+              }
+            ]
+          },
+          {
+            "n": "Salpicón de pulpo y langostinos",
+            "ing": [
+              {
+                "n": "Pulpo",
+                "a": 170,
+                "p": 200
+              },
+              {
+                "n": "Tomate crudo",
+                "a": 150,
+                "p": 180
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 10,
+                "p": 15
+              },
+              {
+                "n": "Cebolla o cebolleta",
+                "a": 50,
+                "p": 75
+              },
+              {
+                "n": "Pimiento rojo",
+                "a": 30,
+                "p": 40
+              },
+              {
+                "n": "Pimiento verde",
+                "a": 30,
+                "p": 40
+              },
+              {
+                "n": "Langostino",
+                "a": 30,
+                "p": 40
+              }
+            ],
+            "rec": [
+              "Lavar y cortar en trozos el tomate, la cebolleta y los pimientos.",
+              "Trocear el pulpo y los langostinos cocidos y mezclar con las verduras.",
+              "Preparar vinagreta con el aceite, el vinagre y la pimienta. Regar el salpicón y dejar reposar en la nevera."
+            ]
+          }
+        ]
+      }
+    },
+    "Viernes": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Ensalada de patata, coliflor, espárragos y huevo con salsa de mostaza",
+            "ing": [
+              {
+                "n": "Huevo de gallina",
+                "a": 55,
+                "p": 65
+              },
+              {
+                "n": "Coliflor",
+                "a": 75,
+                "p": 125
+              },
+              {
+                "n": "Espárrago",
+                "a": 50,
+                "p": 100
+              },
+              {
+                "n": "Patata",
+                "a": 100,
+                "p": 150
+              },
+              {
+                "n": "Yogur natural",
+                "a": 65,
+                "p": 125
+              },
+              {
+                "n": "Mostaza",
+                "a": 7,
+                "p": 14
+              }
+            ],
+            "rec": [
+              "Lavar y trocear los espárragos y cocinar al vapor en el microondas.",
+              "Cocer la patata en dados y la coliflor en agua hirviendo 20 minutos.",
+              "Cocer el huevo 10 minutos.",
+              "Preparar la salsa mezclando el yogur con la mostaza y el zumo de limón.",
+              "Agregar en una fuente los espárragos, la patata y la coliflor con el huevo cocido picado. Aliñar con la salsa de yogur."
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Fajitas de pollo con aguacate, maíz y queso",
+            "ing": [
+              {
+                "n": "Cebolla o cebolleta",
+                "a": 30,
+                "p": 40
+              },
+              {
+                "n": "Pollo pechuga solomillo",
+                "a": 100,
+                "p": 150
+              },
+              {
+                "n": "Queso Havarti light",
+                "a": 20,
+                "p": 35
+              },
+              {
+                "n": "Aguacate",
+                "a": 50,
+                "p": 100
+              },
+              {
+                "n": "Maíz dulce enlatado",
+                "a": 15,
+                "p": 25
+              },
+              {
+                "n": "Fajita integral",
+                "a": 40,
+                "p": 60
+              }
+            ],
+            "rec": [
+              "Cocinar la pechuga de pollo en sartén ligeramente engrasada. Sacar y desmenuzar en tiras.",
+              "Mezclar el pollo con la cebolla, el maíz, el aguacate aplastado, sal y pimienta.",
+              "Extender la tortita y colocar el queso en el centro. Añadir la mezcla de pollo y enrollar."
+            ]
+          }
+        ]
+      }
+    },
+    "Sábado": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Bol exprés de pollo con aguacate y mozzarella",
+            "ing": [
+              {
+                "n": "Pollo pechuga solomillo",
+                "a": 125,
+                "p": 150
+              },
+              {
+                "n": "Lechuga",
+                "a": 20,
+                "p": 30
+              },
+              {
+                "n": "Aguacate",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Tomate cherry",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Mozzarella fresca light",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              }
+            ],
+            "rec": [
+              "Asar en sartén caliente la pechuga de pollo entera. Sacar y lonchear en grueso.",
+              "Colocar en la base de un cuenco la lechuga limpia y troceada.",
+              "Poner en el centro el pollo, alrededor los tomates cherry, el aguacate y la mozzarella.",
+              "Picar la albahaca y esparcir por encima. Aliñar con aceite de oliva y vinagre balsámico."
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Comida disfrutona 🎉",
+            "ing": [],
+            "rec": []
+          }
+        ]
+      }
+    },
+    "Domingo": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Comida disfrutona 🎉",
+            "ing": [],
+            "rec": []
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Pipirrana con huevo duro y atún",
+            "ing": [
+              {
+                "n": "Tomate crudo",
+                "a": 150,
+                "p": 150
+              },
+              {
+                "n": "Cebolla blanca",
+                "a": 75,
+                "p": 75
+              },
+              {
+                "n": "Pimiento verde",
+                "a": 75,
+                "p": 75
+              },
+              {
+                "n": "Atún enlatado en agua",
+                "a": 55,
+                "p": 55
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 8
+              },
+              {
+                "n": "Huevo de gallina",
+                "a": 60,
+                "p": 60
+              }
+            ]
+          },
+          {
+            "n": "Brochetas de pavo y tomatitos al yogur",
+            "ing": [
+              {
+                "n": "Pavo pechuga fresco",
+                "a": 100,
+                "p": 200
+              },
+              {
+                "n": "Tomate cherry",
+                "a": 50,
+                "p": 100
+              },
+              {
+                "n": "Yogur natural",
+                "a": 100,
+                "p": 125
+              },
+              {
+                "n": "Zumo de limón",
+                "a": 50,
+                "p": 70
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "compra": {
+    "alba": {
+      "Leche y derivados": [
+        [
+          "Leche semidesnatada UHT",
+          "2175g"
+        ],
+        [
+          "Yogur natural",
+          "2815g"
+        ],
+        [
+          "Queso feta",
+          "65g"
+        ],
+        [
+          "Queso tipo Burgos 0% MG",
+          "70g"
+        ],
+        [
+          "Mozzarella Fresca Light",
+          "185g"
+        ],
+        [
+          "Queso Havarti Light",
+          "20g"
+        ]
+      ],
+      "Cereales y derivados": [
+        [
+          "Cereales muesli",
+          "100g"
+        ],
+        [
+          "Pan blanco",
+          "450g"
+        ],
+        [
+          "Miel",
+          "5g"
+        ],
+        [
+          "Arroz basmati crudo",
+          "40g"
+        ],
+        [
+          "Maíz dulce enlatado",
+          "15g"
+        ],
+        [
+          "Fajita integral",
+          "40g"
+        ],
+        [
+          "Harina de avena",
+          "30g"
+        ]
+      ],
+      "Frutas": [
+        [
+          "Plátano, banano",
+          "260g"
+        ],
+        [
+          "Naranja",
+          "90g"
+        ],
+        [
+          "Manzana roja",
+          "300g"
+        ],
+        [
+          "Mango",
+          "80g"
+        ],
+        [
+          "Arándanos",
+          "25g"
+        ],
+        [
+          "Aguacate",
+          "175g"
+        ],
+        [
+          "Kiwi",
+          "120g"
+        ],
+        [
+          "Zumo de limón",
+          "90g"
+        ]
+      ],
+      "Hortalizas y verduras": [
+        [
+          "Tomate crudo",
+          "885g"
+        ],
+        [
+          "Ajo",
+          "49g"
+        ],
+        [
+          "Pimiento del piquillo",
+          "100g"
+        ],
+        [
+          "Rúcula",
+          "15g"
+        ],
+        [
+          "Calabacín",
+          "350g"
+        ],
+        [
+          "Champiñón o seta",
+          "275g"
+        ],
+        [
+          "Perejil",
+          "3g"
+        ],
+        [
+          "Cebolla blanca",
+          "105g"
+        ],
+        [
+          "Pepino",
+          "50g"
+        ],
+        [
+          "Cebolla o cebolleta",
+          "80g"
+        ],
+        [
+          "Pimiento rojo",
+          "30g"
+        ],
+        [
+          "Pimiento verde",
+          "105g"
+        ],
+        [
+          "Coliflor",
+          "75g"
+        ],
+        [
+          "Espárrago",
+          "50g"
+        ],
+        [
+          "Lechuga",
+          "20g"
+        ],
+        [
+          "Tomate cherry",
+          "125g"
+        ]
+      ],
+      "Carnes, pescados y huevos": [
+        [
+          "Jamón serrano",
+          "80g"
+        ],
+        [
+          "Huevo de gallina",
+          "295g"
+        ],
+        [
+          "Pechuga de pavo fiambre",
+          "95g"
+        ],
+        [
+          "Clara de huevo pasteurizada",
+          "175g"
+        ],
+        [
+          "Merluza",
+          "200g"
+        ],
+        [
+          "Salmón",
+          "100g"
+        ],
+        [
+          "Pollo pechuga solomillo",
+          "375g"
+        ],
+        [
+          "Pollo muslo/contramuslo",
+          "170g"
+        ],
+        [
+          "Pulpo",
+          "170g"
+        ],
+        [
+          "Langostino",
+          "30g"
+        ],
+        [
+          "Atún enlatado en agua",
+          "55g"
+        ],
+        [
+          "Pavo pechuga fresco",
+          "100g"
+        ]
+      ],
+      "Frutos secos y legumbres": [
+        [
+          "Anacardo sin cáscara",
+          "75g"
+        ],
+        [
+          "Garbanzos cocidos",
+          "200g"
+        ],
+        [
+          "Patata",
+          "100g"
+        ]
+      ],
+      "Aceites y condimentos": [
+        [
+          "Aceite de oliva",
+          "125g"
+        ],
+        [
+          "Café",
+          "600g"
+        ],
+        [
+          "Comino",
+          "5g"
+        ],
+        [
+          "Pimentón",
+          "5g"
+        ],
+        [
+          "Orégano",
+          "5.5g"
+        ],
+        [
+          "Albahaca",
+          "13g"
+        ],
+        [
+          "Canela",
+          "21g"
+        ],
+        [
+          "Mostaza",
+          "7g"
+        ],
+        [
+          "Tomillo",
+          "1.5g"
+        ],
+        [
+          "Pimienta negra",
+          "2g"
+        ],
+        [
+          "Vainilla",
+          "1g"
+        ],
+        [
+          "Romero",
+          "1g"
+        ]
+      ]
+    },
+    "pablo": {
+      "Leche y derivados": [
+        [
+          "Leche semidesnatada UHT",
+          "1125g"
+        ],
+        [
+          "Queso feta",
+          "65g"
+        ],
+        [
+          "Yogur natural",
+          "2275g"
+        ],
+        [
+          "Queso de untar ligero",
+          "60g"
+        ],
+        [
+          "Mozzarella Fresca Light",
+          "260g"
+        ],
+        [
+          "Queso Havarti Light",
+          "35g"
+        ],
+        [
+          "Queso tipo Burgos 0% MG",
+          "70g"
+        ]
+      ],
+      "Cereales y derivados": [
+        [
+          "Cacao en polvo desgrasado sin azúcar",
+          "40g"
+        ],
+        [
+          "Pan de molde integral",
+          "240g"
+        ],
+        [
+          "Miel",
+          "5g"
+        ],
+        [
+          "Chocolate negro",
+          "20g"
+        ],
+        [
+          "Pan blanco",
+          "150g"
+        ],
+        [
+          "Arroz basmati crudo",
+          "100g"
+        ],
+        [
+          "Maíz dulce enlatado",
+          "25g"
+        ],
+        [
+          "Fajita integral",
+          "60g"
+        ],
+        [
+          "Harina de avena",
+          "30g"
+        ]
+      ],
+      "Frutas": [
+        [
+          "Aguacate",
+          "300g"
+        ],
+        [
+          "Plátano, banano",
+          "420g"
+        ],
+        [
+          "Zumo de limón",
+          "123g"
+        ],
+        [
+          "Mandarina",
+          "360g"
+        ],
+        [
+          "Manzana roja",
+          "270g"
+        ],
+        [
+          "Mango",
+          "120g"
+        ],
+        [
+          "Naranja",
+          "200g"
+        ]
+      ],
+      "Hortalizas y verduras": [
+        [
+          "Rúcula",
+          "35g"
+        ],
+        [
+          "Ajo",
+          "78g"
+        ],
+        [
+          "Pimiento del piquillo",
+          "100g"
+        ],
+        [
+          "Calabacín",
+          "350g"
+        ],
+        [
+          "Champiñón o seta",
+          "375g"
+        ],
+        [
+          "Tomate crudo",
+          "780g"
+        ],
+        [
+          "Cebolla o cebolleta",
+          "195g"
+        ],
+        [
+          "Perejil",
+          "3g"
+        ],
+        [
+          "Cebolla blanca",
+          "125g"
+        ],
+        [
+          "Pepino",
+          "75g"
+        ],
+        [
+          "Pimiento rojo",
+          "40g"
+        ],
+        [
+          "Pimiento verde",
+          "115g"
+        ],
+        [
+          "Coliflor",
+          "125g"
+        ],
+        [
+          "Espárrago",
+          "100g"
+        ],
+        [
+          "Lechuga",
+          "30g"
+        ],
+        [
+          "Tomate cherry",
+          "200g"
+        ]
+      ],
+      "Carnes, pescados y huevos": [
+        [
+          "Jamón cocido",
+          "30g"
+        ],
+        [
+          "Huevo de gallina",
+          "305g"
+        ],
+        [
+          "Pechuga de pavo fiambre",
+          "100g"
+        ],
+        [
+          "Clara de huevo pasteurizada",
+          "210g"
+        ],
+        [
+          "Jamón serrano",
+          "60g"
+        ],
+        [
+          "Pollo pechuga solomillo",
+          "580g"
+        ],
+        [
+          "Merluza",
+          "350g"
+        ],
+        [
+          "Salmón",
+          "175g"
+        ],
+        [
+          "Pollo muslo/contramuslo",
+          "340g"
+        ],
+        [
+          "Pulpo",
+          "200g"
+        ],
+        [
+          "Langostino",
+          "40g"
+        ],
+        [
+          "Atún enlatado en agua",
+          "55g"
+        ],
+        [
+          "Pavo pechuga fresco",
+          "200g"
+        ]
+      ],
+      "Frutos secos y legumbres": [
+        [
+          "Anacardo sin cáscara",
+          "20g"
+        ],
+        [
+          "Garbanzos cocidos",
+          "200g"
+        ],
+        [
+          "Nuez pelada",
+          "10g"
+        ],
+        [
+          "Patata",
+          "150g"
+        ]
+      ],
+      "Aceites y condimentos": [
+        [
+          "Aceite de oliva",
+          "165g"
+        ],
+        [
+          "Comino",
+          "5g"
+        ],
+        [
+          "Pimentón",
+          "5g"
+        ],
+        [
+          "Orégano",
+          "8.5g"
+        ],
+        [
+          "Albahaca",
+          "13g"
+        ],
+        [
+          "Romero",
+          "4g"
+        ],
+        [
+          "Tomillo",
+          "4.5g"
+        ],
+        [
+          "Pimienta negra",
+          "3g"
+        ],
+        [
+          "Mostaza",
+          "14g"
+        ],
+        [
+          "Canela",
+          "3g"
+        ],
+        [
+          "Vainilla",
+          "1g"
+        ]
+      ]
+    }
+  }
+}

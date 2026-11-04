@@ -1,0 +1,2918 @@
+{
+  "plan": "2",
+  "nombre": "Bajo en potasio",
+  "dias": {
+    "alba": {
+      "Lunes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y plátano",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "80g plátano"
+              ],
+              "rec": [
+                "Mezclar yogur con muesli. Añadir la fruta."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y jamón serrano",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g jamón serrano"
+              ],
+              "rec": [
+                "Tostar el pan y colocar encima el jamón y el tomate."
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Naranja y nueces",
+              "ing": [
+                "180g naranja",
+                "10g nuez pelada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Pechuga de pollo con menestra de verduras y arroz basmati",
+              "ing": [
+                "100g pollo pechuga",
+                "40g arroz basmati crudo",
+                "100g judía verde",
+                "80g zanahoria",
+                "30g cebolla blanca",
+                "50g guisante congelado",
+                "5g aceite de oliva"
+              ],
+              "rec": [
+                "Cocer el arroz con el doble de agua 15 min. Reservar.",
+                "Cocer las judías y los guisantes 20 min. Escurrir.",
+                "Pochar zanahoria y cebolla con el aceite.",
+                "Emplatar la menestra con el sofrito y el pollo asado a la plancha. Acompañar con el arroz."
+              ]
+            },
+            {
+              "n": "Granada",
+              "ing": [
+                "280g granada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Merienda 17:00",
+          "items": [
+            {
+              "n": "Snack de queso Burgos y tomate",
+              "ing": [
+                "140g queso tipo Burgos 0% MG",
+                "150g tomate crudo"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Ensalada de lechuga y pepino",
+              "ing": [
+                "50g lechuga",
+                "150g pepino",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Lavar y trocear la lechuga. Cortar el pepino en rodajas. Aliñar con aceite."
+              ]
+            },
+            {
+              "n": "Tortilla de calabacín con queso",
+              "ing": [
+                "60g huevo de gallina",
+                "70g clara de huevo pasteurizada",
+                "75g calabacín",
+                "45g queso de untar ligero",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Saltear el calabacín en dados con el aceite.",
+                "Batir el huevo con la clara y agregar el calabacín pochado y el queso.",
+                "Cuajar en sartén 5 min, doblar y voltear."
+              ]
+            },
+            {
+              "n": "Papaya",
+              "ing": [
+                "100g papaya"
+              ]
+            }
+          ]
+        }
+      ],
+      "Martes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y manzana",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "90g manzana roja"
+              ],
+              "rec": [
+                "Mezclar yogur con muesli. Añadir la fruta."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y queso fresco",
+              "ing": [
+                "70g pan blanco",
+                "70g queso tipo Burgos 0% MG",
+                "45g tomate crudo"
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Tortitas de legumbres + plátano y kéfir",
+              "ing": [
+                "28g tortitas legumbres",
+                "125g plátano",
+                "100g kéfir"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Pasta integral de espelta con pavo y champiñones",
+              "ing": [
+                "40g pasta integral de espelta",
+                "100g pavo pechuga fresco",
+                "75g champiñón o seta",
+                "5g aceite de oliva"
+              ],
+              "rec": [
+                "Cocer la pasta en agua hirviendo 12 min. Escurrir.",
+                "Saltear los champiñones laminados.",
+                "Asar el pavo y trocear en tiras.",
+                "Agregar la pasta y el pavo a los champiñones y saltear 2 min."
+              ]
+            },
+            {
+              "n": "Ciruelas",
+              "ing": [
+                "150g ciruela"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Merienda 17:00",
+          "items": [
+            {
+              "n": "Hummus con zanahoria y pepino",
+              "ing": [
+                "50g hummus",
+                "80g zanahoria",
+                "100g pepino"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Merluza con setas, gambas y alcachofas",
+              "ing": [
+                "200g merluza",
+                "70g gamba o camarón",
+                "75g champiñón o seta",
+                "95g alcachofa",
+                "8g aceite de oliva",
+                "5g ajo",
+                "5g perejil"
+              ],
+              "rec": [
+                "Limpiar las alcachofas y trocear en cuartos.",
+                "Pochar las alcachofas con las setas y el ajo picado.",
+                "Añadir las gambas y saltear.",
+                "Añadir la merluza con un poco de agua y cocinar tapada 10 min.",
+                "Espolvorear con perejil antes de servir."
+              ]
+            },
+            {
+              "n": "Melocotón",
+              "ing": [
+                "175g melocotón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Miércoles": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y plátano",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "80g plátano"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y pavo",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g pechuga de pavo fiambre"
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Plátano y kéfir",
+              "ing": [
+                "125g plátano",
+                "100g kéfir"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Filete de lenguado con cuscús y calabacín",
+              "ing": [
+                "150g filete de lenguado congelado",
+                "30g cuscús seco",
+                "100g calabacín",
+                "3g ajo",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Mezclar el cuscús con el aceite. Regar con agua hirviendo. Tapar y reposar 5 min.",
+                "Picar el ajo y trocear el calabacín en dados. Saltear hasta que estén blandos. Agregar el cuscús.",
+                "Asar el lenguado. Emplatar el cuscús con el lenguado encima."
+              ]
+            },
+            {
+              "n": "Kiwi",
+              "ing": [
+                "120g kiwi"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Merienda 17:00",
+          "items": [
+            {
+              "n": "Uvas y anacardos",
+              "ing": [
+                "160g uva blanca",
+                "10g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Ensalada de lechuga y pepino",
+              "ing": [
+                "50g lechuga",
+                "150g pepino",
+                "8g aceite de oliva"
+              ]
+            },
+            {
+              "n": "Jamóncitos de pollo con verduras",
+              "ing": [
+                "180g pollo muslo/contramuslo",
+                "70g calabacín",
+                "70g champiñón o seta",
+                "70g berenjena",
+                "70g zanahoria",
+                "3g eneldo seco",
+                "3g pimienta negra"
+              ],
+              "rec": [
+                "Salpimentar los muslos. Asar a la plancha hasta que estén dorados."
+              ]
+            },
+            {
+              "n": "Melón",
+              "ing": [
+                "150g melón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Jueves": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y manzana",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "90g manzana roja"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y jamón serrano",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g jamón serrano"
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Naranja y nueces",
+              "ing": [
+                "180g naranja",
+                "10g nuez pelada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Brocheta de ternera, champiñón y calabacín con arroz basmati",
+              "ing": [
+                "100g carne magra de ternera",
+                "75g champiñón o seta",
+                "100g calabacín",
+                "40g arroz basmati crudo",
+                "10g aceite de oliva",
+                "3g ajo",
+                "15g limón",
+                "2g orégano",
+                "1g pimienta negra"
+              ],
+              "rec": [
+                "Preparar adobo con aceite, zumo de limón, orégano, ajo picado y pimienta. Emulsionar.",
+                "Marinar la ternera en trozos gruesos mínimo 30 min en nevera.",
+                "Cocer el arroz con el doble de agua 10 min. Reposar 5 min.",
+                "Insertar la carne en brochetas alternando con calabacín y champiñón.",
+                "Asar la brocheta en plancha caliente girando para cocinar por todos los lados.",
+                "Emplatar con el arroz basmati al lado."
+              ]
+            },
+            {
+              "n": "Granada",
+              "ing": [
+                "280g granada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Merienda 17:00",
+          "items": [
+            {
+              "n": "Snack de queso Burgos y tomate",
+              "ing": [
+                "140g queso tipo Burgos 0% MG",
+                "150g tomate crudo"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Salteado de repollo con calabacín y zanahoria",
+              "ing": [
+                "75g col y repollo",
+                "70g calabacín",
+                "40g zanahoria",
+                "5g aceite de oliva"
+              ],
+              "rec": [
+                "Cortar en juliana el repollo. Rallar la zanahoria. Trocear el calabacín.",
+                "Calentar el aceite y cocinar a fuego suave hasta que estén blandas."
+              ]
+            },
+            {
+              "n": "Dorada al papillote en lecho de cebolla",
+              "ing": [
+                "300g dorada",
+                "100g cebolla o cebolleta",
+                "45g limón",
+                "5g aceite de oliva"
+              ],
+              "rec": [
+                "Colocar la cebolla en rodajas en papel de aluminio. Poner la dorada encima.",
+                "Aliñar con zumo de limón y aceite. Envolver formando un paquete cerrado.",
+                "Colocar en sartén caliente y cocinar al papillote 10 minutos."
+              ]
+            },
+            {
+              "n": "Papaya",
+              "ing": [
+                "100g papaya"
+              ]
+            }
+          ]
+        }
+      ],
+      "Viernes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Yogur natural, muesli y arándanos",
+              "ing": [
+                "125g yogur natural",
+                "20g muesli",
+                "25g arándanos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tostada con tomate y pavo",
+              "ing": [
+                "70g pan blanco",
+                "45g tomate crudo",
+                "30g pechuga de pavo fiambre"
+              ]
+            },
+            {
+              "n": "Anacardos",
+              "ing": [
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Tortitas de legumbres",
+              "ing": [
+                "28g tortitas legumbres"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Arroz con calabacín y huevo escalfado",
+              "ing": [
+                "40g arroz blanco crudo",
+                "80g calabacín",
+                "60g huevo de gallina",
+                "5g aceite de oliva"
+              ],
+              "rec": [
+                "Cocer el arroz con el doble de agua junto al calabacín en dados 15 min. Reposar 5 min.",
+                "Hacer un remolino en agua con vinagre a punto de hervir. Dejar caer el huevo y cocinar 3 min.",
+                "Retirar con espumadera. Emplatar el arroz, añadir aceite y colocar el huevo encima."
+              ]
+            },
+            {
+              "n": "Ciruelas",
+              "ing": [
+                "150g ciruela"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Merienda 17:00",
+          "items": [
+            {
+              "n": "Hummus con zanahoria y pepino",
+              "ing": [
+                "50g hummus",
+                "80g zanahoria",
+                "100g pepino"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Ensalada de lechuga y pepino",
+              "ing": [
+                "50g lechuga",
+                "150g pepino",
+                "8g aceite de oliva"
+              ]
+            },
+            {
+              "n": "Filete de ternera a la plancha",
+              "ing": [
+                "175g filete de ternera",
+                "10g aceite de oliva"
+              ],
+              "rec": [
+                "Calentar sartén con el aceite. Echar la ternera. Salar justo antes de servir."
+              ]
+            },
+            {
+              "n": "Melocotón",
+              "ing": [
+                "175g melocotón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Sábado": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche + tostada con huevos revueltos y aguacate",
+              "ing": [
+                "150g leche semidesnatada",
+                "50g café",
+                "40g pan blanco",
+                "60g huevo de gallina",
+                "50g aguacate",
+                "3g aceite de oliva"
+              ]
+            },
+            {
+              "n": "Kiwi",
+              "ing": [
+                "120g kiwi"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            },
+            {
+              "n": "Melón",
+              "ing": [
+                "150g melón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Domingo": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Café con leche semidesnatada",
+              "ing": [
+                "225g leche semidesnatada",
+                "50g café"
+              ]
+            },
+            {
+              "n": "Tortitas de avena y plátano con manzana y canela",
+              "ing": [
+                "80g plátano",
+                "30g harina de avena",
+                "105g clara de huevo pasteurizada",
+                "90g manzana roja",
+                "3g aceite de oliva",
+                "1g vainilla",
+                "canela al gusto"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Ensalada de pasta con nueces",
+              "ing": [
+                "40g espirales",
+                "30g lechuga",
+                "45g tomate crudo",
+                "5g nuez pelada",
+                "5g aceite de oliva"
+              ]
+            },
+            {
+              "n": "Contramuslos de pollo",
+              "ing": [
+                "180g pollo muslo/contramuslo",
+                "5g aceite de oliva",
+                "2g romero",
+                "2g pimienta negra"
+              ],
+              "rec": [
+                "Salpimentar los contramuslos. Cocinar en sartén o plancha hasta que estén dorados."
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Salteado de repollo con calabacín y zanahoria",
+              "ing": [
+                "75g col y repollo",
+                "70g calabacín",
+                "40g zanahoria",
+                "5g aceite de oliva"
+              ]
+            },
+            {
+              "n": "Revuelto de pollo y pimientos",
+              "ing": [
+                "80g pollo pechuga",
+                "90g pimiento rojo",
+                "60g huevo de gallina",
+                "35g clara de huevo pasteurizada",
+                "10g aceite de oliva"
+              ],
+              "rec": [
+                "Trocear el pollo en tacos y el pimiento en dados.",
+                "Saltear en sartén con el aceite hasta que estén dorados.",
+                "Agregar el huevo batido con la clara y cuajar removiendo."
+              ]
+            },
+            {
+              "n": "Papaya",
+              "ing": [
+                "100g papaya"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "pablo": {
+      "Lunes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Tostada de pan de barra con aceite",
+              "ing": [
+                "100g pan blanco",
+                "10g aceite de oliva"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Plátano y anacardos",
+              "ing": [
+                "160g plátano",
+                "10g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Yogur desnatado y anacardos",
+              "ing": [
+                "250g yogur natural desnatado",
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Pechuga de pollo con menestra de verduras y arroz basmati",
+              "ing": [
+                "180g pollo pechuga",
+                "80g arroz basmati crudo",
+                "175g judía verde",
+                "120g zanahoria",
+                "50g cebolla blanca",
+                "90g guisante congelado",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Cocer el arroz con el triple de agua 15 min. Reservar.",
+                "Cocer las judías y los guisantes en agua hirviendo 20 min. Escurrir.",
+                "Pochar zanahoria y cebolla en dados con el aceite.",
+                "Emplatar la menestra con el sofrito y el pollo asado a la plancha. Acompañar con el arroz."
+              ]
+            },
+            {
+              "n": "Granada",
+              "ing": [
+                "280g granada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Ensalada de lechuga y pepino",
+              "ing": [
+                "50g lechuga",
+                "150g pepino",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Lavar y trocear la lechuga. Cortar el pepino en rodajas. Aliñar con aceite."
+              ]
+            },
+            {
+              "n": "Tortilla de calabacín con queso",
+              "ing": [
+                "60g huevo de gallina",
+                "105g clara de huevo pasteurizada",
+                "100g calabacín",
+                "60g queso de untar ligero",
+                "10g aceite de oliva"
+              ],
+              "rec": [
+                "Saltear el calabacín en dados con el aceite.",
+                "Batir el huevo con la clara y agregar el calabacín pochado y el queso.",
+                "Cuajar en sartén 5 min, doblar y voltear."
+              ]
+            },
+            {
+              "n": "Papaya",
+              "ing": [
+                "100g papaya"
+              ]
+            }
+          ]
+        }
+      ],
+      "Martes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Tostada de pan de barra con aceite",
+              "ing": [
+                "100g pan blanco",
+                "10g aceite de oliva"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Mandarinas",
+              "ing": [
+                "180g mandarina"
+              ]
+            },
+            {
+              "n": "Chocolate negro",
+              "ing": [
+                "10g chocolate negro"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Kiwi + pan wasa con aceite + naranja y kéfir",
+              "ing": [
+                "200g kiwi",
+                "30g pan de centeno tipo Wasa",
+                "8g aceite de oliva",
+                "130g naranja",
+                "100g kéfir"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Pasta integral de espelta con pavo y champiñones",
+              "ing": [
+                "80g pasta integral de espelta",
+                "150g pavo pechuga fresco",
+                "125g champiñón o seta",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Cocer la pasta en agua hirviendo 12 min. Escurrir.",
+                "Saltear los champiñones laminados.",
+                "Asar el pavo y trocear en tiras.",
+                "Agregar la pasta y el pavo a los champiñones y saltear 2 min."
+              ]
+            },
+            {
+              "n": "Ciruelas",
+              "ing": [
+                "150g ciruela"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Merluza con setas, gambas y alcachofas",
+              "ing": [
+                "250g merluza",
+                "90g gamba o camarón",
+                "100g champiñón o seta",
+                "130g alcachofa",
+                "10g aceite de oliva",
+                "10g ajo",
+                "10g perejil"
+              ],
+              "rec": [
+                "Limpiar las alcachofas y trocear en cuartos.",
+                "Pochar las alcachofas con las setas y el ajo picado.",
+                "Añadir las gambas y saltear.",
+                "Añadir la merluza con un poco de agua y cocinar tapada 10 min.",
+                "Espolvorear con perejil antes de servir."
+              ]
+            },
+            {
+              "n": "Melocotón",
+              "ing": [
+                "175g melocotón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Miércoles": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Tostada de pan de barra con aceite",
+              "ing": [
+                "100g pan blanco",
+                "10g aceite de oliva"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Manzana y nueces",
+              "ing": [
+                "150g manzana roja",
+                "10g nuez pelada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Yogur desnatado y anacardos",
+              "ing": [
+                "250g yogur natural desnatado",
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Filete de lenguado con cuscús y calabacín",
+              "ing": [
+                "250g filete de lenguado congelado",
+                "50g cuscús seco",
+                "200g calabacín",
+                "5g ajo",
+                "10g aceite de oliva"
+              ],
+              "rec": [
+                "Mezclar el cuscús con el aceite. Regar con agua hirviendo. Tapar y reposar 5 min.",
+                "Picar el ajo y trocear el calabacín en dados. Saltear hasta que estén blandos. Agregar el cuscús.",
+                "Asar el lenguado. Emplatar el cuscús con el lenguado encima."
+              ]
+            },
+            {
+              "n": "Kiwi",
+              "ing": [
+                "120g kiwi"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Ensalada de lechuga y pepino",
+              "ing": [
+                "50g lechuga",
+                "150g pepino",
+                "8g aceite de oliva"
+              ]
+            },
+            {
+              "n": "Jamóncitos de pollo con verduras",
+              "ing": [
+                "180g pollo muslo/contramuslo",
+                "70g calabacín",
+                "70g champiñón o seta",
+                "70g berenjena",
+                "70g zanahoria",
+                "3g perejil",
+                "3g eneldo seco",
+                "3g pimienta negra"
+              ],
+              "rec": [
+                "Salpimentar los muslos. Asar a la plancha hasta que estén dorados."
+              ]
+            },
+            {
+              "n": "Melón",
+              "ing": [
+                "150g melón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Jueves": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Tostada de pan de barra con aceite",
+              "ing": [
+                "100g pan blanco",
+                "10g aceite de oliva"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Mandarinas",
+              "ing": [
+                "180g mandarina"
+              ]
+            },
+            {
+              "n": "Chocolate negro",
+              "ing": [
+                "10g chocolate negro"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Yogur desnatado y anacardos",
+              "ing": [
+                "250g yogur desnatado",
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Brocheta de ternera, champiñón y calabacín con arroz basmati",
+              "ing": [
+                "180g carne magra de ternera",
+                "125g champiñón o seta",
+                "175g calabacín",
+                "80g arroz basmati crudo",
+                "15g aceite de oliva",
+                "8g ajo",
+                "30g limón",
+                "2g orégano",
+                "1g pimienta negra"
+              ],
+              "rec": [
+                "Preparar adobo con aceite, zumo de limón, orégano, ajo picado y pimienta. Emulsionar.",
+                "Marinar la ternera en trozos gruesos mínimo 30 min en nevera.",
+                "Cocer el arroz con el doble de agua 10 min. Reposar 5 min.",
+                "Insertar la carne en brochetas alternando con calabacín y champiñón.",
+                "Asar la brocheta en plancha caliente girando para cocinar por todos los lados.",
+                "Emplatar con el arroz basmati al lado."
+              ]
+            },
+            {
+              "n": "Granada",
+              "ing": [
+                "280g granada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Salteado de repollo con calabacín y zanahoria",
+              "ing": [
+                "75g col y repollo",
+                "70g calabacín",
+                "40g zanahoria",
+                "5g aceite de oliva"
+              ],
+              "rec": [
+                "Cortar en juliana el repollo. Rallar la zanahoria. Trocear el calabacín.",
+                "Calentar el aceite y cocinar a fuego suave hasta que estén blandas."
+              ]
+            },
+            {
+              "n": "Dorada al papillote en lecho de cebolla",
+              "ing": [
+                "370g dorada",
+                "125g cebolla o cebolleta",
+                "60g limón",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Colocar la cebolla en rodajas en papel de aluminio. Poner la dorada encima.",
+                "Aliñar con zumo de limón y aceite. Envolver formando un paquete cerrado.",
+                "Colocar en sartén caliente y cocinar al papillote 10 minutos."
+              ]
+            },
+            {
+              "n": "Papaya",
+              "ing": [
+                "100g papaya"
+              ]
+            }
+          ]
+        }
+      ],
+      "Viernes": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Leche semidesnatada con cacao",
+              "ing": [
+                "225g leche semidesnatada",
+                "8g cacao en polvo"
+              ]
+            },
+            {
+              "n": "Tostada de pan de barra con aceite",
+              "ing": [
+                "100g pan blanco",
+                "10g aceite de oliva"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 10:00",
+          "items": [
+            {
+              "n": "Manzana y nueces",
+              "ing": [
+                "150g manzana roja",
+                "10g nuez pelada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Kiwi + pan wasa con aceite + naranja y kéfir",
+              "ing": [
+                "200g kiwi",
+                "30g pan de centeno tipo Wasa",
+                "8g aceite de oliva",
+                "130g naranja",
+                "100g kéfir"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Arroz con calabacín y huevo escalfado",
+              "ing": [
+                "100g arroz blanco crudo",
+                "120g calabacín",
+                "60g huevo de gallina",
+                "8g aceite de oliva"
+              ],
+              "rec": [
+                "Cocer el arroz con el doble de agua junto al calabacín en dados 15 min. Reposar 5 min.",
+                "Hacer un remolino en agua con vinagre a punto de hervir. Dejar caer el huevo y cocinar 3 min.",
+                "Retirar con espumadera. Emplatar el arroz, añadir aceite y colocar el huevo encima."
+              ]
+            },
+            {
+              "n": "Ciruelas",
+              "ing": [
+                "150g ciruela"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Ensalada de lechuga y pepino",
+              "ing": [
+                "50g lechuga",
+                "150g pepino",
+                "8g aceite de oliva"
+              ]
+            },
+            {
+              "n": "Filete de ternera a la plancha",
+              "ing": [
+                "250g filete de ternera",
+                "10g aceite de oliva"
+              ],
+              "rec": [
+                "Calentar sartén con el aceite. Echar la ternera. Salar justo antes de servir."
+              ]
+            },
+            {
+              "n": "Melocotón",
+              "ing": [
+                "175g melocotón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Sábado": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Naranja y canela",
+              "ing": [
+                "200g naranja",
+                "2g canela"
+              ]
+            },
+            {
+              "n": "Tostada de pan de barra con aceite",
+              "ing": [
+                "100g pan blanco",
+                "10g aceite de oliva"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Naranja y kéfir",
+              "ing": [
+                "130g naranja",
+                "100g kéfir"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Ensalada de pasta con nueces",
+              "ing": [
+                "40g espirales",
+                "30g lechuga",
+                "45g tomate crudo",
+                "5g nuez pelada",
+                "5g aceite de oliva"
+              ]
+            },
+            {
+              "n": "Contramuslos de pollo",
+              "ing": [
+                "150g pollo muslo/contramuslo",
+                "5g aceite de oliva",
+                "2g romero",
+                "2g pimienta negra"
+              ],
+              "rec": [
+                "Salpimentar y especiar los contramuslos.",
+                "Cocinar en sartén o plancha con el aceite hasta que estén dorados."
+              ]
+            },
+            {
+              "n": "Kiwi",
+              "ing": [
+                "120g kiwi"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            },
+            {
+              "n": "Melón",
+              "ing": [
+                "150g melón"
+              ]
+            }
+          ]
+        }
+      ],
+      "Domingo": [
+        {
+          "h": "Desayuno 07:30",
+          "items": [
+            {
+              "n": "Tortitas de avena y plátano con manzana y canela",
+              "ing": [
+                "100g plátano",
+                "30g harina de avena",
+                "105g clara de huevo pasteurizada",
+                "120g manzana roja",
+                "3g aceite de oliva",
+                "1g vainilla",
+                "1g canela"
+              ]
+            },
+            {
+              "n": "Tostada de pan de barra con aceite",
+              "ing": [
+                "100g pan blanco",
+                "10g aceite de oliva"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Almuerzo 2 · 12:30",
+          "items": [
+            {
+              "n": "Yogur desnatado y anacardos",
+              "ing": [
+                "250g yogur desnatado",
+                "15g anacardos"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Comida 14:00",
+          "items": [
+            {
+              "n": "Comida disfrutona 🎉",
+              "ing": [
+                "Ingesta libre"
+              ]
+            },
+            {
+              "n": "Granada",
+              "ing": [
+                "280g granada"
+              ]
+            }
+          ]
+        },
+        {
+          "h": "Cena 21:00",
+          "items": [
+            {
+              "n": "Salteado de repollo con calabacín y zanahoria",
+              "ing": [
+                "75g col y repollo",
+                "70g calabacín",
+                "40g zanahoria",
+                "5g aceite de oliva"
+              ]
+            },
+            {
+              "n": "Revuelto de pollo y pimientos",
+              "ing": [
+                "100g pollo pechuga",
+                "100g pimiento rojo",
+                "60g huevo de gallina",
+                "70g clara de huevo pasteurizada",
+                "10g aceite de oliva"
+              ],
+              "rec": [
+                "Trocear el pollo en tacos y el pimiento en dados.",
+                "Saltear en sartén con el aceite hasta que estén dorados.",
+                "Agregar el huevo batido con la clara y cuajar removiendo."
+              ]
+            },
+            {
+              "n": "Papaya",
+              "ing": [
+                "100g papaya"
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "conjunto": {
+    "Lunes": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Pechuga de pollo con menestra de verduras y arroz basmati",
+            "ing": [
+              {
+                "n": "Pollo pechuga solomillo",
+                "a": 100,
+                "p": 180
+              },
+              {
+                "n": "Arroz basmati crudo",
+                "a": 40,
+                "p": 80
+              },
+              {
+                "n": "Judía verde",
+                "a": 100,
+                "p": 175
+              },
+              {
+                "n": "Zanahoria",
+                "a": 80,
+                "p": 120
+              },
+              {
+                "n": "Cebolla blanca",
+                "a": 30,
+                "p": 50
+              },
+              {
+                "n": "Guisante congelado",
+                "a": 50,
+                "p": 90
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 8
+              }
+            ],
+            "rec": [
+              "Cocer el arroz con el doble de agua 15 min. Reservar.",
+              "Cocer las judías y los guisantes en agua hirviendo 20 min. Escurrir.",
+              "Pochar zanahoria y cebolla en dados con el aceite.",
+              "Emplatar la menestra con el sofrito y el pollo asado a la plancha. Acompañar con el arroz."
+            ]
+          },
+          {
+            "n": "Granada",
+            "ing": [
+              {
+                "n": "Granada",
+                "a": 280,
+                "p": 280
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Ensalada de lechuga y pepino",
+            "ing": [
+              {
+                "n": "Lechuga",
+                "a": 50,
+                "p": 50
+              },
+              {
+                "n": "Pepino",
+                "a": 150,
+                "p": 150
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 8
+              }
+            ],
+            "rec": [
+              "Lavar y trocear la lechuga. Cortar el pepino en rodajas. Aliñar con aceite."
+            ]
+          },
+          {
+            "n": "Tortilla de calabacín con queso",
+            "ing": [
+              {
+                "n": "Huevo de gallina",
+                "a": 60,
+                "p": 60
+              },
+              {
+                "n": "Clara de huevo pasteurizada",
+                "a": 70,
+                "p": 105
+              },
+              {
+                "n": "Calabacín",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Queso de untar ligero",
+                "a": 45,
+                "p": 60
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              }
+            ],
+            "rec": [
+              "Saltear el calabacín en dados con el aceite.",
+              "Batir el huevo con la clara y agregar el calabacín pochado y el queso.",
+              "Cuajar en sartén 5 min, doblar y voltear."
+            ]
+          },
+          {
+            "n": "Papaya",
+            "ing": [
+              {
+                "n": "Papaya",
+                "a": 100,
+                "p": 100
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Martes": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Pasta integral de espelta con pavo y champiñones",
+            "ing": [
+              {
+                "n": "Pasta integral de espelta",
+                "a": 40,
+                "p": 80
+              },
+              {
+                "n": "Pavo pechuga fresco",
+                "a": 100,
+                "p": 150
+              },
+              {
+                "n": "Champiñón o seta",
+                "a": 75,
+                "p": 125
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 8
+              }
+            ],
+            "rec": [
+              "Cocer la pasta en agua hirviendo 12 min. Escurrir.",
+              "Saltear los champiñones laminados.",
+              "Asar el pavo y trocear en tiras.",
+              "Agregar la pasta y el pavo a los champiñones y saltear 2 min."
+            ]
+          },
+          {
+            "n": "Ciruelas",
+            "ing": [
+              {
+                "n": "Ciruela",
+                "a": 150,
+                "p": 150
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Merluza con setas, gambas y alcachofas",
+            "ing": [
+              {
+                "n": "Merluza",
+                "a": 200,
+                "p": 250
+              },
+              {
+                "n": "Gamba o camarón",
+                "a": 70,
+                "p": 90
+              },
+              {
+                "n": "Champiñón o seta",
+                "a": 75,
+                "p": 100
+              },
+              {
+                "n": "Alcachofa",
+                "a": 95,
+                "p": 130
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              },
+              {
+                "n": "Ajo",
+                "a": 5,
+                "p": 10
+              },
+              {
+                "n": "Perejil",
+                "a": 5,
+                "p": 10
+              }
+            ],
+            "rec": [
+              "Limpiar las alcachofas y trocear en cuartos.",
+              "Pochar las alcachofas con las setas y el ajo picado.",
+              "Añadir las gambas y saltear.",
+              "Añadir la merluza con un poco de agua y cocinar tapada 10 min.",
+              "Espolvorear con perejil antes de servir."
+            ]
+          },
+          {
+            "n": "Melocotón",
+            "ing": [
+              {
+                "n": "Melocotón",
+                "a": 175,
+                "p": 175
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Miércoles": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Filete de lenguado con cuscús y calabacín",
+            "ing": [
+              {
+                "n": "Filete de lenguado congelado",
+                "a": 150,
+                "p": 250
+              },
+              {
+                "n": "Cuscús seco",
+                "a": 30,
+                "p": 50
+              },
+              {
+                "n": "Calabacín",
+                "a": 100,
+                "p": 200
+              },
+              {
+                "n": "Ajo",
+                "a": 3,
+                "p": 5
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 10
+              }
+            ],
+            "rec": [
+              "Mezclar el cuscús con el aceite. Regar con agua hirviendo. Tapar y reposar 5 min.",
+              "Picar el ajo y trocear el calabacín en dados. Saltear hasta que estén blandos. Agregar el cuscús.",
+              "Asar el lenguado. Emplatar el cuscús con el lenguado encima."
+            ]
+          },
+          {
+            "n": "Kiwi",
+            "ing": [
+              {
+                "n": "Kiwi",
+                "a": 120,
+                "p": 120
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Ensalada de lechuga y pepino",
+            "ing": [
+              {
+                "n": "Lechuga",
+                "a": 50,
+                "p": 50
+              },
+              {
+                "n": "Pepino",
+                "a": 150,
+                "p": 150
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 8
+              }
+            ]
+          },
+          {
+            "n": "Jamóncitos de pollo con verduras",
+            "ing": [
+              {
+                "n": "Pollo muslo/contramuslo",
+                "a": 180,
+                "p": 180
+              },
+              {
+                "n": "Calabacín",
+                "a": 70,
+                "p": 70
+              },
+              {
+                "n": "Champiñón o seta",
+                "a": 70,
+                "p": 70
+              },
+              {
+                "n": "Berenjena",
+                "a": 70,
+                "p": 70
+              },
+              {
+                "n": "Zanahoria",
+                "a": 70,
+                "p": 70
+              },
+              {
+                "n": "Perejil",
+                "a": 3,
+                "p": 3
+              },
+              {
+                "n": "Eneldo seco",
+                "a": 3,
+                "p": 3
+              },
+              {
+                "n": "Pimienta negra",
+                "a": 3,
+                "p": 3
+              }
+            ],
+            "rec": [
+              "Salpimentar los muslos/contramuslos. Asar a la plancha hasta que estén dorados."
+            ]
+          },
+          {
+            "n": "Melón",
+            "ing": [
+              {
+                "n": "Melón",
+                "a": 150,
+                "p": 150
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Jueves": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Brocheta de ternera, champiñón y calabacín con arroz basmati",
+            "ing": [
+              {
+                "n": "Carne magra de ternera",
+                "a": 100,
+                "p": 180
+              },
+              {
+                "n": "Champiñón o seta",
+                "a": 75,
+                "p": 125
+              },
+              {
+                "n": "Calabacín",
+                "a": 100,
+                "p": 175
+              },
+              {
+                "n": "Arroz basmati crudo",
+                "a": 40,
+                "p": 80
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 10,
+                "p": 15
+              },
+              {
+                "n": "Ajo",
+                "a": 3,
+                "p": 8
+              },
+              {
+                "n": "Limón",
+                "a": 15,
+                "p": 30
+              },
+              {
+                "n": "Orégano",
+                "a": 2,
+                "p": 2
+              },
+              {
+                "n": "Pimienta negra",
+                "a": 1,
+                "p": 1
+              }
+            ],
+            "rec": [
+              "Preparar adobo con aceite, zumo de limón, orégano, ajo picado y pimienta. Emulsionar.",
+              "Marinar la ternera en trozos gruesos mínimo 30 min en nevera.",
+              "Cocer el arroz con el doble de agua 10 min. Reposar 5 min.",
+              "Insertar la carne en brochetas alternando con calabacín y champiñón.",
+              "Asar la brocheta en plancha caliente girando para cocinar por todos los lados.",
+              "Emplatar con el arroz basmati al lado."
+            ]
+          },
+          {
+            "n": "Granada",
+            "ing": [
+              {
+                "n": "Granada",
+                "a": 280,
+                "p": 280
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Salteado de repollo con calabacín y zanahoria",
+            "ing": [
+              {
+                "n": "Col y repollo",
+                "a": 75,
+                "p": 75
+              },
+              {
+                "n": "Calabacín",
+                "a": 70,
+                "p": 70
+              },
+              {
+                "n": "Zanahoria",
+                "a": 40,
+                "p": 40
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 5
+              }
+            ],
+            "rec": [
+              "Cortar en juliana el repollo. Rallar la zanahoria. Trocear el calabacín.",
+              "Calentar el aceite y cocinar a fuego suave hasta que estén blandas."
+            ]
+          },
+          {
+            "n": "Dorada al papillote en lecho de cebolla",
+            "ing": [
+              {
+                "n": "Dorada",
+                "a": 300,
+                "p": 370
+              },
+              {
+                "n": "Cebolla o cebolleta",
+                "a": 100,
+                "p": 125
+              },
+              {
+                "n": "Limón",
+                "a": 45,
+                "p": 60
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 8
+              }
+            ],
+            "rec": [
+              "Colocar la cebolla en rodajas en papel de aluminio. Poner la dorada encima.",
+              "Aliñar con zumo de limón y aceite. Envolver formando un paquete cerrado.",
+              "Colocar en sartén caliente y cocinar al papillote 10 minutos."
+            ]
+          },
+          {
+            "n": "Papaya",
+            "ing": [
+              {
+                "n": "Papaya",
+                "a": 100,
+                "p": 100
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Viernes": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Arroz con calabacín y huevo escalfado",
+            "ing": [
+              {
+                "n": "Arroz blanco crudo",
+                "a": 40,
+                "p": 100
+              },
+              {
+                "n": "Calabacín",
+                "a": 80,
+                "p": 120
+              },
+              {
+                "n": "Huevo de gallina",
+                "a": 60,
+                "p": 60
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 8
+              }
+            ],
+            "rec": [
+              "Cocer el arroz con el doble de agua junto al calabacín en dados 15 min. Reposar 5 min.",
+              "Hacer un remolino en agua con vinagre a punto de hervir. Dejar caer el huevo y cocinar 3 min.",
+              "Retirar con espumadera. Emplatar el arroz, añadir aceite y colocar el huevo encima."
+            ]
+          },
+          {
+            "n": "Ciruelas",
+            "ing": [
+              {
+                "n": "Ciruela",
+                "a": 150,
+                "p": 150
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Ensalada de lechuga y pepino",
+            "ing": [
+              {
+                "n": "Lechuga",
+                "a": 50,
+                "p": 50
+              },
+              {
+                "n": "Pepino",
+                "a": 150,
+                "p": 150
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 8,
+                "p": 8
+              }
+            ]
+          },
+          {
+            "n": "Filete de ternera a la plancha",
+            "ing": [
+              {
+                "n": "Filete de ternera",
+                "a": 175,
+                "p": 250
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 10,
+                "p": 10
+              }
+            ],
+            "rec": [
+              "Calentar sartén con el aceite. Echar la ternera. Salar justo antes de servir."
+            ]
+          },
+          {
+            "n": "Melocotón",
+            "ing": [
+              {
+                "n": "Melocotón",
+                "a": 175,
+                "p": 175
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Sábado": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Ensalada de pasta con nueces",
+            "ing": [
+              {
+                "n": "Espirales",
+                "a": 40,
+                "p": 40
+              },
+              {
+                "n": "Lechuga",
+                "a": 30,
+                "p": 30
+              },
+              {
+                "n": "Tomate crudo",
+                "a": 45,
+                "p": 45
+              },
+              {
+                "n": "Nuez pelada",
+                "a": 5,
+                "p": 5
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 5
+              }
+            ]
+          },
+          {
+            "n": "Contramuslos de pollo",
+            "ing": [
+              {
+                "n": "Pollo muslo/contramuslo",
+                "a": 180,
+                "p": 150
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 5
+              },
+              {
+                "n": "Romero",
+                "a": 2,
+                "p": 2
+              },
+              {
+                "n": "Pimienta negra",
+                "a": 2,
+                "p": 2
+              }
+            ],
+            "rec": [
+              "Salpimentar y especiar los contramuslos.",
+              "Cocinar en sartén o plancha con el aceite hasta que estén dorados."
+            ]
+          },
+          {
+            "n": "Kiwi",
+            "ing": [
+              {
+                "n": "Kiwi",
+                "a": 120,
+                "p": 120
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Comida disfrutona 🎉",
+            "ing": [],
+            "rec": []
+          },
+          {
+            "n": "Melón",
+            "ing": [
+              {
+                "n": "Melón",
+                "a": 150,
+                "p": 150
+              }
+            ]
+          }
+        ]
+      }
+    },
+    "Domingo": {
+      "comida": {
+        "h": "Comida 14:00",
+        "platos": [
+          {
+            "n": "Comida disfrutona 🎉",
+            "ing": [],
+            "rec": []
+          },
+          {
+            "n": "Granada",
+            "ing": [
+              {
+                "n": "Granada",
+                "a": 280,
+                "p": 280
+              }
+            ]
+          }
+        ]
+      },
+      "cena": {
+        "h": "Cena 21:00",
+        "platos": [
+          {
+            "n": "Salteado de repollo con calabacín y zanahoria",
+            "ing": [
+              {
+                "n": "Col y repollo",
+                "a": 75,
+                "p": 75
+              },
+              {
+                "n": "Calabacín",
+                "a": 70,
+                "p": 70
+              },
+              {
+                "n": "Zanahoria",
+                "a": 40,
+                "p": 40
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 5,
+                "p": 5
+              }
+            ]
+          },
+          {
+            "n": "Revuelto de pollo y pimientos",
+            "ing": [
+              {
+                "n": "Pollo pechuga solomillo",
+                "a": 80,
+                "p": 100
+              },
+              {
+                "n": "Pimiento rojo",
+                "a": 90,
+                "p": 100
+              },
+              {
+                "n": "Huevo de gallina",
+                "a": 60,
+                "p": 60
+              },
+              {
+                "n": "Clara de huevo pasteurizada",
+                "a": 35,
+                "p": 70
+              },
+              {
+                "n": "Aceite de oliva",
+                "a": 10,
+                "p": 10
+              }
+            ],
+            "rec": [
+              "Trocear el pollo en tacos y el pimiento en dados.",
+              "Saltear en sartén con el aceite hasta que estén dorados.",
+              "Agregar el huevo batido con la clara y cuajar removiendo."
+            ]
+          },
+          {
+            "n": "Papaya",
+            "ing": [
+              {
+                "n": "Papaya",
+                "a": 100,
+                "p": 100
+              }
+            ]
+          }
+        ]
+      }
+    }
+  },
+  "compra": {
+    "alba": {
+      "Leche y derivados": [
+        [
+          "Leche semidesnatada UHT",
+          "2175g"
+        ],
+        [
+          "Yogur natural",
+          "625g"
+        ],
+        [
+          "Queso tipo Burgos 0% MG",
+          "490g"
+        ],
+        [
+          "Queso de untar ligero",
+          "45g"
+        ],
+        [
+          "Kéfir",
+          "200g"
+        ]
+      ],
+      "Cereales y derivados": [
+        [
+          "Cereales muesli",
+          "100g"
+        ],
+        [
+          "Pan blanco",
+          "390g"
+        ],
+        [
+          "Arroz basmati crudo",
+          "80g"
+        ],
+        [
+          "Tortitas de legumbres",
+          "56g"
+        ],
+        [
+          "Pasta integral de espelta",
+          "40g"
+        ],
+        [
+          "Cuscús seco",
+          "30g"
+        ],
+        [
+          "Arroz blanco crudo",
+          "40g"
+        ],
+        [
+          "Espirales",
+          "40g"
+        ],
+        [
+          "Harina de avena",
+          "30g"
+        ]
+      ],
+      "Frutas": [
+        [
+          "Plátano, banano",
+          "510g"
+        ],
+        [
+          "Naranja",
+          "540g"
+        ],
+        [
+          "Granada",
+          "840g"
+        ],
+        [
+          "Papaya",
+          "300g"
+        ],
+        [
+          "Manzana roja",
+          "300g"
+        ],
+        [
+          "Ciruela",
+          "300g"
+        ],
+        [
+          "Melocotón",
+          "350g"
+        ],
+        [
+          "Kiwi",
+          "360g"
+        ],
+        [
+          "Uva blanca",
+          "320g"
+        ],
+        [
+          "Melón",
+          "300g"
+        ],
+        [
+          "Limón",
+          "60g"
+        ],
+        [
+          "Arándanos",
+          "25g"
+        ],
+        [
+          "Aguacate",
+          "50g"
+        ]
+      ],
+      "Hortalizas y verduras": [
+        [
+          "Tomate crudo",
+          "720g"
+        ],
+        [
+          "Judía verde",
+          "100g"
+        ],
+        [
+          "Zanahoria",
+          "390g"
+        ],
+        [
+          "Cebolla blanca",
+          "30g"
+        ],
+        [
+          "Lechuga",
+          "180g"
+        ],
+        [
+          "Pepino",
+          "650g"
+        ],
+        [
+          "Calabacín",
+          "565g"
+        ],
+        [
+          "Champiñón o seta",
+          "295g"
+        ],
+        [
+          "Alcachofa",
+          "95g"
+        ],
+        [
+          "Perejil",
+          "8g"
+        ],
+        [
+          "Ajo",
+          "11g"
+        ],
+        [
+          "Berenjena",
+          "70g"
+        ],
+        [
+          "Col y repollo",
+          "150g"
+        ],
+        [
+          "Cebolla o cebolleta",
+          "100g"
+        ],
+        [
+          "Pimiento rojo",
+          "90g"
+        ]
+      ],
+      "Carnes, pescados y huevos": [
+        [
+          "Jamón serrano",
+          "60g"
+        ],
+        [
+          "Pollo pechuga solomillo",
+          "180g"
+        ],
+        [
+          "Huevo de gallina",
+          "240g"
+        ],
+        [
+          "Clara de huevo pasteurizada",
+          "210g"
+        ],
+        [
+          "Pavo pechuga fresco",
+          "100g"
+        ],
+        [
+          "Merluza",
+          "200g"
+        ],
+        [
+          "Gamba o camarón",
+          "70g"
+        ],
+        [
+          "Pechuga de pavo fiambre",
+          "60g"
+        ],
+        [
+          "Filete de lenguado congelado",
+          "150g"
+        ],
+        [
+          "Pollo muslo/contramuslo",
+          "330g"
+        ],
+        [
+          "Carne magra de ternera",
+          "100g"
+        ],
+        [
+          "Dorada",
+          "300g"
+        ]
+      ],
+      "Frutos secos y legumbres": [
+        [
+          "Anacardo sin cáscara",
+          "95g"
+        ],
+        [
+          "Nuez pelada",
+          "35g"
+        ],
+        [
+          "Hummus",
+          "100g"
+        ],
+        [
+          "Guisante congelado",
+          "50g"
+        ]
+      ],
+      "Aceites y condimentos": [
+        [
+          "Aceite de oliva",
+          "124g"
+        ],
+        [
+          "Café",
+          "600g"
+        ],
+        [
+          "Canela",
+          "21g"
+        ],
+        [
+          "Eneldo seco",
+          "3g"
+        ],
+        [
+          "Pimienta negra",
+          "6g"
+        ],
+        [
+          "Orégano",
+          "2g"
+        ],
+        [
+          "Romero",
+          "2g"
+        ],
+        [
+          "Vainilla",
+          "1g"
+        ]
+      ]
+    },
+    "pablo": {
+      "Leche y derivados": [
+        [
+          "Leche semidesnatada UHT",
+          "1125g"
+        ],
+        [
+          "Yogur natural desnatado",
+          "750g"
+        ],
+        [
+          "Queso de untar ligero",
+          "60g"
+        ],
+        [
+          "Kéfir",
+          "200g"
+        ]
+      ],
+      "Cereales y derivados": [
+        [
+          "Cacao en polvo desgrasado sin azúcar",
+          "40g"
+        ],
+        [
+          "Pan blanco",
+          "700g"
+        ],
+        [
+          "Chocolate negro",
+          "20g"
+        ],
+        [
+          "Arroz basmati crudo",
+          "160g"
+        ],
+        [
+          "Pan de centeno tipo Wasa",
+          "60g"
+        ],
+        [
+          "Pasta integral de espelta",
+          "80g"
+        ],
+        [
+          "Cuscús seco",
+          "50g"
+        ],
+        [
+          "Arroz blanco crudo",
+          "100g"
+        ],
+        [
+          "Espirales",
+          "40g"
+        ],
+        [
+          "Harina de avena",
+          "30g"
+        ]
+      ],
+      "Frutas": [
+        [
+          "Plátano, banano",
+          "260g"
+        ],
+        [
+          "Granada",
+          "840g"
+        ],
+        [
+          "Papaya",
+          "300g"
+        ],
+        [
+          "Mandarina",
+          "360g"
+        ],
+        [
+          "Kiwi",
+          "640g"
+        ],
+        [
+          "Ciruela",
+          "300g"
+        ],
+        [
+          "Melocotón",
+          "350g"
+        ],
+        [
+          "Manzana roja",
+          "420g"
+        ],
+        [
+          "Naranja",
+          "460g"
+        ],
+        [
+          "Melón",
+          "300g"
+        ],
+        [
+          "Limón",
+          "90g"
+        ]
+      ],
+      "Hortalizas y verduras": [
+        [
+          "Judía verde",
+          "175g"
+        ],
+        [
+          "Zanahoria",
+          "300g"
+        ],
+        [
+          "Cebolla blanca",
+          "50g"
+        ],
+        [
+          "Lechuga",
+          "180g"
+        ],
+        [
+          "Pepino",
+          "450g"
+        ],
+        [
+          "Calabacín",
+          "785g"
+        ],
+        [
+          "Champiñón o seta",
+          "450g"
+        ],
+        [
+          "Alcachofa",
+          "130g"
+        ],
+        [
+          "Perejil",
+          "13g"
+        ],
+        [
+          "Ajo",
+          "23g"
+        ],
+        [
+          "Berenjena",
+          "100g"
+        ],
+        [
+          "Col y repollo",
+          "150g"
+        ],
+        [
+          "Cebolla o cebolleta",
+          "125g"
+        ],
+        [
+          "Tomate crudo",
+          "45g"
+        ],
+        [
+          "Pimiento rojo",
+          "100g"
+        ]
+      ],
+      "Carnes, pescados y huevos": [
+        [
+          "Pollo pechuga solomillo",
+          "280g"
+        ],
+        [
+          "Huevo de gallina",
+          "180g"
+        ],
+        [
+          "Clara de huevo pasteurizada",
+          "280g"
+        ],
+        [
+          "Pavo pechuga fresco",
+          "150g"
+        ],
+        [
+          "Merluza",
+          "250g"
+        ],
+        [
+          "Gamba o camarón",
+          "90g"
+        ],
+        [
+          "Filete de lenguado congelado",
+          "250g"
+        ],
+        [
+          "Pollo muslo/contramuslo",
+          "390g"
+        ],
+        [
+          "Carne magra de ternera",
+          "180g"
+        ],
+        [
+          "Dorada",
+          "370g"
+        ]
+      ],
+      "Frutos secos y legumbres": [
+        [
+          "Anacardo sin cáscara",
+          "55g"
+        ],
+        [
+          "Nuez pelada",
+          "25g"
+        ],
+        [
+          "Guisante congelado",
+          "90g"
+        ]
+      ],
+      "Aceites y condimentos": [
+        [
+          "Aceite de oliva",
+          "230g"
+        ],
+        [
+          "Cacao en polvo desgrasado sin azúcar",
+          "40g"
+        ],
+        [
+          "Eneldo seco",
+          "3g"
+        ],
+        [
+          "Pimienta negra",
+          "6g"
+        ],
+        [
+          "Orégano",
+          "2g"
+        ],
+        [
+          "Canela",
+          "3g"
+        ],
+        [
+          "Romero",
+          "2g"
+        ],
+        [
+          "Vainilla",
+          "1g"
+        ]
+      ]
+    }
+  }
+}
