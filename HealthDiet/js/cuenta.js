@@ -191,6 +191,25 @@
     const button=event.currentTarget.querySelector('button');button.disabled=true;
     try{await rpc('hd_set_my_name',{p_name:name});await refresh();status('Nombre guardado.');}catch(error){report(error);}finally{button.disabled=false;}
   };
+  $('#password-form').onsubmit=async event=>{
+    event.preventDefault();
+    const form=event.currentTarget, button=form.querySelector('button');
+    const current=$('#current-password').value, next=$('#new-password').value, repeated=$('#confirm-password').value;
+    if(next!==repeated){status('Las contraseñas nuevas no coinciden.',true);return;}
+    if(next===current){status('La contraseña nueva debe ser distinta de la actual.',true);return;}
+    button.disabled=true;button.textContent='Guardando…';
+    try {
+      const {data:userData,error:userError}=await client.auth.getUser();
+      if(userError||!userData?.user?.email)throw new Error('No se ha podido verificar la sesión.');
+      const {error:loginError}=await client.auth.signInWithPassword({email:userData.user.email,password:current});
+      if(loginError){status('No se ha podido verificar la contraseña actual. Compruébala e inténtalo de nuevo.',true);return;}
+      const {error:updateError}=await client.auth.updateUser({password:next});
+      if(updateError)throw updateError;
+      form.reset();status('Contraseña actualizada.');
+    } catch(error) {
+      status('No se ha podido cambiar la contraseña. Comprueba los requisitos y vuelve a intentarlo.',true);
+    } finally {button.disabled=false;button.textContent='Cambiar contraseña';}
+  };
   $('#save-color').onclick=async()=>{
     try{await rpc('hd_set_my_color',{p_color:$('#my-color').value});status('Color guardado.');await refresh();}catch(error){report(error);}
   };
@@ -199,7 +218,7 @@
     const sequence = ++refreshNumber;
     const { data, error } = await client.auth.getSession(); if (sequence !== refreshNumber) return; if (error) { report(error); return; }
     const session = data.session; toggle('#auth', !session); toggle('#space', !!session); toggle('#account-nav', !!session); if(!session) toggle('#nav-links', false);
-    if (!session) { if($('#recipe-dialog').open)$('#recipe-dialog').close(); editingRecipeId=null; workspace = null; sharedRecipes=[]; window.hdSharedMenus.clear(); $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); return; }
+    if (!session) { if($('#recipe-dialog').open)$('#recipe-dialog').close(); $('#password-form').reset(); editingRecipeId=null; workspace = null; sharedRecipes=[]; window.hdSharedMenus.clear(); $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); return; }
     try {
       const current = await rpc('hd_my_workspace'); if (sequence !== refreshNumber) return;
       toggle('#dashboard', !!current); toggle('#onboarding', !current); toggle('#nav-links', !!current);
