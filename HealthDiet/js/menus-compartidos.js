@@ -21,6 +21,7 @@ window.hdSharedMenus = (() => {
     if(!menus.length) list.append(el('p','Todavía no hay menús.','muted'));
     for(const menu of menus){
       const card=el('article',undefined,'dish-editor'); card.append(el('strong',menu.name+(menu.active?' · Activo':'')));
+      for(const entry of refs(menu)){card.append(el('p',days[entry.day-1]+' · '+entry.meal+': '+recipeName(entry.recipe_id),'muted'));}
       if(!menu.active)card.append(makeButton('Activar menú',async()=>{try{await rpc('hd_activate_menu',{p_menu_id:menu.id});menus=await rpc('hd_list_menus');notify('Menú activado.');render();}catch(e){notify('No se ha podido activar el menú.',true);}}));
       list.append(card);
     }
