@@ -83,10 +83,10 @@
     sharedRecipes=recipes; const list=$('#shared-recipes'); list.replaceChildren();
     if (!recipes.length) list.append(text('p','Todavía no hay recetas compartidas.','muted'));
     for (const recipe of recipes) {
-      const article=document.createElement('article'); article.className='dish-editor'; article.append(text('strong',recipe.name));
+      const article=document.createElement('article'); article.className='dish-editor'; article.append(text('strong',recipe.name)); if(recipe.container) article.append(text('p','Táper: '+recipe.container,'muted'));
       for (const dish of recipe.dishes) { article.append(text('p',dish.name)); for (const ingredient of dish.ingredients) {
         const line=text('p',ingredient.name+': '+ingredient.quantities.map(q=>q.name+(q.active?'':' (antiguo miembro)')+' '+q.quantity+' '+(ingredient.unit==='unidad'?'ud.':ingredient.unit)).join(' · '),'muted'); article.append(line);
-      } } list.append(article);
+      } } if(recipe.steps.length){article.append(text('strong','Preparación'));const ol=document.createElement('ol');for(const step of recipe.steps)ol.append(text('li',step));article.append(ol);} list.append(article);
     }
   }
   $('#shared-profile').onchange=updateProfile;
