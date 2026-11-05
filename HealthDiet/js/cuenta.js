@@ -42,16 +42,79 @@
     }
     toggle('#admin', data.role === 'admin'); $('#member-select').disabled = !select.options.length; $('#transfer-button').disabled = !select.options.length;
   }
+
+  const input = (placeholder, type = 'text') => { const e = document.createElement('input'); e.type = type; e.placeholder = placeholder; return e; };
+  function addIngredient(box) {
+    const row = document.createElement('div'); row.className = 'shared-ingredient';
+    const name = input('Ingrediente'); name.className = 'shared-ingredient-name'; name.required = true; name.maxLength = 120; row.append(name);
+    const unit = document.createElement('select'); unit.className = 'shared-unit'; unit.setAttribute('aria-label', 'Unidad');
+    for (const [value, label] of [['g','g'],['unidad','unidad(es)']]) { const o = text('option', label); o.value = value; unit.append(o); } row.append(unit);
+    for (const person of workspace.members) {
+      const label = document.createElement('label'); label.className = 'shared-person'; label.dataset.member = person.id; label.append(document.createTextNode('Cantidad · '+person.name));
+      const qty = input('Cantidad', 'number'); qty.min = '0.001'; qty.step = 'any'; qty.setAttribute('aria-label','Cantidad para '+person.name); label.append(qty); row.append(label);
+    }
+    const remove = text('button','Quitar ingrediente','quiet'); remove.type='button'; remove.onclick=()=>row.remove(); row.append(remove); box.append(row); updateProfile();
+  }
+  function addDish() {
+    const box = document.createElement('section'); box.className='dish-editor shared-dish'; const title=text('strong','Plato'); const name=input('Nombre del plato'); name.className='shared-dish-name'; name.required=true; name.maxLength=120;
+    const ingredients=document.createElement('div'); ingredients.className='shared-ingredients';
+    const add=text('button','＋ Ingrediente','secondary'); add.type='button'; add.onclick=()=>addIngredient(ingredients);
+    const del=text('button','Quitar plato','quiet'); del.type='button'; del.onclick=()=>box.remove();
+    box.append(title,name,ingredients,add,del); $('#shared-dishes').append(box); addIngredient(ingredients);
+  }
+  function updateProfile() {
+    const profile=$('#shared-profile').value;
+    document.querySelectorAll('.shared-person').forEach(label=>{ label.hidden = profile!=='todos' && label.dataset.member!==profile; });
+  }
+  function resetRecipeForm() {
+    const select=$('#shared-profile'); select.replaceChildren();
+    for (const p of workspace.members) { const option=text('option',p.name); option.value=p.id; select.append(option); }
+    if (workspace.members.length>1) { const option=text('option','Todos'); option.value='todos'; select.append(option); }
+    $('#shared-dishes').replaceChildren(); addDish();
+  }
+  async function renderSharedRecipes(expected) {
+    const recipes=await rpc('hd_list_recipes'); if (expected!==refreshNumber) return;
+    const list=$('#shared-recipes'); list.replaceChildren();
+    if (!recipes.length) list.append(text('p','Todavía no hay recetas compartidas.','muted'));
+    for (const recipe of recipes) {
+      const article=document.createElement('article'); article.className='dish-editor'; article.append(text('strong',recipe.name));
+      for (const dish of recipe.dishes) { article.append(text('p',dish.name)); for (const ingredient of dish.ingredients) {
+        const line=text('p',ingredient.name+': '+ingredient.quantities.map(q=>q.name+(q.active?'':' (antiguo miembro)')+' '+q.quantity+' '+(ingredient.unit==='unidad'?'ud.':ingredient.unit)).join(' · '),'muted'); article.append(line);
+      } } list.append(article);
+    }
+  }
+  $('#shared-profile').onchange=updateProfile;
+  $('#shared-add-dish').onclick=addDish;
+  $('#shared-recipe-form').onsubmit=async event=>{
+    event.preventDefault(); const profile=$('#shared-profile').value; const dishes=[];
+    for (const box of document.querySelectorAll('.shared-dish')) {
+      const ingredients=[];
+      for (const row of box.querySelectorAll('.shared-ingredient')) {
+        const quantities=[];
+        for (const label of row.querySelectorAll('.shared-person')) {
+          if (profile!=='todos' && label.dataset.member!==profile) continue;
+          const value=label.querySelector('input').value;
+          if (value!=='') quantities.push({member_id:label.dataset.member,quantity:Number(value)});
+        }
+        ingredients.push({name:row.querySelector('.shared-ingredient-name').value.trim(),unit:row.querySelector('.shared-unit').value,quantities});
+      }
+      dishes.push({name:box.querySelector('.shared-dish-name').value.trim(),ingredients});
+    }
+    if (!dishes.length || dishes.some(d=>!d.ingredients.length||d.ingredients.some(i=>!i.quantities.length))) { status('Añade al menos un plato, un ingrediente y una cantidad por ingrediente.',true); return; }
+    const steps=$('#shared-steps').value.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+    try { await rpc('hd_create_recipe',{p_name:$('#shared-name').value.trim(),p_container:$('#shared-container').value.trim()||null,p_steps:steps,p_dishes:dishes}); event.target.reset(); resetRecipeForm(); status('Receta guardada en el espacio.'); await renderSharedRecipes(refreshNumber); } catch(error) { report(error); }
+  };
+ 
   async function refresh() {
     const sequence = ++refreshNumber;
     const { data, error } = await client.auth.getSession(); if (sequence !== refreshNumber) return; if (error) { report(error); return; }
     const session = data.session; toggle('#auth', !session); toggle('#space', !!session);
-    if (!session) { workspace = null; return; }
+    if (!session) { workspace = null; $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); return; }
     $('#signed-in').textContent = session.user.email || '';
     try {
       const current = await rpc('hd_my_workspace'); if (sequence !== refreshNumber) return;
       toggle('#dashboard', !!current); toggle('#onboarding', !current);
-      if (current) renderWorkspace(current);
+      if (current) { renderWorkspace(current); resetRecipeForm(); await renderSharedRecipes(sequence); } else { workspace=null; $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); }
     } catch (error) { toggle('#dashboard', false); toggle('#onboarding', false); report(error); }
   }
   client.auth.onAuthStateChange(() => { setTimeout(() => refresh(), 0); });
