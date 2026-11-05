@@ -18,7 +18,10 @@
       const { error } = await client.auth.signInWithPassword({ email: $('#email').value.trim(), password: $('#password').value });
       if (error) throw error;
       $('#password').value = ''; status('Sesión iniciada.');
-    } catch (error) { report(error); }
+    } catch (error) {
+      if (error?.code === 'invalid_credentials') status('El correo o la contraseña no son correctos. Compruébalos e inténtalo de nuevo.', true);
+      else report(error);
+    }
   };
   $('#signout').onclick = async () => { try { const { error } = await client.auth.signOut(); if (error) throw error; workspace = null; status('Sesión cerrada.'); await refresh(); } catch (error) { report(error); } };
   $('#create-form').onsubmit = async event => {
