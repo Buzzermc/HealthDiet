@@ -8,7 +8,7 @@
   const toggle = (selector, shown) => { $(selector).hidden = !shown; };
   if (!window.supabase) { status('No se ha podido cargar el servicio de acceso. Comprueba tu conexión y vuelve a intentarlo.', true); return; }
   const client = window.supabase.createClient(url, key);
-  let workspace = null, refreshNumber = 0;
+  let workspace = null, refreshNumber = 0, sharedRecipes = [];
   const rpc = async (name, args = {}) => { const { data, error } = await client.rpc(name, args); if (error) throw error; return data; };
   const text = (tag, value, cls) => { const node = document.createElement(tag); node.textContent = value; if (cls) node.className = cls; return node; };
   const report = error => { console.error('HealthDiet:', error); status('No se ha podido completar la operación. Revisa los datos e inténtalo de nuevo.', true); };
@@ -74,7 +74,7 @@
   }
   async function renderSharedRecipes(expected) {
     const recipes=await rpc('hd_list_recipes'); if (expected!==refreshNumber) return;
-    const list=$('#shared-recipes'); list.replaceChildren();
+    sharedRecipes=recipes; const list=$('#shared-recipes'); list.replaceChildren();
     if (!recipes.length) list.append(text('p','Todavía no hay recetas compartidas.','muted'));
     for (const recipe of recipes) {
       const article=document.createElement('article'); article.className='dish-editor'; article.append(text('strong',recipe.name));
@@ -102,19 +102,19 @@
     }
     if (!dishes.length || dishes.some(d=>!d.ingredients.length||d.ingredients.some(i=>!i.quantities.length))) { status('Añade al menos un plato, un ingrediente y una cantidad por ingrediente.',true); return; }
     const steps=$('#shared-steps').value.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
-    try { await rpc('hd_create_recipe',{p_name:$('#shared-name').value.trim(),p_container:$('#shared-container').value.trim()||null,p_steps:steps,p_dishes:dishes}); event.target.reset(); resetRecipeForm(); status('Receta guardada en el espacio.'); await renderSharedRecipes(refreshNumber); } catch(error) { report(error); }
+    try { await rpc('hd_create_recipe',{p_name:$('#shared-name').value.trim(),p_container:$('#shared-container').value.trim()||null,p_steps:steps,p_dishes:dishes}); event.target.reset(); resetRecipeForm(); status('Receta guardada en el espacio.'); await renderSharedRecipes(refreshNumber); await window.hdSharedMenus.reload({rpc,notify:status,recipes:sharedRecipes,members:workspace.members}); } catch(error) { report(error); }
   };
  
   async function refresh() {
     const sequence = ++refreshNumber;
     const { data, error } = await client.auth.getSession(); if (sequence !== refreshNumber) return; if (error) { report(error); return; }
     const session = data.session; toggle('#auth', !session); toggle('#space', !!session);
-    if (!session) { workspace = null; $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); return; }
+    if (!session) { workspace = null; sharedRecipes=[]; window.hdSharedMenus.clear(); $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); return; }
     $('#signed-in').textContent = session.user.email || '';
     try {
       const current = await rpc('hd_my_workspace'); if (sequence !== refreshNumber) return;
       toggle('#dashboard', !!current); toggle('#onboarding', !current);
-      if (current) { renderWorkspace(current); resetRecipeForm(); await renderSharedRecipes(sequence); } else { workspace=null; $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); }
+      if (current) { renderWorkspace(current); resetRecipeForm(); await renderSharedRecipes(sequence); await window.hdSharedMenus.reload({rpc,notify:status,recipes:sharedRecipes,members:current.members,isCurrent:()=>sequence===refreshNumber}); } else { workspace=null; sharedRecipes=[]; window.hdSharedMenus.clear(); $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); }
     } catch (error) { toggle('#dashboard', false); toggle('#onboarding', false); report(error); }
   }
   client.auth.onAuthStateChange(() => { setTimeout(() => refresh(), 0); });
