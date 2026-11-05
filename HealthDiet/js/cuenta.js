@@ -49,7 +49,7 @@
     document.querySelectorAll('[data-hd-view]').forEach(node=>{node.hidden = node.dataset.hdView!==view || (node.id==='admin' && workspace?.role!=='admin');});
     document.querySelectorAll('[data-view-target]').forEach(node=>{const selected=node.dataset.viewTarget===view;node.classList.toggle('selected',selected);node.setAttribute('aria-current',selected?'page':'false');});
   }
-  document.querySelectorAll('[data-view-target]').forEach(node=>node.onclick=()=>setView(node.dataset.viewTarget));
+  document.querySelectorAll('[data-view-target]').forEach(node=>node.onclick=()=>{setView(node.dataset.viewTarget);if(node.dataset.viewTarget==='shopping' && workspace)refresh().catch(report);});
   function renderWorkspace(data) {
     workspace = data; $('#workspace-title').textContent = data.name; $('#workspace-role').textContent = data.role === 'admin' ? 'Administración' : 'Miembro';
     const members = $('#members'); members.replaceChildren(); const select = $('#member-select'); select.replaceChildren();
@@ -150,7 +150,7 @@
     if (!dishes.length || dishes.some(d=>!d.ingredients.length||d.ingredients.some(i=>!i.quantities.length))) { status('Añade al menos un plato, un ingrediente y una cantidad por ingrediente.',true); return; }
     const steps=$('#shared-steps').value.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
     try { const params={p_name:$('#shared-name').value.trim(),p_container:$('#shared-container').value.trim()||null,p_steps:steps,p_dishes:dishes};
-      if(editingRecipeId)await rpc('hd_update_recipe',{...params,p_recipe_id:editingRecipeId});else await rpc('hd_create_recipe',params);
+      if(editingRecipeId){if(!await window.hdSharedMenus.withConfirmation('hd_shopping_update_recipe',{...params,p_recipe_id:editingRecipeId}))return;}else await rpc('hd_create_recipe',params);
       cancelEdit(); status('Receta guardada en el espacio.'); await renderSharedRecipes(refreshNumber); await window.hdSharedMenus.reload({rpc,notify:status,recipes:sharedRecipes,members:workspace.members}); } catch(error) {
       if(error?.message?.includes('cantidades históricas')) status('No se puede eliminar o cambiar un ingrediente con cantidades históricas de antiguos miembros.',true);
       else report(error);
@@ -192,3 +192,4 @@
   client.auth.onAuthStateChange(() => { setTimeout(() => refresh(), 0); });
   refresh();
 })();
+
