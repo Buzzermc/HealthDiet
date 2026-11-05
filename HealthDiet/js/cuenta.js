@@ -4,7 +4,10 @@
   const url = 'https://hbdkzelbyiixyjbroiat.supabase.co';
   // Clave publicable: la autorización real se comprueba en Supabase.
   const key = 'sb_publishable_8ieWzq-WkuLDDizrm39QMA_iDgE_kuR';
-  const status = (message, error = false) => { const box = $('#status'); box.textContent = message; box.classList.toggle('error', error); };
+  const status = (message, error = false) => {
+    const target = $('#recipe-dialog')?.open ? $('#recipe-dialog-status') : $('#shared-menu-dialog')?.open ? $('#menu-dialog-status') : $('#status');
+    target.textContent = message; target.classList.toggle('error', error);
+  };
   const toggle = (selector, shown) => { $(selector).hidden = !shown; };
   if (!window.supabase) { status('No se ha podido cargar el servicio de acceso. Comprueba tu conexión y vuelve a intentarlo.', true); return; }
   const client = window.supabase.createClient(url, key);
@@ -17,7 +20,7 @@
     try {
       const { error } = await client.auth.signInWithPassword({ email: $('#email').value.trim(), password: $('#password').value });
       if (error) throw error;
-      $('#password').value = ''; status('Sesión iniciada.');
+      $('#password').value = ''; status('');
     } catch (error) {
       if (error?.code === 'invalid_credentials') status('El correo o la contraseña no son correctos. Compruébalos e inténtalo de nuevo.', true);
       else report(error);
@@ -69,7 +72,10 @@
     const ingredients=document.createElement('div'); ingredients.className='shared-ingredients';
     const add=text('button','＋ Ingrediente','secondary'); add.type='button'; add.onclick=()=>addIngredient(ingredients);
     const del=text('button','Quitar plato','quiet'); del.type='button'; del.onclick=()=>box.remove();
-    box.append(title,name,ingredients,add,del); $('#shared-dishes').append(box); if(data.ingredients?.length)data.ingredients.forEach(i=>addIngredient(ingredients,i)); else addIngredient(ingredients);
+    const top=document.createElement('div');top.className='dish-title-row';top.append(title,del);
+    const nameLabel=document.createElement('label');nameLabel.append(document.createTextNode('Nombre del plato'),name);
+    const ingredientsHead=document.createElement('div');ingredientsHead.className='ing-head';ingredientsHead.append(text('span','Ingredientes','label'),add);
+    box.append(top,nameLabel,ingredientsHead,ingredients); $('#shared-dishes').append(box); if(data.ingredients?.length)data.ingredients.forEach(i=>addIngredient(ingredients,i)); else addIngredient(ingredients);
   }
   function updateProfile() {
     const profile=$('#shared-profile').value;
@@ -92,7 +98,7 @@
       } } if(recipe.steps.length){article.append(text('strong','Preparación'));const ol=document.createElement('ol');for(const step of recipe.steps)ol.append(text('li',step));article.append(ol);}
       const prepare=(editing)=>{
         editingRecipeId=editing?recipe.id:null; $('#recipe-form-title').textContent=editing?'Editar receta':'Copiar receta';
-        $('#recipe-cancel').hidden=false; $('#recipe-submit').textContent=editing?'Guardar cambios':'Guardar copia';
+        $('#recipe-submit').textContent=editing?'Guardar cambios':'Guardar copia';
         $('#shared-recipe-form').reset(); resetRecipeForm();
         $('#shared-name').value=recipe.name;
         const selectedContainer=recipe.container||''; const containerSelect=$('#shared-container');
@@ -101,7 +107,7 @@
         $('#shared-steps').value=recipe.steps.join(String.fromCharCode(10));
         $('#shared-dishes').replaceChildren(); recipe.dishes.forEach(d=>addDish(d));
         if(workspace.members.length>1)$('#shared-profile').value='todos';
-        updateProfile();status(editing?'Edita la receta y guarda los cambios.':'Copia preparada. Revisa los ingredientes y guarda la nueva receta.');
+        updateProfile(); status(''); $('#recipe-dialog-status').textContent=''; $('#recipe-dialog').showModal();
         $('#shared-name').focus();
       };
       const edit=text('button','Editar','secondary');edit.type='button';edit.onclick=()=>prepare(true);
@@ -111,8 +117,16 @@
   }
   $('#shared-profile').onchange=updateProfile;
   $('#shared-add-dish').onclick=()=>addDish();
-  function cancelEdit(){editingRecipeId=null;$('#shared-recipe-form').reset();resetRecipeForm();$('#recipe-form-title').textContent='Nueva receta';$('#recipe-submit').textContent='Guardar receta';$('#recipe-cancel').hidden=true;}
+  function cancelEdit(){
+    if($('#recipe-dialog').open)$('#recipe-dialog').close();
+    editingRecipeId=null;$('#shared-recipe-form').reset();resetRecipeForm();
+    $('#recipe-form-title').textContent='Nueva receta';$('#recipe-submit').textContent='Guardar receta';
+    $('#recipe-dialog-status').textContent='';
+  }
   $('#recipe-cancel').onclick=cancelEdit;
+  $('#recipe-close').onclick=cancelEdit;
+  $('#recipe-dialog').addEventListener('cancel',event=>{event.preventDefault();cancelEdit();});
+  $('#recipe-new').onclick=()=>{cancelEdit();status('');$('#recipe-dialog').showModal();$('#shared-name').focus();};
   $('#shared-recipe-form').onsubmit=async event=>{
     event.preventDefault(); const profile=$('#shared-profile').value; const dishes=[];
     for (const box of document.querySelectorAll('.shared-dish')) {
@@ -163,7 +177,7 @@
     const sequence = ++refreshNumber;
     const { data, error } = await client.auth.getSession(); if (sequence !== refreshNumber) return; if (error) { report(error); return; }
     const session = data.session; toggle('#auth', !session); toggle('#space', !!session); toggle('#account-nav', !!session); if(!session) toggle('#nav-links', false);
-    if (!session) { editingRecipeId=null; workspace = null; sharedRecipes=[]; window.hdSharedMenus.clear(); $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); return; }
+    if (!session) { if($('#recipe-dialog').open)$('#recipe-dialog').close(); editingRecipeId=null; workspace = null; sharedRecipes=[]; window.hdSharedMenus.clear(); $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); return; }
     try {
       const current = await rpc('hd_my_workspace'); if (sequence !== refreshNumber) return;
       toggle('#dashboard', !!current); toggle('#onboarding', !current); toggle('#nav-links', !!current);

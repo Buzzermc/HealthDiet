@@ -8,7 +8,7 @@ window.hdSharedMenus = (() => {
   function emptyWeek(){ return days.map(()=>meals.map(()=>[])); }
   function el(tag, content, cls){ const e=document.createElement(tag); if(content!==undefined)e.textContent=content; if(cls)e.className=cls; return e; }
   function makeButton(label, action, cls='secondary'){ const b=el('button',label,cls); b.type='button'; b.onclick=action; return b; }
-  function clear(){recipes=[];members=[];menus=[];draft=emptyWeek();selectedDay=0;cookingDay=0;['#shared-menu-list','#shared-menu-days','#shared-menu-editor','#shared-cooking','#shared-shopping'].forEach(s=>$(s).replaceChildren());}
+  function clear(){if($('#shared-menu-dialog').open)$('#shared-menu-dialog').close();recipes=[];members=[];menus=[];draft=emptyWeek();selectedDay=0;cookingDay=0;['#shared-menu-list','#shared-menu-days','#shared-menu-editor','#shared-cooking','#shared-shopping'].forEach(s=>$(s).replaceChildren());}
   async function reload(options){
     rpc=options.rpc; notify=options.notify; recipes=options.recipes; members=options.members;
     const result=await rpc('hd_list_menus');
@@ -41,10 +41,14 @@ window.hdSharedMenus = (() => {
       const add=makeButton('Añadir',()=>{if(select.value){draft[selectedDay][i].push(select.value);renderEditor();}});add.disabled=!available.length;section.append(select,add);root.append(section);
     });
   }
+  function closeMenu(){if($('#shared-menu-dialog').open)$('#shared-menu-dialog').close();draft=emptyWeek();selectedDay=0;$('#shared-menu-form').reset();$('#menu-dialog-status').textContent='';}
+  $('#menu-new').onclick=()=>{closeMenu();notify('');renderEditor();$('#shared-menu-dialog').showModal();$('#shared-menu-name').focus();};
+  $('#menu-close').onclick=closeMenu;$('#menu-cancel').onclick=closeMenu;
+  $('#shared-menu-dialog').addEventListener('cancel',event=>{event.preventDefault();closeMenu();});
   $('#shared-menu-form').onsubmit=async event=>{
     event.preventDefault();
     if(draft.some(day=>!day[2].length||!day[4].length)){notify('Añade al menos una receta a la comida y la cena de cada día.',true);return;}
-    try{await rpc('hd_save_menu',{p_name:$('#shared-menu-name').value.trim(),p_days:draft});draft=emptyWeek();selectedDay=0;event.target.reset();menus=await rpc('hd_list_menus');notify('Menú guardado.');render();}catch(e){notify('No se ha podido guardar el menú.',true);}
+    try{await rpc('hd_save_menu',{p_name:$('#shared-menu-name').value.trim(),p_days:draft});closeMenu();menus=await rpc('hd_list_menus');notify('Menú guardado.');render();}catch(e){notify('No se ha podido guardar el menú.',true);}
   };
   function activeMenu(){return menus.find(m=>m.active);}
   function refs(menu,day){return menu.entries.filter(e=>day===undefined||e.day===day+1).sort((a,b)=>a.day-b.day||meals.indexOf(a.meal)-meals.indexOf(b.meal)||a.position-b.position);}
