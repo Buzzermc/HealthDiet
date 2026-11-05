@@ -81,7 +81,10 @@
       const label = document.createElement('label'); label.className = 'shared-person'; label.dataset.member = person.id; label.append(document.createTextNode('Cantidad · '+person.name));
       const qty = input('Cantidad', 'number'); qty.min = '0.001'; qty.step = 'any'; qty.setAttribute('aria-label','Cantidad para '+person.name); const previous=(data.quantities||[]).find(q=>q.member_id===person.id); if(previous)qty.value=previous.quantity; label.append(qty); row.append(label);
     }
-    const remove = text('button','Quitar ingrediente','quiet'); remove.type='button'; remove.onclick=()=>row.remove(); row.append(remove); box.append(row); updateProfile();
+    const remove = document.createElement('button'); remove.className='ingredient-remove'; remove.type='button';
+    remove.setAttribute('aria-label','Eliminar ingrediente'); remove.title='Eliminar ingrediente';
+    remove.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 10v6M14 10v6"/></svg>';
+    remove.onclick=()=>row.remove(); row.append(remove); box.append(row); updateProfile();
   }
   function addDish(data = {}) {
     const box = document.createElement('section'); box.className='dish-editor shared-dish'; box.dataset.dishId=data.id||''; const title=text('strong','Plato'); const name=input('Nombre del plato'); name.className='shared-dish-name'; name.required=true; name.maxLength=120; name.value=data.name||'';
@@ -90,8 +93,9 @@
     const del=text('button','Quitar plato','quiet'); del.type='button'; del.onclick=()=>box.remove();
     const top=document.createElement('div');top.className='dish-title-row';top.append(title,del);
     const nameLabel=document.createElement('label');nameLabel.append(document.createTextNode('Nombre del plato'),name);
-    const ingredientsHead=document.createElement('div');ingredientsHead.className='ing-head';ingredientsHead.append(text('span','Ingredientes','label'),add);
-    box.append(top,nameLabel,ingredientsHead,ingredients); $('#shared-dishes').append(box); if(data.ingredients?.length)data.ingredients.forEach(i=>addIngredient(ingredients,i)); else addIngredient(ingredients);
+    const ingredientsHead=document.createElement('div');ingredientsHead.className='ing-head';ingredientsHead.append(text('span','Ingredientes','label'));
+    add.classList.add('add-ingredient');
+    box.append(top,nameLabel,ingredientsHead,ingredients,add); $('#shared-dishes').append(box); if(data.ingredients?.length)data.ingredients.forEach(i=>addIngredient(ingredients,i)); else addIngredient(ingredients);
   }
   function updateProfile() {
     const profile=$('#shared-profile').value;
