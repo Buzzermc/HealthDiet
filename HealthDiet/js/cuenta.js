@@ -169,10 +169,16 @@
       row.append(remove);list.append(row);const option=text('option',item.name);option.value=item.name;select.append(option);
     }
     if([...select.options].some(o=>o.value===chosen))select.value=chosen;
-    const me=workspace.members.find(p=>p.id===workspace.my_member_id);if(me)$('#my-color').value=me.color;
+    const me=workspace.members.find(p=>p.id===workspace.my_member_id);if(me){$('#my-color').value=me.color;$('#my-name').value=me.name;}
   }
   $('#container-form').onsubmit=async event=>{
     event.preventDefault();try{await rpc('hd_add_container',{p_name:$('#container-name-new').value.trim()});event.target.reset();await renderSettings(refreshNumber);status('Táper añadido.');}catch(error){report(error);}
+  };
+  $('#name-form').onsubmit=async event=>{
+    event.preventDefault();const name=$('#my-name').value.trim();
+    if(!name){status('Escribe un nombre para mostrar.',true);return;}
+    const button=event.currentTarget.querySelector('button');button.disabled=true;
+    try{await rpc('hd_set_my_name',{p_name:name});await refresh();status('Nombre guardado.');}catch(error){report(error);}finally{button.disabled=false;}
   };
   $('#save-color').onclick=async()=>{
     try{await rpc('hd_set_my_color',{p_color:$('#my-color').value});status('Color guardado.');await refresh();}catch(error){report(error);}
