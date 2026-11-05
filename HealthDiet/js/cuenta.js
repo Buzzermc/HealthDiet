@@ -162,12 +162,11 @@
   async function refresh() {
     const sequence = ++refreshNumber;
     const { data, error } = await client.auth.getSession(); if (sequence !== refreshNumber) return; if (error) { report(error); return; }
-    const session = data.session; toggle('#auth', !session); toggle('#space', !!session);
+    const session = data.session; toggle('#auth', !session); toggle('#space', !!session); toggle('#account-nav', !!session); if(!session) toggle('#nav-links', false);
     if (!session) { editingRecipeId=null; workspace = null; sharedRecipes=[]; window.hdSharedMenus.clear(); $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); return; }
-    $('#signed-in').textContent = session.user.email || '';
     try {
       const current = await rpc('hd_my_workspace'); if (sequence !== refreshNumber) return;
-      toggle('#dashboard', !!current); toggle('#onboarding', !current);
+      toggle('#dashboard', !!current); toggle('#onboarding', !current); toggle('#nav-links', !!current);
       if (current) { renderWorkspace(current); await renderSettings(sequence); if(sequence!==refreshNumber)return; cancelEdit(); await renderSharedRecipes(sequence); await window.hdSharedMenus.reload({rpc,notify:status,recipes:sharedRecipes,members:current.members,isCurrent:()=>sequence===refreshNumber}); } else { workspace=null; sharedRecipes=[]; window.hdSharedMenus.clear(); $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); }
     } catch (error) { toggle('#dashboard', false); toggle('#onboarding', false); report(error); }
   }
