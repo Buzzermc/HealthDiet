@@ -4,14 +4,23 @@ window.hdSharedMenus = (() => {
   const $ = s => document.querySelector(s);
   const days = ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
   const meals = ['desayuno','almuerzo','comida','merienda','cena'];
-  let rpc, notify, recipes=[], members=[], menus=[], draft=emptyWeek(), selectedDay=0, cookingDay=0, editingMenuId=null;
+  let rpc, notify, recipes=[], members=[], menus=[], checked=new Set(), draft=emptyWeek(), selectedDay=0, cookingDay=0, editingMenuId=null;
   function emptyWeek(){ return days.map(()=>meals.map(()=>[])); }
   function el(tag, content, cls){ const e=document.createElement(tag); if(content!==undefined)e.textContent=content; if(cls)e.className=cls; return e; }
   function makeButton(label, action, cls='secondary'){ const b=el('button',label,cls); b.type='button'; b.onclick=action; return b; }
-  function clear(){if($('#shared-menu-dialog').open)$('#shared-menu-dialog').close();recipes=[];members=[];menus=[];draft=emptyWeek();selectedDay=0;cookingDay=0;editingMenuId=null;['#shared-menu-list','#shared-menu-days','#shared-menu-editor','#shared-cooking','#shared-shopping'].forEach(s=>$(s).replaceChildren());}
+  function clear(){if($('#shared-menu-dialog').open)$('#shared-menu-dialog').close();recipes=[];members=[];menus=[];checked.clear();draft=emptyWeek();selectedDay=0;cookingDay=0;editingMenuId=null;['#shared-menu-list','#shared-menu-days','#shared-menu-editor','#shared-cooking','#shared-shopping'].forEach(s=>$(s).replaceChildren());}
+  async function withConfirmation(name,params){
+    try{await rpc(name,{...params,p_confirm:false});return true;}
+    catch(error){
+      if(!String(error.message||error).includes('SHOPPING_CONFIRM_REQUIRED'))throw error;
+      if(!confirm('Al cambiar el menú o una de sus recetas se desmarcarán todos los ingredientes de la lista de la compra. ¿Quieres continuar?'))return false;
+      await rpc(name,{...params,p_confirm:true});return true;
+    }
+  }
+  async function readShopping(){const state=await rpc('hd_shopping_read');checked=new Set(state.checked);return state;}
   async function reload(options){
     rpc=options.rpc; notify=options.notify; recipes=options.recipes; members=options.members;
-    const result=await rpc('hd_list_menus');
+    const result=await rpc('hd_list_menus'); await readShopping();
     if(options.isCurrent && !options.isCurrent()) return;
     menus=result; render();
   }
@@ -43,8 +52,8 @@ window.hdSharedMenus = (() => {
       }
       const actions=el('div',undefined,'actions shared-menu-actions');
       actions.append(makeButton('Editar',()=>openMenu(menu,false)),makeButton('Copiar',()=>openMenu(menu,true)));
-      if(!menu.active)actions.append(makeButton('Activar menú',async()=>{try{await rpc('hd_activate_menu',{p_menu_id:menu.id});menus=await rpc('hd_list_menus');notify('Menú activado.');render();}catch(e){notify('No se ha podido activar el menú.',true);}}));
-      actions.append(makeButton('Eliminar',async()=>{const question=menu.active?'¿Eliminar el menú activo? Dejará de haber un menú activo.':'¿Eliminar este menú?';if(!confirm(question))return;try{await rpc('hd_delete_menu',{p_menu_id:menu.id});menus=await rpc('hd_list_menus');notify('Menú eliminado.');render();}catch(e){notify('No se ha podido eliminar el menú.',true);}},'quiet'));
+      if(!menu.active)actions.append(makeButton('Activar menú',async()=>{try{if(!await withConfirmation('hd_shopping_activate',{p_menu_id:menu.id}))return;menus=await rpc('hd_list_menus');await readShopping();notify('Menú activado.');render();}catch(e){notify('No se ha podido activar el menú.',true);}}));
+      actions.append(makeButton('Eliminar',async()=>{const question=menu.active?'¿Eliminar el menú activo? Dejará de haber un menú activo y se desmarcará la lista de la compra.':'¿Eliminar este menú?';if(!confirm(question))return;try{await rpc('hd_delete_menu',{p_menu_id:menu.id});menus=await rpc('hd_list_menus');await readShopping();notify('Menú eliminado.');render();}catch(e){notify('No se ha podido eliminar el menú.',true);}},'quiet'));
       detail.append(actions);card.append(detail);list.append(card);
     }
     renderEditor(); renderCooking(); renderShopping();
@@ -80,7 +89,7 @@ window.hdSharedMenus = (() => {
   $('#shared-menu-form').onsubmit=async event=>{
     event.preventDefault();
     if(draft.some(day=>!day[2].length||!day[4].length)){notify('Añade al menos una receta a la comida y la cena de cada día.',true);return;}
-    try{const params={p_name:$('#shared-menu-name').value.trim(),p_days:draft};if(editingMenuId)await rpc('hd_update_menu',{...params,p_menu_id:editingMenuId});else await rpc('hd_save_menu',params);closeMenu();menus=await rpc('hd_list_menus');notify('Menú guardado.');render();}catch(e){notify('No se ha podido guardar el menú.',true);}
+    try{const params={p_name:$('#shared-menu-name').value.trim(),p_days:draft};if(editingMenuId){if(!await withConfirmation('hd_shopping_update_menu',{...params,p_menu_id:editingMenuId}))return;}else await rpc('hd_save_menu',params);closeMenu();menus=await rpc('hd_list_menus');await readShopping();notify('Menú guardado.');render();}catch(e){notify('No se ha podido guardar el menú.',true);}
   };
   function activeMenu(){return menus.find(m=>m.active);}
   function refs(menu,day){return menu.entries.filter(e=>day===undefined||e.day===day+1).sort((a,b)=>a.day-b.day||meals.indexOf(a.meal)-meals.indexOf(b.meal)||a.position-b.position);}
@@ -110,11 +119,15 @@ window.hdSharedMenus = (() => {
       for(const q of ingredient.quantities)if(q.active){const old=group.people.get(q.member_id)||{...q,quantity:0};old.quantity+=Number(q.quantity);group.people.set(q.member_id,old);}
     }}
     if(!groups.size){root.append(el('p','No hay ingredientes en este menú.','muted'));return;}
-    root.append(el('p','Marca lo que hay que comprar. Las marcas son temporales.','muted'));
+    root.append(el('p','Marca lo que hay que comprar. Las marcas se comparten con tu espacio.','muted'));
     for(const group of groups.values()){
-      const row=el('div',undefined,'shopping-item'),label=el('label',undefined,'shopping-check-label'),check=el('input');check.type='checkbox';label.append(check,el('span',group.name,'shopping-name'));
+      const row=el('div',undefined,'shopping-item'),label=el('label',undefined,'shopping-check-label'),check=el('input');check.type='checkbox';
+      const key=group.name.trim().toLocaleLowerCase('es')+'|'+group.unit;check.checked=checked.has(key);
+      check.onchange=async()=>{const value=check.checked;check.disabled=true;try{await rpc('hd_shopping_set',{p_menu_id:menu.id,p_name:group.name,p_unit:group.unit,p_checked:value});if(value)checked.add(key);else checked.delete(key);}catch(error){check.checked=!value;notify('No se ha podido guardar la marca. Actualiza la aplicación y vuelve a intentarlo.',true);}finally{check.disabled=false;}};
+      label.append(check,el('span',group.name,'shopping-name'));
       const vals=el('div',undefined,'shopping-amounts');let total=0;for(const q of group.people.values()){vals.append(amountNode(q));total+=q.quantity;} vals.append(el('strong','Total: '+total+' '+group.unit));row.append(label,vals);root.append(row);
     }
   }
-  return {reload,clear};
+  return {reload,clear,withConfirmation};
 })();
+
