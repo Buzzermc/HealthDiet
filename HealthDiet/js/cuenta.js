@@ -4,9 +4,14 @@
   const url = 'https://hbdkzelbyiixyjbroiat.supabase.co';
   // Clave publicable: la autorización real se comprueba en Supabase.
   const key = 'sb_publishable_8ieWzq-WkuLDDizrm39QMA_iDgE_kuR';
+  let toastTimer;
   const status = (message, error = false) => {
     const target = $('#recipe-dialog')?.open ? $('#recipe-dialog-status') : $('#shared-menu-dialog')?.open ? $('#menu-dialog-status') : $('#status');
     target.textContent = message; target.classList.toggle('error', error);
+    if(target.id==='status'){
+      clearTimeout(toastTimer);target.hidden=!message;
+      if(message)toastTimer=setTimeout(()=>{target.hidden=true;target.textContent='';},error?7000:3500);
+    }
   };
   const toggle = (selector, shown) => { $(selector).hidden = !shown; };
   if (!window.supabase) { status('No se ha podido cargar el servicio de acceso. Comprueba tu conexión y vuelve a intentarlo.', true); return; }

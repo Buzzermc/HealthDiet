@@ -48,3 +48,30 @@
 #shared-dishes .shared-person{order:1}
 #shared-dishes .shared-unit{order:2}
 #shared-dishes .shared-ingredient>.quiet{order:3}
+
+/* Confirmaciones breves */
+#status.app-toast{position:fixed;right:24px;bottom:24px;z-index:1100;max-width:min(420px,calc(100vw - 32px));margin:0;padding:13px 17px;border:1px solid #bfd8c8;border-radius:12px;background:#eff8f2;color:#285c40;box-shadow:0 12px 30px #1b2c1e26;font-size:14px;font-weight:600;line-height:1.45}
+#status.app-toast.error{background:#fff1ed;color:#923d32;border-color:#ebc5bb}
+#status.app-toast[hidden]{display:none}
+/* Configuración */
+.profile-settings .settings-block+.settings-block{margin-top:28px;padding-top:24px;border-top:1px solid #e9ebe5}
+.profile-settings .settings-block>label{display:block;margin:16px 0 8px;font-weight:700;font-size:13px}
+.profile-settings .color-control{display:flex;align-items:center;gap:12px;flex-wrap:wrap}
+.profile-settings .color-control input{width:55px;height:42px;padding:3px;cursor:pointer}
+.profile-settings .settings-block h3{margin:0 0 8px}
+/* Menús compactos */
+.shared-menu-card{background:#fff;border:1px solid #e6eae4;border-radius:14px;margin:12px 0;overflow:hidden}
+.shared-menu-summary{display:flex;align-items:center;justify-content:space-between;gap:12px;cursor:pointer;padding:16px 18px;list-style:none}
+.shared-menu-summary::-webkit-details-marker{display:none}
+.shared-menu-summary:focus-visible{outline:3px solid #398866;outline-offset:-3px}
+.shared-menu-title{display:flex;align-items:center;flex-wrap:wrap;gap:9px}.shared-menu-title strong{font-size:16px}
+.shared-menu-title small{flex-basis:100%;font-weight:400}
+.shared-menu-toggle{white-space:nowrap;font-size:13px;color:#2d7a5a;font-weight:700}
+.shared-menu-detail{border-top:1px solid #e9ece7;padding:4px 18px 18px}
+.shared-menu-day{padding:12px 0;border-bottom:1px solid #eef0eb}
+.shared-menu-day h4{margin:0 0 8px;color:#2d6e52;font-size:14px}
+.shared-menu-meal{display:grid;grid-template-columns:110px 1fr;gap:10px;padding:4px 0;font-size:13px;color:#555}
+.shared-menu-meal strong{color:#383b36}
+.shared-menu-actions{gap:8px;margin-top:16px}
+.day-choices button[aria-pressed="true"]{background:#2d7a5a;color:white;border-color:#2d7a5a}
+@media(max-width:540px){#status.app-toast{right:16px;bottom:16px}.shared-menu-meal{grid-template-columns:85px 1fr}}
