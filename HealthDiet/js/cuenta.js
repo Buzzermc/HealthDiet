@@ -72,8 +72,40 @@
   }
 
   const input = (placeholder, type = 'text') => { const e = document.createElement('input'); e.type = type; e.placeholder = placeholder; return e; };
+  function reorderHandle(item, kind) {
+    const handle=document.createElement('button');handle.type='button';handle.className='reorder-handle';
+    handle.setAttribute('aria-label','Mover '+kind+'. Usa las flechas arriba y abajo o arrastra.');
+    handle.title='Arrastrar para ordenar';handle.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><circle cx="9" cy="5" r="1.6"/><circle cx="15" cy="5" r="1.6"/><circle cx="9" cy="12" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="9" cy="19" r="1.6"/><circle cx="15" cy="19" r="1.6"/></svg>';
+    let dragging=false, pointer=null;
+    const announce=()=>{const position=[...item.parentElement.children].indexOf(item)+1;$('#reorder-status').textContent=kind.charAt(0).toUpperCase()+kind.slice(1)+' en la posición '+position+'.';};
+    handle.addEventListener('keydown',event=>{
+      if(event.key!=='ArrowUp'&&event.key!=='ArrowDown')return;
+      const sibling=event.key==='ArrowUp'?item.previousElementSibling:item.nextElementSibling;
+      if(!sibling)return;event.preventDefault();
+      if(event.key==='ArrowUp')item.parentElement.insertBefore(item,sibling);else item.parentElement.insertBefore(sibling,item);
+      handle.focus();announce();
+    });
+    handle.addEventListener('pointerdown',event=>{
+      if(event.button!==0)return;
+      dragging=true;pointer=event.pointerId;handle.setPointerCapture(pointer);item.classList.add('reordering');event.preventDefault();
+    });
+    handle.addEventListener('pointermove',event=>{
+      if(!dragging||event.pointerId!==pointer)return;
+      const under=document.elementFromPoint(event.clientX,event.clientY);
+      const target=under?.closest(kind==='plato'?'.shared-dish':'.shared-ingredient');
+      if(!target||target===item||target.parentElement!==item.parentElement)return;
+      const rect=target.getBoundingClientRect(), siblings=[...item.parentElement.children];
+      const from=siblings.indexOf(item), to=siblings.indexOf(target), midpoint=rect.top+rect.height/2;
+      if(to<from && event.clientY<midpoint)item.parentElement.insertBefore(item,target);
+      else if(to>from && event.clientY>midpoint)item.parentElement.insertBefore(item,target.nextSibling);
+    });
+    const finish=event=>{if(!dragging||event.pointerId!==pointer)return;dragging=false;pointer=null;item.classList.remove('reordering');announce();};
+    handle.addEventListener('pointerup',finish);handle.addEventListener('pointercancel',finish);handle.addEventListener('lostpointercapture',finish);
+    return handle;
+  }
   function addIngredient(box, data = {}) {
     const row = document.createElement('div'); row.className = 'shared-ingredient'; row.dataset.ingredientId=data.id||'';
+    row.append(reorderHandle(row,'ingrediente'));
     const name = input('Ingrediente'); name.className = 'shared-ingredient-name'; name.required = true; name.maxLength = 120; name.value=data.name||''; row.append(name);
     const unit = document.createElement('select'); unit.className = 'shared-unit'; unit.setAttribute('aria-label', 'Unidad');
     for (const [value, label] of [['g','g'],['unidad','unidad(es)']]) { const o = text('option', label); o.value = value; unit.append(o); } unit.value=data.unit||'g'; row.append(unit);
@@ -91,7 +123,7 @@
     const ingredients=document.createElement('div'); ingredients.className='shared-ingredients';
     const add=text('button','＋ Ingrediente','secondary'); add.type='button'; add.onclick=()=>addIngredient(ingredients);
     const del=text('button','Quitar plato','quiet'); del.type='button'; del.onclick=()=>box.remove();
-    const top=document.createElement('div');top.className='dish-title-row';top.append(title,del);
+    const top=document.createElement('div');top.className='dish-title-row';top.append(reorderHandle(box,'plato'),title,del);
     const nameLabel=document.createElement('label');nameLabel.append(document.createTextNode('Nombre del plato'),name);
     const ingredientsHead=document.createElement('div');ingredientsHead.className='ing-head';ingredientsHead.append(text('span','Ingredientes','label'));
     add.classList.add('add-ingredient');
