@@ -87,3 +87,13 @@
 #shared-dishes .ingredient-remove svg{width:18px;height:18px}
 #shared-dishes .add-ingredient{margin-top:8px}
 
+/* Tiradores para ordenar con ratón, pantalla táctil o teclado. */
+#shared-dishes .reorder-handle{flex:0 0 30px;width:30px;height:40px;display:flex;align-items:center;justify-content:center;padding:5px;margin:0;background:transparent;border:0;border-radius:8px;color:#7b8279;cursor:grab;touch-action:none}
+#shared-dishes .reorder-handle:hover{background:#eaf1eb;color:#2d7a5a}
+#shared-dishes .reorder-handle:focus-visible{outline:3px solid #398866;outline-offset:1px}
+#shared-dishes .reorder-handle svg{width:20px;height:20px;pointer-events:none}
+#shared-dishes .shared-ingredient>.reorder-handle{order:-1}
+#shared-dishes .dish-title-row>strong{margin-right:auto}
+#shared-dishes .reordering{outline:2px solid #74ac8e;box-shadow:0 4px 14px #275d4320}
+#shared-add-dish{margin-top:8px}
+
