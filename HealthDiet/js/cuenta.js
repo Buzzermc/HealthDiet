@@ -31,7 +31,18 @@
       else report(error);
     }
   };
-  $('#signout').onclick = async () => { try { const { error } = await client.auth.signOut(); if (error) throw error; workspace = null; status('Sesión cerrada.'); await refresh(); } catch (error) { report(error); } };
+  $('#signout').onclick = async event => {
+    const button=event.currentTarget, label=button.querySelector('span');
+    button.disabled=true;label.textContent='Cerrando sesión…';
+    try {
+      const {error}=await client.auth.signOut({scope:'local'});
+      if(error)throw error;
+      workspace=null;await refresh();status('Sesión cerrada.');
+    } catch(error) {
+      console.error('HealthDiet: error al cerrar sesión',error);
+      status('No se ha podido cerrar sesión. Comprueba la conexión y vuelve a intentarlo.',true);
+    } finally {button.disabled=false;label.textContent='Cerrar sesión';}
+  };
   $('#create-form').onsubmit = async event => {
     event.preventDefault();
     try { await rpc('hd_create_workspace', { p_workspace_name: $('#workspace-name').value.trim(), p_display_name: $('#display-name').value.trim() }); event.target.reset(); status('Espacio creado.'); await refresh(); } catch (error) { report(error); }
