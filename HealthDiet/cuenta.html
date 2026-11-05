@@ -16,8 +16,8 @@
 <div class="modal-body">
 <label for="shared-name">Nombre de la receta</label><input id="shared-name" required maxlength="120" placeholder="Ej. Arroz con tomate y huevo">
 <div class="recipe-select-grid"><div><label for="shared-profile">Perfil</label><select id="shared-profile"></select></div><div><label for="shared-container">Tamaño del táper</label><select id="shared-container"><option value="">Sin especificar</option></select></div></div>
-<div class="ing-head recipe-dish-head"><span class="label">Platos de la receta</span><button type="button" class="secondary" id="shared-add-dish">＋ Añadir plato</button></div>
-<div id="shared-dishes"></div><p class="muted">Cada receta necesita al menos un plato y cada plato, al menos un ingrediente.</p>
+<div class="ing-head recipe-dish-head"><span class="label">Platos de la receta</span></div>
+<div id="shared-dishes"></div><button type="button" class="secondary" id="shared-add-dish">＋ Añadir plato</button><span id="reorder-status" class="visually-hidden" aria-live="polite"></span><p class="muted">Cada receta necesita al menos un plato y cada plato, al menos un ingrediente.</p>
 <hr class="section-divider"><div class="ing-head"><span class="label">Instrucciones de preparación</span></div><p class="muted">Una única preparación para toda la receta. Escribe un paso por línea.</p><label for="shared-steps" class="visually-hidden">Instrucciones de preparación</label><textarea id="shared-steps" rows="4" placeholder="Describe la preparación paso a paso"></textarea><p id="recipe-dialog-status" class="error" role="status"></p>
 </div><div class="modal-foot"><button type="button" class="quiet" id="recipe-cancel">Cancelar</button><button class="primary" id="recipe-submit">Guardar receta</button></div>
 </form></dialog></section><section class="account-card" data-hd-view="menus" hidden><div class="section-heading"><div><h3>Mis menús</h3><p class="muted">Organiza las recetas de cada comida durante la semana.</p></div><button type="button" class="primary" id="menu-new">＋ Nuevo menú</button></div><div id="shared-menu-list"></div>
