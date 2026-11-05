@@ -1,19 +1,23 @@
 # HealthDiet
 
-Aplicación en desarrollo para gestionar recetas, menús semanales y la preparación de comidas.
+Aplicación para organizar recetas, menús semanales y la lista de la compra.
 
 ## Probar la aplicación
 
-Descarga `HealthDiet/index.html` y ábrelo con tu navegador. Incluye las pestañas Mis recetas, Menús y Cocinar juntos, así como el logotipo; no necesitas descargar archivos adicionales para probarla.
+1. En GitHub, selecciona **Code → Download ZIP**.
+2. Descomprime el archivo descargado.
+3. Dentro de la carpeta `HealthDiet`, abre `index.html` en el navegador.
 
-Las recetas y menús se guardan en el navegador y dispositivo que utilices. Aún no se sincronizan con Supabase. La disponibilidad de datos guardados desde archivos locales puede variar al cambiar de ubicación, nombre de archivo o navegador. Conserva la versión anterior si contiene datos de prueba.
+Conserva juntas las carpetas `css`, `js` e `imagenes`: la página las necesita para funcionar. No es necesario instalar dependencias ni utilizar Netlify para esta prueba.
 
-`HealthDiet/platos.html` conserva un enlace de compatibilidad que abre `index.html` cuando ambos archivos están en la misma carpeta.
+Las recetas, menús y configuración se guardan en el navegador y dispositivo; todavía no se sincronizan con Supabase. Las marcas de la compra son temporales. Al cambiar la ubicación del archivo o de navegador, los datos anteriores podrían no aparecer: conserva la copia anterior hasta comprobarlos.
 
 ## Organización
 
-- `HealthDiet/index.html`: entrada principal y prototipo autocontenido.
-- `HealthDiet/planes/`: archivos conservados de la aplicación anterior; no alimentan los menús de la nueva versión.
-- `HealthDiet/LEEME.txt`: instrucciones breves de uso.
+- `HealthDiet/index.html`: estructura y pantallas.
+- `HealthDiet/css/estilos.css`: estilos.
+- `HealthDiet/js/recetas.js`, `menus.js`, `cocinar-juntos.js`, `compra.js` y `configuracion.js`: lógica de cada sección.
+- `HealthDiet/js/utilidades.js` y `app.js`: funciones compartidas e inicio.
+- `HealthDiet/imagenes/logo.webp`: logotipo.
 
-La aplicación original permanece en su repositorio independiente.
+Los scripts se cargan en el orden indicado en `index.html`, ya que comparten funciones. `platos.html` redirige a la entrada principal.

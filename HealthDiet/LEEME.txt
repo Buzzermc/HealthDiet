@@ -1,7 +1,9 @@
-HEALTHDIET — GUÍA DE USO
+HEALTHDIET
 
-Abre index.html en tu navegador para acceder a Mis recetas, Menús y Cocinar juntos. Para probarlo solo necesitas este archivo.
+Para probar la aplicación, descarga el repositorio completo como ZIP desde GitHub (Code > Download ZIP), descomprímelo y abre index.html en esta carpeta.
 
-Los datos se guardan en el navegador y dispositivo utilizados. Aún no se sincronizan con Supabase. Si cambias la ubicación del archivo o de navegador, los datos locales anteriores podrían no estar disponibles; conserva tu copia anterior.
+Mantén las carpetas css, js e imagenes junto a index.html. No necesitas instalar programas ni Netlify.
 
-El archivo platos.html redirige a index.html si ambos están en la misma carpeta. La carpeta planes contiene archivos de la aplicación anterior y no se utiliza para los menús nuevos.
+Los datos se guardan en el navegador y dispositivo, no en Supabase. Al abrir la aplicación desde otra ubicación o navegador, los datos anteriores podrían no aparecer. Conserva la copia anterior hasta verificarlos. Las marcas de la compra son temporales.
+
+Consulta el README del repositorio para conocer la organización del código.
