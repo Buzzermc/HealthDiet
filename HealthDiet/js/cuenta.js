@@ -50,23 +50,23 @@
   }
 
   const input = (placeholder, type = 'text') => { const e = document.createElement('input'); e.type = type; e.placeholder = placeholder; return e; };
-  function addIngredient(box) {
+  function addIngredient(box, data = {}) {
     const row = document.createElement('div'); row.className = 'shared-ingredient';
-    const name = input('Ingrediente'); name.className = 'shared-ingredient-name'; name.required = true; name.maxLength = 120; row.append(name);
+    const name = input('Ingrediente'); name.className = 'shared-ingredient-name'; name.required = true; name.maxLength = 120; name.value=data.name||''; row.append(name);
     const unit = document.createElement('select'); unit.className = 'shared-unit'; unit.setAttribute('aria-label', 'Unidad');
-    for (const [value, label] of [['g','g'],['unidad','unidad(es)']]) { const o = text('option', label); o.value = value; unit.append(o); } row.append(unit);
+    for (const [value, label] of [['g','g'],['unidad','unidad(es)']]) { const o = text('option', label); o.value = value; unit.append(o); } unit.value=data.unit||'g'; row.append(unit);
     for (const person of workspace.members) {
       const label = document.createElement('label'); label.className = 'shared-person'; label.dataset.member = person.id; label.append(document.createTextNode('Cantidad · '+person.name));
-      const qty = input('Cantidad', 'number'); qty.min = '0.001'; qty.step = 'any'; qty.setAttribute('aria-label','Cantidad para '+person.name); label.append(qty); row.append(label);
+      const qty = input('Cantidad', 'number'); qty.min = '0.001'; qty.step = 'any'; qty.setAttribute('aria-label','Cantidad para '+person.name); const previous=(data.quantities||[]).find(q=>q.member_id===person.id); if(previous)qty.value=previous.quantity; label.append(qty); row.append(label);
     }
     const remove = text('button','Quitar ingrediente','quiet'); remove.type='button'; remove.onclick=()=>row.remove(); row.append(remove); box.append(row); updateProfile();
   }
-  function addDish() {
-    const box = document.createElement('section'); box.className='dish-editor shared-dish'; const title=text('strong','Plato'); const name=input('Nombre del plato'); name.className='shared-dish-name'; name.required=true; name.maxLength=120;
+  function addDish(data = {}) {
+    const box = document.createElement('section'); box.className='dish-editor shared-dish'; const title=text('strong','Plato'); const name=input('Nombre del plato'); name.className='shared-dish-name'; name.required=true; name.maxLength=120; name.value=data.name||'';
     const ingredients=document.createElement('div'); ingredients.className='shared-ingredients';
     const add=text('button','＋ Ingrediente','secondary'); add.type='button'; add.onclick=()=>addIngredient(ingredients);
     const del=text('button','Quitar plato','quiet'); del.type='button'; del.onclick=()=>box.remove();
-    box.append(title,name,ingredients,add,del); $('#shared-dishes').append(box); addIngredient(ingredients);
+    box.append(title,name,ingredients,add,del); $('#shared-dishes').append(box); if(data.ingredients?.length)data.ingredients.forEach(i=>addIngredient(ingredients,i)); else addIngredient(ingredients);
   }
   function updateProfile() {
     const profile=$('#shared-profile').value;
@@ -86,11 +86,20 @@
       const article=document.createElement('article'); article.className='dish-editor'; article.append(text('strong',recipe.name)); if(recipe.container) article.append(text('p','Táper: '+recipe.container,'muted'));
       for (const dish of recipe.dishes) { article.append(text('p',dish.name)); for (const ingredient of dish.ingredients) {
         const line=text('p',ingredient.name+': '+ingredient.quantities.map(q=>q.name+(q.active?'':' (antiguo miembro)')+' '+q.quantity+' '+(ingredient.unit==='unidad'?'ud.':ingredient.unit)).join(' · '),'muted'); article.append(line);
-      } } if(recipe.steps.length){article.append(text('strong','Preparación'));const ol=document.createElement('ol');for(const step of recipe.steps)ol.append(text('li',step));article.append(ol);} list.append(article);
+      } } if(recipe.steps.length){article.append(text('strong','Preparación'));const ol=document.createElement('ol');for(const step of recipe.steps)ol.append(text('li',step));article.append(ol);}
+      const copy=text('button','Copiar receta','secondary');copy.type='button';copy.onclick=()=>{
+        $('#shared-recipe-form').reset(); resetRecipeForm();
+        $('#shared-name').value=recipe.name; $('#shared-container').value=recipe.container||'';
+        $('#shared-steps').value=recipe.steps.join(String.fromCharCode(10));
+        $('#shared-dishes').replaceChildren(); recipe.dishes.forEach(d=>addDish(d));
+        if(workspace.members.length>1)$('#shared-profile').value='todos';
+        updateProfile();status('Copia preparada. Revisa los ingredientes y guarda la nueva receta.');
+        $('#shared-name').focus();
+      };article.append(copy); list.append(article);
     }
   }
   $('#shared-profile').onchange=updateProfile;
-  $('#shared-add-dish').onclick=addDish;
+  $('#shared-add-dish').onclick=()=>addDish();
   $('#shared-recipe-form').onsubmit=async event=>{
     event.preventDefault(); const profile=$('#shared-profile').value; const dishes=[];
     for (const box of document.querySelectorAll('.shared-dish')) {
