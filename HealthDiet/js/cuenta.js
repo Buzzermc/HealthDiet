@@ -140,7 +140,12 @@
     const items=await rpc('hd_settings_read'); if(expected!==refreshNumber)return;
     const list=$('#settings-containers'),select=$('#shared-container'),chosen=select.value;
     list.replaceChildren(); select.replaceChildren();const none=text('option','Sin especificar');none.value='';select.append(none);
-    for(const item of items){list.append(text('p',item.name,'muted'));const option=text('option',item.name);option.value=item.name;select.append(option);}
+    for(const item of items){
+      const row=document.createElement('div');row.className='config-item';row.append(text('span',item.name));
+      const remove=text('button','Quitar','quiet');remove.type='button';remove.setAttribute('aria-label','Quitar táper '+item.name);
+      remove.onclick=async()=>{if(!confirm('¿Quitar este tipo de táper? Las recetas existentes lo conservarán.'))return;try{await rpc('hd_remove_container',{p_id:item.id});await renderSettings(refreshNumber);status('Tipo de táper eliminado.');}catch(error){report(error);}};
+      row.append(remove);list.append(row);const option=text('option',item.name);option.value=item.name;select.append(option);
+    }
     if([...select.options].some(o=>o.value===chosen))select.value=chosen;
     const me=workspace.members.find(p=>p.id===workspace.my_member_id);if(me)$('#my-color').value=me.color;
   }
