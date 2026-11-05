@@ -49,9 +49,9 @@ end $$;
 create function healthdiet_private.invite(p_email text)
 returns uuid language plpgsql security definer set search_path = ''
 as $$
-declare uid uuid := healthdiet_private.verified_user(); m healthdiet_core.members%rowtype; iid uuid; email text := lower(btrim(p_email));
+declare uid uuid := healthdiet_private.verified_user(); m healthdiet_core.members%rowtype; iid uuid; target_email text := lower(btrim(p_email));
 begin
-  if email is null or length(email) not between 3 and 320 or email !~ '^[^[:space:]@]+@[^[:space:]@]+\.[^[:space:]@]+$' then
+  if target_email is null or length(target_email) not between 3 and 320 or target_email !~ '^[^[:space:]@]+@[^[:space:]@]+\.[^[:space:]@]+$' then
     raise exception 'Indica un correo válido.';
   end if;
   select * into m from healthdiet_core.members where user_id=uid and left_at is null;
@@ -61,13 +61,13 @@ begin
     raise exception 'Ya no eres administrador.' using errcode='42501';
   end if;
   if exists (select 1 from healthdiet_core.members a join auth.users u on u.id=a.user_id
-      where a.workspace_id=m.workspace_id and a.left_at is null and lower(u.email)=email) then
+      where a.workspace_id=m.workspace_id and a.left_at is null and lower(u.email)=target_email) then
     raise exception 'Esta persona ya pertenece al espacio.';
   end if;
   update healthdiet_core.invitations set revoked_at=now()
-    where workspace_id=m.workspace_id and lower(invited_email)=email and accepted_at is null and revoked_at is null;
+    where workspace_id=m.workspace_id and lower(invited_email)=target_email and accepted_at is null and revoked_at is null;
   insert into healthdiet_core.invitations(workspace_id,invited_email,invited_by,expires_at)
-    values(m.workspace_id,email,m.id,now()+interval '7 days') returning id into iid;
+    values(m.workspace_id,target_email,m.id,now()+interval '7 days') returning id into iid;
   return iid;
 end $$;
 
@@ -88,12 +88,12 @@ end $$;
 create function healthdiet_private.accept_invitation(p_invitation uuid,p_display_name text)
 returns uuid language plpgsql security definer set search_path = ''
 as $$
-declare uid uuid := healthdiet_private.verified_user(); inv healthdiet_core.invitations%rowtype; email text;
+declare uid uuid := healthdiet_private.verified_user(); inv healthdiet_core.invitations%rowtype; target_email text;
 begin
   if length(btrim(coalesce(p_display_name,''))) not between 1 and 120 then raise exception 'Indica tu nombre.'; end if;
-  select lower(u.email) into email from auth.users u where u.id=uid;
+  select lower(u.email) into target_email from auth.users u where u.id=uid;
   select * into inv from healthdiet_core.invitations where id=p_invitation for update;
-  if not found or lower(inv.invited_email)<>email or inv.accepted_at is not null or inv.revoked_at is not null or inv.expires_at<=now() then
+  if not found or lower(inv.invited_email)<>target_email or inv.accepted_at is not null or inv.revoked_at is not null or inv.expires_at<=now() then
     raise exception 'La invitación no está disponible.' using errcode='42501';
   end if;
   perform 1 from healthdiet_core.workspaces where id=inv.workspace_id for update;
