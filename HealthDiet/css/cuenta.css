@@ -25,29 +25,29 @@
 .account-card dialog .modal-foot button{margin:0}
 .recipe-select-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
 .recipe-dish-head{margin-top:12px}
-#shared-dishes .dish-editor{margin:12px 0;padding:15px}
-#shared-dishes .dish-editor>strong{display:block;margin-bottom:12px}
-#shared-dishes .dish-editor>.secondary{margin-top:10px}
-#shared-dishes .shared-ingredient{display:flex;flex-wrap:wrap;align-items:flex-end;gap:7px;margin:8px 0;padding:8px 0}
-#shared-dishes .shared-ingredient-name{flex:2 1 155px;min-width:120px}
-#shared-dishes .shared-unit{flex:0 1 105px;min-width:85px}
-#shared-dishes .shared-person{flex:1 1 100px;margin:0!important;color:#666}
-#shared-dishes .shared-person input{display:block;margin-top:5px}
-#shared-dishes .shared-ingredient>.quiet{flex:0 0 auto}
+:is(#shared-dishes,.drag-preview-context) .dish-editor{margin:12px 0;padding:15px}
+:is(#shared-dishes,.drag-preview-context) .dish-editor>strong{display:block;margin-bottom:12px}
+:is(#shared-dishes,.drag-preview-context) .dish-editor>.secondary{margin-top:10px}
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient{display:flex;flex-wrap:wrap;align-items:flex-end;gap:7px;margin:8px 0;padding:8px 0}
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient-name{flex:2 1 155px;min-width:120px}
+:is(#shared-dishes,.drag-preview-context) .shared-unit{flex:0 1 105px;min-width:85px}
+:is(#shared-dishes,.drag-preview-context) .shared-person{flex:1 1 100px;margin:0!important;color:#666}
+:is(#shared-dishes,.drag-preview-context) .shared-person input{display:block;margin-top:5px}
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient>.quiet{flex:0 0 auto}
 #shared-steps{min-height:90px;resize:vertical}
 .visually-hidden{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .account-card dialog .modal-body label.visually-hidden{position:absolute;margin:-1px}
 #shared-menu-days button[aria-pressed="true"]{background:#2d7a5a;color:white;border-color:#2d7a5a}
-@media(max-width:540px){.section-heading{align-items:stretch;flex-direction:column}.section-heading>.primary{align-self:flex-start}.recipe-select-grid{gap:8px}#shared-dishes .shared-ingredient-name{flex-basis:100%}}
+@media(max-width:540px){.section-heading{align-items:stretch;flex-direction:column}.section-heading>.primary{align-self:flex-start}.recipe-select-grid{gap:8px}:is(#shared-dishes,.drag-preview-context) .shared-ingredient-name{flex-basis:100%}}
 
 .recipe-select-grid{margin-top:16px}
-#shared-dishes .dish-title-row>strong{margin:0}
-#shared-dishes .dish-editor>label{margin:12px 0!important}
-#shared-dishes .dish-editor>.ing-head{margin-top:10px}
-#shared-dishes .shared-ingredient-name{order:0}
-#shared-dishes .shared-person{order:1}
-#shared-dishes .shared-unit{order:2}
-#shared-dishes .shared-ingredient>.quiet{order:3}
+:is(#shared-dishes,.drag-preview-context) .dish-title-row>strong{margin:0}
+:is(#shared-dishes,.drag-preview-context) .dish-editor>label{margin:12px 0!important}
+:is(#shared-dishes,.drag-preview-context) .dish-editor>.ing-head{margin-top:10px}
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient-name{order:0}
+:is(#shared-dishes,.drag-preview-context) .shared-person{order:1}
+:is(#shared-dishes,.drag-preview-context) .shared-unit{order:2}
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient>.quiet{order:3}
 
 /* Confirmaciones breves */
 #status.app-toast{position:fixed;right:24px;bottom:24px;z-index:1100;max-width:min(420px,calc(100vw - 32px));margin:0;padding:13px 17px;border:1px solid #bfd8c8;border-radius:12px;background:#eff8f2;color:#285c40;box-shadow:0 12px 30px #1b2c1e26;font-size:14px;font-weight:600;line-height:1.45}
@@ -77,23 +77,28 @@
 @media(max-width:540px){#status.app-toast{right:16px;bottom:16px}.shared-menu-meal{grid-template-columns:85px 1fr}}
 
 /* Ingredientes: controles agrupados y acción de eliminación visible. */
-#shared-dishes .shared-ingredient{background:#fff;border:1px solid #e4e8e1;border-radius:12px;padding:12px;margin:10px 0;gap:8px}
-#shared-dishes .shared-ingredient-name{flex:2 1 125px;min-width:100px}
-#shared-dishes .shared-person{flex:1 1 80px;min-width:70px}
-#shared-dishes .shared-unit{flex:0 1 90px;min-width:75px}
-#shared-dishes .ingredient-remove{order:3;flex:0 0 36px;width:36px;height:40px;display:flex;align-items:center;justify-content:center;margin:0;padding:8px;background:#f6f6f3;border:1px solid #e5e7e0;border-radius:9px;color:#747a72}
-#shared-dishes .ingredient-remove:hover{background:#fff0ed;border-color:#e8c5bf;color:#a43e32}
-#shared-dishes .ingredient-remove:focus-visible{outline:3px solid #398866;outline-offset:2px}
-#shared-dishes .ingredient-remove svg{width:18px;height:18px}
-#shared-dishes .add-ingredient{margin-top:8px}
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient{background:#fff;border:1px solid #e4e8e1;border-radius:12px;padding:12px;margin:10px 0;gap:8px}
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient-name{flex:2 1 125px;min-width:100px}
+:is(#shared-dishes,.drag-preview-context) .shared-person{flex:1 1 80px;min-width:70px}
+:is(#shared-dishes,.drag-preview-context) .shared-unit{flex:0 1 90px;min-width:75px}
+:is(#shared-dishes,.drag-preview-context) .ingredient-remove{order:3;flex:0 0 36px;width:36px;height:40px;display:flex;align-items:center;justify-content:center;margin:0;padding:8px;background:#f6f6f3;border:1px solid #e5e7e0;border-radius:9px;color:#747a72}
+:is(#shared-dishes,.drag-preview-context) .ingredient-remove:hover{background:#fff0ed;border-color:#e8c5bf;color:#a43e32}
+:is(#shared-dishes,.drag-preview-context) .ingredient-remove:focus-visible{outline:3px solid #398866;outline-offset:2px}
+:is(#shared-dishes,.drag-preview-context) .ingredient-remove svg{width:18px;height:18px}
+:is(#shared-dishes,.drag-preview-context) .add-ingredient{margin-top:8px}
 
 /* Tiradores para ordenar con ratón, pantalla táctil o teclado. */
-#shared-dishes .reorder-handle{flex:0 0 30px;width:30px;height:40px;display:flex;align-items:center;justify-content:center;padding:5px;margin:0;background:transparent;border:0;border-radius:8px;color:#7b8279;cursor:grab;touch-action:none}
-#shared-dishes .reorder-handle:hover{background:#eaf1eb;color:#2d7a5a}
-#shared-dishes .reorder-handle:focus-visible{outline:3px solid #398866;outline-offset:1px}
-#shared-dishes .reorder-handle svg{width:20px;height:20px;pointer-events:none}
-#shared-dishes .shared-ingredient>.reorder-handle{order:-1}
-#shared-dishes .dish-title-row>strong{margin-right:auto}
-#shared-dishes .reordering{outline:2px solid #74ac8e;box-shadow:0 4px 14px #275d4320}
+:is(#shared-dishes,.drag-preview-context) .reorder-handle{flex:0 0 30px;width:30px;height:40px;display:flex;align-items:center;justify-content:center;padding:5px;margin:0;background:transparent;border:0;border-radius:8px;color:#7b8279;cursor:grab;touch-action:none}
+:is(#shared-dishes,.drag-preview-context) .reorder-handle:hover{background:#eaf1eb;color:#2d7a5a}
+:is(#shared-dishes,.drag-preview-context) .reorder-handle:focus-visible{outline:3px solid #398866;outline-offset:1px}
+:is(#shared-dishes,.drag-preview-context) .reorder-handle svg{width:20px;height:20px;pointer-events:none}
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient>.reorder-handle{order:-1}
+:is(#shared-dishes,.drag-preview-context) .dish-title-row>strong{margin-right:auto}
+:is(#shared-dishes,.drag-preview-context) .reordering{outline:2px solid #74ac8e;box-shadow:0 4px 14px #275d4320}
 #shared-add-dish{margin-top:8px}
 
+
+.drag-preview-context{position:fixed;z-index:10;pointer-events:none;opacity:.93;filter:drop-shadow(0 12px 14px #1b2c1e40)}
+.drag-preview-context> .shared-ingredient,.drag-preview-context> .shared-dish{margin:0!important;outline:2px solid #74ac8e}
+#shared-dishes .reordering{opacity:.25;outline:2px dashed #74ac8e;box-shadow:none}
+@media(prefers-reduced-motion:reduce){.drag-preview-context{filter:none}}
