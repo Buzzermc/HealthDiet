@@ -76,8 +76,14 @@
     const handle=document.createElement('button');handle.type='button';handle.className='reorder-handle';
     handle.setAttribute('aria-label','Mover '+kind+'. Usa las flechas arriba y abajo o arrastra.');
     handle.title='Arrastrar para ordenar';handle.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><circle cx="9" cy="5" r="1.6"/><circle cx="15" cy="5" r="1.6"/><circle cx="9" cy="12" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="9" cy="19" r="1.6"/><circle cx="15" cy="19" r="1.6"/></svg>';
-    let dragging=false, pointer=null;
+    let dragging=false, pointer=null, ghost=null, originNext=null, parent=null, lastX=0, lastY=0, offsetX=0, offsetY=0, scrollFrame=0;
     const announce=()=>{const position=[...item.parentElement.children].indexOf(item)+1;$('#reorder-status').textContent=kind.charAt(0).toUpperCase()+kind.slice(1)+' en la posición '+position+'.';};
+    const animateMove=move=>{
+      const siblings=[...parent.children], before=new Map(siblings.map(el=>[el,el.getBoundingClientRect().top]));
+      move();
+      if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+      for(const el of siblings){if(el===item)continue;const delta=before.get(el)-el.getBoundingClientRect().top;if(delta)el.animate([{transform:'translateY('+delta+'px)'},{transform:'translateY(0)'}],{duration:180,easing:'ease-out'});}
+    };
     handle.addEventListener('keydown',event=>{
       if(event.key!=='ArrowUp'&&event.key!=='ArrowDown')return;
       const sibling=event.key==='ArrowUp'?item.previousElementSibling:item.nextElementSibling;
@@ -85,22 +91,42 @@
       if(event.key==='ArrowUp')item.parentElement.insertBefore(item,sibling);else item.parentElement.insertBefore(sibling,item);
       handle.focus();announce();
     });
-    handle.addEventListener('pointerdown',event=>{
-      if(event.button!==0)return;
-      dragging=true;pointer=event.pointerId;handle.setPointerCapture(pointer);item.classList.add('reordering');event.preventDefault();
-    });
-    handle.addEventListener('pointermove',event=>{
-      if(!dragging||event.pointerId!==pointer)return;
-      const under=document.elementFromPoint(event.clientX,event.clientY);
+    const update=()=>{
+      if(!dragging)return;
+      ghost.style.left=(lastX-offsetX)+'px';ghost.style.top=(lastY-offsetY)+'px';
+      const under=document.elementFromPoint(lastX,lastY);
       const target=under?.closest(kind==='plato'?'.shared-dish':'.shared-ingredient');
-      if(!target||target===item||target.parentElement!==item.parentElement)return;
+      if(!target||target===item||target.parentElement!==parent)return;
       const rect=target.getBoundingClientRect(), siblings=[...item.parentElement.children];
       const from=siblings.indexOf(item), to=siblings.indexOf(target), midpoint=rect.top+rect.height/2;
-      if(to<from && event.clientY<midpoint)item.parentElement.insertBefore(item,target);
-      else if(to>from && event.clientY>midpoint)item.parentElement.insertBefore(item,target.nextSibling);
+      if(to<from && lastY<midpoint)animateMove(()=>parent.insertBefore(item,target));
+      else if(to>from && lastY>midpoint)animateMove(()=>parent.insertBefore(item,target.nextSibling));
+    };
+    const scroll=()=>{
+      if(!dragging)return;
+      const area=$('#recipe-dialog .modal-body'), rect=area.getBoundingClientRect(), edge=45;
+      const speed=lastY<rect.top+edge?-12:lastY>rect.bottom-edge?12:0;
+      if(speed){area.scrollTop+=speed;update();}
+      scrollFrame=requestAnimationFrame(scroll);
+    };
+    const move=event=>{if(!dragging||event.pointerId!==pointer)return;lastX=event.clientX;lastY=event.clientY;update();event.preventDefault();};
+    const finish=event=>{
+      if(!dragging||(event.pointerId!==undefined&&event.pointerId!==pointer))return;
+      if(event.type==='pointercancel'&&originNext!==item)parent.insertBefore(item,originNext?.parentElement===parent?originNext:null);
+      dragging=false;pointer=null;cancelAnimationFrame(scrollFrame);item.classList.remove('reordering');ghost.remove();ghost=null;
+      document.removeEventListener('pointermove',move);document.removeEventListener('pointerup',finish);document.removeEventListener('pointercancel',finish);announce();
+    };
+    handle.addEventListener('pointerdown',event=>{
+      if(event.button!==0||dragging)return;
+      const rect=item.getBoundingClientRect(); parent=item.parentElement;originNext=item.nextElementSibling;pointer=event.pointerId;dragging=true;
+      lastX=event.clientX;lastY=event.clientY;offsetX=lastX-rect.left;offsetY=lastY-rect.top;
+      ghost=document.createElement('div');ghost.className='drag-preview-context';ghost.setAttribute('aria-hidden','true');ghost.inert=true;
+      const copy=item.cloneNode(true);copy.querySelectorAll('input,select,textarea').forEach((el,i)=>{const src=item.querySelectorAll('input,select,textarea')[i];if(src)el.value=src.value;});
+      ghost.append(copy);ghost.style.width=rect.width+'px';$('#recipe-dialog').append(ghost);
+      item.classList.add('reordering');$('#recipe-dialog').setPointerCapture(pointer);
+      document.addEventListener('pointermove',move,{passive:false});document.addEventListener('pointerup',finish);document.addEventListener('pointercancel',finish);
+      update();scrollFrame=requestAnimationFrame(scroll);event.preventDefault();
     });
-    const finish=event=>{if(!dragging||event.pointerId!==pointer)return;dragging=false;pointer=null;item.classList.remove('reordering');announce();};
-    handle.addEventListener('pointerup',finish);handle.addEventListener('pointercancel',finish);handle.addEventListener('lostpointercapture',finish);
     return handle;
   }
   function addIngredient(box, data = {}) {
