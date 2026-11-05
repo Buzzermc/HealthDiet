@@ -111,6 +111,22 @@
     try { await rpc('hd_create_recipe',{p_name:$('#shared-name').value.trim(),p_container:$('#shared-container').value.trim()||null,p_steps:steps,p_dishes:dishes}); event.target.reset(); resetRecipeForm(); status('Receta guardada en el espacio.'); await renderSharedRecipes(refreshNumber); await window.hdSharedMenus.reload({rpc,notify:status,recipes:sharedRecipes,members:workspace.members}); } catch(error) { report(error); }
   };
  
+
+  async function renderSettings(expected) {
+    const items=await rpc('hd_settings_read'); if(expected!==refreshNumber)return;
+    const list=$('#settings-containers'),select=$('#shared-container'),chosen=select.value;
+    list.replaceChildren(); select.replaceChildren();const none=text('option','Sin especificar');none.value='';select.append(none);
+    for(const item of items){list.append(text('p',item.name,'muted'));const option=text('option',item.name);option.value=item.name;select.append(option);}
+    if([...select.options].some(o=>o.value===chosen))select.value=chosen;
+    const me=workspace.members.find(p=>p.id===workspace.my_member_id);if(me)$('#my-color').value=me.color;
+  }
+  $('#container-form').onsubmit=async event=>{
+    event.preventDefault();try{await rpc('hd_add_container',{p_name:$('#container-name-new').value.trim()});event.target.reset();await renderSettings(refreshNumber);status('Táper añadido.');}catch(error){report(error);}
+  };
+  $('#save-color').onclick=async()=>{
+    try{await rpc('hd_set_my_color',{p_color:$('#my-color').value});status('Color guardado.');await refresh();}catch(error){report(error);}
+  };
+
   async function refresh() {
     const sequence = ++refreshNumber;
     const { data, error } = await client.auth.getSession(); if (sequence !== refreshNumber) return; if (error) { report(error); return; }
@@ -120,7 +136,7 @@
     try {
       const current = await rpc('hd_my_workspace'); if (sequence !== refreshNumber) return;
       toggle('#dashboard', !!current); toggle('#onboarding', !current);
-      if (current) { renderWorkspace(current); resetRecipeForm(); await renderSharedRecipes(sequence); await window.hdSharedMenus.reload({rpc,notify:status,recipes:sharedRecipes,members:current.members,isCurrent:()=>sequence===refreshNumber}); } else { workspace=null; sharedRecipes=[]; window.hdSharedMenus.clear(); $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); }
+      if (current) { renderWorkspace(current); await renderSettings(sequence); if(sequence!==refreshNumber)return; resetRecipeForm(); await renderSharedRecipes(sequence); await window.hdSharedMenus.reload({rpc,notify:status,recipes:sharedRecipes,members:current.members,isCurrent:()=>sequence===refreshNumber}); } else { workspace=null; sharedRecipes=[]; window.hdSharedMenus.clear(); $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); }
     } catch (error) { toggle('#dashboard', false); toggle('#onboarding', false); report(error); }
   }
   client.auth.onAuthStateChange(() => { setTimeout(() => refresh(), 0); });
