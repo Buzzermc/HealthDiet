@@ -134,7 +134,7 @@
     row.append(reorderHandle(row,'ingrediente'));
     const name = input('Ingrediente'); name.className = 'shared-ingredient-name'; name.required = true; name.maxLength = 120; name.value=data.name||''; row.append(name);
     const unit = document.createElement('select'); unit.className = 'shared-unit'; unit.setAttribute('aria-label', 'Unidad');
-    for (const [value, label] of [['g','g'],['unidad','unidad(es)']]) { const o = text('option', label); o.value = value; unit.append(o); } unit.value=data.unit||'g'; row.append(unit);
+    for (const [value, label] of [['g','g'],['unidad','uds.']]) { const o = text('option', label); o.value = value; unit.append(o); } unit.value=data.unit||'g'; row.append(unit);
     for (const person of workspace.members) {
       const label = document.createElement('label'); label.className = 'shared-person'; label.dataset.member = person.id; label.append(document.createTextNode('Cantidad · '+person.name));
       const qty = input('Cantidad', 'number'); qty.min = '0.001'; qty.step = 'any'; qty.setAttribute('aria-label','Cantidad para '+person.name); const previous=(data.quantities||[]).find(q=>q.member_id===person.id); if(previous)qty.value=previous.quantity; label.append(qty); row.append(label);
