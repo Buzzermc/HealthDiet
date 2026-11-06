@@ -1,5 +1,6 @@
 /* Agrupación y marcas de la lista de la compra. */
 window.hdCreateShopping = ({$, el, activeMenu, refs, amountNode, getState}) => {
+  let sortBy='name-asc';
   function renderShopping(){
     const {recipes, checked, rpc, notify}=getState();
     const root=$('#shared-shopping');root.replaceChildren();const menu=activeMenu();if(!menu){root.append(el('p','Activa un menú para preparar la compra.','muted'));return;}
@@ -10,12 +11,23 @@ window.hdCreateShopping = ({$, el, activeMenu, refs, amountNode, getState}) => {
     }}
     if(!groups.size){root.append(el('p','No hay ingredientes en este menú.','muted'));return;}
     root.append(el('p','Marca lo que hay que comprar. Las marcas se comparten con tu espacio.','muted'));
-    for(const group of groups.values()){
+    const toolbar=el('div',undefined,'shopping-toolbar'),sortLabel=el('label','Ordenar por','shopping-sort-label'),sort=el('select');
+    sort.setAttribute('aria-label','Ordenar lista de la compra');
+    for(const [value,label] of [['name-asc','Nombre: A a Z'],['name-desc','Nombre: Z a A'],['checked-first','Marcados primero'],['unchecked-first','Sin marcar primero']]){const option=el('option',label);option.value=value;sort.append(option);}
+    sort.value=sortBy;sort.onchange=()=>{sortBy=sort.value;renderShopping();};toolbar.append(sortLabel,sort);root.append(toolbar);
+    const keyFor=group=>group.name.trim().toLocaleLowerCase('es')+'|'+group.unit;
+    const ordered=[...groups.values()].sort((a,b)=>{
+      const name=a.name.localeCompare(b.name,'es',{sensitivity:'base'})||a.unit.localeCompare(b.unit,'es');
+      if(sortBy==='name-desc')return -name;
+      if(sortBy==='checked-first'||sortBy==='unchecked-first'){const difference=Number(checked.has(keyFor(a)))-Number(checked.has(keyFor(b)));if(difference)return sortBy==='checked-first'?-difference:difference;}
+      return name;
+    });
+    for(const group of ordered){
       const row=el('div',undefined,'shopping-item'),label=el('label',undefined,'shopping-check-label'),check=el('input');check.type='checkbox';
       const key=group.name.trim().toLocaleLowerCase('es')+'|'+group.unit;check.checked=checked.has(key);
-      check.onchange=async()=>{const value=check.checked;check.disabled=true;try{await rpc('hd_shopping_set',{p_menu_id:menu.id,p_name:group.name,p_unit:group.unit,p_checked:value});if(value)checked.add(key);else checked.delete(key);}catch(error){check.checked=!value;notify('No se ha podido guardar la marca. Actualiza la aplicación y vuelve a intentarlo.',true);}finally{check.disabled=false;}};
+      check.onchange=async()=>{const value=check.checked;check.disabled=true;try{await rpc('hd_shopping_set',{p_menu_id:menu.id,p_name:group.name,p_unit:group.unit,p_checked:value});if(value)checked.add(key);else checked.delete(key);if(sortBy==='checked-first'||sortBy==='unchecked-first')renderShopping();}catch(error){check.checked=!value;notify('No se ha podido guardar la marca. Actualiza la aplicación y vuelve a intentarlo.',true);}finally{check.disabled=false;}};
       label.append(check,el('span',group.name,'shopping-name'));
-      const vals=el('div',undefined,'shopping-amounts');let total=0;for(const q of group.people.values()){vals.append(amountNode(q));total+=q.quantity;} vals.append(el('strong','Total: '+total+' '+group.unit));row.append(label,vals);root.append(row);
+      const vals=el('div',undefined,'shopping-amounts'),unit=group.unit==='unidad'?'uds':group.unit;let total=0;for(const q of group.people.values())total+=q.quantity;const totalNode=el('strong',total+unit);totalNode.setAttribute('aria-label','Total: '+total+' '+unit);vals.append(totalNode);for(const q of group.people.values())vals.append(amountNode(q,{compact:true,unit}));row.append(label,vals);root.append(row);
     }
   }
   return renderShopping;

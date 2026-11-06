@@ -22,6 +22,12 @@ window.hdCreateSettings = ({state, $, rpc, text, status, report, client, refresh
     const button=event.currentTarget.querySelector('button');button.disabled=true;
     try{await rpc('hd_set_my_name',{p_name:name});await refresh();status('Nombre guardado.');}catch(error){report(error);}finally{button.disabled=false;}
   };
+  $('#workspace-name-form').onsubmit=async event=>{
+    event.preventDefault();const name=$('#workspace-name-edit').value.trim();
+    if(!name){status('Escribe un nombre para el espacio.',true);return;}
+    const button=event.currentTarget.querySelector('button');button.disabled=true;
+    try{await rpc('hd_rename_workspace',{p_name:name});await refresh();status('Nombre del espacio guardado.');}catch(error){report(error);}finally{button.disabled=false;}
+  };
   $('#password-form').onsubmit=async event=>{
     event.preventDefault();
     const form=event.currentTarget, button=form.querySelector('button');

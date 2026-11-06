@@ -65,6 +65,8 @@
   document.querySelectorAll('[data-view-target]').forEach(node=>node.onclick=()=>{setView(node.dataset.viewTarget);if(node.dataset.viewTarget==='shopping' && state.workspace)refresh().catch(report);});
   function renderWorkspace(data) {
     state.workspace = data; $('#workspace-title').textContent = data.name; $('#workspace-role').textContent = data.role === 'admin' ? 'Administración' : 'Miembro';
+    $('#space-slogan').textContent = 'El espacio de '+data.name+' para comer bien';
+    $('#workspace-name-edit').value = data.name;
     const members = $('#members'); members.replaceChildren(); const select = $('#member-select'); select.replaceChildren();
     for (const person of data.members) {
       const row = document.createElement('div'); row.className = 'account-person'; const name = document.createElement('span'); const dot = document.createElement('i'); dot.className = 'account-dot'; dot.style.backgroundColor = person.color; name.append(dot, document.createTextNode(person.name)); row.append(name, text('small', person.role === 'admin' ? 'Administración' : 'Miembro')); members.append(row);
@@ -77,11 +79,11 @@
     const sequence = ++state.refreshNumber;
     const { data, error } = await client.auth.getSession(); if (sequence !== state.refreshNumber) return; if (error) { report(error); return; }
     const session = data.session; toggle('#auth', !session); toggle('#space', !!session); toggle('#account-nav', !!session); if(!session) toggle('#nav-links', false);
-    if (!session) { if($('#recipe-dialog').open)$('#recipe-dialog').close(); $('#password-form').reset(); state.editingRecipeId=null; state.workspace = null; state.sharedRecipes=[]; $('#recipe-search').value=''; $('#recipe-search-empty').hidden=true; window.hdSharedMenus.clear(); $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); return; }
+    if (!session) { if($('#recipe-dialog').open)$('#recipe-dialog').close(); $('#password-form').reset(); state.editingRecipeId=null; state.workspace = null; state.sharedRecipes=[]; $('#space-slogan').textContent='Tu espacio para comer bien'; $('#recipe-search').value=''; $('#recipe-search-empty').hidden=true; window.hdSharedMenus.clear(); $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); return; }
     try {
       const current = await rpc('hd_my_workspace'); if (sequence !== state.refreshNumber) return;
       toggle('#dashboard', !!current); toggle('#onboarding', !current); toggle('#nav-links', !!current);
-      if (current) { renderWorkspace(current); await settingsUI.render(sequence); if(sequence!==state.refreshNumber)return; recipesUI.cancel(); await recipesUI.render(sequence); await window.hdSharedMenus.reload({rpc,notify:status,recipes:state.sharedRecipes,members:current.members,isCurrent:()=>sequence===state.refreshNumber}); } else { state.workspace=null; state.sharedRecipes=[]; window.hdSharedMenus.clear(); $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); }
+      if (current) { renderWorkspace(current); await settingsUI.render(sequence); if(sequence!==state.refreshNumber)return; recipesUI.cancel(); await recipesUI.render(sequence); await window.hdSharedMenus.reload({rpc,notify:status,recipes:state.sharedRecipes,members:current.members,isCurrent:()=>sequence===state.refreshNumber}); } else { state.workspace=null; state.sharedRecipes=[]; $('#space-slogan').textContent='Tu espacio para comer bien'; window.hdSharedMenus.clear(); $('#shared-recipes').replaceChildren(); $('#shared-dishes').replaceChildren(); }
     } catch (error) { toggle('#dashboard', false); toggle('#onboarding', false); report(error); }
   }
   client.auth.onAuthStateChange(() => { setTimeout(() => refresh(), 0); });
