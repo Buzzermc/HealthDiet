@@ -170,10 +170,14 @@
     sharedRecipes=recipes; const list=$('#shared-recipes'); list.replaceChildren();
     if (!recipes.length) list.append(text('p','Todavía no hay recetas compartidas.','muted'));
     for (const recipe of recipes) {
-      const article=document.createElement('article'); article.className='dish-editor'; article.append(text('strong',recipe.name)); if(recipe.container) article.append(text('p','Táper: '+recipe.container,'muted'));
-      for (const dish of recipe.dishes) { article.append(text('p',dish.name)); for (const ingredient of dish.ingredients) {
-        const line=text('p',ingredient.name+': '+ingredient.quantities.map(q=>q.name+(q.active?'':' (antiguo miembro)')+' '+q.quantity+' '+(ingredient.unit==='unidad'?'ud.':ingredient.unit)).join(' · '),'muted'); article.append(line);
-      } } if(recipe.steps.length){article.append(text('strong','Preparación'));const ol=document.createElement('ol');for(const step of recipe.steps)ol.append(text('li',step));article.append(ol);}
+      const article=document.createElement('details');article.className='recipe-card';
+      const summary=document.createElement('summary');summary.className='recipe-card-summary';
+      summary.append(text('strong',recipe.name));const chevron=text('span','⌄','recipe-card-chevron');chevron.setAttribute('aria-hidden','true');summary.append(chevron);article.append(summary);
+      const detail=document.createElement('div');detail.className='recipe-card-detail';
+      if(recipe.container)detail.append(text('p','Táper: '+recipe.container,'muted'));
+      for (const dish of recipe.dishes) { const section=document.createElement('section');section.className='recipe-card-dish';section.append(text('h4',dish.name)); for (const ingredient of dish.ingredients) {
+        const line=text('p',ingredient.name+': '+ingredient.quantities.map(q=>q.name+(q.active?'':' (antiguo miembro)')+' '+q.quantity+' '+(ingredient.unit==='unidad'?'ud.':ingredient.unit)).join(' · '),'muted'); section.append(line);
+      } detail.append(section); } if(recipe.steps.length){detail.append(text('strong','Preparación'));const ol=document.createElement('ol');for(const step of recipe.steps)ol.append(text('li',step));detail.append(ol);}
       const prepare=(editing)=>{
         editingRecipeId=editing?recipe.id:null; $('#recipe-form-title').textContent=editing?'Editar receta':'Copiar receta';
         $('#recipe-submit').textContent=editing?'Guardar cambios':'Guardar copia';
@@ -190,7 +194,7 @@
       };
       const edit=text('button','Editar','secondary');edit.type='button';edit.onclick=()=>prepare(true);
       const copy=text('button','Copiar receta','secondary');copy.type='button';copy.onclick=()=>prepare(false);
-      article.append(edit,copy); list.append(article);
+      const actions=document.createElement('div');actions.className='actions recipe-card-actions';actions.append(edit,copy);detail.append(actions);article.append(detail);list.append(article);
     }
   }
   $('#shared-profile').onchange=updateProfile;
