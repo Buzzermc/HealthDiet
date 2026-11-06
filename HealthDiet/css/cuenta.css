@@ -616,6 +616,13 @@ font-size:14px}
 .recipe-card-dish p{
 margin:5px 0}
 
+/* Cantidad total y raciones personales en la misma línea cuando hay espacio. */
+.cooking-ingredient { align-items: center; flex-wrap: wrap; }
+.cooking-ingredient > span:first-child { flex: 1 1 110px; min-width: 0; overflow-wrap: anywhere; }
+.cooking-amounts { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 4px; margin-left: auto; }
+.cooking-amounts strong { white-space: nowrap; margin-right: 3px; }
+.cooking-amounts .person-amount { margin: 0; white-space: nowrap; }
+
 .recipe-card-detail>strong{
 display:block;
 margin-top:16px}
