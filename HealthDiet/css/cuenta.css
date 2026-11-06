@@ -102,3 +102,20 @@
 .drag-preview-context> .shared-ingredient,.drag-preview-context> .shared-dish{margin:0!important;outline:2px solid #74ac8e}
 #shared-dishes .reordering{opacity:.25;outline:2px dashed #74ac8e;box-shadow:none}
 @media(prefers-reduced-motion:reduce){.drag-preview-context{filter:none}}
+
+/* Recetas compactas con detalle desplegable. */
+.recipe-card{background:#fff;border:1px solid #e6eae4;border-radius:14px;margin:10px 0;overflow:hidden}
+.recipe-card-summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 18px;list-style:none;cursor:pointer}
+.recipe-card-summary::-webkit-details-marker{display:none}
+.recipe-card-summary:focus-visible{outline:3px solid #398866;outline-offset:-3px}
+.recipe-card-summary strong{font-size:15px;overflow-wrap:anywhere}
+.recipe-card-chevron{font-size:22px;line-height:1;color:#2d7a5a;transition:transform .18s;flex:none}
+.recipe-card[open] .recipe-card-chevron{transform:rotate(180deg)}
+.recipe-card-detail{border-top:1px solid #e9ece7;padding:4px 18px 18px}
+.recipe-card-dish{padding:8px 0;border-bottom:1px solid #eef0eb}
+.recipe-card-dish h4{margin:6px 0;color:#2d6e52;font-size:14px}
+.recipe-card-dish p{margin:5px 0}
+.recipe-card-detail>strong{display:block;margin-top:16px}
+.recipe-card-detail ol{padding-left:22px;line-height:1.5;font-size:14px}
+.recipe-card-actions{gap:8px;margin-top:16px}
+@media(prefers-reduced-motion:reduce){.recipe-card-chevron{transition:none}}
