@@ -635,6 +635,7 @@ margin:5px 0}
 .cooking-recipe-detail .cooking-steps { margin: 8px 0 0; padding-left: 24px; }
 .cooking-steps li { padding: 4px 0; }
 .cooking-steps li::marker { color: #a05a00; font-weight: 700; }
+.cooking-amounts .former-member { background: #eeeeea; color: #62655f; }
 
 .recipe-card-detail>strong{
 display:block;

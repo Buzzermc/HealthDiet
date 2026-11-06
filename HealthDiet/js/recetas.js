@@ -113,9 +113,19 @@ window.hdCreateRecipes = ({state, $, rpc, text, status, report}) => {
       summary.append(text('strong',recipe.name));const chevron=text('span','⌄','recipe-card-chevron');chevron.setAttribute('aria-hidden','true');summary.append(chevron);article.append(summary);
       const detail=document.createElement('div');detail.className='recipe-card-detail';
       if(recipe.container)detail.append(text('p','Táper: '+recipe.container,'muted'));
-      for (const dish of recipe.dishes) { const section=document.createElement('section');section.className='recipe-card-dish';section.append(text('h4',dish.name)); for (const ingredient of dish.ingredients) {
-        const line=text('p',ingredient.name+': '+ingredient.quantities.map(q=>q.name+(q.active?'':' (antiguo miembro)')+' '+q.quantity+' '+(ingredient.unit==='unidad'?'ud.':ingredient.unit)).join(' · '),'muted'); section.append(line);
-      } detail.append(section); } if(recipe.steps.length){detail.append(text('strong','Preparación'));const ol=document.createElement('ol');for(const step of recipe.steps)ol.append(text('li',step));detail.append(ol);}
+      const {amountNode}=window.hdCreateAmounts(text,()=>state.workspace.members);
+      for (const dish of recipe.dishes) {
+        const section=document.createElement('section');section.className='cooking-dish';
+        section.append(text('h4',dish.name,'cooking-dish-name'),text('span','Ingredientes','cooking-section-label cooking-ingredients-label'));
+        for (const ingredient of dish.ingredients) {
+          const line=text('div','','ingredient cooking-ingredient');line.append(text('span',ingredient.name));
+          const values=text('span','','cooking-amounts');const unit=ingredient.unit==='unidad'?'uds':ingredient.unit;
+          for(const q of ingredient.quantities){const badge=amountNode(q,{compact:true,unit});if(!q.active){badge.classList.add('former-member');badge.title=q.name+' (antiguo miembro)';badge.setAttribute('aria-label',q.name+' (antiguo miembro): '+q.quantity+unit);}values.append(badge);}
+          line.append(values);section.append(line);
+        }
+        detail.append(section);
+      }
+      if(recipe.steps.length){const prep=text('section','','cooking-preparation');prep.append(text('span','Preparación','cooking-section-label cooking-preparation-label'));const ol=text('ol','','cooking-steps');for(const step of recipe.steps)ol.append(text('li',step));prep.append(ol);detail.append(prep);}
       const prepare=(editing)=>{
         state.editingRecipeId=editing?recipe.id:null; $('#recipe-form-title').textContent=editing?'Editar receta':'Copiar receta';
         $('#recipe-submit').textContent=editing?'Guardar cambios':'Guardar copia';

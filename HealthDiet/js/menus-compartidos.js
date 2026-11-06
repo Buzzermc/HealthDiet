@@ -61,7 +61,7 @@ window.hdSharedMenus = (() => {
   }
   function renderEditor(){
     const tabs=$('#shared-menu-days');tabs.replaceChildren();
-    days.forEach((day,i)=>{const b=makeButton(day.slice(0,3),()=>{selectedDay=i;renderEditor();});b.setAttribute('aria-label',day);b.setAttribute('aria-pressed',String(i===selectedDay));if(i===selectedDay)b.classList.add('selected');tabs.append(b);});
+    days.forEach((day,i)=>{const b=makeButton(day.slice(0,2),()=>{selectedDay=i;renderEditor();});b.setAttribute('aria-label',day);b.setAttribute('aria-pressed',String(i===selectedDay));if(i===selectedDay)b.classList.add('selected');tabs.append(b);});
     const root=$('#shared-menu-editor');root.replaceChildren();
     const label=el('label','Comida del día');label.htmlFor='menu-meal-select';
     const selectMeal=el('select');selectMeal.id='menu-meal-select';

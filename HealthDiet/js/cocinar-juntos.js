@@ -4,7 +4,7 @@ window.hdCreateCooking = ({$, el, makeButton, days, activeMenu, refs, amounts, a
     const {recipes, cookingDay}=getState();
     const root=$('#shared-cooking');root.replaceChildren();const menu=activeMenu();
     if(!menu){root.append(el('p','Activa un menú para ver las recetas.','muted'));return;}
-    root.append(el('p',menu.name,'muted'));const bar=el('div',undefined,'day-choices');days.forEach((day,i)=>{const b=makeButton(day.slice(0,3),()=>{setDay(i);renderCooking();});b.setAttribute('aria-label',day);b.setAttribute('aria-pressed',String(i===cookingDay));bar.append(b);});root.append(bar);
+    root.append(el('p',menu.name,'muted'));const bar=el('div',undefined,'day-choices');days.forEach((day,i)=>{const b=makeButton(day.slice(0,2),()=>{setDay(i);renderCooking();});b.setAttribute('aria-label',day);b.setAttribute('aria-pressed',String(i===cookingDay));bar.append(b);});root.append(bar);
     for(const entry of refs(menu,cookingDay)){
       const recipe=recipes.find(r=>r.id===entry.recipe_id);if(!recipe)continue;
       const card=el('details',undefined,'recipe-card cooking-recipe-card');
