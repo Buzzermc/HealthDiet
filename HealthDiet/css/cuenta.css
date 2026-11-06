@@ -622,6 +622,19 @@ margin:5px 0}
 .cooking-amounts { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 4px; margin-left: auto; }
 .cooking-amounts strong { white-space: nowrap; margin-right: 3px; }
 .cooking-amounts .person-amount { margin: 0; white-space: nowrap; }
+.cooking-card-heading { display: flex; flex-direction: column; gap: 4px; min-width: 0; }
+.cooking-card-heading strong { font: 400 18px 'DM Serif Display', serif; }
+.cooking-meal-label { color: #858980; font-size: 10px; letter-spacing: .08em; text-transform: uppercase; }
+.cooking-recipe-detail { padding-top: 12px; }
+.cooking-dish + .cooking-dish { border-top: 1px solid #eef0eb; margin-top: 14px; padding-top: 14px; }
+.cooking-dish-name { margin: 0 0 10px; padding: 8px 10px; background: #fafaf8; border-left: 3px solid #dfa33e; border-radius: 6px; font-size: 13px; }
+.cooking-section-label { display: inline-block; padding: 4px 9px; border-radius: 6px; font-size: 10px; font-weight: 700; letter-spacing: .07em; text-transform: uppercase; }
+.cooking-ingredients-label { background: #e6f4ed; color: #1e6b42; }
+.cooking-preparation { margin-top: 18px; }
+.cooking-preparation-label { background: #fff3e0; color: #995b0a; }
+.cooking-recipe-detail .cooking-steps { margin: 8px 0 0; padding-left: 24px; }
+.cooking-steps li { padding: 4px 0; }
+.cooking-steps li::marker { color: #a05a00; font-weight: 700; }
 
 .recipe-card-detail>strong{
 display:block;
