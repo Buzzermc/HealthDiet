@@ -1,16 +1,82 @@
 <!doctype html>
-<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>HealthDiet · Recetas y menús</title>
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=DM+Serif+Display&display=swap" rel="stylesheet">
-<!-- Estilos de la aplicación -->
-<link rel="stylesheet" href="css/estilos.css"></head><body><header><div class="brand-header"><img class="brand-logo" src="imagenes/logo.webp" alt="HealthDiet"><div class="brand-copy"><h1>Tu espacio para comer bien</h1><p>Pablo &amp; Alba · Recetas</p></div></div></header><!-- Navegación y vistas principales -->
-<nav class="app-nav" aria-label="Navegación principal"><button type="button" class="selected" data-page="cooking" aria-current="page">Cocinar juntos</button><button type="button" data-page="recipes" aria-current="false">Mis recetas</button><button type="button" data-page="menus" aria-current="false">Menús</button><button type="button" data-page="shopping" aria-current="false">La compra</button><button type="button" data-page="settings" aria-current="false">Configuración</button></nav><main><section id="recipesPage" hidden><div class="intro"><div><h2>Mis recetas</h2><div class="muted">Organiza tus recetas por perfil, platos e ingredientes.</div></div><button class="primary" id="add">＋ Nueva receta</button></div><div class="notice">Primera versión: las recetas se guardan solo en este navegador y dispositivo. Todavía no se sincronizan con Supabase.</div><div class="filters" aria-label="Filtrar por perfil"><button class="chip active" data-filter="Todos">Todos</button><button class="chip" data-filter="Pablo">Pablo</button><button class="chip" data-filter="Alba">Alba</button></div><p class="count" id="count"></p><section class="cards" id="cards" aria-live="polite"></section></section><section id="menusPage" hidden><div class="intro"><div><h2>Mis menús</h2><div class="muted">Organiza las recetas de cada comida durante la semana.</div></div><button class="primary" id="newMenu" type="button">＋ Nuevo menú</button></div><div class="notice">Los menús se guardan solo en este navegador y dispositivo. Aún no se sincronizan con Supabase.</div><p class="muted">Puedes guardar varios menús y activar uno. En cada día son obligatorias la comida y la cena.</p><p id="menu-status" class="menu-error" role="status"></p><div id="menu-cards" aria-live="polite"></div></section><section id="cookingPage"><div class="intro"><div><h2>Cocinar juntos</h2><div class="muted" id="cook-subtitle"></div></div></div><div id="cook-days" class="day-choices" aria-label="Seleccionar día"></div><div id="cook-content" aria-live="polite"></div></section><section id="shoppingPage" hidden><div class="intro"><div><h2>La compra</h2><div class="muted" id="shopping-subtitle"></div></div></div><p class="muted">Marca los ingredientes que hay que comprar y desmárcalos cuando ya los tengas.</p><div id="shopping-legend" class="shopping-legend" aria-label="Colores de los perfiles"></div><p id="shopping-message" class="menu-error" role="status"></p><div id="shopping-list" aria-live="polite"></div><p class="muted shopping-note">Las marcas son temporales y se borran al cerrar o recargar la página. Los ingredientes con el mismo nombre y unidad se suman durante toda la semana.</p></section><section id="settingsPage" hidden><div class="intro"><div><h2>Configuración</h2><div class="muted">Personaliza los táperes y los colores de cada perfil.</div></div></div><div class="notice">La configuración se guarda solo en este navegador y dispositivo.</div><div class="config-card"><h3>Tipos de táper</h3><p class="muted">Añade los tamaños o tipos que utilizáis para seleccionarlos en cada receta.</p><div id="container-list"></div><label for="container-name" class="config-label">Nuevo tipo de táper</label><div class="add-recipe-row"><input id="container-name" maxlength="60" placeholder="Ej. cristal de 800 ml"><button type="button" class="secondary" id="container-add">Añadir táper</button></div><p class="muted">Al quitar un tipo, las recetas que ya lo usan conservan ese dato.</p></div><div class="config-card"><h3>Colores de los perfiles</h3><p class="muted">Identifican las cantidades de cada persona en «Cocinar juntos».</p><div class="color-settings"><label for="color-alba">Alba <input type="color" id="color-alba" value="#2d7a5a"></label><label for="color-pablo">Pablo <input type="color" id="color-pablo" value="#1e5fa0"></label></div></div><p class="muted" id="settings-status" role="status"></p></section></main>
-<dialog id="menu-editor" class="menu-dialog"><form id="menu-form"><div class="modal-head"><h2 id="menu-editor-title">Nuevo menú</h2><button type="button" class="quiet" id="menu-close" aria-label="Cerrar">✕</button></div><div class="modal-body"><label for="menu-name">Nombre del menú</label><input id="menu-name" required maxlength="120" placeholder="Ej. Menú de otoño"><p id="menu-editor-info" class="muted"></p><div id="menu-days" class="day-choices" aria-label="Seleccionar día"></div><h3 id="current-day"></h3><div id="day-meals"></div><p id="menu-error" class="menu-error" role="alert"></p></div><div class="modal-foot"><button type="button" class="quiet" id="menu-cancel">Cancelar</button><button type="submit" class="primary">Guardar menú</button></div></form></dialog>
-<dialog id="editor"><form id="form"><div class="modal-head"><h2 id="formTitle">Nueva receta</h2><button type="button" class="quiet" id="close" aria-label="Cerrar">✕</button></div><div class="modal-body"><label for="name">Nombre de la receta</label><input id="name" required maxlength="120" placeholder="Ej. Arroz con tomate y huevo"><label for="tupper">Tamaño del táper</label><select id="tupper"><option value="">Sin especificar</option><option value="pequeño">Táper pequeño</option><option value="grande">Táper grande</option></select><label for="profile">Perfil</label><select id="profile"><option>Pablo</option><option>Alba</option><option>Ambos</option></select><div class="ing-head"><span class="label">Platos de la receta</span><button type="button" class="secondary" id="addDish">＋ Añadir plato</button></div><div id="dishes"></div><p class="muted">Cada plato necesita al menos un ingrediente. Si es para ambos, deja vacía la cantidad de quien no tome un ingrediente.</p><hr class="section-divider"><div class="ing-head"><span class="label">Instrucciones de preparación</span><button type="button" class="secondary" id="addStep">＋ Añadir paso</button></div><p class="muted">Una única preparación para toda la receta. Los pasos son opcionales.</p><div id="steps"></div><p class="error" id="error" role="alert"></p></div><div class="modal-foot"><button class="quiet" type="button" id="cancel">Cancelar</button><button class="primary" type="submit">Guardar receta</button></div></form></dialog>
-<!-- Configuración local -->
-<script src="js/utilidades.js"></script>
-<script src="js/configuracion.js"></script>
-<!-- Recetas y almacenamiento local -->
-<script src="js/recetas.js"></script><!-- Menús semanales -->
-<script src="js/menus.js"></script><!-- Cocinar juntos -->
-<script src="js/cocinar-juntos.js"></script><!-- Lista de la compra -->
-<script src="js/compra.js"></script><script src="js/app.js"></script></body></html>
+<html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Cuenta · HealthDiet</title>
+<link rel="stylesheet" href="css/estilos.css">
+<link rel="stylesheet" href="css/cuenta.css">
+<script defer src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.49.8/dist/umd/supabase.js"></script>
+<!-- Utilidades y vistas: el orden respeta sus dependencias. -->
+<script defer src="js/dialogos.js"></script>
+<script defer src="js/cantidades.js"></script>
+<script defer src="js/cocinar-juntos.js"></script>
+<script defer src="js/compra.js"></script>
+<script defer src="js/menus-compartidos.js"></script>
+<script defer src="js/recetas.js"></script>
+<script defer src="js/configuracion.js"></script>
+<script defer src="js/cuenta.js"></script></head>
+<body>
+<header><div class="brand-header"><img class="brand-logo" src="imagenes/logo.webp" alt="HealthDiet"><div class="brand-copy"><h1>Tu espacio para comer bien</h1><p>Tu cuenta y tu espacio compartido</p></div></div>
+</header>
+<nav id="account-nav" class="shared-nav" aria-label="Navegación de la aplicación" hidden><div class="shared-nav-inner"><div id="nav-links" class="shared-nav-links" hidden><button type="button" data-view-target="cooking"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3v6a3 3 0 0 0 6 0V3M6 3v18M15 3v7h4V3M19 10v11"/></svg><span>Cocinar juntos</span></button><button type="button" data-view-target="recipes"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19a3 3 0 0 1 3-3h13V3H7a3 3 0 0 0-3 3z"/><path d="M4 19a2 2 0 0 0 2 2h14v-5M8 7h8M8 11h6"/></svg><span>Mis recetas</span></button><button type="button" data-view-target="menus"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M7 3v4M17 3v4M3 10h18M8 14h2M14 14h2M8 18h2"/></svg><span>Menús</span></button><button type="button" data-view-target="shopping"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3h2l2 12h12l2-8H6"/><circle cx="9" cy="20" r="1"/><circle cx="18" cy="20" r="1"/></svg><span>La compra</span></button><button type="button" data-view-target="settings"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.7 1.7 0 0 0 .34 1.88l.06.06-1.7 2.94-.08-.02a1.7 1.7 0 0 0-1.78.68l-.04.07h-3.4l-.03-.07a1.7 1.7 0 0 0-1.78-.68l-.08.02-1.7-2.94.06-.06A1.7 1.7 0 0 0 9.6 15l-.08-.04v-3.4l.08-.03a1.7 1.7 0 0 0-.34-1.88L9.2 9.6l1.7-2.94.08.02a1.7 1.7 0 0 0 1.78-.68l.03-.07h3.4l.04.07a1.7 1.7 0 0 0 1.78.68l.08-.02 1.7 2.94-.06.06a1.7 1.7 0 0 0-.34 1.88l.08.03v3.4z" transform="translate(-2 -1)"/></svg><span>Configuración</span></button></div><button type="button" class="signout" id="signout"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M10 17l5-5-5-5M15 12H3"/><path d="M12 3h6a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-6"/></svg><span>Cerrar sesión</span></button></div>
+</nav>
+<!-- Avisos y confirmaciones compartidos. -->
+<dialog id="app-dialog" class="app-dialog" aria-labelledby="app-dialog-title" aria-describedby="app-dialog-message">
+  <div class="modal-head"><h2 id="app-dialog-title"></h2></div>
+  <div class="modal-body"><p id="app-dialog-message"></p><ul id="app-dialog-list" hidden></ul></div>
+  <div class="modal-foot"><button type="button" id="app-dialog-cancel" class="secondary">Cancelar</button><button type="button" id="app-dialog-accept" class="primary">Aceptar</button></div>
+</dialog>
+<main class="account-main">
+<div class="notice"><strong>Versión en preparación.</strong> Esta versión compartida está en pruebas. Faltan algunas funciones y comprobaciones con cuentas reales.</div>
+<div id="status" class="app-toast" role="status" aria-live="polite" hidden></div>
+<section id="auth" class="account-card" hidden><h2>Tu cuenta</h2><p class="muted">Las cuentas se crean manualmente durante esta fase.</p>
+<form id="auth-form"><label for="email">Correo electrónico</label><input id="email" type="email" autocomplete="email" required maxlength="320"><label for="password">Contraseña</label><input id="password" type="password" autocomplete="current-password" minlength="8" required><button class="primary" id="auth-submit">Iniciar sesión</button>
+</form>
+</section>
+<section id="space" hidden><div id="onboarding" hidden><div class="account-card"><h3>Crear un espacio</h3><p class="muted">Serás la persona administradora del espacio.</p>
+<form id="create-form"><label for="workspace-name">Nombre del espacio</label><input id="workspace-name" maxlength="120" required><label for="display-name">Tu nombre</label><input id="display-name" maxlength="120" autocomplete="nickname" required><button class="primary">Crear espacio</button>
+</form></div><p class="muted">Si ya existe vuestro espacio, un administrador deberá vincularte manualmente.</p></div>
+<div id="dashboard" hidden><div class="account-card" data-hd-view="settings" hidden><h3 id="workspace-title"></h3><p id="workspace-role" class="muted"></p><h4>Personas del espacio</h4><div id="members"></div><button type="button" class="quiet" id="leave">Abandonar espacio</button></div>
+<!-- Recetas y su formulario. -->
+<section class="account-card" data-hd-view="recipes" hidden>
+<div class="section-heading"><div><h3>Mis recetas</h3><p class="muted">Organiza tus recetas por perfil, platos e ingredientes.</p></div><button type="button" class="primary" id="recipe-new">＋ Nueva receta</button></div>
+<div class="recipe-search"><label for="recipe-search" class="visually-hidden">Buscar recetas por nombre o ingrediente</label><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg><input id="recipe-search" type="search" placeholder="Buscar por receta o ingrediente" autocomplete="off"></div><div id="shared-recipes"></div><p id="recipe-search-empty" class="muted" role="status" hidden>No hay recetas que coincidan con la búsqueda.</p>
+<dialog id="recipe-dialog" aria-labelledby="recipe-form-title">
+<form id="shared-recipe-form">
+<div class="modal-head"><h2 id="recipe-form-title">Nueva receta</h2><button type="button" class="quiet modal-close" id="recipe-close" aria-label="Cerrar">✕</button></div>
+<div class="modal-body">
+<label for="shared-name">Nombre de la receta</label><input id="shared-name" required maxlength="120" placeholder="Ej. Arroz con tomate y huevo">
+<div class="recipe-select-grid"><div><label for="shared-profile">Perfil</label><select id="shared-profile"></select></div><div><label for="shared-container">Tamaño del táper</label><select id="shared-container"><option value="">Sin especificar</option></select></div></div>
+<div class="ing-head recipe-dish-head"><span class="label">Platos de la receta</span></div>
+<div id="shared-dishes"></div><button type="button" class="secondary" id="shared-add-dish">＋ Añadir plato</button><span id="reorder-status" class="visually-hidden" aria-live="polite"></span><p class="muted">Cada receta necesita al menos un plato y cada plato, al menos un ingrediente.</p>
+<hr class="section-divider"><div class="ing-head"><span class="label">Instrucciones de preparación</span></div><p class="muted">Una única preparación para toda la receta. Escribe un paso por línea.</p><label for="shared-steps" class="visually-hidden">Instrucciones de preparación</label><textarea id="shared-steps" rows="4" placeholder="Describe la preparación paso a paso"></textarea><p id="recipe-dialog-status" class="error" role="status"></p>
+</div><div class="modal-foot"><button type="button" class="quiet" id="recipe-cancel">Cancelar</button><button class="primary" id="recipe-submit">Guardar receta</button></div>
+</form>
+</dialog>
+</section>
+<!-- Menús y su editor. -->
+<section class="account-card" data-hd-view="menus" hidden>
+<div class="section-heading"><div><h3>Mis menús</h3><p class="muted">Organiza las recetas de cada comida durante la semana.</p></div><button type="button" class="primary" id="menu-new">＋ Nuevo menú</button></div><div id="shared-menu-list"></div>
+<dialog id="shared-menu-dialog" class="menu-dialog" aria-labelledby="shared-menu-title">
+<form id="shared-menu-form">
+<div class="modal-head"><h2 id="shared-menu-title">Nuevo menú</h2><button type="button" class="quiet modal-close" id="menu-close" aria-label="Cerrar">✕</button></div>
+<div class="modal-body"><label for="shared-menu-name">Nombre del menú</label><input id="shared-menu-name" required maxlength="120" placeholder="Ej. Menú de otoño"><p class="muted">Selecciona un día, el tipo de comida y las recetas que quieras añadir.</p><div id="shared-menu-days" class="day-choices" aria-label="Seleccionar día"></div><div id="shared-menu-editor"></div><p id="menu-dialog-status" class="error" role="status"></p></div>
+<div class="modal-foot"><button type="button" class="quiet" id="menu-cancel">Cancelar</button><button class="primary" id="shared-menu-submit">Guardar menú</button></div>
+</form>
+</dialog>
+</section>
+<!-- Vistas de cocina, compra y configuración. -->
+<section class="account-card" data-hd-view="cooking"><h3>Cocinar juntos</h3><div id="shared-cooking"></div>
+</section>
+<section class="account-card" data-hd-view="shopping" hidden><h3>La compra</h3><div id="shared-shopping"></div>
+</section>
+<section class="account-card profile-settings" data-hd-view="settings" hidden><div class="settings-block"><h3>Tu nombre</h3><p class="muted">Así aparecerás en las recetas y en el espacio compartido.</p>
+<form id="name-form"><label for="my-name">Nombre visible</label><input id="my-name" name="display-name" autocomplete="nickname" maxlength="120" required><button class="secondary">Guardar nombre</button>
+</form></div><div class="settings-block"><h3>Tu contraseña</h3><p class="muted">Para cambiarla, introduce tu contraseña actual y elige una nueva.</p>
+<form id="password-form"><label for="current-password">Contraseña actual</label><input id="current-password" type="password" autocomplete="current-password" required><label for="new-password">Nueva contraseña</label><input id="new-password" type="password" autocomplete="new-password" minlength="8" required><label for="confirm-password">Repite la nueva contraseña</label><input id="confirm-password" type="password" autocomplete="new-password" minlength="8" required><button class="secondary">Cambiar contraseña</button>
+</form></div><div class="settings-block"><h3>Tu color</h3><p class="muted">Este color identifica tus cantidades al cocinar y en la compra.</p><label for="my-color">Color personal</label><div class="color-control"><input id="my-color" type="color"><button type="button" class="secondary" id="save-color">Guardar color</button></div></div><div class="settings-block"><h3>Táperes del espacio</h3><div id="settings-containers"></div>
+<form id="container-form"><label for="container-name-new">Nuevo tipo de táper</label><input id="container-name-new" maxlength="60" required><button class="secondary">Añadir táper</button>
+</form><p class="muted">Las recetas existentes conservarán su táper aunque lo quites de la lista.</p></div>
+</section><div id="admin" class="account-card" data-hd-view="settings" hidden><h3>Traspasar administración</h3><p class="muted">Para abandonar el espacio, primero debes transferir la administración a otro miembro.</p>
+<form id="transfer-form"><label for="member-select">Nuevo administrador</label><select id="member-select"></select><button class="secondary" id="transfer-button">Traspasar administración</button>
+</form></div></div>
+</section>
+</main></body></html>
+

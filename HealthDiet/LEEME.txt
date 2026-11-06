@@ -1,9 +1,99 @@
-HEALTHDIET
+HEALTHDIET — GUÍA DE LA VERSIÓN LOCAL
 
-Para probar la aplicación, descarga el repositorio completo como ZIP desde GitHub (Code > Download ZIP), descomprímelo y abre index.html en esta carpeta.
+Esta versión se ejecuta en tu ordenador y utiliza la base de datos compartida
+de HealthDiet en Supabase. Necesita conexión a Internet para iniciar sesión,
+consultar y guardar datos, y para cargar la biblioteca de Supabase.
 
-Mantén las carpetas css, js e imagenes junto a index.html. No necesitas instalar programas ni Netlify.
+1. INICIAR LA APLICACIÓN
 
-Los datos se guardan en el navegador y dispositivo, no en Supabase. Al abrir la aplicación desde otra ubicación o navegador, los datos anteriores podrían no aparecer. Conserva la copia anterior hasta verificarlos. Las marcas de la compra son temporales.
+Necesitas Python 3 instalado. Descomprime el ZIP completo y conserva juntos
+sus archivos y carpetas.
 
-Consulta el README del repositorio para conocer la organización del código.
+Linux o macOS:
+  1. Abre una terminal dentro de la carpeta HealthDiet.
+  2. Ejecuta: python3 iniciar.py
+  3. Si el navegador no se abre, entra en http://localhost:8765/.
+  4. Inicia sesión con tu cuenta de HealthDiet.
+  5. Para terminar, vuelve a la terminal y pulsa Ctrl+C.
+
+Windows:
+  1. Haz doble clic en INICIAR_WINDOWS.bat dentro de HealthDiet.
+  2. Mantén abierta la ventana del servidor y entra en
+     http://localhost:8765/ si no se abre automáticamente.
+  3. Inicia sesión con tu cuenta; al terminar, cierra la ventana del servidor.
+
+Usa localhost en vez de abrir index.html directamente. El servidor solo acepta
+conexiones desde el propio equipo. Si el puerto 8765 está ocupado, cierra la
+otra copia antes de volver a iniciar.
+
+2. ORGANIZACIÓN DE LOS ARCHIVOS
+
+  index.html                 Estructura de las pantallas y carga de módulos.
+  ESTRUCTURA.md              Descripción de responsabilidades y dependencias.
+  iniciar.py                 Servidor de prueba local.
+  INICIAR_WINDOWS.bat        Acceso directo para Windows.
+  css/estilos.css            Estilos generales y componentes.
+  css/cuenta.css             Estilos de la versión compartida.
+  imagenes/logo.webp         Imagen del logotipo.
+  js/dialogos.js             Avisos y confirmaciones de la aplicación.
+  js/cuenta.js               Sesión, espacio y navegación.
+  js/recetas.js              Formulario, búsqueda y gestión de recetas.
+  js/configuracion.js        Preferencias personales y táperes.
+  js/menus-compartidos.js    Edición y gestión de menús.
+  js/cocinar-juntos.js       Vista diaria del menú activo.
+  js/compra.js               Agrupación y marcas de la compra.
+  js/cantidades.js           Cálculo y presentación de cantidades.
+
+Los módulos se cargan en el orden indicado en index.html. Mantén juntos los
+archivos al trasladar o actualizar la aplicación.
+
+3. CONEXIÓN Y DATOS
+
+El navegador se conecta al proyecto HealthDiet de Supabase mediante la URL y
+la clave publicable configuradas en js/cuenta.js. Esa clave está pensada para
+ser visible; los permisos deben aplicarse en Supabase. No incluyas claves
+secretas, contraseñas ni claves de servicio en el código o en este ZIP.
+
+Las recetas, menús y marcas de compra pertenecen al espacio compartido y se
+guardan en Supabase. El ZIP contiene el código, no una copia de los datos.
+Las marcas sobreviven a una recarga; cambiar el menú activo o modificar una
+receta o composición que lo afecte puede requerir confirmación y desmarcarlas.
+
+IMPORTANTE: ejecutar la aplicación en local no crea una base de datos aislada.
+Los cambios guardados en un espacio se comparten con sus miembros. Usa cuentas
+y un espacio de prueba independientes al ensayar cambios que alteren datos.
+
+4. CÓMO PROBAR CAMBIOS
+
+  1. Conserva una copia del ZIP anterior y descomprime la versión nueva en
+     otra carpeta. Comprueba que esa versión incluye todos sus archivos.
+  2. Iníciala con el servidor local y entra con una cuenta de prueba vinculada
+     al espacio de prueba, sin usar datos reales para ensayos destructivos.
+  3. Comprueba el inicio y cierre de sesión, las pestañas, recetas, menús,
+     Cocinar juntos, compra y configuración relacionados con el cambio.
+  4. Si modificas una receta del menú activo o cambias dicho menú, comprueba
+     el aviso y el estado de las marcas de la compra.
+  5. Para comprobar los cambios entre personas, prueba con dos cuentas y
+     dispositivos o navegadores. Puede ser necesario recargar para verlos.
+
+Esta guía no acredita que todas las pruebas de seguridad o funcionales se hayan
+completado. Consulta el documento de estado antes de publicar.
+
+5. CÓMO VOLVER A UNA VERSIÓN ANTERIOR
+
+  1. Detén el servidor local (Ctrl+C o cierra su ventana).
+  2. Usa el ZIP anterior que hayas conservado, descomprímelo en una carpeta
+     diferente y arranca su iniciar.py o INICIAR_WINDOWS.bat.
+  3. Comprueba el inicio de sesión y los flujos necesarios antes de usarla.
+
+La vuelta al ZIP anterior solo restaura el código local: no revierte recetas,
+menús, contraseñas, marcas ni cambios de configuración de Supabase. Las
+versiones antiguas pueden no ser compatibles con cambios posteriores de la
+base de datos; verifica la compatibilidad antes de usarlas. Recuperar datos
+requiere una copia de seguridad y un procedimiento específico de Supabase.
+
+6. RECETAS
+
+Puedes crear, buscar, editar, copiar y eliminar recetas desde su tarjeta.
+Para eliminar una receta incluida en algún menú, primero debes retirarla o
+sustituirla en todos los menús indicados en el aviso.

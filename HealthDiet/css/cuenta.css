@@ -1,0 +1,695 @@
+.account-main{
+max-width:720px}
+.account-card{
+background:#fff;
+border:1px solid #eaeae5;
+border-radius:16px;
+padding:24px;
+margin:16px 0}
+.account-card h2,.account-card h3{
+margin:0 0 10px}
+.account-card h3{
+font-size:23px}
+.account-card form{
+display:grid;
+gap:9px}
+.account-card form label{
+font-weight:700;
+font-size:13px;
+margin-top:8px}
+.account-card form button{
+justify-self:start;
+margin-top:8px}
+.account-card form+ h3{
+margin-top:28px}
+.account-switch{
+display:flex;
+gap:8px;
+margin:18px 0}
+.account-top{
+display:flex;
+justify-content:space-between;
+align-items:center;
+gap:12px}
+.account-top h2{
+margin-bottom:3px}
+.account-person{
+display:flex;
+justify-content:space-between;
+align-items:center;
+padding:10px 0;
+border-bottom:1px solid #eee}
+.account-person span{
+overflow-wrap:anywhere}
+.account-person small{
+color:#777}
+.account-dot{
+display:inline-block;
+width:12px;
+height:12px;
+border-radius:50%;
+margin-right:8px}
+.account-invite{
+border-top:1px solid #eee;
+padding:12px 0}
+.account-invite label{
+display:block;
+margin:8px 0;
+font-size:13px;
+font-weight:700}
+#status{
+font-size:14px;
+line-height:1.5;
+color:#275d43}
+#status.error{
+color:#a72a24}
+@media(max-width:540px){
+.account-card{
+padding:18px}
+.account-top{
+align-items:start;
+flex-direction:column}
+}
+
+.shared-ingredient{
+padding:10px 0;
+border-bottom:1px solid #eee}
+.shared-ingredient label{
+display:block}
+.account-card textarea{
+width:100%;
+font:inherit;
+border:1px solid #d8dbd4;
+border-radius:9px;
+padding:10px}
+.person-amount{
+margin:2px}
+.account-card input[type=checkbox]{
+width:20px}
+
+/* La navegación forma parte de la cabecera y permanece disponible al entrar. */
+.shared-nav{
+background:#2e2d2a;
+border-top:1px solid rgba(255,255,255,.14);
+padding:10px 20px}
+
+.shared-nav-inner{
+max-width:960px;
+margin:0 auto;
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:14px}
+
+.shared-nav-links{
+display:flex;
+align-items:center;
+flex-wrap:wrap;
+gap:5px;
+min-width:0}
+
+.shared-nav button{
+display:inline-flex;
+align-items:center;
+justify-content:center;
+gap:7px;
+border:1px solid transparent;
+border-radius:9px;
+background:transparent;
+color:#e7e6e1;
+padding:10px 12px;
+font:inherit;
+font-size:14px;
+font-weight:500;
+line-height:1.25;
+white-space:nowrap;
+cursor:pointer}
+
+.shared-nav button:hover{
+background:#44443f;
+color:#fff}
+
+.shared-nav button.selected{
+background:#e8c547;
+border-color:#e8c547;
+color:#24231f;
+font-weight:700}
+
+.shared-nav button:focus-visible{
+outline:3px solid #fff;
+outline-offset:2px}
+
+.shared-nav svg{
+display:block;
+width:17px;
+height:17px;
+flex:none}
+
+.shared-nav .signout{
+margin-left:auto;
+color:#e7e6e1;
+border-color:rgba(255,255,255,.22)}
+
+@media(max-width:720px){
+.shared-nav-inner{
+align-items:flex-start;
+flex-wrap:wrap;
+gap:8px}
+.shared-nav-links{
+flex:1 1 100%}
+.shared-nav button{
+flex:1 1 auto;
+padding:9px 10px;
+font-size:13px}
+.shared-nav .signout{
+flex:0 0 auto;
+margin-left:auto}
+}
+
+/* Listados y ventanas de creación */
+.section-heading{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:18px;
+margin-bottom:18px}
+
+.section-heading h3{
+margin:0}
+.section-heading p{
+margin:5px 0 0}
+
+.section-heading>.primary{
+flex:none;
+white-space:nowrap}
+
+.account-card dialog form{
+display:block}
+
+.account-card dialog .modal-head h2{
+margin:0}
+
+.account-card dialog .modal-body label{
+display:block;
+font-weight:700;
+font-size:12px;
+margin:16px 0 7px}
+
+.account-card dialog .modal-body label:first-child{
+margin-top:0}
+
+.account-card dialog .modal-foot button{
+margin:0}
+
+.recipe-select-grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px}
+
+.recipe-dish-head{
+margin-top:12px}
+
+:is(#shared-dishes,.drag-preview-context) .dish-editor{
+margin:12px 0;
+padding:15px}
+
+:is(#shared-dishes,.drag-preview-context) .dish-editor>strong{
+display:block;
+margin-bottom:12px}
+
+:is(#shared-dishes,.drag-preview-context) .dish-editor>.secondary{
+margin-top:10px}
+
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient{
+display:flex;
+flex-wrap:wrap;
+align-items:flex-end;
+gap:7px;
+margin:8px 0;
+padding:8px 0}
+
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient-name{
+flex:2 1 155px;
+min-width:120px}
+
+:is(#shared-dishes,.drag-preview-context) .shared-unit{
+flex:0 1 105px;
+min-width:85px}
+
+:is(#shared-dishes,.drag-preview-context) .shared-person{
+flex:1 1 100px;
+margin:0!important;
+color:#666}
+
+:is(#shared-dishes,.drag-preview-context) .shared-person input{
+display:block;
+margin-top:5px}
+
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient>.quiet{
+flex:0 0 auto}
+
+#shared-steps{
+min-height:90px;
+resize:vertical}
+
+.visually-hidden{
+position:absolute;
+width:1px;
+height:1px;
+padding:0;
+margin:-1px;
+overflow:hidden;
+clip:rect(0,0,0,0);
+white-space:nowrap;
+border:0}
+
+.account-card dialog .modal-body label.visually-hidden{
+position:absolute;
+margin:-1px}
+
+#shared-menu-days button[aria-pressed="true"]{
+background:#2d7a5a;
+color:white;
+border-color:#2d7a5a}
+
+@media(max-width:540px){
+.section-heading{
+align-items:stretch;
+flex-direction:column}
+.section-heading>.primary{
+align-self:flex-start}
+.recipe-select-grid{
+gap:8px}
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient-name{
+flex-basis:100%}
+}
+
+.recipe-select-grid{
+margin-top:16px}
+
+:is(#shared-dishes,.drag-preview-context) .dish-title-row>strong{
+margin:0}
+
+:is(#shared-dishes,.drag-preview-context) .dish-editor>label{
+margin:12px 0!important}
+
+:is(#shared-dishes,.drag-preview-context) .dish-editor>.ing-head{
+margin-top:10px}
+
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient-name{
+order:0}
+
+:is(#shared-dishes,.drag-preview-context) .shared-person{
+order:1}
+
+:is(#shared-dishes,.drag-preview-context) .shared-unit{
+order:2}
+
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient>.quiet{
+order:3}
+
+/* Confirmaciones breves */
+#status.app-toast{
+position:fixed;
+right:24px;
+bottom:24px;
+z-index:1100;
+max-width:min(420px,calc(100vw - 32px));
+margin:0;
+padding:13px 17px;
+border:1px solid #bfd8c8;
+border-radius:12px;
+background:#eff8f2;
+color:#285c40;
+box-shadow:0 12px 30px #1b2c1e26;
+font-size:14px;
+font-weight:600;
+line-height:1.45}
+
+#status.app-toast.error{
+background:#fff1ed;
+color:#923d32;
+border-color:#ebc5bb}
+
+#status.app-toast[hidden]{
+display:none}
+
+/* Configuración */
+.profile-settings .settings-block+.settings-block{
+margin-top:28px;
+padding-top:24px;
+border-top:1px solid #e9ebe5}
+
+.profile-settings .settings-block>label{
+display:block;
+margin:16px 0 8px;
+font-weight:700;
+font-size:13px}
+
+.profile-settings .color-control{
+display:flex;
+align-items:center;
+gap:12px;
+flex-wrap:wrap}
+
+.profile-settings .color-control input{
+width:55px;
+height:42px;
+padding:3px;
+cursor:pointer}
+
+.profile-settings .settings-block h3{
+margin:0 0 8px}
+
+/* Menús compactos */
+.shared-menu-card{
+background:#fff;
+border:1px solid #e6eae4;
+border-radius:14px;
+margin:12px 0;
+overflow:hidden}
+
+.shared-menu-summary{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:12px;
+cursor:pointer;
+padding:16px 18px;
+list-style:none}
+
+.shared-menu-summary::-webkit-details-marker{
+display:none}
+
+.shared-menu-summary:focus-visible{
+outline:3px solid #398866;
+outline-offset:-3px}
+
+.shared-menu-title{
+display:flex;
+align-items:center;
+flex-wrap:wrap;
+gap:9px}
+.shared-menu-title strong{
+font-size:16px}
+
+.shared-menu-title small{
+flex-basis:100%;
+font-weight:400}
+
+.shared-menu-toggle{
+white-space:nowrap;
+font-size:13px;
+color:#2d7a5a;
+font-weight:700}
+
+.shared-menu-detail{
+border-top:1px solid #e9ece7;
+padding:4px 18px 18px}
+
+.shared-menu-day{
+padding:12px 0;
+border-bottom:1px solid #eef0eb}
+
+.shared-menu-day h4{
+margin:0 0 8px;
+color:#2d6e52;
+font-size:14px}
+
+.shared-menu-meal{
+display:grid;
+grid-template-columns:110px 1fr;
+gap:10px;
+padding:4px 0;
+font-size:13px;
+color:#555}
+
+.shared-menu-meal strong{
+color:#383b36}
+
+.shared-menu-actions{
+gap:8px;
+margin-top:16px}
+
+.day-choices button[aria-pressed="true"]{
+background:#2d7a5a;
+color:white;
+border-color:#2d7a5a}
+
+@media(max-width:540px){
+#status.app-toast{
+right:16px;
+bottom:16px}
+.shared-menu-meal{
+grid-template-columns:85px 1fr}
+}
+
+/* Ingredientes: controles agrupados y acción de eliminación visible. */
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient{
+background:#fff;
+border:1px solid #e4e8e1;
+border-radius:12px;
+padding:12px;
+margin:10px 0;
+gap:8px}
+
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient-name{
+flex:2 1 125px;
+min-width:100px}
+
+:is(#shared-dishes,.drag-preview-context) .shared-person{
+flex:1 1 80px;
+min-width:70px}
+
+:is(#shared-dishes,.drag-preview-context) .shared-unit{
+flex:0 0 68px;
+min-width:68px;
+padding-left:7px;
+padding-right:4px}
+
+:is(#shared-dishes,.drag-preview-context) .ingredient-remove{
+order:3;
+flex:0 0 36px;
+width:36px;
+height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+margin:0;
+padding:8px;
+background:#f6f6f3;
+border:1px solid #e5e7e0;
+border-radius:9px;
+color:#747a72}
+
+:is(#shared-dishes,.drag-preview-context) .ingredient-remove:hover{
+background:#fff0ed;
+border-color:#e8c5bf;
+color:#a43e32}
+
+:is(#shared-dishes,.drag-preview-context) .ingredient-remove:focus-visible{
+outline:3px solid #398866;
+outline-offset:2px}
+
+:is(#shared-dishes,.drag-preview-context) .ingredient-remove svg{
+width:18px;
+height:18px}
+
+:is(#shared-dishes,.drag-preview-context) .add-ingredient{
+margin-top:8px}
+
+/* Tiradores para ordenar con ratón, pantalla táctil o teclado. */
+:is(#shared-dishes,.drag-preview-context) .reorder-handle{
+flex:0 0 30px;
+width:30px;
+height:40px;
+display:flex;
+align-items:center;
+justify-content:center;
+padding:5px;
+margin:0;
+background:transparent;
+border:0;
+border-radius:8px;
+color:#7b8279;
+cursor:grab;
+touch-action:none}
+
+:is(#shared-dishes,.drag-preview-context) .reorder-handle:hover{
+background:#eaf1eb;
+color:#2d7a5a}
+
+:is(#shared-dishes,.drag-preview-context) .reorder-handle:focus-visible{
+outline:3px solid #398866;
+outline-offset:1px}
+
+:is(#shared-dishes,.drag-preview-context) .reorder-handle svg{
+width:20px;
+height:20px;
+pointer-events:none}
+
+:is(#shared-dishes,.drag-preview-context) .shared-ingredient>.reorder-handle{
+order:-1}
+
+:is(#shared-dishes,.drag-preview-context) .dish-title-row>strong{
+margin-right:auto}
+
+:is(#shared-dishes,.drag-preview-context) .reordering{
+outline:2px solid #74ac8e;
+box-shadow:0 4px 14px #275d4320}
+
+#shared-add-dish{
+margin-top:8px}
+
+.drag-preview-context{
+position:fixed;
+z-index:10;
+pointer-events:none;
+opacity:.93;
+filter:drop-shadow(0 12px 14px #1b2c1e40)}
+
+.drag-preview-context> .shared-ingredient,.drag-preview-context> .shared-dish{
+margin:0!important;
+outline:2px solid #74ac8e}
+
+#shared-dishes .reordering{
+opacity:.25;
+outline:2px dashed #74ac8e;
+box-shadow:none}
+
+@media(prefers-reduced-motion:reduce){
+.drag-preview-context{
+filter:none}
+}
+
+/* Recetas compactas con detalle desplegable. */
+.recipe-card{
+background:#fff;
+border:1px solid #e6eae4;
+border-radius:14px;
+margin:10px 0;
+overflow:hidden}
+
+.recipe-card-summary{
+display:flex;
+align-items:center;
+justify-content:space-between;
+gap:12px;
+padding:16px 18px;
+list-style:none;
+cursor:pointer}
+
+.recipe-card-summary::-webkit-details-marker{
+display:none}
+
+.recipe-card-summary:focus-visible{
+outline:3px solid #398866;
+outline-offset:-3px}
+
+.recipe-card-summary strong{
+font-size:15px;
+overflow-wrap:anywhere}
+
+.recipe-card-chevron{
+font-size:22px;
+line-height:1;
+color:#2d7a5a;
+transition:transform .18s;
+flex:none}
+
+.recipe-card[open] .recipe-card-chevron{
+transform:rotate(180deg)}
+
+.recipe-card-detail{
+border-top:1px solid #e9ece7;
+padding:4px 18px 18px}
+
+.recipe-card-dish{
+padding:8px 0;
+border-bottom:1px solid #eef0eb}
+
+.recipe-card-dish h4{
+margin:6px 0;
+color:#2d6e52;
+font-size:14px}
+
+.recipe-card-dish p{
+margin:5px 0}
+
+.recipe-card-detail>strong{
+display:block;
+margin-top:16px}
+
+.recipe-card-detail ol{
+padding-left:22px;
+line-height:1.5;
+font-size:14px}
+
+.recipe-card-actions{
+gap:8px;
+margin-top:16px}
+
+@media(prefers-reduced-motion:reduce){
+.recipe-card-chevron{
+transition:none}
+}
+
+/* Buscador de recetas. */
+.recipe-search{
+position:relative;
+margin:16px 0}
+
+.recipe-search svg{
+position:absolute;
+left:14px;
+top:50%;
+transform:translateY(-50%);
+width:19px;
+height:19px;
+color:#73766e;
+pointer-events:none}
+
+.recipe-search input{
+width:100%;
+padding:12px 14px 12px 43px;
+background:#fff}
+
+#shared-menu-editor label{
+display:block;
+font-size:13px;
+font-weight:700;
+margin:14px 0 7px}
+
+#shared-menu-editor .menu-add-recipe{
+margin-top:10px}
+
+.menu-configured{
+border-top:1px solid #eee;
+margin-top:20px;
+padding-top:16px}
+
+.menu-configured-meal{
+margin-top:14px}
+
+.menu-configured-meal>strong{
+display:block;
+font-size:13px;
+margin-bottom:7px;
+color:#2d6e52}
+
+.menu-configured-meal .chosen-item{
+margin:5px 0}
+
+
+.recipe-card-actions .recipe-delete{color:#a72a24;margin-left:auto}
+.recipe-card-actions .recipe-delete:disabled{opacity:.5}
+
+/* Avisos coherentes con los formularios de HealthDiet. */
+.app-dialog{width:min(480px,calc(100% - 28px));max-height:min(80vh,650px);border:1px solid #e7e9e3;border-radius:16px;background:#fff;color:#22231e}
+.app-dialog .modal-head h2{font-size:24px}
+.app-dialog .modal-body{max-height:55vh;overflow:auto;line-height:1.55;color:#4c514b}
+.app-dialog .modal-body p{margin:0;white-space:pre-wrap;overflow-wrap:anywhere}
+.app-dialog .modal-body ul{margin:14px 0 0;padding-left:22px}
+.app-dialog .modal-body li{padding:3px 0;overflow-wrap:anywhere}
+.app-dialog .modal-foot{gap:10px;flex-wrap:wrap}
+.app-dialog .dialog-danger{background:#a93830}

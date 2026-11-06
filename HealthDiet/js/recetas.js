@@ -1,49 +1,200 @@
-(()=>{
-'use strict';
-const KEY='healthdiet.dishes.v1', $=s=>document.querySelector(s), cards=$('#cards'), dialog=$('#editor'), dishes=$('#dishes'), steps=$('#steps');
-let recipes=[], usable=true, current=null, filter='Todos';
-function el(tag,text,cls){const n=document.createElement(tag);if(text!==undefined)n.textContent=text;if(cls)n.className=cls;return n}
-function normalize(r){
-  let ds=Array.isArray(r.dishes)?r.dishes:[{name:r.name,ingredients:Array.isArray(r.ingredients)?r.ingredients:[]}];
-  return {...r,steps:Array.isArray(r.steps)?r.steps:[],dishes:ds.map(d=>({...d,ingredients:(d.ingredients||[]).map(i=>({...i,quantities:i.quantities||{Pablo:r.profile==='Pablo'?i.quantity:null,Alba:r.profile==='Alba'?i.quantity:null}}))}))};
-}
-try{const raw=localStorage.getItem(KEY), data=raw?JSON.parse(raw):[];if(!Array.isArray(data))throw Error();recipes=data.map(normalize)}catch(e){usable=false;document.querySelector('.notice').textContent='No se han podido leer los datos guardados. La edición está desactivada para evitar pérdidas.'}
-function save(){try{localStorage.setItem(KEY,JSON.stringify(recipes));return true}catch(e){$('#error').textContent='No se ha podido guardar en este navegador. Comprueba su almacenamiento.';return false}}
-function refreshProfiles(){let profile=$('#profile').value;dishes.querySelectorAll('.ingredient-editor').forEach(row=>{for(const person of ['Pablo','Alba']){const wrap=row.querySelector('.quantity-'+person);wrap.hidden=profile!=='Ambos'&&profile!==person;wrap.querySelector('input').required=profile===person} });}
-function ingredientRow(container,data={}){
- const row=el('div',undefined,'ingredient-editor'),name=el('input');name.placeholder='Ingrediente';name.value=data.name||'';name.required=true;name.maxLength=120;name.setAttribute('aria-label','Nombre del ingrediente');row.append(name);
- for(const person of ['Pablo','Alba']){const wrap=el('label',undefined,'quantity-field quantity-'+person), title=el('span',person),input=el('input');input.type='number';input.min='0.001';input.step='any';input.placeholder='Cantidad';input.value=data.quantities?.[person]??'';input.setAttribute('aria-label','Cantidad para '+person);wrap.append(title,input);row.append(wrap)}
- const unit=el('select');unit.className='ingredient-unit';unit.setAttribute('aria-label','Unidad');for(const [v,t] of [['g','g'],['unidad','unidad(es)']]){let o=el('option',t);o.value=v;unit.append(o)}unit.value=data.unit||'g';
- const del=el('button','×','remove');del.type='button';del.setAttribute('aria-label','Eliminar ingrediente');del.onclick=()=>{if(container.children.length>1)row.remove();else{row.querySelectorAll('input').forEach(input=>input.value='')}};row.append(unit,del);container.append(row);refreshProfiles();
-}
-function refreshDishes(){[...dishes.children].forEach((d,i)=>{d.querySelector('.dish-number').textContent='Plato '+(i+1);d.querySelector('.delete-dish').hidden=dishes.children.length===1})}
-function addDish(data={}){const box=el('section',undefined,'dish-editor'),top=el('div',undefined,'dish-title-row'),title=el('strong','','dish-number'),remove=el('button','Eliminar plato','quiet delete-dish');remove.type='button';remove.onclick=()=>{if(dishes.children.length>1){box.remove();refreshDishes()}};top.append(title,remove);const label=el('label','Nombre del plato'),name=el('input');name.className='dish-name-input';name.placeholder='Ej. Arroz con tomate';name.required=true;name.maxLength=120;name.value=data.name||'';name.setAttribute('aria-label','Nombre del plato');const head=el('div',undefined,'ing-head');head.append(el('span','Ingredientes','label'));const add=el('button','＋ Ingrediente','secondary'),ing=el('div',undefined,'ingredient-list');add.type='button';add.onclick=()=>ingredientRow(ing);head.append(add);box.append(top,label,name,head,ing);dishes.append(box);(data.ingredients?.length?data.ingredients:[{}]).forEach(i=>ingredientRow(ing,i));refreshDishes()}
-function refreshSteps(){[...steps.children].forEach((x,i)=>x.querySelector('.step-num').textContent=i+1)}
-function addStep(value=''){let row=el('div',undefined,'step-row'),num=el('span','','step-num'),input=el('textarea');input.placeholder='Describe este paso';input.value=value;input.maxLength=2000;input.setAttribute('aria-label','Instrucción de preparación');let del=el('button','×','remove');del.type='button';del.setAttribute('aria-label','Eliminar paso');del.onclick=()=>{row.remove();refreshSteps()};row.append(num,input,del);steps.append(row);refreshSteps()}
-function open(recipe=null,copy=false){
- if(!usable)return;current=recipe&&!copy?recipe.id:null;$('#formTitle').textContent=copy?'Copiar receta':recipe?'Editar receta':'Nueva receta';$('#name').value=recipe?.name||'';window.hdSettings.refreshTuppers(recipe?.tupper||'');
- let profile=recipe?(copy&&recipe.profile!=='Ambos'?(recipe.profile==='Pablo'?'Alba':'Pablo'):recipe.profile):(filter==='Todos'?'Pablo':filter);$('#profile').value=profile;
- dishes.replaceChildren();steps.replaceChildren();
- let list=recipe?.dishes||[{}];if(copy&&recipe.profile!=='Ambos')list=list.map(d=>({...d,ingredients:d.ingredients.map(i=>({...i,quantities:{...i.quantities,[profile]:i.quantities[profile]??i.quantities[recipe.profile]}}))}));
- list.forEach(addDish);(recipe?.steps||[]).forEach(addStep);$('#error').textContent='';dialog.showModal();$('#name').focus()
-}
-function formatQty(q,u){return q==null?'No lleva':String(q).replace('.',',')+' '+(u==='unidad'?'ud.':u)}
-function render(){
- cards.replaceChildren();const list=recipes.filter(r=>filter==='Todos'||r.profile===filter||r.profile==='Ambos');$('#count').textContent=`${list.length} ${list.length===1?'receta':'recetas'}`;
- if(!list.length){let box=el('div',undefined,'empty');box.append(el('h3','Tu recetario empieza aquí'),el('p','Añade una receta y organiza sus platos e ingredientes.','muted'));cards.append(box);return}
- for(const r of list){const card=el('article',undefined,'card');card.append(el('span',r.profile,'badge '+(r.profile==='Alba'?'alba':'')),el('h3',r.name),el('p',r.tupper?'Táper '+r.tupper:'Táper sin especificar','tupper-label'));
-  for(const d of r.dishes){card.append(el('div',d.name,'dish-subtitle'));for(const ing of d.ingredients){const row=el('div',undefined,'ingredient');let people=r.profile==='Ambos'?(filter==='Todos'?['Pablo','Alba']:[filter]):[r.profile];let visible=people.map(p=>(r.profile==='Ambos'&&filter==='Todos'?p+': ':'')+formatQty(ing.quantities[p],ing.unit)).join(' · ');row.append(el('span',ing.name),el('span',visible,'qty'));card.append(row)}}
-  if(r.steps.length){card.append(el('div','Preparación','dish-subtitle'));const ol=el('ol',undefined,'prep-list');r.steps.forEach(step=>ol.append(el('li',step)));card.append(ol)}
-  const actions=el('div',undefined,'actions'),options=[['Editar',()=>open(r)], [r.profile==='Ambos'?'Copiar receta':'Copiar para '+(r.profile==='Pablo'?'Alba':'Pablo'),()=>open(r,true)],['Eliminar',()=>{if(confirm('¿Eliminar esta receta?')){let previous=recipes;recipes=recipes.filter(x=>x.id!==r.id);if(!save())recipes=previous;render()}}]];
-  for(const [label,fn] of options){const b=el('button',label,label==='Eliminar'?'quiet':'secondary');b.onclick=fn;b.disabled=!usable;actions.append(b)}card.append(actions);cards.append(card)
- }
-}
-$('#add').onclick=()=>open();$('#addDish').onclick=()=>addDish();$('#addStep').onclick=()=>addStep();$('#profile').onchange=refreshProfiles;$('#close').onclick=$('#cancel').onclick=()=>dialog.close();
-document.querySelectorAll('[data-filter]').forEach(b=>b.onclick=()=>{filter=b.dataset.filter;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x===b));render()});
-$('#form').onsubmit=e=>{
- e.preventDefault();let name=$('#name').value.trim(),profile=$('#profile').value,ds=[...dishes.children].map(box=>({name:box.querySelector('.dish-name-input').value.trim(),ingredients:[...box.querySelectorAll('.ingredient-editor')].map(row=>{let quantities={};for(const p of ['Pablo','Alba']){let v=row.querySelector('.quantity-'+p+' input').value;quantities[p]=v===''?null:Number(v)}return {name:row.querySelector('input').value.trim(),quantities,unit:row.querySelector('.ingredient-unit').value}})})),preparation=[...steps.querySelectorAll('textarea')].map(x=>x.value.trim()).filter(Boolean);
- let invalid=ds.some(d=>!d.name||!d.ingredients.length||d.ingredients.some(i=>{let q=i.quantities,active=profile==='Ambos'?[q.Pablo,q.Alba]:[q[profile]];return !i.name||active.every(x=>x===null)||active.some(x=>x!==null&&(!Number.isFinite(x)||x<=0))}));
- if(!name||!ds.length||invalid){$('#error').textContent='Completa cada plato e ingrediente e indica al menos una cantidad mayor que cero por ingrediente.';return}
- let recipe={id:current||newRecordId(),name,profile,tupper:$('#tupper').value,dishes:ds,steps:preparation},previous=recipes;recipes=current?recipes.map(r=>r.id===current?recipe:r):[...recipes,recipe];if(save()){dialog.close();filter=profile==='Ambos'?'Todos':profile;document.querySelectorAll('[data-filter]').forEach(x=>x.classList.toggle('active',x.dataset.filter===filter));render()}else recipes=previous
-};render()
-})();
+/* Gestión de recetas y su formulario. */
+window.hdCreateRecipes = ({state, $, rpc, text, status, report}) => {
+  const input = (placeholder, type = 'text') => { const e = document.createElement('input'); e.type = type; e.placeholder = placeholder; return e; };
+  function reorderHandle(item, kind) {
+    const handle=document.createElement('button');handle.type='button';handle.className='reorder-handle';
+    handle.setAttribute('aria-label','Mover '+kind+'. Usa las flechas arriba y abajo o arrastra.');
+    handle.title='Arrastrar para ordenar';handle.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24" fill="currentColor"><circle cx="9" cy="5" r="1.6"/><circle cx="15" cy="5" r="1.6"/><circle cx="9" cy="12" r="1.6"/><circle cx="15" cy="12" r="1.6"/><circle cx="9" cy="19" r="1.6"/><circle cx="15" cy="19" r="1.6"/></svg>';
+    let dragging=false, pointer=null, ghost=null, originNext=null, parent=null, lastX=0, lastY=0, offsetX=0, offsetY=0, scrollFrame=0;
+    const announce=()=>{const position=[...item.parentElement.children].indexOf(item)+1;$('#reorder-status').textContent=kind.charAt(0).toUpperCase()+kind.slice(1)+' en la posición '+position+'.';};
+    const animateMove=move=>{
+      const siblings=[...parent.children], before=new Map(siblings.map(el=>[el,el.getBoundingClientRect().top]));
+      move();
+      if(window.matchMedia('(prefers-reduced-motion: reduce)').matches)return;
+      for(const el of siblings){if(el===item)continue;const delta=before.get(el)-el.getBoundingClientRect().top;if(delta)el.animate([{transform:'translateY('+delta+'px)'},{transform:'translateY(0)'}],{duration:180,easing:'ease-out'});}
+    };
+    handle.addEventListener('keydown',event=>{
+      if(event.key!=='ArrowUp'&&event.key!=='ArrowDown')return;
+      const sibling=event.key==='ArrowUp'?item.previousElementSibling:item.nextElementSibling;
+      if(!sibling)return;event.preventDefault();
+      if(event.key==='ArrowUp')item.parentElement.insertBefore(item,sibling);else item.parentElement.insertBefore(sibling,item);
+      handle.focus();announce();
+    });
+    const update=()=>{
+      if(!dragging)return;
+      ghost.style.left=(lastX-offsetX)+'px';ghost.style.top=(lastY-offsetY)+'px';
+      const under=document.elementFromPoint(lastX,lastY);
+      const target=under?.closest(kind==='plato'?'.shared-dish':'.shared-ingredient');
+      if(!target||target===item||target.parentElement!==parent)return;
+      const rect=target.getBoundingClientRect(), siblings=[...item.parentElement.children];
+      const from=siblings.indexOf(item), to=siblings.indexOf(target), midpoint=rect.top+rect.height/2;
+      if(to<from && lastY<midpoint)animateMove(()=>parent.insertBefore(item,target));
+      else if(to>from && lastY>midpoint)animateMove(()=>parent.insertBefore(item,target.nextSibling));
+    };
+    const scroll=()=>{
+      if(!dragging)return;
+      const area=$('#recipe-dialog .modal-body'), rect=area.getBoundingClientRect(), edge=45;
+      const speed=lastY<rect.top+edge?-12:lastY>rect.bottom-edge?12:0;
+      if(speed){area.scrollTop+=speed;update();}
+      scrollFrame=requestAnimationFrame(scroll);
+    };
+    const move=event=>{if(!dragging||event.pointerId!==pointer)return;lastX=event.clientX;lastY=event.clientY;update();event.preventDefault();};
+    const finish=event=>{
+      if(!dragging||(event.pointerId!==undefined&&event.pointerId!==pointer))return;
+      if(event.type==='pointercancel'&&originNext!==item)parent.insertBefore(item,originNext?.parentElement===parent?originNext:null);
+      dragging=false;pointer=null;cancelAnimationFrame(scrollFrame);item.classList.remove('reordering');ghost.remove();ghost=null;
+      document.removeEventListener('pointermove',move);document.removeEventListener('pointerup',finish);document.removeEventListener('pointercancel',finish);announce();
+    };
+    handle.addEventListener('pointerdown',event=>{
+      if(event.button!==0||dragging)return;
+      const rect=item.getBoundingClientRect(); parent=item.parentElement;originNext=item.nextElementSibling;pointer=event.pointerId;dragging=true;
+      lastX=event.clientX;lastY=event.clientY;offsetX=lastX-rect.left;offsetY=lastY-rect.top;
+      ghost=document.createElement('div');ghost.className='drag-preview-context';ghost.setAttribute('aria-hidden','true');ghost.inert=true;
+      const copy=item.cloneNode(true);copy.querySelectorAll('input,select,textarea').forEach((el,i)=>{const src=item.querySelectorAll('input,select,textarea')[i];if(src)el.value=src.value;});
+      ghost.append(copy);ghost.style.width=rect.width+'px';$('#recipe-dialog').append(ghost);
+      item.classList.add('reordering');$('#recipe-dialog').setPointerCapture(pointer);
+      document.addEventListener('pointermove',move,{passive:false});document.addEventListener('pointerup',finish);document.addEventListener('pointercancel',finish);
+      update();scrollFrame=requestAnimationFrame(scroll);event.preventDefault();
+    });
+    return handle;
+  }
+  function addIngredient(box, data = {}) {
+    const row = document.createElement('div'); row.className = 'shared-ingredient'; row.dataset.ingredientId=data.id||'';
+    row.append(reorderHandle(row,'ingrediente'));
+    const name = input('Ingrediente'); name.className = 'shared-ingredient-name'; name.required = true; name.maxLength = 120; name.value=data.name||''; row.append(name);
+    const unit = document.createElement('select'); unit.className = 'shared-unit'; unit.setAttribute('aria-label', 'Unidad');
+    for (const [value, label] of [['g','g'],['unidad','uds.']]) { const o = text('option', label); o.value = value; unit.append(o); } unit.value=data.unit||'g'; row.append(unit);
+    for (const person of state.workspace.members) {
+      const label = document.createElement('label'); label.className = 'shared-person'; label.dataset.member = person.id; label.append(document.createTextNode('Cantidad · '+person.name));
+      const qty = input('Cantidad', 'number'); qty.min = '0.001'; qty.step = 'any'; qty.setAttribute('aria-label','Cantidad para '+person.name); const previous=(data.quantities||[]).find(q=>q.member_id===person.id); if(previous)qty.value=previous.quantity; label.append(qty); row.append(label);
+    }
+    const remove = document.createElement('button'); remove.className='ingredient-remove'; remove.type='button';
+    remove.setAttribute('aria-label','Eliminar ingrediente'); remove.title='Eliminar ingrediente';
+    remove.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 10v6M14 10v6"/></svg>';
+    remove.onclick=()=>row.remove(); row.append(remove); box.append(row); updateProfile();
+  }
+  function addDish(data = {}) {
+    const box = document.createElement('section'); box.className='dish-editor shared-dish'; box.dataset.dishId=data.id||''; const title=text('strong','Plato'); const name=input('Nombre del plato'); name.className='shared-dish-name'; name.required=true; name.maxLength=120; name.value=data.name||'';
+    const ingredients=document.createElement('div'); ingredients.className='shared-ingredients';
+    const add=text('button','＋ Ingrediente','secondary'); add.type='button'; add.onclick=()=>addIngredient(ingredients);
+    const del=text('button','Quitar plato','quiet'); del.type='button'; del.onclick=()=>box.remove();
+    const top=document.createElement('div');top.className='dish-title-row';top.append(reorderHandle(box,'plato'),title,del);
+    const nameLabel=document.createElement('label');nameLabel.append(document.createTextNode('Nombre del plato'),name);
+    const ingredientsHead=document.createElement('div');ingredientsHead.className='ing-head';ingredientsHead.append(text('span','Ingredientes','label'));
+    add.classList.add('add-ingredient');
+    box.append(top,nameLabel,ingredientsHead,ingredients,add); $('#shared-dishes').append(box); if(data.ingredients?.length)data.ingredients.forEach(i=>addIngredient(ingredients,i)); else addIngredient(ingredients);
+  }
+  function updateProfile() {
+    const profile=$('#shared-profile').value;
+    document.querySelectorAll('.shared-person').forEach(label=>{ label.hidden = profile!=='todos' && label.dataset.member!==profile; });
+  }
+  function resetRecipeForm() {
+    const select=$('#shared-profile'); select.replaceChildren();
+    for (const p of state.workspace.members) { const option=text('option',p.name); option.value=p.id; select.append(option); }
+    if (state.workspace.members.length>1) { const option=text('option','Todos'); option.value='todos'; select.append(option); }
+    $('#shared-dishes').replaceChildren(); addDish();
+  }
+  const normalizeRecipeSearch = value => value.toLocaleLowerCase('es').normalize('NFD').replace(/[\u0300-\u036f]/g,'').trim();
+  function filterSharedRecipes(){
+    const query=normalizeRecipeSearch($('#recipe-search').value);
+    let matches=0;
+    $('#shared-recipes').querySelectorAll('.recipe-card').forEach(card=>{card.hidden=!!query&&!card.dataset.search.includes(query);if(!card.hidden)matches++;});
+    $('#recipe-search-empty').hidden=!query||!state.sharedRecipes.length||matches>0;
+  }
+  $('#recipe-search').addEventListener('input',filterSharedRecipes);
+  async function renderSharedRecipes(expected) {
+    const recipes=await rpc('hd_list_recipes'); if (expected!==state.refreshNumber) return;
+    state.sharedRecipes=recipes; const list=$('#shared-recipes'); list.replaceChildren();
+    if (!recipes.length) list.append(text('p','Todavía no hay recetas compartidas.','muted'));
+    for (const recipe of recipes) {
+      const article=document.createElement('details');article.className='recipe-card';
+      article.dataset.search=normalizeRecipeSearch([recipe.name,...recipe.dishes.flatMap(d=>d.ingredients.map(i=>i.name))].join(' '));
+      const summary=document.createElement('summary');summary.className='recipe-card-summary';
+      summary.append(text('strong',recipe.name));const chevron=text('span','⌄','recipe-card-chevron');chevron.setAttribute('aria-hidden','true');summary.append(chevron);article.append(summary);
+      const detail=document.createElement('div');detail.className='recipe-card-detail';
+      if(recipe.container)detail.append(text('p','Táper: '+recipe.container,'muted'));
+      for (const dish of recipe.dishes) { const section=document.createElement('section');section.className='recipe-card-dish';section.append(text('h4',dish.name)); for (const ingredient of dish.ingredients) {
+        const line=text('p',ingredient.name+': '+ingredient.quantities.map(q=>q.name+(q.active?'':' (antiguo miembro)')+' '+q.quantity+' '+(ingredient.unit==='unidad'?'ud.':ingredient.unit)).join(' · '),'muted'); section.append(line);
+      } detail.append(section); } if(recipe.steps.length){detail.append(text('strong','Preparación'));const ol=document.createElement('ol');for(const step of recipe.steps)ol.append(text('li',step));detail.append(ol);}
+      const prepare=(editing)=>{
+        state.editingRecipeId=editing?recipe.id:null; $('#recipe-form-title').textContent=editing?'Editar receta':'Copiar receta';
+        $('#recipe-submit').textContent=editing?'Guardar cambios':'Guardar copia';
+        $('#shared-recipe-form').reset(); resetRecipeForm();
+        $('#shared-name').value=recipe.name;
+        const selectedContainer=recipe.container||''; const containerSelect=$('#shared-container');
+        if(selectedContainer && ![...containerSelect.options].some(o=>o.value===selectedContainer)){const option=text('option',selectedContainer+' (ya no configurado)');option.value=selectedContainer;containerSelect.append(option);}
+        containerSelect.value=selectedContainer;
+        $('#shared-steps').value=recipe.steps.join(String.fromCharCode(10));
+        $('#shared-dishes').replaceChildren(); recipe.dishes.forEach(d=>addDish(d));
+        if(state.workspace.members.length>1)$('#shared-profile').value='todos';
+        updateProfile(); status(''); $('#recipe-dialog-status').textContent=''; $('#recipe-dialog').showModal();
+        $('#shared-name').focus();
+      };
+      const edit=text('button','Editar','secondary');edit.type='button';edit.onclick=()=>prepare(true);
+      const copy=text('button','Copiar receta','secondary');copy.type='button';copy.onclick=()=>prepare(false);
+      const remove=text('button','Eliminar receta','quiet recipe-delete');remove.type='button';
+      remove.onclick=async()=>{
+        remove.disabled=true;
+        try{
+          const check=await rpc('hd_delete_recipe',{p_recipe_id:recipe.id,p_confirm:false});
+          if(check.status==='in_use'){
+            await window.hdDialog.alert('Para eliminar esta receta, primero debes eliminarla o sustituirla en los siguientes menús:',{heading:'Receta incluida en menús',items:check.menus.map(menu=>menu.name+(menu.active?' (activo)':''))});
+            return;
+          }
+          if(check.status!=='confirmation_required')throw new Error('Respuesta inesperada al comprobar la receta.');
+          if(!(await window.hdDialog.confirm('¿Eliminar la receta «'+recipe.name+'»? Esta acción no se puede deshacer.',{heading:'Eliminar receta',acceptLabel:'Eliminar',danger:true})))return;
+          const result=await rpc('hd_delete_recipe',{p_recipe_id:recipe.id,p_confirm:true});
+          if(result.status==='in_use'){
+            await window.hdDialog.alert('Para eliminar esta receta, primero debes eliminarla o sustituirla en los siguientes menús:',{heading:'Receta incluida en menús',items:result.menus.map(menu=>menu.name+(menu.active?' (activo)':''))});
+            return;
+          }
+          if(result.status!=='deleted')throw new Error('No se confirmó la eliminación.');
+          await renderSharedRecipes(state.refreshNumber);
+          await window.hdSharedMenus.reload({rpc,notify:status,recipes:state.sharedRecipes,members:state.workspace.members});
+          status('Receta eliminada.');
+        }catch(error){report(error);}finally{remove.disabled=false;}
+      };
+      const actions=document.createElement('div');actions.className='actions recipe-card-actions';actions.append(edit,copy,remove);detail.append(actions);article.append(detail);list.append(article);
+    }
+    filterSharedRecipes();
+  }
+  $('#shared-profile').onchange=updateProfile;
+  $('#shared-add-dish').onclick=()=>addDish();
+  function cancelEdit(){
+    if($('#recipe-dialog').open)$('#recipe-dialog').close();
+    state.editingRecipeId=null;$('#shared-recipe-form').reset();resetRecipeForm();
+    $('#recipe-form-title').textContent='Nueva receta';$('#recipe-submit').textContent='Guardar receta';
+    $('#recipe-dialog-status').textContent='';
+  }
+  $('#recipe-cancel').onclick=cancelEdit;
+  $('#recipe-close').onclick=cancelEdit;
+  $('#recipe-dialog').addEventListener('cancel',event=>{event.preventDefault();cancelEdit();});
+  $('#recipe-new').onclick=()=>{cancelEdit();status('');$('#recipe-dialog').showModal();$('#shared-name').focus();};
+  $('#shared-recipe-form').onsubmit=async event=>{
+    event.preventDefault(); const profile=$('#shared-profile').value; const dishes=[];
+    for (const box of document.querySelectorAll('.shared-dish')) {
+      const ingredients=[];
+      for (const row of box.querySelectorAll('.shared-ingredient')) {
+        const quantities=[];
+        for (const label of row.querySelectorAll('.shared-person')) {
+          if (profile!=='todos' && label.dataset.member!==profile) continue;
+          const value=label.querySelector('input').value;
+          if (value!=='') quantities.push({member_id:label.dataset.member,quantity:Number(value)});
+        }
+        ingredients.push({id:state.editingRecipeId?(row.dataset.ingredientId||null):null,name:row.querySelector('.shared-ingredient-name').value.trim(),unit:row.querySelector('.shared-unit').value,quantities});
+      }
+      dishes.push({id:state.editingRecipeId?(box.dataset.dishId||null):null,name:box.querySelector('.shared-dish-name').value.trim(),ingredients});
+    }
+    if (!dishes.length || dishes.some(d=>!d.ingredients.length||d.ingredients.some(i=>!i.quantities.length))) { status('Añade al menos un plato, un ingrediente y una cantidad por ingrediente.',true); return; }
+    const steps=$('#shared-steps').value.split(/\r?\n/).map(s=>s.trim()).filter(Boolean);
+    try { const params={p_name:$('#shared-name').value.trim(),p_container:$('#shared-container').value.trim()||null,p_steps:steps,p_dishes:dishes};
+      if(state.editingRecipeId){if(!await window.hdSharedMenus.withConfirmation('hd_shopping_update_recipe',{...params,p_recipe_id:state.editingRecipeId}))return;}else await rpc('hd_create_recipe',params);
+      cancelEdit(); status('Receta guardada en el espacio.'); await renderSharedRecipes(state.refreshNumber); await window.hdSharedMenus.reload({rpc,notify:status,recipes:state.sharedRecipes,members:state.workspace.members}); } catch(error) {
+      if(error?.message?.includes('cantidades históricas')) status('No se puede eliminar o cambiar un ingrediente con cantidades históricas de antiguos miembros.',true);
+      else report(error);
+    }
+  };
+ 
+
+  return { render: renderSharedRecipes, cancel: cancelEdit };
+};
