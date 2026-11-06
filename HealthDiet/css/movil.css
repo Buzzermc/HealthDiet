@@ -1,0 +1,39 @@
+/* Ajustes de pantalla pequeña; en escritorio se conserva la distribución habitual. */
+@media (max-width: 600px) {
+  header { padding: 16px 12px; }
+  .shared-nav { padding: 8px 12px; }
+  main.account-main { width: 100%; padding: 18px 8px 48px; }
+  .account-card { margin: 10px 0; padding: 16px 12px; }
+  .notice { margin-bottom: 14px; }
+
+  .section-heading { gap: 12px; }
+  .section-heading > .primary { min-height: 44px; }
+  .recipe-card-summary, .shared-menu-summary { padding: 14px 12px; min-height: 52px; }
+  .recipe-card-detail, .shared-menu-detail { padding: 4px 12px 14px; }
+  .recipe-card-summary > *, .shared-menu-title, .shared-menu-meal > * { min-width: 0; }
+  .shared-menu-title, .shared-menu-meal, .shopping-item { overflow-wrap: anywhere; }
+  .recipe-card-actions, .shared-menu-actions { display: flex; flex-wrap: wrap; }
+  .recipe-card-actions button, .shared-menu-actions button { min-height: 44px; }
+
+  .day-choices { gap: 6px; overscroll-behavior-x: contain; }
+  .day-choices button { flex: 0 0 auto; min-height: 44px; }
+  .shared-nav button { min-height: 44px; }
+  .shopping-item { gap: 8px; }
+  .shopping-amounts { flex-wrap: wrap; }
+
+  dialog, .menu-dialog, .app-dialog { width: calc(100% - 16px); max-width: none; max-height: calc(100dvh - 16px); }
+  .modal-head, .modal-body, .modal-foot { padding: 14px; }
+  .account-card dialog .modal-body { max-height: calc(100dvh - 150px); overflow-y: auto; }
+  .modal-foot { flex-wrap: wrap; }
+  .modal-foot button { min-height: 44px; }
+  .account-card input:not([type="checkbox"]):not([type="color"]),
+  .account-card select, .account-card textarea { font-size: 16px; min-width: 0; }
+  #shared-dishes .dish-editor { padding: 10px; }
+  #shared-dishes .shared-ingredient { padding: 9px; }
+}
+
+@media (max-width: 360px) {
+  .recipe-select-grid { grid-template-columns: 1fr; }
+  .shared-menu-summary { align-items: flex-start; }
+  .shared-menu-toggle { white-space: normal; text-align: right; }
+}
