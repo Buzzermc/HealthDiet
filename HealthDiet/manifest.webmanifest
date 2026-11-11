@@ -1,0 +1,17 @@
+{
+  "id": "./",
+  "name": "HealthDiet",
+  "short_name": "HealthDiet",
+  "description": "Organiza recetas, menús y la lista de la compra en tu espacio compartido.",
+  "lang": "es",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f7f6f3",
+  "theme_color": "#2e2d2a",
+  "icons": [
+    { "src": "imagenes/icono-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "imagenes/icono-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "imagenes/icono-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

@@ -26,9 +26,17 @@ Usa localhost en vez de abrir index.html directamente. El servidor solo acepta
 conexiones desde el propio equipo. Si el puerto 8765 está ocupado, cierra la
 otra copia antes de volver a iniciar.
 
+INSTALACIÓN EN EL MÓVIL
+
+En Chrome para Android, abre la web publicada y usa el menú del navegador
+para instalar la aplicación si esa opción está disponible. La aplicación
+instalada utiliza la misma cuenta y necesita conexión a Internet. El
+navegador y el dispositivo determinan la opción de instalación disponible.
+
 2. ORGANIZACIÓN DE LOS ARCHIVOS
 
   index.html                 Estructura de las pantallas y carga de módulos.
+  manifest.webmanifest       Nombre, apariencia e iconos de instalación.
   ESTRUCTURA.md              Descripción de responsabilidades y dependencias.
   iniciar.py                 Servidor de prueba local.
   INICIAR_WINDOWS.bat        Acceso directo para Windows.
