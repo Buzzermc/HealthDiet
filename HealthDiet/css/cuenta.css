@@ -749,11 +749,11 @@ button.shopping-extra-delete { display: inline-flex; flex: 0 0 44px; width: 44px
 .recipe-member-dot { width: 11px; height: 11px; flex: 0 0 11px; border-radius: 50%; border: 1px solid #0003; }
 :is(#shared-dishes,.drag-preview-context) .shared-quantities { order: 1; display: flex; flex: 2 1 160px; flex-wrap: wrap; align-items: flex-end; gap: 5px 8px; min-width: 0; }
 :is(#shared-dishes,.drag-preview-context) .shared-quantities .shared-person { flex: 1 1 70px; min-width: 65px; margin: 0 !important; }
-:is(#shared-dishes,.drag-preview-context) .shared-quantities .shared-person input { display: block; width: 100%; margin: 0; border-width: 2px; appearance: textfield; -moz-appearance: textfield; }
+:is(#shared-dishes,.drag-preview-context) .shared-quantities .shared-person input { display: block; width: 100%; margin: 0; border-width: 3px; padding-left: 6px; padding-right: 6px; appearance: textfield; -moz-appearance: textfield; }
 :is(#shared-dishes,.drag-preview-context) .shared-quantities input::-webkit-inner-spin-button,
 :is(#shared-dishes,.drag-preview-context) .shared-quantities input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
 #recipe-dialog > form { display: flex; flex-direction: column; max-height: calc(100dvh - 32px); }
 #recipe-dialog .modal-head, #recipe-dialog .modal-foot { flex: 0 0 auto; }
 #recipe-dialog .modal-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
 
-:is(#shared-dishes,.drag-preview-context) .shared-quantities input::placeholder { font-weight: 400; }
+:is(#shared-dishes,.drag-preview-context) .shared-quantities input::placeholder { font-size: 11px; font-weight: 400; }
