@@ -9,7 +9,7 @@ window.hdSharedMenus = (() => {
   function emptyWeek(){ return days.map(()=>meals.map(()=>[])); }
   function el(tag, content, cls){ const e=document.createElement(tag); if(content!==undefined)e.textContent=content; if(cls)e.className=cls; return e; }
   function makeButton(label, action, cls='secondary'){ const b=el('button',label,cls); b.type='button'; b.onclick=action; return b; }
-  function clear(){if($('#shared-menu-dialog').open)$('#shared-menu-dialog').close();recipes=[];members=[];menus=[];checked.clear();extras=[];extraUnavailable=false;draft=emptyWeek();selectedDay=0;cookingDay=todayIndex();editingMenuId=null;['#shared-menu-list','#shared-menu-days','#shared-menu-editor','#shared-cooking','#cooking-member-legend','#shared-shopping'].forEach(s=>$(s).replaceChildren());}
+  function clear(){if($('#shared-menu-dialog').open)$('#shared-menu-dialog').close();recipes=[];members=[];menus=[];checked.clear();extras=[];extraUnavailable=false;draft=emptyWeek();selectedDay=0;cookingDay=todayIndex();editingMenuId=null;['#shared-menu-list','#shared-menu-days','#shared-menu-editor','#shared-cooking','#shared-shopping'].forEach(s=>$(s).replaceChildren());}
   async function withConfirmation(name,params){
     try{await rpc(name,{...params,p_confirm:false});return true;}
     catch(error){
