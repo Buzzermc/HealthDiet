@@ -728,10 +728,16 @@ margin:5px 0}
 .app-dialog .modal-foot{gap:10px;flex-wrap:wrap}
 .app-dialog .dialog-danger{background:#a93830}
 
-/* Productos añadidos a mano, independientes del menú activo. */
-.shopping-extra { padding-bottom: 22px; margin-bottom: 22px; border-bottom: 1px solid #e6e6df; }
-.shopping-section-title { margin: 0 0 8px; }
-.shopping-extra-form { display: flex; align-items: center; gap: 8px; margin: 12px 0; }
-.shopping-extra-form input { flex: 1; min-width: 0; }
-.shopping-extra-form button { flex: 0 0 auto; }
-.shopping-extra-item .quiet { flex: 0 0 auto; }
+/* Apartados de la compra y productos añadidos a mano. */
+.shopping-section { border: 1px solid #e5e9e2; border-radius: 12px; margin: 12px 0; padding: 0 14px; }
+.shopping-section-summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0; cursor: pointer; font-weight: 700; color: #2e2d2a; list-style: none; }
+.shopping-section-summary::-webkit-details-marker { display: none; }
+.shopping-section-summary::after { content: '⌄'; color: #2d7a5a; font-size: 21px; line-height: 1; transition: transform .15s; }
+.shopping-section[open] > .shopping-section-summary::after { transform: rotate(180deg); }
+.shopping-section[open] { padding-bottom: 14px; }
+.account-card form.shopping-extra-form { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; }
+.shopping-extra-form input { flex: 1 1 auto; min-width: 0; }
+.account-card form.shopping-extra-form .shopping-extra-add { display: inline-flex; flex: 0 0 44px; width: 44px; height: 44px; align-items: center; justify-content: center; margin: 0; padding: 0; font-size: 24px; line-height: 1; }
+button.shopping-extra-delete { display: inline-flex; flex: 0 0 44px; width: 44px; height: 44px; align-items: center; justify-content: center; padding: 8px; color: #ba5552; }
+.shopping-extra-delete svg { width: 20px; height: 20px; }
+.shopping-extra-delete:hover { color: #953b38; background: #fff3f2; border-radius: 8px; }
