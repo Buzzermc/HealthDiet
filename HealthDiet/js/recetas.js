@@ -65,7 +65,6 @@ window.hdCreateRecipes = ({state, $, rpc, text, status, report}) => {
     const unit = document.createElement('select'); unit.className = 'shared-unit'; unit.setAttribute('aria-label', 'Unidad');
     for (const [value, label] of [['g','g'],['unidad','uds.']]) { const o = text('option', label); o.value = value; unit.append(o); } unit.value=data.unit||'g'; row.append(unit);
     const quantities=document.createElement('div');quantities.className='shared-quantities';
-    quantities.append(text('span','Cantidad','shared-quantities-title'));
     for (const person of state.workspace.members) {
       const label = document.createElement('label'); label.className = 'shared-person'; label.dataset.member = person.id;
       const qty = input('Cantidad', 'number'); qty.min = '0.001'; qty.step = 'any'; qty.setAttribute('aria-label','Cantidad para '+person.name); qty.style.borderColor=person.color || '#2d7a5a'; const previous=(data.quantities||[]).find(q=>q.member_id===person.id); if(previous)qty.value=previous.quantity; label.append(qty); quantities.append(label);
