@@ -48,7 +48,7 @@
 <div class="recipe-search"><label for="recipe-search" class="visually-hidden">Buscar recetas por nombre o ingrediente</label><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="m16 16 4 4"/></svg><input id="recipe-search" type="search" placeholder="Buscar por receta o ingrediente" autocomplete="off"></div><div id="shared-recipes"></div><p id="recipe-search-empty" class="muted" role="status" hidden>No hay recetas que coincidan con la búsqueda.</p>
 <dialog id="recipe-dialog" aria-labelledby="recipe-form-title">
 <form id="shared-recipe-form">
-<div class="modal-head"><h2 id="recipe-form-title">Nueva receta</h2><button type="button" class="quiet modal-close" id="recipe-close" aria-label="Cerrar">✕</button></div>
+<div class="modal-head recipe-modal-head"><div class="recipe-modal-heading"><h2 id="recipe-form-title">Nueva receta</h2><div id="recipe-member-legend" class="recipe-member-legend" aria-label="Colores de las personas"></div></div><button type="button" class="quiet modal-close" id="recipe-close" aria-label="Cerrar">✕</button></div>
 <div class="modal-body">
 <label for="shared-name">Nombre de la receta</label><input id="shared-name" required maxlength="120" placeholder="Ej. Arroz con tomate y huevo">
 <div class="recipe-select-grid"><div><label for="shared-profile">Perfil</label><select id="shared-profile"></select></div><div><label for="shared-container">Tamaño del táper</label><select id="shared-container"><option value="">Sin especificar</option></select></div></div>

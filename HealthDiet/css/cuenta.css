@@ -727,3 +727,39 @@ margin:5px 0}
 .app-dialog .modal-body li{padding:3px 0;overflow-wrap:anywhere}
 .app-dialog .modal-foot{gap:10px;flex-wrap:wrap}
 .app-dialog .dialog-danger{background:#a93830}
+
+/* Apartados de la compra y productos añadidos a mano. */
+.shopping-section { border: 1px solid #e5e9e2; border-radius: 12px; margin: 12px 0; padding: 0 14px; }
+.shopping-section-summary { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 14px 0; cursor: pointer; font-weight: 700; color: #2e2d2a; list-style: none; }
+.shopping-section-summary::-webkit-details-marker { display: none; }
+.shopping-section-summary::after { content: '⌄'; color: #2d7a5a; font-size: 21px; line-height: 1; transition: transform .15s; }
+.shopping-section[open] > .shopping-section-summary::after { transform: rotate(180deg); }
+.shopping-section[open] { padding-bottom: 14px; }
+.account-card form.shopping-extra-form { display: flex; align-items: center; gap: 8px; margin: 0 0 12px; }
+.shopping-extra-form input { flex: 1 1 auto; min-width: 0; }
+.account-card form.shopping-extra-form .shopping-extra-add { display: inline-flex; flex: 0 0 44px; width: 44px; height: 44px; align-items: center; justify-content: center; margin: 0; padding: 0; font-size: 24px; line-height: 1; }
+button.shopping-extra-delete { display: inline-flex; flex: 0 0 44px; width: 44px; height: 44px; align-items: center; justify-content: center; padding: 8px; color: #ba5552; }
+.shopping-extra-delete svg { width: 20px; height: 20px; }
+.shopping-extra-delete:hover { color: #953b38; background: #fff3f2; border-radius: 8px; }
+
+/* Identificación de cantidades en el formulario de recetas. */
+.recipe-modal-heading { min-width: 0; }
+.recipe-member-legend { display: flex; flex-wrap: wrap; gap: 5px 12px; margin-top: 7px; font-size: 12px; font-weight: 600; color: #555b54; }
+.recipe-member-entry { display: inline-flex; align-items: center; gap: 5px; overflow-wrap: anywhere; }
+.recipe-member-dot { width: 11px; height: 11px; flex: 0 0 11px; border-radius: 50%; border: 1px solid #0003; }
+:is(#shared-dishes,.drag-preview-context) .shared-quantities { order: 1; display: flex; flex: 2 1 160px; flex-wrap: wrap; align-items: flex-end; gap: 5px 8px; min-width: 0; }
+:is(#shared-dishes,.drag-preview-context) .shared-quantities .shared-person { flex: 1 1 70px; min-width: 65px; margin: 0 !important; }
+:is(#shared-dishes,.drag-preview-context) .shared-quantities .shared-person input { display: block; width: 100%; margin: 0; border-width: 3px; padding-left: 6px; padding-right: 6px; appearance: textfield; -moz-appearance: textfield; }
+:is(#shared-dishes,.drag-preview-context) .shared-quantities input::-webkit-inner-spin-button,
+:is(#shared-dishes,.drag-preview-context) .shared-quantities input::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+#recipe-dialog > form { display: flex; flex-direction: column; max-height: calc(100dvh - 32px); }
+#recipe-dialog .modal-head, #recipe-dialog .modal-foot { flex: 0 0 auto; }
+#recipe-dialog .modal-body { flex: 1 1 auto; min-height: 0; overflow-y: auto; }
+
+:is(#shared-dishes,.drag-preview-context) .shared-quantities input::placeholder { font-size: 11px; font-weight: 400; }
+
+/* La cabecera acompaña únicamente a la receta que se está consultando. */
+.cooking-recipe-card { overflow: visible; }
+.cooking-recipe-card > .recipe-card-summary { background: #fff; border-radius: 14px; }
+.cooking-recipe-card[open] > .recipe-card-summary { position: sticky; top: 0; z-index: 5; border-radius: 13px 13px 0 0; box-shadow: 0 2px 4px #0000000b; }
+.cooking-recipe-card:not([open]) .cooking-member-legend { display: none; }

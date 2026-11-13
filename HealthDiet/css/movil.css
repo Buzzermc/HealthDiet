@@ -60,3 +60,15 @@
   .shared-menu-toggle { white-space: normal; text-align: right; }
   #transfer-form .settings-inline { flex-wrap: wrap; }
 }
+
+/* En móvil, el nombre ocupa la primera fila y las cantidades quedan debajo. */
+@media (max-width: 600px) {
+  :is(#shared-dishes, .drag-preview-context) .shared-ingredient-name {
+    flex: 1 1 calc(100% - 38px);
+    min-width: 0;
+  }
+  :is(#shared-dishes, .drag-preview-context) .shared-person {
+    flex: 1 1 70px;
+    min-width: 65px;
+  }
+}

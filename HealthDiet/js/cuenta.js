@@ -103,6 +103,9 @@
     try { await rpc('hd_leave_workspace'); status('Has abandonado el espacio.'); await refresh(); } catch (error) { status('No se ha podido abandonar el espacio. Si eres la última persona administradora, transfiere primero la administración.', true); }
   };
   function setView(view) {
+    if(state.activeView==='cooking' && view!=='cooking') {
+      document.querySelectorAll('#shared-cooking details[open]').forEach(card=>{card.open=false;});
+    }
     state.activeView=view;
     document.querySelectorAll('[data-hd-view]').forEach(node=>{node.hidden = node.dataset.hdView!==view || (node.id==='admin' && state.workspace?.role!=='admin');});
     document.querySelectorAll('[data-view-target]').forEach(node=>{const selected=node.dataset.viewTarget===view;node.classList.toggle('selected',selected);node.setAttribute('aria-current',selected?'page':'false');});

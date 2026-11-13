@@ -64,10 +64,12 @@ window.hdCreateRecipes = ({state, $, rpc, text, status, report}) => {
     const name = input('Ingrediente'); name.className = 'shared-ingredient-name'; name.required = true; name.maxLength = 120; name.value=data.name||''; row.append(name);
     const unit = document.createElement('select'); unit.className = 'shared-unit'; unit.setAttribute('aria-label', 'Unidad');
     for (const [value, label] of [['g','g'],['unidad','uds.']]) { const o = text('option', label); o.value = value; unit.append(o); } unit.value=data.unit||'g'; row.append(unit);
+    const quantities=document.createElement('div');quantities.className='shared-quantities';
     for (const person of state.workspace.members) {
-      const label = document.createElement('label'); label.className = 'shared-person'; label.dataset.member = person.id; label.append(document.createTextNode('Cantidad · '+person.name));
-      const qty = input('Cantidad', 'number'); qty.min = '0.001'; qty.step = 'any'; qty.setAttribute('aria-label','Cantidad para '+person.name); const previous=(data.quantities||[]).find(q=>q.member_id===person.id); if(previous)qty.value=previous.quantity; label.append(qty); row.append(label);
+      const label = document.createElement('label'); label.className = 'shared-person'; label.dataset.member = person.id;
+      const qty = input('Cantidad', 'number'); qty.min = '0.001'; qty.step = 'any'; qty.setAttribute('aria-label','Cantidad para '+person.name); qty.style.borderColor=person.color || '#2d7a5a'; const previous=(data.quantities||[]).find(q=>q.member_id===person.id); if(previous)qty.value=previous.quantity; label.append(qty); quantities.append(label);
     }
+    row.append(quantities);
     const remove = document.createElement('button'); remove.className='ingredient-remove'; remove.type='button';
     remove.setAttribute('aria-label','Eliminar ingrediente'); remove.title='Eliminar ingrediente';
     remove.innerHTML='<svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 6h18M8 6V4h8v2M19 6l-1 14H6L5 6M10 10v6M14 10v6"/></svg>';
@@ -87,6 +89,11 @@ window.hdCreateRecipes = ({state, $, rpc, text, status, report}) => {
   function updateProfile() {
     const profile=$('#shared-profile').value;
     document.querySelectorAll('.shared-person').forEach(label=>{ label.hidden = profile!=='todos' && label.dataset.member!==profile; });
+    const legend=$('#recipe-member-legend');legend.replaceChildren();
+    for(const person of state.workspace.members){
+      if(profile!=='todos' && person.id!==profile)continue;
+      const entry=text('span',person.name,'recipe-member-entry'),dot=document.createElement('span');dot.className='recipe-member-dot';dot.style.backgroundColor=person.color||'#2d7a5a';dot.setAttribute('aria-hidden','true');entry.prepend(dot);legend.append(entry);
+    }
   }
   function resetRecipeForm() {
     const select=$('#shared-profile'); select.replaceChildren();
