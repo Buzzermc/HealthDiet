@@ -9,7 +9,7 @@ window.hdCreateAmounts = (el, getMembers) => {
     const name=String(q.name || '').trim();
     const label=options.compact ? (Array.from(name)[0] || '?').toLocaleUpperCase('es') : name;
     const quantity=String(q.quantity)+(options.unit || '');
-    const span=el('span',label+': '+quantity,'person-amount');
+    const span=el('span',options.hideName ? quantity : label+': '+quantity,'person-amount');
     if(options.compact){span.title=name;span.setAttribute('aria-label',name+': '+quantity);}
     const p=getMembers().find(m=>m.id===q.member_id);if(p){span.style.backgroundColor=p.color;const c=p.color.match(/[0-9a-f]{2}/gi).map(x=>parseInt(x,16)/255).map(x=>x<=.04045?x/12.92:((x+.055)/1.055)**2.4);span.style.color=(c[0]*.2126+c[1]*.7152+c[2]*.0722)>.179?'#111':'#fff';}return span;
   }

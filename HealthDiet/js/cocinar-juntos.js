@@ -1,7 +1,13 @@
 /* Vista diaria del menú activo. */
 window.hdCreateCooking = ({$, el, makeButton, days, activeMenu, refs, amounts, amountNode, getState, setDay}) => {
   function renderCooking(){
-    const {recipes, cookingDay}=getState();
+    const {recipes, cookingDay, members}=getState();
+    const legend=$('#cooking-member-legend');legend.replaceChildren();
+    for(const member of members){
+      const entry=el('span',undefined,'recipe-member-entry'),dot=el('span',undefined,'recipe-member-dot');
+      dot.style.backgroundColor=member.color||'#2d7a5a';dot.setAttribute('aria-hidden','true');
+      entry.append(dot,document.createTextNode(member.name));legend.append(entry);
+    }
     const root=$('#shared-cooking');
     // Conserva las tarjetas abiertas cuando se actualizan los datos de la vista.
     const openCards=new Set(Array.from(root.querySelectorAll('details[data-cooking-key]')).filter(card=>card.open).map(card=>card.dataset.cookingKey));
@@ -27,7 +33,7 @@ window.hdCreateCooking = ({$, el, makeButton, days, activeMenu, refs, amounts, a
           const vals=el('span',undefined,'cooking-amounts');const a=amounts(ingredient);
           const unit=ingredient.unit==='unidad'?'uds':ingredient.unit;
           const total=el('strong',a.total+unit);total.setAttribute('aria-label','Total: '+a.total+' '+unit);vals.append(total);
-          for(const q of a.active)vals.append(amountNode(q,{compact:true,unit}));
+          for(const q of a.active)vals.append(amountNode(q,{compact:true,unit,hideName:true}));
           row.append(vals);section.append(row);
         }
         detail.append(section);
