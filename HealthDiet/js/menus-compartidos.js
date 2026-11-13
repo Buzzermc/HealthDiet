@@ -5,11 +5,11 @@ window.hdSharedMenus = (() => {
   const days = ['Lunes','Martes','Miércoles','Jueves','Viernes','Sábado','Domingo'];
   const meals = ['desayuno','almuerzo','comida','merienda','cena'];
   const todayIndex = () => (new Date().getDay() + 6) % 7;
-  let rpc, notify, recipes=[], members=[], menus=[], checked=new Set(), draft=emptyWeek(), selectedDay=0, selectedMeal='', cookingDay=todayIndex(), editingMenuId=null;
+  let rpc, notify, recipes=[], members=[], menus=[], checked=new Set(), extras=[], extraUnavailable=false, draft=emptyWeek(), selectedDay=0, selectedMeal='', cookingDay=todayIndex(), editingMenuId=null;
   function emptyWeek(){ return days.map(()=>meals.map(()=>[])); }
   function el(tag, content, cls){ const e=document.createElement(tag); if(content!==undefined)e.textContent=content; if(cls)e.className=cls; return e; }
   function makeButton(label, action, cls='secondary'){ const b=el('button',label,cls); b.type='button'; b.onclick=action; return b; }
-  function clear(){if($('#shared-menu-dialog').open)$('#shared-menu-dialog').close();recipes=[];members=[];menus=[];checked.clear();draft=emptyWeek();selectedDay=0;cookingDay=todayIndex();editingMenuId=null;['#shared-menu-list','#shared-menu-days','#shared-menu-editor','#shared-cooking','#shared-shopping'].forEach(s=>$(s).replaceChildren());}
+  function clear(){if($('#shared-menu-dialog').open)$('#shared-menu-dialog').close();recipes=[];members=[];menus=[];checked.clear();extras=[];extraUnavailable=false;draft=emptyWeek();selectedDay=0;cookingDay=todayIndex();editingMenuId=null;['#shared-menu-list','#shared-menu-days','#shared-menu-editor','#shared-cooking','#shared-shopping'].forEach(s=>$(s).replaceChildren());}
   async function withConfirmation(name,params){
     try{await rpc(name,{...params,p_confirm:false});return true;}
     catch(error){
@@ -22,6 +22,7 @@ window.hdSharedMenus = (() => {
   async function reload(options){
     rpc=options.rpc; notify=options.notify; recipes=options.recipes; members=options.members;
     const result=await rpc('hd_list_menus'); await readShopping();
+    try {extras=await rpc('hd_extra_list');extraUnavailable=false;} catch(error) {extras=[];extraUnavailable=true;}
     if(options.isCurrent && !options.isCurrent()) return;
     menus=result; render();
   }
@@ -105,7 +106,7 @@ window.hdSharedMenus = (() => {
   function refs(menu,day){return menu.entries.filter(e=>day===undefined||e.day===day+1).sort((a,b)=>a.day-b.day||meals.indexOf(a.meal)-meals.indexOf(b.meal)||a.position-b.position);}
   const {amounts, amountNode}=window.hdCreateAmounts(el,()=>members);
   const renderCooking=window.hdCreateCooking({$,el,makeButton,days,activeMenu,refs,amounts,amountNode,getState:()=>({recipes,cookingDay}),setDay:value=>{cookingDay=value;}});
-  const renderShopping=window.hdCreateShopping({$,el,activeMenu,refs,amountNode,getState:()=>({recipes,checked,rpc,notify})});
+  const renderShopping=window.hdCreateShopping({$,el,activeMenu,refs,amountNode,getState:()=>({recipes,checked,rpc,notify,extras,extraUnavailable}),setExtras:value=>{extras=value;}});
   return {reload,clear,withConfirmation};
 })();
 

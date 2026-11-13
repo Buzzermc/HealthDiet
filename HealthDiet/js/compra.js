@@ -1,9 +1,31 @@
 /* Agrupación y marcas de la lista de la compra. */
-window.hdCreateShopping = ({$, el, activeMenu, refs, amountNode, getState}) => {
+window.hdCreateShopping = ({$, el, activeMenu, refs, amountNode, getState, setExtras}) => {
   let sortBy='name-asc';
+  function renderExtras(root,{rpc,notify,extras,extraUnavailable}) {
+    const section=el('section',undefined,'shopping-extra');
+    section.append(el('h4','Compra extra','shopping-section-title'));
+    section.append(el('p','Añade otros productos que necesitéis. Se comparten en vuestro espacio y se conservan al cambiar de menú.','muted'));
+    if(extraUnavailable){section.append(el('p','La compra extra todavía no está disponible.','muted'));root.append(section);return;}
+    const form=el('form',undefined,'shopping-extra-form'),input=el('input'),add=el('button','Añadir','secondary');
+    input.type='text';input.required=true;input.maxLength=120;input.placeholder='Ej.: jabón, papel de cocina…';input.setAttribute('aria-label','Producto para la compra extra');add.type='submit';form.append(input,add);
+    form.onsubmit=async event=>{event.preventDefault();const name=input.value.trim();if(!name){input.focus();return;}add.disabled=true;try{await rpc('hd_extra_add',{p_name:name});setExtras(await rpc('hd_extra_list'));renderShopping();}catch(error){notify('No se ha podido añadir el producto. Inténtalo de nuevo.',true);}finally{add.disabled=false;}};
+    section.append(form);
+    if(!extras.length)section.append(el('p','Todavía no hay productos extra.','muted'));
+    for(const item of extras){
+      const row=el('div',undefined,'shopping-item shopping-extra-item'),label=el('label',undefined,'shopping-check-label'),check=el('input'),remove=el('button','Eliminar','quiet');
+      check.type='checkbox';check.checked=item.checked;check.setAttribute('aria-label','Marcar '+item.name+' para comprar');
+      check.onchange=async()=>{const value=check.checked;check.disabled=true;try{await rpc('hd_extra_set',{p_id:item.id,p_checked:value});item.checked=value;}catch(error){check.checked=!value;notify('No se ha podido guardar la marca.',true);}finally{check.disabled=false;}};
+      remove.type='button';remove.setAttribute('aria-label','Eliminar '+item.name);remove.onclick=async()=>{remove.disabled=true;try{await rpc('hd_extra_delete',{p_id:item.id});setExtras(await rpc('hd_extra_list'));renderShopping();}catch(error){notify('No se ha podido eliminar el producto.',true);remove.disabled=false;}};
+      label.append(check,el('span',item.name,'shopping-name'));row.append(label,remove);section.append(row);
+    }
+    root.append(section);
+  }
   function renderShopping(){
-    const {recipes, checked, rpc, notify}=getState();
-    const root=$('#shared-shopping');root.replaceChildren();const menu=activeMenu();if(!menu){root.append(el('p','Activa un menú para preparar la compra.','muted'));return;}
+    const {recipes, checked, rpc, notify, extras, extraUnavailable}=getState();
+    const root=$('#shared-shopping');root.replaceChildren();
+    renderExtras(root,{rpc,notify,extras,extraUnavailable});
+    root.append(el('h4','Ingredientes del menú','shopping-section-title'));
+    const menu=activeMenu();if(!menu){root.append(el('p','Activa un menú para preparar la compra.','muted'));return;}
     const groups=new Map();
     for(const entry of refs(menu)){const recipe=recipes.find(r=>r.id===entry.recipe_id);if(!recipe)continue;for(const dish of recipe.dishes)for(const ingredient of dish.ingredients){
       const key=ingredient.name.trim().toLocaleLowerCase('es')+'|'+ingredient.unit;let group=groups.get(key);if(!group){group={name:ingredient.name,unit:ingredient.unit,people:new Map()};groups.set(key,group);}

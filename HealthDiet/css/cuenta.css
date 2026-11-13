@@ -727,3 +727,11 @@ margin:5px 0}
 .app-dialog .modal-body li{padding:3px 0;overflow-wrap:anywhere}
 .app-dialog .modal-foot{gap:10px;flex-wrap:wrap}
 .app-dialog .dialog-danger{background:#a93830}
+
+/* Productos añadidos a mano, independientes del menú activo. */
+.shopping-extra { padding-bottom: 22px; margin-bottom: 22px; border-bottom: 1px solid #e6e6df; }
+.shopping-section-title { margin: 0 0 8px; }
+.shopping-extra-form { display: flex; align-items: center; gap: 8px; margin: 12px 0; }
+.shopping-extra-form input { flex: 1; min-width: 0; }
+.shopping-extra-form button { flex: 0 0 auto; }
+.shopping-extra-item .quiet { flex: 0 0 auto; }
